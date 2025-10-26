@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15039B91-4170-4CB2-8FB5-0078B44D0337}</ProjectGuid>
+    <ProjectGuid>{040F2E2F-7C11-4B04-9217-143926BA0826}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaDatos</RootNamespace>
-    <AssemblyName>CapaDatos</AssemblyName>
+    <RootNamespace>CapaEntidad</RootNamespace>
+    <AssemblyName>CapaEntidad</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="datApoderado.cs" />
-    <Compile Include="datCargo.cs" />
-    <Compile Include="datCurso.cs" />
-    <Compile Include="datDocente.cs" />
-    <Compile Include="datEstudiante.cs" />
-    <Compile Include="datMatricula.cs" />
+    <Compile Include="entApoderado.cs" />
+    <Compile Include="entCargo.cs" />
+    <Compile Include="entCurso.cs" />
+    <Compile Include="entDocente.cs" />
+    <Compile Include="entEstudiante.cs" />
+    <Compile Include="entGradoAcademico.cs" />
+    <Compile Include="entMatricula.cs" />
+    <Compile Include="entNivelAcademico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

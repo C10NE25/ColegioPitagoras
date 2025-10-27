@@ -28,20 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelMenuLateral = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelMenuLateral.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelMenuLateral
+            // 
+            this.panelMenuLateral.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelMenuLateral.Controls.Add(this.button1);
+            this.panelMenuLateral.Controls.Add(this.panelLogo);
+            this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuLateral.Name = "panelMenuLateral";
+            this.panelMenuLateral.Size = new System.Drawing.Size(465, 1428);
+            this.panelMenuLateral.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(465, 192);
+            this.panelLogo.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 192);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(465, 95);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(2240, 1428);
+            this.Controls.Add(this.panelMenuLateral);
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "Form1";
             this.Text = "t ";
+            this.panelMenuLateral.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelMenuLateral;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

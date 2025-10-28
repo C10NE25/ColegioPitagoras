@@ -21,12 +21,18 @@ namespace CapaPresentacion
         //Metodo para ocultar los submenus
         private void customizeDesing()
         {
+            panelAcademicoSubMenu.Visible = false;
             panelAdministrativoSubMenu.Visible = false;
+            panelTesoreriaSubMenu.Visible = false;
         }
         private void hideSubMenu()
         {
+            if (panelAcademicoSubMenu.Visible == true)
+                panelAcademicoSubMenu.Visible = false;
             if (panelAdministrativoSubMenu.Visible == true)
                 panelAdministrativoSubMenu.Visible = false;
+            if (panelTesoreriaSubMenu.Visible == true)
+                panelTesoreriaSubMenu.Visible = false;
         }
         //Metodo para mostrar los submenus
         private void showSubMenu(Panel subMenu)
@@ -40,9 +46,9 @@ namespace CapaPresentacion
                 subMenu.Visible = false;
         }
 
-        private void btnAdministrativo_Click(object sender, EventArgs e)
+        private void btnAcademico_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelAdministrativoSubMenu);
+            showSubMenu(panelAcademicoSubMenu);
         }
 
         private void btnTutor_Click(object sender, EventArgs e)
@@ -69,6 +75,30 @@ namespace CapaPresentacion
             panelChildForm.Tag= childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void btnEstudiante_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmEstudiante());
+
+            hideSubMenu();
+        }
+
+        private void btnDocente_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmDocente());
+
+            hideSubMenu();
+        }
+
+        private void btnAdministrativo_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAdministrativoSubMenu);
+        }
+
+        private void btnTesoreria_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelTesoreriaSubMenu);
         }
     }
 }

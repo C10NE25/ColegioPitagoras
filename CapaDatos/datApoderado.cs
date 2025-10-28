@@ -64,6 +64,42 @@ namespace CapaDatos
             return lista;
         }
 
+        ///Insertar Apoderado
+        public Boolean insertarApoderado(entApoderado apo)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertarApoderado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@dniApo", apo.DniApo);
+                cmd.Parameters.AddWithValue("@nombreApo", apo.NombreApo);
+                cmd.Parameters.AddWithValue("@apellidosApo", apo.ApellidosApo);
+                cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
+                cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
+                cmd.Parameters.AddWithValue("@estadoApot", apo.EstadoApot);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return inserta;
+
+        }
+
         #endregion metodo
 
     }

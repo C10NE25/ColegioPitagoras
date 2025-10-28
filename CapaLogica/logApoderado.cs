@@ -35,13 +35,14 @@ namespace CapaLogica
         {
             datApoderado.Instancia.insertarApoderado(Apo);
         }
-
+        ///Editar Apoderado
         public void EditarApoderado(entApoderado Apo)
         {
             datApoderado.Instancia.editarApoderado(Apo);
         }
 
-        public void DeshabilitarCliente(entApoderado Apo)
+        ///Deshabilitar Apoderado
+        public void DeshabilitarApoderado(entApoderado Apo)
         {
             datApoderado.Instancia.deshabilitarApoderado(Apo);
         }

@@ -135,6 +135,35 @@ namespace CapaDatos
             return edita;
         }
 
+        ///Deshabilitar Apoderado
+        public Boolean deshabilitarApoderado(int idApo)
+        {
+            SqlCommand cmd = null;
+            Boolean deshabilita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitarApoderado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idApoderado", idApo);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    deshabilita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return deshabilita;
+        }
+
         #endregion metodo
 
     }

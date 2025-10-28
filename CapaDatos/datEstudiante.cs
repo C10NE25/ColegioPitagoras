@@ -26,7 +26,6 @@ namespace CapaDatos
 
         #region metodos
         ///Listar Estudiantes
-        
         public List<entEstudiante> ListarEstudiantes()
         {
             SqlCommand cmd = null;

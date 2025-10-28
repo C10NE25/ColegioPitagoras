@@ -15,6 +15,42 @@ namespace CapaPresentacion
         public Form1()
         {
             InitializeComponent();
+            customizeDesing();
+        }
+
+        //Metodo para ocultar los submenus
+        private void customizeDesing()
+        {
+            panelAdministrativoSubMenu.Visible = false;
+        }
+        private void hideSubMenu()
+        {
+            if (panelAdministrativoSubMenu.Visible == true)
+                panelAdministrativoSubMenu.Visible = false;
+        }
+        //Metodo para mostrar los submenus
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+
+        private void btnAdministrativo_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAdministrativoSubMenu);
+        }
+
+        private void btnTutor_Click(object sender, EventArgs e)
+        {
+
+
+            //Oculta el submenu luego de hacer click en una opcion
+            hideSubMenu();
         }
     }
 }

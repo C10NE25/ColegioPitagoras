@@ -47,10 +47,28 @@ namespace CapaPresentacion
 
         private void btnTutor_Click(object sender, EventArgs e)
         {
-
+            openChildForms(new frmTutor());
 
             //Oculta el submenu luego de hacer click en una opcion
             hideSubMenu();
+        }
+        //Variable para almacenar formulario hijo
+        private Form activeForm=null; 
+        //Panel para abrir formularios hijos
+        private void openChildForms(Form childForm)
+        {
+            //Si esta activo, lo cierra
+            if (activeForm != null)
+                activeForm.Close();
+            //Almacena el formulario en la variable
+            activeForm=childForm;
+            childForm.TopLevel=false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag= childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

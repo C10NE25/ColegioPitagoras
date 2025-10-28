@@ -33,7 +33,7 @@ namespace CapaDatos
             List<entEstudiante> lista = new List<entEstudiante>();
             try
             {
-                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spListarEstudiante", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
@@ -70,7 +70,7 @@ namespace CapaDatos
             Boolean inserto = false;
             try
             {
-                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarEstudiante", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@dniEst", Est.DniEst);
@@ -96,6 +96,42 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
             return inserto;
+        }
+
+        ///Editar Estudiante
+        public Boolean EditarEstudiante(entEstudiante Est)
+        {
+            SqlCommand cmd = null;
+            Boolean edito = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditarEstudiante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idEstudiante", Est.IdEstudiante);
+                cmd.Parameters.AddWithValue("@dniEst", Est.DniEst);
+                cmd.Parameters.AddWithValue("@nombreEst", Est.NombreEst);
+                cmd.Parameters.AddWithValue("@apellidosEst", Est.ApellidosEst);
+                cmd.Parameters.AddWithValue("@fechaNacEst", Est.FechaNacEst);
+                cmd.Parameters.AddWithValue("@direccionEst", Est.DireccionEst);
+                cmd.Parameters.AddWithValue("@idApoderado", Est.IdApoderado);
+                cmd.Parameters.AddWithValue("@estadoEst", Est.EstadoEst);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edito = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return edito;
         }
 
         #endregion metodos

@@ -100,5 +100,40 @@ namespace CapaPresentacion
         {
             showSubMenu(panelTesoreriaSubMenu);
         }
+
+        private void btnNivelAcademico_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmNivelAcademico());
+
+            hideSubMenu();
+        }
+
+        private void btnGradoAcademico_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmGradoAcademico());
+
+            hideSubMenu();
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmCurso());
+
+            hideSubMenu();
+        }
+
+        private void btnAsistencias_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmAsistencias());
+
+            hideSubMenu();
+        }
+
+        private void btnNotas_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmNotas());
+
+            hideSubMenu();
+        }
     }
 }

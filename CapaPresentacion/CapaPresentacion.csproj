@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsistencias.Designer.cs">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,24 @@
     <Compile Include="frmEstudiante.Designer.cs">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGradoAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradoAcademico.Designer.cs">
+      <DependentUpon>frmGradoAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNivelAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNivelAcademico.Designer.cs">
+      <DependentUpon>frmNivelAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotas.Designer.cs">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +105,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAsistencias.resx">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDocente.resx">
       <DependentUpon>frmDocente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstudiante.resx">
       <DependentUpon>frmEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGradoAcademico.resx">
+      <DependentUpon>frmGradoAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNivelAcademico.resx">
+      <DependentUpon>frmNivelAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotas.resx">
+      <DependentUpon>frmNotas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTutor.resx">
       <DependentUpon>frmTutor.cs</DependentUpon>

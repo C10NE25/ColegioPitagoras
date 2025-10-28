@@ -109,6 +109,7 @@
             this.btnGradoAcademico.TabIndex = 4;
             this.btnGradoAcademico.Text = "Grado Academico";
             this.btnGradoAcademico.UseVisualStyleBackColor = false;
+            this.btnGradoAcademico.Click += new System.EventHandler(this.btnGradoAcademico_Click);
             // 
             // btnNivelAcademico
             // 
@@ -120,6 +121,7 @@
             this.btnNivelAcademico.TabIndex = 3;
             this.btnNivelAcademico.Text = "Nivel Academico";
             this.btnNivelAcademico.UseVisualStyleBackColor = false;
+            this.btnNivelAcademico.Click += new System.EventHandler(this.btnNivelAcademico_Click);
             // 
             // btnDocente
             // 
@@ -208,6 +210,7 @@
             this.btnCurso.TabIndex = 5;
             this.btnCurso.Text = "Curso";
             this.btnCurso.UseVisualStyleBackColor = false;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
             // 
             // btnAsistencias
             // 
@@ -219,6 +222,7 @@
             this.btnAsistencias.TabIndex = 13;
             this.btnAsistencias.Text = "Asistencias";
             this.btnAsistencias.UseVisualStyleBackColor = false;
+            this.btnAsistencias.Click += new System.EventHandler(this.btnAsistencias_Click);
             // 
             // btnNotas
             // 
@@ -230,6 +234,7 @@
             this.btnNotas.TabIndex = 14;
             this.btnNotas.Text = "Notas";
             this.btnNotas.UseVisualStyleBackColor = false;
+            this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);
             // 
             // btnTipoDocumento
             // 

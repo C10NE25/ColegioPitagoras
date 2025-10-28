@@ -1,12 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class Class1
+    public class Conexion
     {
+        private static readonly Conexion _instancia = new Conexion();
+        public static Conexion Instancia
+        {
+            get { return Conexion._instancia; }
+        }
+
+        public SqlConnection Conectar()
+        {
+            SqlConnection cn = new SqlConnection();
+            /*Data Source= Nombre de su servidor, 
+            * Initial Catalog= Nombre de la base de datos*/
+            cn.ConnectionString = 
+                "Data Source=DESKTOP-OAR169C\\SQLEXPRESS; " +
+                "Initial Catalog = ColegioPitagoras3;" +
+                "Integrated Security=true";
+
+            return cn;
+        }
     }
 }

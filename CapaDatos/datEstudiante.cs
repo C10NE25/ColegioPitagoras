@@ -102,7 +102,7 @@ namespace CapaDatos
         public Boolean EditarEstudiante(entEstudiante Est)
         {
             SqlCommand cmd = null;
-            Boolean edito = false;
+            Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
@@ -120,7 +120,7 @@ namespace CapaDatos
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    edito = true;
+                    edita = true;
                 }
             }
             catch (Exception e)
@@ -131,8 +131,38 @@ namespace CapaDatos
             {
                 cmd.Connection.Close();
             }
-            return edito;
+            return edita;
         }
+
+        ///deshabilitar Estudiante
+        public Boolean DeshabilitarEstudiante(entEstudiante Est)
+        {
+            SqlCommand cmd = null;
+            Boolean deshabilita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitarEstudiante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idEstudiante", Est.IdEstudiante);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    deshabilita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return deshabilita;
+        }
+
 
         #endregion metodos
     }

@@ -63,6 +63,41 @@ namespace CapaDatos
             return lista;
         }
 
+        ///Insertar Estudiante
+        public Boolean InsertarEstudiante(entEstudiante Est)
+        {
+            SqlCommand cmd = null;
+            Boolean inserto = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("spInsertarEstudiante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dniEst", Est.DniEst);
+                cmd.Parameters.AddWithValue("@nombreEst", Est.NombreEst);
+                cmd.Parameters.AddWithValue("@apellidosEst", Est.ApellidosEst);
+                cmd.Parameters.AddWithValue("@fechaNacEst", Est.FechaNacEst);
+                cmd.Parameters.AddWithValue("@direccionEst", Est.DireccionEst);
+                cmd.Parameters.AddWithValue("@idApoderado", Est.IdApoderado);
+                cmd.Parameters.AddWithValue("@estadoEst", Est.EstadoEst);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserto = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return inserto;
+        }
+
         #endregion metodos
     }
 }

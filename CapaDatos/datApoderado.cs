@@ -136,7 +136,7 @@ namespace CapaDatos
         }
 
         ///Deshabilitar Apoderado
-        public Boolean deshabilitarApoderado(int idApo)
+        public Boolean deshabilitarApoderado(entApoderado apo)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
@@ -145,7 +145,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarApoderado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idApoderado", idApo);
+                cmd.Parameters.AddWithValue("@idApoderado", apo.IdApoderado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

@@ -42,13 +42,13 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entApoderado Apo = new entApoderado();
-                    Apo.IdApoderado = Convert.ToInt32(dr["IdApoderado"]);
-                    Apo.DniApo = dr["DniApo"].ToString();
-                    Apo.NombreApo = dr["NombreApo"].ToString();
-                    Apo.ApellidosApo = dr["ApellidosApo"].ToString();
-                    Apo.NumCelularApo = dr["NumCelularApo"].ToString();
-                    Apo.DireccionApo= dr["DireccionApo"].ToString();
-                    Apo.EstadoApot = Convert.ToBoolean(dr["EstadoApot"]);
+                    Apo.IdApoderado = Convert.ToInt32(dr["idApoderado"]);
+                    Apo.DniApo = dr["dniApo"].ToString();
+                    Apo.NombreApo = dr["nombreApo"].ToString();
+                    Apo.ApellidosApo = dr["apellidosApo"].ToString();
+                    Apo.NumCelularApo = dr["numCelularApo"].ToString();
+                    Apo.DireccionApo= dr["direccionApo"].ToString();
+                    Apo.EstadoApot = Convert.ToBoolean(dr["estadoApot"]);
                     lista.Add(Apo);
                 }
 

@@ -104,6 +104,7 @@
             this.btnBoletaPago.TabIndex = 8;
             this.btnBoletaPago.Text = "Boleta de Pago";
             this.btnBoletaPago.UseVisualStyleBackColor = false;
+            this.btnBoletaPago.Click += new System.EventHandler(this.btnBoletaPago_Click);
             // 
             // btnPlanPago
             // 
@@ -115,6 +116,7 @@
             this.btnPlanPago.TabIndex = 7;
             this.btnPlanPago.Text = "Plan de Pago";
             this.btnPlanPago.UseVisualStyleBackColor = false;
+            this.btnPlanPago.Click += new System.EventHandler(this.btnPlanPago_Click);
             // 
             // btnTipoPlanPago
             // 
@@ -126,6 +128,7 @@
             this.btnTipoPlanPago.TabIndex = 6;
             this.btnTipoPlanPago.Text = "Tipo de Plan de Pago";
             this.btnTipoPlanPago.UseVisualStyleBackColor = false;
+            this.btnTipoPlanPago.Click += new System.EventHandler(this.btnTipoPlanPago_Click);
             // 
             // btnTesoreria
             // 

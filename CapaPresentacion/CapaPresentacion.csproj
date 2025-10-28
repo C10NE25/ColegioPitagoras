@@ -82,6 +82,12 @@
     <Compile Include="frmAdministrativo\frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTesoreria\frmBoletaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmBoletaPago.Designer.cs">
+      <DependentUpon>frmBoletaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,18 @@
     <Compile Include="frmAdministrativo\frmTipoDocumento.Designer.cs">
       <DependentUpon>frmTipoDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTesoreria\frmPlanPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmPlanPago.Designer.cs">
+      <DependentUpon>frmPlanPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoPlanPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoPlanPago.Designer.cs">
+      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAdministrativo\frmBoletaInscripcion.resx">
@@ -158,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmBoletaPago.resx">
+      <DependentUpon>frmBoletaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -188,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmTipoDocumento.resx">
       <DependentUpon>frmTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmPlanPago.resx">
+      <DependentUpon>frmPlanPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmTipoPlanPago.resx">
+      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -184,5 +184,26 @@ namespace CapaPresentacion
 
             hideSubMenu();
         }
+
+        private void btnTipoPlanPago_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmTipoPlanPago());
+
+            hideSubMenu();
+        }
+
+        private void btnPlanPago_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmPlanPago());
+
+            hideSubMenu();
+        }
+
+        private void btnBoletaPago_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmBoletaPago());
+
+            hideSubMenu();
+        }
     }
 }

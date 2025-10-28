@@ -46,6 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdministrativo\frmBoletaInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmBoletaInscripcion.Designer.cs">
+      <DependentUpon>frmBoletaInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmBoletaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmBoletaMatricula.Designer.cs">
+      <DependentUpon>frmBoletaMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmCarpetaInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmCarpetaInscripcion.Designer.cs">
+      <DependentUpon>frmCarpetaInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmDocumento.Designer.cs">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmMatricula.Designer.cs">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +136,29 @@
     <Compile Include="frmAcademico\frmTutor.Designer.cs">
       <DependentUpon>frmTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdministrativo\frmTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmTipoDocumento.Designer.cs">
+      <DependentUpon>frmTipoDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdministrativo\frmBoletaInscripcion.resx">
+      <DependentUpon>frmBoletaInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmBoletaMatricula.resx">
+      <DependentUpon>frmBoletaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmCarpetaInscripcion.resx">
+      <DependentUpon>frmCarpetaInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmMatricula.resx">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmTutor.resx">
       <DependentUpon>frmTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmTipoDocumento.resx">
+      <DependentUpon>frmTipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

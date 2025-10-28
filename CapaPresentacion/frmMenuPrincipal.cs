@@ -135,5 +135,54 @@ namespace CapaPresentacion
 
             hideSubMenu();
         }
+
+        private void btnTipoDocumento_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmTipoDocumento());
+
+            hideSubMenu();
+        }
+
+        private void btnDocumento_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmDocumento());
+
+            hideSubMenu();
+        }
+
+        private void btnCarpetaInscripcion_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmCarpetaInscripcion());
+
+            hideSubMenu();
+        }
+
+        private void btnBoletaInscripcion_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmBoletaInscripcion());
+
+            hideSubMenu();
+        }
+
+        private void btnBoletaMatricula_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmBoletaMatricula());
+
+            hideSubMenu();
+        }
+
+        private void btnInscripcion_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmInscripcion());
+
+            hideSubMenu();
+        }
+
+        private void btnMatricula_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmMatricula());
+
+            hideSubMenu();
+        }
     }
 }

@@ -163,7 +163,6 @@ namespace CapaDatos
             return deshabilita;
         }
 
-
         #endregion metodos
     }
 }

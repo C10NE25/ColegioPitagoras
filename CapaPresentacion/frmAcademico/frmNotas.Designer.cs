@@ -29,12 +29,30 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvNota = new System.Windows.Forms.DataGridView();
+            this.gbxNotas = new System.Windows.Forms.GroupBox();
+            this.cbxEstado = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDireccionDocente = new System.Windows.Forms.TextBox();
+            this.txtNroCelularDocente = new System.Windows.Forms.TextBox();
+            this.txtApellidoDocente = new System.Windows.Forms.TextBox();
+            this.txtNombreDocente = new System.Windows.Forms.TextBox();
+            this.txtIDDocente = new System.Windows.Forms.TextBox();
+            this.txtDniDocente = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNota)).BeginInit();
+            this.gbxNotas.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -47,73 +65,232 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Notas";
             // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Location = new System.Drawing.Point(1645, 491);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(230, 95);
+            this.btnDeshabilitar.TabIndex = 53;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(1645, 351);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(230, 92);
+            this.btnEditar.TabIndex = 52;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(1645, 201);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(230, 92);
+            this.btnNuevo.TabIndex = 51;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(909, 66);
+            this.btnCerrar.Location = new System.Drawing.Point(1645, 634);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(157, 69);
-            this.btnCerrar.TabIndex = 46;
-            this.btnCerrar.Text = "X";
+            this.btnCerrar.Size = new System.Drawing.Size(230, 95);
+            this.btnCerrar.TabIndex = 49;
+            this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // button3
+            // dgvNota
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(1394, 867);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(230, 92);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dgvNota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNota.Location = new System.Drawing.Point(108, 167);
+            this.dgvNota.Name = "dgvNota";
+            this.dgvNota.ReadOnly = true;
+            this.dgvNota.RowHeadersWidth = 92;
+            this.dgvNota.RowTemplate.Height = 37;
+            this.dgvNota.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNota.Size = new System.Drawing.Size(1432, 601);
+            this.dgvNota.TabIndex = 48;
             // 
-            // button2
+            // gbxNotas
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1169, 867);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(230, 92);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.gbxNotas.Controls.Add(this.cbxEstado);
+            this.gbxNotas.Controls.Add(this.label7);
+            this.gbxNotas.Controls.Add(this.btnAgregar);
+            this.gbxNotas.Controls.Add(this.btnModificar);
+            this.gbxNotas.Controls.Add(this.btnCancelar);
+            this.gbxNotas.Controls.Add(this.label6);
+            this.gbxNotas.Controls.Add(this.label5);
+            this.gbxNotas.Controls.Add(this.label4);
+            this.gbxNotas.Controls.Add(this.label3);
+            this.gbxNotas.Controls.Add(this.label2);
+            this.gbxNotas.Controls.Add(this.txtDireccionDocente);
+            this.gbxNotas.Controls.Add(this.txtNroCelularDocente);
+            this.gbxNotas.Controls.Add(this.txtApellidoDocente);
+            this.gbxNotas.Controls.Add(this.txtNombreDocente);
+            this.gbxNotas.Controls.Add(this.txtIDDocente);
+            this.gbxNotas.Controls.Add(this.txtDniDocente);
+            this.gbxNotas.Location = new System.Drawing.Point(119, 857);
+            this.gbxNotas.Name = "gbxNotas";
+            this.gbxNotas.Size = new System.Drawing.Size(1562, 435);
+            this.gbxNotas.TabIndex = 50;
+            this.gbxNotas.TabStop = false;
+            this.gbxNotas.Text = "Notas de estudiantes";
             // 
-            // button1
+            // cbxEstado
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(945, 867);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 92);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cbxEstado.AutoSize = true;
+            this.cbxEstado.Location = new System.Drawing.Point(665, 257);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Size = new System.Drawing.Size(223, 33);
+            this.cbxEstado.TabIndex = 13;
+            this.cbxEstado.Text = "Estado del Tutor";
+            this.cbxEstado.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // label7
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 194);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 92;
-            this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(1432, 601);
-            this.dataGridView1.TabIndex = 42;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(652, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 29);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Direccion:";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Location = new System.Drawing.Point(1282, 57);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(230, 92);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(1282, 186);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(230, 92);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(1282, 308);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(230, 92);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(654, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 29);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Nro Celular:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 29);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Apellidos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Nombres:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 29);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "DNI:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Id del Docente:";
+            // 
+            // txtDireccionDocente
+            // 
+            this.txtDireccionDocente.Location = new System.Drawing.Point(806, 186);
+            this.txtDireccionDocente.Name = "txtDireccionDocente";
+            this.txtDireccionDocente.Size = new System.Drawing.Size(338, 35);
+            this.txtDireccionDocente.TabIndex = 5;
+            // 
+            // txtNroCelularDocente
+            // 
+            this.txtNroCelularDocente.Location = new System.Drawing.Point(806, 124);
+            this.txtNroCelularDocente.Name = "txtNroCelularDocente";
+            this.txtNroCelularDocente.Size = new System.Drawing.Size(338, 35);
+            this.txtNroCelularDocente.TabIndex = 4;
+            // 
+            // txtApellidoDocente
+            // 
+            this.txtApellidoDocente.Location = new System.Drawing.Point(179, 251);
+            this.txtApellidoDocente.Name = "txtApellidoDocente";
+            this.txtApellidoDocente.Size = new System.Drawing.Size(338, 35);
+            this.txtApellidoDocente.TabIndex = 3;
+            // 
+            // txtNombreDocente
+            // 
+            this.txtNombreDocente.Location = new System.Drawing.Point(179, 186);
+            this.txtNombreDocente.Name = "txtNombreDocente";
+            this.txtNombreDocente.Size = new System.Drawing.Size(338, 35);
+            this.txtNombreDocente.TabIndex = 2;
+            // 
+            // txtIDDocente
+            // 
+            this.txtIDDocente.Location = new System.Drawing.Point(231, 54);
+            this.txtIDDocente.Name = "txtIDDocente";
+            this.txtIDDocente.Size = new System.Drawing.Size(139, 35);
+            this.txtIDDocente.TabIndex = 1;
+            // 
+            // txtDniDocente
+            // 
+            this.txtDniDocente.Location = new System.Drawing.Point(179, 127);
+            this.txtDniDocente.Name = "txtDniDocente";
+            this.txtDniDocente.Size = new System.Drawing.Size(338, 35);
+            this.txtDniDocente.TabIndex = 0;
             // 
             // frmNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1747, 1374);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1959, 1374);
+            this.Controls.Add(this.btnDeshabilitar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvNota);
+            this.Controls.Add(this.gbxNotas);
+            this.Controls.Add(this.label1);
             this.Name = "frmNotas";
             this.Text = "frmNotas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNota)).EndInit();
+            this.gbxNotas.ResumeLayout(false);
+            this.gbxNotas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +299,27 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvNota;
+        private System.Windows.Forms.GroupBox gbxNotas;
+        private System.Windows.Forms.CheckBox cbxEstado;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDireccionDocente;
+        private System.Windows.Forms.TextBox txtNroCelularDocente;
+        private System.Windows.Forms.TextBox txtApellidoDocente;
+        private System.Windows.Forms.TextBox txtNombreDocente;
+        private System.Windows.Forms.TextBox txtIDDocente;
+        private System.Windows.Forms.TextBox txtDniDocente;
     }
 }

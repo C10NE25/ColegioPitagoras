@@ -20,8 +20,8 @@ namespace CapaDatos
             SqlConnection cn = new SqlConnection();
             /*Data Source= Nombre de su servidor, 
             * Initial Catalog= Nombre de la base de datos*/
-            cn.ConnectionString = 
-                "Data Source=DESKTOP-OAR169C\\SQLEXPRESS; " +
+            cn.ConnectionString =
+                "Data Source=Francesco\\SQLEXPRESS; " +
                 "Initial Catalog = ColegioPitagoras3;" +
                 "Integrated Security=true";
 

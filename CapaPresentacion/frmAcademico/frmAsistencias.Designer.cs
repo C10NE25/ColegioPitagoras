@@ -43,7 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDMatriculaEst = new System.Windows.Forms.TextBox();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.gbxAsistencias.SuspendLayout();
@@ -110,7 +110,7 @@
             // gbxAsistencias
             // 
             this.gbxAsistencias.Controls.Add(this.label4);
-            this.gbxAsistencias.Controls.Add(this.dateTimePicker1);
+            this.gbxAsistencias.Controls.Add(this.dtpFecha);
             this.gbxAsistencias.Controls.Add(this.cbxEstado);
             this.gbxAsistencias.Controls.Add(this.btnAgregar);
             this.gbxAsistencias.Controls.Add(this.btnModificar);
@@ -198,12 +198,12 @@
             this.txtIDCurso.Size = new System.Drawing.Size(338, 35);
             this.txtIDCurso.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(187, 191);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(460, 35);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dtpFecha.Location = new System.Drawing.Point(187, 191);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(460, 35);
+            this.dtpFecha.TabIndex = 14;
             // 
             // label4
             // 
@@ -254,6 +254,6 @@
         private System.Windows.Forms.TextBox txtIDMatriculaEst;
         private System.Windows.Forms.TextBox txtIDCurso;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

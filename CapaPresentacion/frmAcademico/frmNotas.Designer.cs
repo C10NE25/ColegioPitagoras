@@ -36,21 +36,17 @@
             this.dgvNota = new System.Windows.Forms.DataGridView();
             this.gbxNotas = new System.Windows.Forms.GroupBox();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDireccionDocente = new System.Windows.Forms.TextBox();
-            this.txtNroCelularDocente = new System.Windows.Forms.TextBox();
-            this.txtApellidoDocente = new System.Windows.Forms.TextBox();
-            this.txtNombreDocente = new System.Windows.Forms.TextBox();
-            this.txtIDDocente = new System.Windows.Forms.TextBox();
-            this.txtDniDocente = new System.Windows.Forms.TextBox();
+            this.txtNotaNumerica = new System.Windows.Forms.TextBox();
+            this.txtIDMatriculaEst = new System.Windows.Forms.TextBox();
+            this.txtIDCurso = new System.Windows.Forms.TextBox();
+            this.cmbTipoEvaluacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNota)).BeginInit();
             this.gbxNotas.SuspendLayout();
             this.SuspendLayout();
@@ -115,22 +111,18 @@
             // 
             // gbxNotas
             // 
+            this.gbxNotas.Controls.Add(this.cmbTipoEvaluacion);
             this.gbxNotas.Controls.Add(this.cbxEstado);
-            this.gbxNotas.Controls.Add(this.label7);
             this.gbxNotas.Controls.Add(this.btnAgregar);
             this.gbxNotas.Controls.Add(this.btnModificar);
             this.gbxNotas.Controls.Add(this.btnCancelar);
-            this.gbxNotas.Controls.Add(this.label6);
             this.gbxNotas.Controls.Add(this.label5);
             this.gbxNotas.Controls.Add(this.label4);
             this.gbxNotas.Controls.Add(this.label3);
             this.gbxNotas.Controls.Add(this.label2);
-            this.gbxNotas.Controls.Add(this.txtDireccionDocente);
-            this.gbxNotas.Controls.Add(this.txtNroCelularDocente);
-            this.gbxNotas.Controls.Add(this.txtApellidoDocente);
-            this.gbxNotas.Controls.Add(this.txtNombreDocente);
-            this.gbxNotas.Controls.Add(this.txtIDDocente);
-            this.gbxNotas.Controls.Add(this.txtDniDocente);
+            this.gbxNotas.Controls.Add(this.txtNotaNumerica);
+            this.gbxNotas.Controls.Add(this.txtIDMatriculaEst);
+            this.gbxNotas.Controls.Add(this.txtIDCurso);
             this.gbxNotas.Location = new System.Drawing.Point(119, 857);
             this.gbxNotas.Name = "gbxNotas";
             this.gbxNotas.Size = new System.Drawing.Size(1562, 435);
@@ -141,21 +133,12 @@
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(665, 257);
+            this.cbxEstado.Location = new System.Drawing.Point(693, 130);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(223, 33);
+            this.cbxEstado.Size = new System.Drawing.Size(236, 33);
             this.cbxEstado.TabIndex = 13;
-            this.cbxEstado.Text = "Estado del Tutor";
+            this.cbxEstado.Text = "Estado de la Nota";
             this.cbxEstado.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(652, 192);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 29);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Direccion:";
             // 
             // btnAgregar
             // 
@@ -187,92 +170,70 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(654, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 29);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nro Celular:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 257);
+            this.label5.Location = new System.Drawing.Point(618, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 29);
+            this.label5.Size = new System.Drawing.Size(180, 29);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Apellidos:";
+            this.label5.Text = "Nota Numerica:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(27, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 29);
+            this.label4.Size = new System.Drawing.Size(226, 29);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Nombres:";
+            this.label4.Text = "Tipo de Evaluacion:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 29);
+            this.label3.Size = new System.Drawing.Size(106, 29);
             this.label3.TabIndex = 8;
-            this.label3.Text = "DNI:";
+            this.label3.Text = "IDCurso:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 29);
+            this.label2.Size = new System.Drawing.Size(261, 29);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Id del Docente:";
+            this.label2.Text = "Id Matricula Estudiante:";
             // 
-            // txtDireccionDocente
+            // txtNotaNumerica
             // 
-            this.txtDireccionDocente.Location = new System.Drawing.Point(806, 186);
-            this.txtDireccionDocente.Name = "txtDireccionDocente";
-            this.txtDireccionDocente.Size = new System.Drawing.Size(338, 35);
-            this.txtDireccionDocente.TabIndex = 5;
+            this.txtNotaNumerica.Location = new System.Drawing.Point(804, 51);
+            this.txtNotaNumerica.Name = "txtNotaNumerica";
+            this.txtNotaNumerica.Size = new System.Drawing.Size(338, 35);
+            this.txtNotaNumerica.TabIndex = 3;
             // 
-            // txtNroCelularDocente
+            // txtIDMatriculaEst
             // 
-            this.txtNroCelularDocente.Location = new System.Drawing.Point(806, 124);
-            this.txtNroCelularDocente.Name = "txtNroCelularDocente";
-            this.txtNroCelularDocente.Size = new System.Drawing.Size(338, 35);
-            this.txtNroCelularDocente.TabIndex = 4;
+            this.txtIDMatriculaEst.Location = new System.Drawing.Point(304, 54);
+            this.txtIDMatriculaEst.Name = "txtIDMatriculaEst";
+            this.txtIDMatriculaEst.Size = new System.Drawing.Size(139, 35);
+            this.txtIDMatriculaEst.TabIndex = 1;
             // 
-            // txtApellidoDocente
+            // txtIDCurso
             // 
-            this.txtApellidoDocente.Location = new System.Drawing.Point(179, 251);
-            this.txtApellidoDocente.Name = "txtApellidoDocente";
-            this.txtApellidoDocente.Size = new System.Drawing.Size(338, 35);
-            this.txtApellidoDocente.TabIndex = 3;
+            this.txtIDCurso.Location = new System.Drawing.Point(179, 127);
+            this.txtIDCurso.Name = "txtIDCurso";
+            this.txtIDCurso.Size = new System.Drawing.Size(338, 35);
+            this.txtIDCurso.TabIndex = 0;
             // 
-            // txtNombreDocente
+            // cmbTipoEvaluacion
             // 
-            this.txtNombreDocente.Location = new System.Drawing.Point(179, 186);
-            this.txtNombreDocente.Name = "txtNombreDocente";
-            this.txtNombreDocente.Size = new System.Drawing.Size(338, 35);
-            this.txtNombreDocente.TabIndex = 2;
-            // 
-            // txtIDDocente
-            // 
-            this.txtIDDocente.Location = new System.Drawing.Point(231, 54);
-            this.txtIDDocente.Name = "txtIDDocente";
-            this.txtIDDocente.Size = new System.Drawing.Size(139, 35);
-            this.txtIDDocente.TabIndex = 1;
-            // 
-            // txtDniDocente
-            // 
-            this.txtDniDocente.Location = new System.Drawing.Point(179, 127);
-            this.txtDniDocente.Name = "txtDniDocente";
-            this.txtDniDocente.Size = new System.Drawing.Size(338, 35);
-            this.txtDniDocente.TabIndex = 0;
+            this.cmbTipoEvaluacion.FormattingEnabled = true;
+            this.cmbTipoEvaluacion.Location = new System.Drawing.Point(259, 192);
+            this.cmbTipoEvaluacion.Name = "cmbTipoEvaluacion";
+            this.cmbTipoEvaluacion.Size = new System.Drawing.Size(274, 37);
+            this.cmbTipoEvaluacion.TabIndex = 14;
             // 
             // frmNotas
             // 
@@ -306,20 +267,16 @@
         private System.Windows.Forms.DataGridView dgvNota;
         private System.Windows.Forms.GroupBox gbxNotas;
         private System.Windows.Forms.CheckBox cbxEstado;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDireccionDocente;
-        private System.Windows.Forms.TextBox txtNroCelularDocente;
-        private System.Windows.Forms.TextBox txtApellidoDocente;
-        private System.Windows.Forms.TextBox txtNombreDocente;
-        private System.Windows.Forms.TextBox txtIDDocente;
-        private System.Windows.Forms.TextBox txtDniDocente;
+        private System.Windows.Forms.TextBox txtNotaNumerica;
+        private System.Windows.Forms.TextBox txtIDMatriculaEst;
+        private System.Windows.Forms.TextBox txtIDCurso;
+        private System.Windows.Forms.ComboBox cmbTipoEvaluacion;
     }
 }

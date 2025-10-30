@@ -171,6 +171,9 @@
     <EmbeddedResource Include="frmAdministrativo\frmCarpetaInscripcion.resx">
       <DependentUpon>frmCarpetaInscripcion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmDocumento.resx">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmInscripcion.resx">
       <DependentUpon>frmInscripcion.cs</DependentUpon>
     </EmbeddedResource>

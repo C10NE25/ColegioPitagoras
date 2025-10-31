@@ -35,6 +35,12 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvPlanPago = new System.Windows.Forms.DataGridView();
             this.gbxPlanPago = new System.Windows.Forms.GroupBox();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIDBoletaInscripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
@@ -45,21 +51,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDTipoPlanPago = new System.Windows.Forms.TextBox();
             this.txtIDBoletaMatricula = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIDBoletaInscripcion = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtMontoTotal = new System.Windows.Forms.TextBox();
+            this.gbxBusqueda = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbEstadoPlanPago = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPago)).BeginInit();
             this.gbxPlanPago.SuspendLayout();
+            this.gbxBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 75);
+            this.label1.Location = new System.Drawing.Point(96, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 56);
             this.label1.TabIndex = 95;
@@ -104,7 +109,7 @@
             // dgvPlanPago
             // 
             this.dgvPlanPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlanPago.Location = new System.Drawing.Point(96, 170);
+            this.dgvPlanPago.Location = new System.Drawing.Point(96, 255);
             this.dgvPlanPago.Name = "dgvPlanPago";
             this.dgvPlanPago.ReadOnly = true;
             this.dgvPlanPago.RowHeadersWidth = 92;
@@ -131,12 +136,60 @@
             this.gbxPlanPago.Controls.Add(this.label2);
             this.gbxPlanPago.Controls.Add(this.txtIDTipoPlanPago);
             this.gbxPlanPago.Controls.Add(this.txtIDBoletaMatricula);
-            this.gbxPlanPago.Location = new System.Drawing.Point(122, 839);
+            this.gbxPlanPago.Location = new System.Drawing.Point(122, 892);
             this.gbxPlanPago.Name = "gbxPlanPago";
             this.gbxPlanPago.Size = new System.Drawing.Size(1483, 435);
             this.gbxPlanPago.TabIndex = 98;
             this.gbxPlanPago.TabStop = false;
             this.gbxPlanPago.Text = "Datos del Plan de Pago";
+            // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.Location = new System.Drawing.Point(304, 308);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(182, 35);
+            this.txtMontoTotal.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(147, 29);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Monto Total:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 246);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(173, 29);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "ID de Matricula";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(304, 243);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 35);
+            this.textBox1.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(267, 29);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "ID de Boleta Inscripcion";
+            // 
+            // txtIDBoletaInscripcion
+            // 
+            this.txtIDBoletaInscripcion.Location = new System.Drawing.Point(304, 186);
+            this.txtIDBoletaInscripcion.Name = "txtIDBoletaInscripcion";
+            this.txtIDBoletaInscripcion.Size = new System.Drawing.Size(139, 35);
+            this.txtIDBoletaInscripcion.TabIndex = 16;
             // 
             // label4
             // 
@@ -226,59 +279,50 @@
             this.txtIDBoletaMatricula.Size = new System.Drawing.Size(139, 35);
             this.txtIDBoletaMatricula.TabIndex = 0;
             // 
-            // label5
+            // gbxBusqueda
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(267, 29);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "ID de Boleta Inscripcion";
+            this.gbxBusqueda.Controls.Add(this.cmbEstadoPlanPago);
+            this.gbxBusqueda.Controls.Add(this.btnBuscar);
+            this.gbxBusqueda.Controls.Add(this.label9);
+            this.gbxBusqueda.Location = new System.Drawing.Point(258, 139);
+            this.gbxBusqueda.Name = "gbxBusqueda";
+            this.gbxBusqueda.Size = new System.Drawing.Size(1221, 93);
+            this.gbxBusqueda.TabIndex = 102;
+            this.gbxBusqueda.TabStop = false;
+            this.gbxBusqueda.Text = "Busqueda de Planes de Pago";
             // 
-            // txtIDBoletaInscripcion
+            // btnBuscar
             // 
-            this.txtIDBoletaInscripcion.Location = new System.Drawing.Point(304, 186);
-            this.txtIDBoletaInscripcion.Name = "txtIDBoletaInscripcion";
-            this.txtIDBoletaInscripcion.Size = new System.Drawing.Size(139, 35);
-            this.txtIDBoletaInscripcion.TabIndex = 16;
+            this.btnBuscar.Location = new System.Drawing.Point(964, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(224, 61);
+            this.btnBuscar.TabIndex = 57;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // label9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 29);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "ID de Matricula";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(279, 29);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "Estado de Plan de Pago:";
             // 
-            // textBox1
+            // cmbEstadoPlanPago
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 243);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 35);
-            this.textBox1.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 308);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 29);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Monto Total:";
-            // 
-            // txtMontoTotal
-            // 
-            this.txtMontoTotal.Location = new System.Drawing.Point(304, 308);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(182, 35);
-            this.txtMontoTotal.TabIndex = 21;
+            this.cmbEstadoPlanPago.FormattingEnabled = true;
+            this.cmbEstadoPlanPago.Location = new System.Drawing.Point(314, 45);
+            this.cmbEstadoPlanPago.Name = "cmbEstadoPlanPago";
+            this.cmbEstadoPlanPago.Size = new System.Drawing.Size(321, 37);
+            this.cmbEstadoPlanPago.TabIndex = 58;
             // 
             // frmPlanPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1950, 1374);
+            this.Controls.Add(this.gbxBusqueda);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -291,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanPago)).EndInit();
             this.gbxPlanPago.ResumeLayout(false);
             this.gbxPlanPago.PerformLayout();
+            this.gbxBusqueda.ResumeLayout(false);
+            this.gbxBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +367,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox gbxBusqueda;
+        private System.Windows.Forms.ComboBox cmbEstadoPlanPago;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label9;
     }
 }

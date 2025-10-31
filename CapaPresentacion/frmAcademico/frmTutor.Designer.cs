@@ -68,7 +68,7 @@
             this.dgvTutor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTutor.Size = new System.Drawing.Size(1654, 600);
             this.dgvTutor.TabIndex = 0;
-            this.dgvTutor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellDoubleClick);
+            this.dgvTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellClick);
             // 
             // btnAgregar
             // 

@@ -71,18 +71,6 @@ namespace CapaPresentacion
             listarEstudiante();
         }
 
-        private void dgvEstudiante_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dgvEstudiante.Rows[e.RowIndex];
-            txtIDEstudiante.Text = fila.Cells[0].Value.ToString();
-            txtNombreEstudiante.Text = fila.Cells[1].Value.ToString();
-            txtApellidoEstudiante.Text = fila.Cells[2].Value.ToString();
-            txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
-            dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
-            txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();
-            txtIDTutor.Text = fila.Cells[6].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -143,6 +131,19 @@ namespace CapaPresentacion
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvEstudiante_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvEstudiante.Rows[e.RowIndex];
+            txtIDEstudiante.Text = fila.Cells[0].Value.ToString();
+            txtNombreEstudiante.Text = fila.Cells[1].Value.ToString();
+            txtApellidoEstudiante.Text = fila.Cells[2].Value.ToString();
+            txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
+            dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
+            txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();
+            txtIDTutor.Text = fila.Cells[6].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
         }
     }
 }

@@ -117,7 +117,7 @@
             this.dgvEstudiante.RowTemplate.Height = 37;
             this.dgvEstudiante.Size = new System.Drawing.Size(1545, 601);
             this.dgvEstudiante.TabIndex = 12;
-            this.dgvEstudiante.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellDoubleClick);
+            this.dgvEstudiante.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellClick);
             // 
             // gbxEstudiante
             // 

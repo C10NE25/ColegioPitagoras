@@ -75,17 +75,6 @@ namespace CapaPresentacion
             listarTutor();
         }
 
-        private void dgvTutor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dgvTutor.Rows[e.RowIndex];
-            txtIDTutor.Text = fila.Cells[0].Value.ToString();
-            txtDniTutor.Text = fila.Cells[1].Value.ToString();
-            txtNombreTutor.Text = fila.Cells[2].Value.ToString();
-            txtApellidoTutor.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularTutor.Text = fila.Cells[4].Value.ToString();
-            txtDireccionTutor.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -139,6 +128,18 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxTutor.Enabled = false;
             listarTutor();
+        }
+
+        private void dgvTutor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvTutor.Rows[e.RowIndex];
+            txtIDTutor.Text = fila.Cells[0].Value.ToString();
+            txtDniTutor.Text = fila.Cells[1].Value.ToString();
+            txtNombreTutor.Text = fila.Cells[2].Value.ToString();
+            txtApellidoTutor.Text = fila.Cells[3].Value.ToString();
+            txtNroCelularTutor.Text = fila.Cells[4].Value.ToString();
+            txtDireccionTutor.Text = fila.Cells[5].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
         }
     }
 }

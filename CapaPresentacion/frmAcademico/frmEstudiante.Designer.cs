@@ -35,6 +35,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvEstudiante = new System.Windows.Forms.DataGridView();
             this.gbxEstudiante = new System.Windows.Forms.GroupBox();
+            this.dtpFechaNacEstudiante = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@
             this.txtNombreEstudiante = new System.Windows.Forms.TextBox();
             this.txtIDEstudiante = new System.Windows.Forms.TextBox();
             this.txtDniEstudiante = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpFechaNacEstudiante = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiante)).BeginInit();
             this.gbxEstudiante.SuspendLayout();
             this.SuspendLayout();
@@ -69,9 +69,9 @@
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(1634, 491);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(1722, 491);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(230, 95);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(320, 95);
             this.btnDeshabilitar.TabIndex = 17;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(1634, 351);
+            this.btnEditar.Location = new System.Drawing.Point(1722, 351);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(230, 92);
+            this.btnEditar.Size = new System.Drawing.Size(320, 92);
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(1634, 201);
+            this.btnNuevo.Location = new System.Drawing.Point(1722, 201);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(230, 92);
+            this.btnNuevo.Size = new System.Drawing.Size(320, 92);
             this.btnNuevo.TabIndex = 15;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -99,9 +99,9 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(1634, 634);
+            this.btnCerrar.Location = new System.Drawing.Point(1722, 634);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(230, 95);
+            this.btnCerrar.Size = new System.Drawing.Size(320, 95);
             this.btnCerrar.TabIndex = 13;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             this.dgvEstudiante.ReadOnly = true;
             this.dgvEstudiante.RowHeadersWidth = 92;
             this.dgvEstudiante.RowTemplate.Height = 37;
-            this.dgvEstudiante.Size = new System.Drawing.Size(1432, 601);
+            this.dgvEstudiante.Size = new System.Drawing.Size(1545, 601);
             this.dgvEstudiante.TabIndex = 12;
             this.dgvEstudiante.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellDoubleClick);
             // 
@@ -141,19 +141,35 @@
             this.gbxEstudiante.Controls.Add(this.txtDniEstudiante);
             this.gbxEstudiante.Location = new System.Drawing.Point(108, 857);
             this.gbxEstudiante.Name = "gbxEstudiante";
-            this.gbxEstudiante.Size = new System.Drawing.Size(1562, 435);
+            this.gbxEstudiante.Size = new System.Drawing.Size(1722, 435);
             this.gbxEstudiante.TabIndex = 14;
             this.gbxEstudiante.TabStop = false;
             this.gbxEstudiante.Text = "Datos del Estudiante";
+            // 
+            // dtpFechaNacEstudiante
+            // 
+            this.dtpFechaNacEstudiante.Location = new System.Drawing.Point(292, 328);
+            this.dtpFechaNacEstudiante.Name = "dtpFechaNacEstudiante";
+            this.dtpFechaNacEstudiante.Size = new System.Drawing.Size(438, 35);
+            this.dtpFechaNacEstudiante.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 328);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(248, 29);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Fecha de Nacimiento:";
             // 
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
             this.cbxEstado.Location = new System.Drawing.Point(665, 257);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(223, 33);
+            this.cbxEstado.Size = new System.Drawing.Size(279, 33);
             this.cbxEstado.TabIndex = 13;
-            this.cbxEstado.Text = "Estado del Tutor";
+            this.cbxEstado.Text = "Estado del Estudiante";
             this.cbxEstado.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -168,9 +184,9 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(1282, 57);
+            this.btnAgregar.Location = new System.Drawing.Point(1327, 57);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(230, 92);
+            this.btnAgregar.Size = new System.Drawing.Size(345, 92);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -179,9 +195,9 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(1282, 186);
+            this.btnModificar.Location = new System.Drawing.Point(1327, 186);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(230, 92);
+            this.btnModificar.Size = new System.Drawing.Size(345, 92);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -190,9 +206,9 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(1282, 308);
+            this.btnCancelar.Location = new System.Drawing.Point(1327, 308);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(230, 92);
+            this.btnCancelar.Size = new System.Drawing.Size(345, 92);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -285,27 +301,11 @@
             this.txtDniEstudiante.Size = new System.Drawing.Size(338, 35);
             this.txtDniEstudiante.TabIndex = 0;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 328);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(248, 29);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Fecha de Nacimiento:";
-            // 
-            // dtpFechaNacEstudiante
-            // 
-            this.dtpFechaNacEstudiante.Location = new System.Drawing.Point(292, 328);
-            this.dtpFechaNacEstudiante.Name = "dtpFechaNacEstudiante";
-            this.dtpFechaNacEstudiante.Size = new System.Drawing.Size(438, 35);
-            this.dtpFechaNacEstudiante.TabIndex = 15;
-            // 
             // frmEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1962, 1374);
+            this.ClientSize = new System.Drawing.Size(2117, 1374);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);

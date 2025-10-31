@@ -149,9 +149,9 @@
             this.cbxEstado.AutoSize = true;
             this.cbxEstado.Location = new System.Drawing.Point(665, 257);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(223, 33);
+            this.cbxEstado.Size = new System.Drawing.Size(256, 33);
             this.cbxEstado.TabIndex = 13;
-            this.cbxEstado.Text = "Estado del Tutor";
+            this.cbxEstado.Text = "Estado del Docente";
             this.cbxEstado.UseVisualStyleBackColor = true;
             // 
             // label7

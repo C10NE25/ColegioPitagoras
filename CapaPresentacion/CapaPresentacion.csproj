@@ -46,16 +46,178 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmAdministrativo\frmBoletaInscripcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmAdministrativo\frmBoletaInscripcion.Designer.cs">
+      <DependentUpon>frmBoletaInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmBoletaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmBoletaMatricula.Designer.cs">
+      <DependentUpon>frmBoletaMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmCarpetaInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmCarpetaInscripcion.Designer.cs">
+      <DependentUpon>frmCarpetaInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmDocumento.Designer.cs">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmMatricula.Designer.cs">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmBoletaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmBoletaPago.Designer.cs">
+      <DependentUpon>frmBoletaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmAsistencias.Designer.cs">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmDocente.Designer.cs">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmEstudiante.Designer.cs">
+      <DependentUpon>frmEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmGradoAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmGradoAcademico.Designer.cs">
+      <DependentUpon>frmGradoAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmNivelAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmNivelAcademico.Designer.cs">
+      <DependentUpon>frmNivelAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmNotas.Designer.cs">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmTutor.Designer.cs">
+      <DependentUpon>frmTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdministrativo\frmTipoDocumento.Designer.cs">
+      <DependentUpon>frmTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmPlanPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmPlanPago.Designer.cs">
+      <DependentUpon>frmPlanPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoPlanPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoPlanPago.Designer.cs">
+      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdministrativo\frmBoletaInscripcion.resx">
+      <DependentUpon>frmBoletaInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmBoletaMatricula.resx">
+      <DependentUpon>frmBoletaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmCarpetaInscripcion.resx">
+      <DependentUpon>frmCarpetaInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmDocumento.resx">
+      <DependentUpon>frmDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmMatricula.resx">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmBoletaPago.resx">
+      <DependentUpon>frmBoletaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmAsistencias.resx">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmDocente.resx">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmEstudiante.resx">
+      <DependentUpon>frmEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmGradoAcademico.resx">
+      <DependentUpon>frmGradoAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmNivelAcademico.resx">
+      <DependentUpon>frmNivelAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmNotas.resx">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmTutor.resx">
+      <DependentUpon>frmTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdministrativo\frmTipoDocumento.resx">
+      <DependentUpon>frmTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmPlanPago.resx">
+      <DependentUpon>frmPlanPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmTipoPlanPago.resx">
+      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +240,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{040f2e2f-7c11-4b04-9217-143926ba0826}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{c3b5f156-f7d5-441c-8eb0-f914342a1554}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

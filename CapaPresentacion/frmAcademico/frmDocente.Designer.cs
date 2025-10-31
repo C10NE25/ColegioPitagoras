@@ -116,7 +116,7 @@
             this.dgvDocente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDocente.Size = new System.Drawing.Size(1432, 601);
             this.dgvDocente.TabIndex = 18;
-            this.dgvDocente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellDoubleClick);
+            this.dgvDocente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocente_CellClick);
             this.dgvDocente.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDocente_DataBindingComplete);
             // 
             // gbxDocente

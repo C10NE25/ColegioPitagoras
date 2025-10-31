@@ -73,17 +73,6 @@ namespace CapaPresentacion
             listarDocente();
         }
 
-        private void dgvDocente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
-            txtIDDocente.Text = fila.Cells[0].Value.ToString();
-            txtDniDocente.Text = fila.Cells[1].Value.ToString();
-            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
-            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
-            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -141,6 +130,18 @@ namespace CapaPresentacion
         private void dgvDocente_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvDocente.ClearSelection();
+        }
+
+        private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
+            txtIDDocente.Text = fila.Cells[0].Value.ToString();
+            txtDniDocente.Text = fila.Cells[1].Value.ToString();
+            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
+            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
+            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
+            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
         }
     }
 }

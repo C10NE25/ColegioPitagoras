@@ -68,7 +68,7 @@
             // panelMenuLateral
             // 
             this.panelMenuLateral.AutoScroll = true;
-            this.panelMenuLateral.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelMenuLateral.Controls.Add(this.panelTesoreriaSubMenu);
             this.panelMenuLateral.Controls.Add(this.btnTesoreria);
             this.panelMenuLateral.Controls.Add(this.panelAdministrativoSubMenu);
@@ -78,29 +78,33 @@
             this.panelMenuLateral.Controls.Add(this.panelLogo);
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuLateral.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(465, 1656);
+            this.panelMenuLateral.Size = new System.Drawing.Size(199, 761);
             this.panelMenuLateral.TabIndex = 0;
             // 
             // panelTesoreriaSubMenu
             // 
-            this.panelTesoreriaSubMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelTesoreriaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelTesoreriaSubMenu.Controls.Add(this.btnBoletaPago);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnPlanPago);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnTipoPlanPago);
             this.panelTesoreriaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTesoreriaSubMenu.Location = new System.Drawing.Point(0, 1610);
+            this.panelTesoreriaSubMenu.Location = new System.Drawing.Point(0, 723);
+            this.panelTesoreriaSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelTesoreriaSubMenu.Name = "panelTesoreriaSubMenu";
-            this.panelTesoreriaSubMenu.Size = new System.Drawing.Size(427, 245);
+            this.panelTesoreriaSubMenu.Size = new System.Drawing.Size(182, 132);
             this.panelTesoreriaSubMenu.TabIndex = 5;
             // 
             // btnBoletaPago
             // 
-            this.btnBoletaPago.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnBoletaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnBoletaPago.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaPago.Location = new System.Drawing.Point(0, 146);
+            this.btnBoletaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBoletaPago.Location = new System.Drawing.Point(0, 66);
+            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnBoletaPago.Name = "btnBoletaPago";
-            this.btnBoletaPago.Size = new System.Drawing.Size(427, 73);
+            this.btnBoletaPago.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaPago.TabIndex = 8;
             this.btnBoletaPago.Text = "Boleta de Pago";
             this.btnBoletaPago.UseVisualStyleBackColor = false;
@@ -108,11 +112,13 @@
             // 
             // btnPlanPago
             // 
-            this.btnPlanPago.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnPlanPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlanPago.Location = new System.Drawing.Point(0, 73);
+            this.btnPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlanPago.Location = new System.Drawing.Point(0, 33);
+            this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnPlanPago.Name = "btnPlanPago";
-            this.btnPlanPago.Size = new System.Drawing.Size(427, 73);
+            this.btnPlanPago.Size = new System.Drawing.Size(182, 33);
             this.btnPlanPago.TabIndex = 7;
             this.btnPlanPago.Text = "Plan de Pago";
             this.btnPlanPago.UseVisualStyleBackColor = false;
@@ -120,11 +126,13 @@
             // 
             // btnTipoPlanPago
             // 
-            this.btnTipoPlanPago.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnTipoPlanPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnTipoPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoPlanPago.Location = new System.Drawing.Point(0, 0);
+            this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnTipoPlanPago.Name = "btnTipoPlanPago";
-            this.btnTipoPlanPago.Size = new System.Drawing.Size(427, 73);
+            this.btnTipoPlanPago.Size = new System.Drawing.Size(182, 33);
             this.btnTipoPlanPago.TabIndex = 6;
             this.btnTipoPlanPago.Text = "Tipo de Plan de Pago";
             this.btnTipoPlanPago.UseVisualStyleBackColor = false;
@@ -133,9 +141,12 @@
             // btnTesoreria
             // 
             this.btnTesoreria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTesoreria.Location = new System.Drawing.Point(0, 1515);
+            this.btnTesoreria.FlatAppearance.BorderSize = 0;
+            this.btnTesoreria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTesoreria.Location = new System.Drawing.Point(0, 680);
+            this.btnTesoreria.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnTesoreria.Name = "btnTesoreria";
-            this.btnTesoreria.Size = new System.Drawing.Size(427, 95);
+            this.btnTesoreria.Size = new System.Drawing.Size(182, 43);
             this.btnTesoreria.TabIndex = 4;
             this.btnTesoreria.Text = "Tesoreria";
             this.btnTesoreria.UseVisualStyleBackColor = true;
@@ -143,7 +154,7 @@
             // 
             // panelAdministrativoSubMenu
             // 
-            this.panelAdministrativoSubMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelAdministrativoSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelAdministrativoSubMenu.Controls.Add(this.btnMatricula);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnInscripcion);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnBoletaMatricula);
@@ -152,18 +163,22 @@
             this.panelAdministrativoSubMenu.Controls.Add(this.btnDocumento);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnTipoDocumento);
             this.panelAdministrativoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdministrativoSubMenu.Location = new System.Drawing.Point(0, 982);
+            this.panelAdministrativoSubMenu.Location = new System.Drawing.Point(0, 441);
+            this.panelAdministrativoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelAdministrativoSubMenu.Name = "panelAdministrativoSubMenu";
-            this.panelAdministrativoSubMenu.Size = new System.Drawing.Size(427, 533);
+            this.panelAdministrativoSubMenu.Size = new System.Drawing.Size(182, 239);
             this.panelAdministrativoSubMenu.TabIndex = 3;
             // 
             // btnMatricula
             // 
-            this.btnMatricula.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnMatricula.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMatricula.Location = new System.Drawing.Point(0, 438);
+            this.btnMatricula.FlatAppearance.BorderSize = 0;
+            this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatricula.Location = new System.Drawing.Point(0, 198);
+            this.btnMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnMatricula.Name = "btnMatricula";
-            this.btnMatricula.Size = new System.Drawing.Size(427, 75);
+            this.btnMatricula.Size = new System.Drawing.Size(182, 34);
             this.btnMatricula.TabIndex = 12;
             this.btnMatricula.Text = "Matricula";
             this.btnMatricula.UseVisualStyleBackColor = false;
@@ -171,11 +186,14 @@
             // 
             // btnInscripcion
             // 
-            this.btnInscripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInscripcion.Location = new System.Drawing.Point(0, 365);
+            this.btnInscripcion.FlatAppearance.BorderSize = 0;
+            this.btnInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscripcion.Location = new System.Drawing.Point(0, 165);
+            this.btnInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnInscripcion.Name = "btnInscripcion";
-            this.btnInscripcion.Size = new System.Drawing.Size(427, 73);
+            this.btnInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnInscripcion.TabIndex = 11;
             this.btnInscripcion.Text = "Inscripcion";
             this.btnInscripcion.UseVisualStyleBackColor = false;
@@ -183,11 +201,14 @@
             // 
             // btnBoletaMatricula
             // 
-            this.btnBoletaMatricula.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnBoletaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnBoletaMatricula.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaMatricula.Location = new System.Drawing.Point(0, 292);
+            this.btnBoletaMatricula.FlatAppearance.BorderSize = 0;
+            this.btnBoletaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBoletaMatricula.Location = new System.Drawing.Point(0, 132);
+            this.btnBoletaMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnBoletaMatricula.Name = "btnBoletaMatricula";
-            this.btnBoletaMatricula.Size = new System.Drawing.Size(427, 73);
+            this.btnBoletaMatricula.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaMatricula.TabIndex = 10;
             this.btnBoletaMatricula.Text = "Boleta de Matricula";
             this.btnBoletaMatricula.UseVisualStyleBackColor = false;
@@ -195,11 +216,14 @@
             // 
             // btnBoletaInscripcion
             // 
-            this.btnBoletaInscripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnBoletaInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnBoletaInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaInscripcion.Location = new System.Drawing.Point(0, 219);
+            this.btnBoletaInscripcion.FlatAppearance.BorderSize = 0;
+            this.btnBoletaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBoletaInscripcion.Location = new System.Drawing.Point(0, 99);
+            this.btnBoletaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnBoletaInscripcion.Name = "btnBoletaInscripcion";
-            this.btnBoletaInscripcion.Size = new System.Drawing.Size(427, 73);
+            this.btnBoletaInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaInscripcion.TabIndex = 9;
             this.btnBoletaInscripcion.Text = "Boleta de Inscripcion";
             this.btnBoletaInscripcion.UseVisualStyleBackColor = false;
@@ -207,11 +231,14 @@
             // 
             // btnCarpetaInscripcion
             // 
-            this.btnCarpetaInscripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCarpetaInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnCarpetaInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCarpetaInscripcion.Location = new System.Drawing.Point(0, 146);
+            this.btnCarpetaInscripcion.FlatAppearance.BorderSize = 0;
+            this.btnCarpetaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarpetaInscripcion.Location = new System.Drawing.Point(0, 66);
+            this.btnCarpetaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnCarpetaInscripcion.Name = "btnCarpetaInscripcion";
-            this.btnCarpetaInscripcion.Size = new System.Drawing.Size(427, 73);
+            this.btnCarpetaInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnCarpetaInscripcion.TabIndex = 8;
             this.btnCarpetaInscripcion.Text = "Carpeta de Inscripcion";
             this.btnCarpetaInscripcion.UseVisualStyleBackColor = false;
@@ -219,11 +246,14 @@
             // 
             // btnDocumento
             // 
-            this.btnDocumento.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnDocumento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDocumento.Location = new System.Drawing.Point(0, 73);
+            this.btnDocumento.FlatAppearance.BorderSize = 0;
+            this.btnDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocumento.Location = new System.Drawing.Point(0, 33);
+            this.btnDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnDocumento.Name = "btnDocumento";
-            this.btnDocumento.Size = new System.Drawing.Size(427, 73);
+            this.btnDocumento.Size = new System.Drawing.Size(182, 33);
             this.btnDocumento.TabIndex = 7;
             this.btnDocumento.Text = "Documento";
             this.btnDocumento.UseVisualStyleBackColor = false;
@@ -231,11 +261,14 @@
             // 
             // btnTipoDocumento
             // 
-            this.btnTipoDocumento.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnTipoDocumento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoDocumento.FlatAppearance.BorderSize = 0;
+            this.btnTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDocumento.Location = new System.Drawing.Point(0, 0);
+            this.btnTipoDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnTipoDocumento.Name = "btnTipoDocumento";
-            this.btnTipoDocumento.Size = new System.Drawing.Size(427, 73);
+            this.btnTipoDocumento.Size = new System.Drawing.Size(182, 33);
             this.btnTipoDocumento.TabIndex = 6;
             this.btnTipoDocumento.Text = "Tipo de Documento";
             this.btnTipoDocumento.UseVisualStyleBackColor = false;
@@ -244,9 +277,12 @@
             // btnAdministrativo
             // 
             this.btnAdministrativo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdministrativo.Location = new System.Drawing.Point(0, 887);
+            this.btnAdministrativo.FlatAppearance.BorderSize = 0;
+            this.btnAdministrativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdministrativo.Location = new System.Drawing.Point(0, 398);
+            this.btnAdministrativo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnAdministrativo.Name = "btnAdministrativo";
-            this.btnAdministrativo.Size = new System.Drawing.Size(427, 95);
+            this.btnAdministrativo.Size = new System.Drawing.Size(182, 43);
             this.btnAdministrativo.TabIndex = 2;
             this.btnAdministrativo.Text = "Administrativo";
             this.btnAdministrativo.UseVisualStyleBackColor = true;
@@ -254,7 +290,7 @@
             // 
             // panelAcademicoSubMenu
             // 
-            this.panelAcademicoSubMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelAcademicoSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.panelAcademicoSubMenu.Controls.Add(this.btnNotas);
             this.panelAcademicoSubMenu.Controls.Add(this.btnAsistencias);
             this.panelAcademicoSubMenu.Controls.Add(this.btnCurso);
@@ -264,18 +300,22 @@
             this.panelAcademicoSubMenu.Controls.Add(this.btnEstudiante);
             this.panelAcademicoSubMenu.Controls.Add(this.btnTutor);
             this.panelAcademicoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAcademicoSubMenu.Location = new System.Drawing.Point(0, 287);
+            this.panelAcademicoSubMenu.Location = new System.Drawing.Point(0, 129);
+            this.panelAcademicoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelAcademicoSubMenu.Name = "panelAcademicoSubMenu";
-            this.panelAcademicoSubMenu.Size = new System.Drawing.Size(427, 600);
+            this.panelAcademicoSubMenu.Size = new System.Drawing.Size(182, 269);
             this.panelAcademicoSubMenu.TabIndex = 1;
             // 
             // btnNotas
             // 
-            this.btnNotas.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnNotas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNotas.Location = new System.Drawing.Point(0, 511);
+            this.btnNotas.FlatAppearance.BorderSize = 0;
+            this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotas.Location = new System.Drawing.Point(0, 231);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(427, 73);
+            this.btnNotas.Size = new System.Drawing.Size(182, 33);
             this.btnNotas.TabIndex = 14;
             this.btnNotas.Text = "Notas";
             this.btnNotas.UseVisualStyleBackColor = false;
@@ -283,11 +323,14 @@
             // 
             // btnAsistencias
             // 
-            this.btnAsistencias.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnAsistencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnAsistencias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAsistencias.Location = new System.Drawing.Point(0, 438);
+            this.btnAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistencias.Location = new System.Drawing.Point(0, 198);
+            this.btnAsistencias.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnAsistencias.Name = "btnAsistencias";
-            this.btnAsistencias.Size = new System.Drawing.Size(427, 73);
+            this.btnAsistencias.Size = new System.Drawing.Size(182, 33);
             this.btnAsistencias.TabIndex = 13;
             this.btnAsistencias.Text = "Asistencias";
             this.btnAsistencias.UseVisualStyleBackColor = false;
@@ -295,11 +338,14 @@
             // 
             // btnCurso
             // 
-            this.btnCurso.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnCurso.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCurso.Location = new System.Drawing.Point(0, 365);
+            this.btnCurso.FlatAppearance.BorderSize = 0;
+            this.btnCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCurso.Location = new System.Drawing.Point(0, 165);
+            this.btnCurso.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnCurso.Name = "btnCurso";
-            this.btnCurso.Size = new System.Drawing.Size(427, 73);
+            this.btnCurso.Size = new System.Drawing.Size(182, 33);
             this.btnCurso.TabIndex = 5;
             this.btnCurso.Text = "Curso";
             this.btnCurso.UseVisualStyleBackColor = false;
@@ -307,11 +353,14 @@
             // 
             // btnGradoAcademico
             // 
-            this.btnGradoAcademico.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnGradoAcademico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnGradoAcademico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGradoAcademico.Location = new System.Drawing.Point(0, 292);
+            this.btnGradoAcademico.FlatAppearance.BorderSize = 0;
+            this.btnGradoAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGradoAcademico.Location = new System.Drawing.Point(0, 132);
+            this.btnGradoAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnGradoAcademico.Name = "btnGradoAcademico";
-            this.btnGradoAcademico.Size = new System.Drawing.Size(427, 73);
+            this.btnGradoAcademico.Size = new System.Drawing.Size(182, 33);
             this.btnGradoAcademico.TabIndex = 4;
             this.btnGradoAcademico.Text = "Grado Academico";
             this.btnGradoAcademico.UseVisualStyleBackColor = false;
@@ -319,11 +368,14 @@
             // 
             // btnNivelAcademico
             // 
-            this.btnNivelAcademico.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNivelAcademico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnNivelAcademico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNivelAcademico.Location = new System.Drawing.Point(0, 219);
+            this.btnNivelAcademico.FlatAppearance.BorderSize = 0;
+            this.btnNivelAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNivelAcademico.Location = new System.Drawing.Point(0, 99);
+            this.btnNivelAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnNivelAcademico.Name = "btnNivelAcademico";
-            this.btnNivelAcademico.Size = new System.Drawing.Size(427, 73);
+            this.btnNivelAcademico.Size = new System.Drawing.Size(182, 33);
             this.btnNivelAcademico.TabIndex = 3;
             this.btnNivelAcademico.Text = "Nivel Academico";
             this.btnNivelAcademico.UseVisualStyleBackColor = false;
@@ -331,11 +383,14 @@
             // 
             // btnDocente
             // 
-            this.btnDocente.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnDocente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnDocente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDocente.Location = new System.Drawing.Point(0, 146);
+            this.btnDocente.FlatAppearance.BorderSize = 0;
+            this.btnDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDocente.Location = new System.Drawing.Point(0, 66);
+            this.btnDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnDocente.Name = "btnDocente";
-            this.btnDocente.Size = new System.Drawing.Size(427, 73);
+            this.btnDocente.Size = new System.Drawing.Size(182, 33);
             this.btnDocente.TabIndex = 2;
             this.btnDocente.Text = "Docente";
             this.btnDocente.UseVisualStyleBackColor = false;
@@ -343,11 +398,14 @@
             // 
             // btnEstudiante
             // 
-            this.btnEstudiante.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnEstudiante.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEstudiante.Location = new System.Drawing.Point(0, 73);
+            this.btnEstudiante.FlatAppearance.BorderSize = 0;
+            this.btnEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstudiante.Location = new System.Drawing.Point(0, 33);
+            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnEstudiante.Name = "btnEstudiante";
-            this.btnEstudiante.Size = new System.Drawing.Size(427, 73);
+            this.btnEstudiante.Size = new System.Drawing.Size(182, 33);
             this.btnEstudiante.TabIndex = 1;
             this.btnEstudiante.Text = "Estudiante";
             this.btnEstudiante.UseVisualStyleBackColor = false;
@@ -355,11 +413,14 @@
             // 
             // btnTutor
             // 
-            this.btnTutor.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnTutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnTutor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTutor.FlatAppearance.BorderSize = 0;
+            this.btnTutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTutor.Location = new System.Drawing.Point(0, 0);
+            this.btnTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnTutor.Name = "btnTutor";
-            this.btnTutor.Size = new System.Drawing.Size(427, 73);
+            this.btnTutor.Size = new System.Drawing.Size(182, 33);
             this.btnTutor.TabIndex = 0;
             this.btnTutor.Text = "Tutor";
             this.btnTutor.UseVisualStyleBackColor = false;
@@ -368,9 +429,12 @@
             // btnAcademico
             // 
             this.btnAcademico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAcademico.Location = new System.Drawing.Point(0, 192);
+            this.btnAcademico.FlatAppearance.BorderSize = 0;
+            this.btnAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcademico.Location = new System.Drawing.Point(0, 86);
+            this.btnAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnAcademico.Name = "btnAcademico";
-            this.btnAcademico.Size = new System.Drawing.Size(427, 95);
+            this.btnAcademico.Size = new System.Drawing.Size(182, 43);
             this.btnAcademico.TabIndex = 1;
             this.btnAcademico.Text = "Academico";
             this.btnAcademico.UseVisualStyleBackColor = true;
@@ -378,11 +442,12 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(427, 192);
+            this.panelLogo.Size = new System.Drawing.Size(182, 86);
             this.panelLogo.TabIndex = 1;
             // 
             // panelChildForm
@@ -390,31 +455,32 @@
             this.panelChildForm.BackColor = System.Drawing.Color.DimGray;
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(465, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(199, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(2245, 1656);
+            this.panelChildForm.Size = new System.Drawing.Size(1035, 761);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(789, 461);
+            this.pictureBox1.Location = new System.Drawing.Point(374, 216);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(549, 618);
+            this.pictureBox1.Size = new System.Drawing.Size(235, 277);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2710, 1656);
+            this.ClientSize = new System.Drawing.Size(1234, 761);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenuLateral);
-            this.Margin = new System.Windows.Forms.Padding(7);
-            this.MinimumSize = new System.Drawing.Size(2268, 1461);
+            this.MinimumSize = new System.Drawing.Size(740, 477);
             this.Name = "frmMenuPrincipal";
             this.Text = "t ";
             this.panelMenuLateral.ResumeLayout(false);

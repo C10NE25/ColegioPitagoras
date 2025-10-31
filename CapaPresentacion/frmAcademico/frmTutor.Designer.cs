@@ -69,6 +69,7 @@
             this.dgvTutor.Size = new System.Drawing.Size(1654, 600);
             this.dgvTutor.TabIndex = 0;
             this.dgvTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellClick);
+            this.dgvTutor.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTutor_DataBindingComplete);
             // 
             // btnAgregar
             // 

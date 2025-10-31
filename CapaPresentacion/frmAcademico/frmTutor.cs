@@ -32,9 +32,23 @@ namespace CapaPresentacion
         {
             this.Close();
         }
-
+        void deshabilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnDeshabilitar.Enabled = false;
+            btnCerrar.Enabled = false;
+        }
+        void habilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            btnDeshabilitar.Enabled = true;
+            btnCerrar.Enabled = true;
+        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            deshabilitarBotonesPrincipales();
             gbxTutor.Enabled = true;
             btnAgregar.Visible = true;
             btnModificar.Visible = false;
@@ -73,11 +87,13 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxTutor.Enabled = false;
             listarTutor();
+            habilitarBotonesPrincipales();
         }
 
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            deshabilitarBotonesPrincipales();
             gbxTutor.Enabled=true;
             btnModificar.Visible = true;
             btnAgregar.Visible = false;
@@ -104,11 +120,13 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxTutor.Enabled = false;
             listarTutor();
+            habilitarBotonesPrincipales();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             gbxTutor.Enabled = false;
+            habilitarBotonesPrincipales();
         }
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
@@ -140,6 +158,11 @@ namespace CapaPresentacion
             txtNroCelularTutor.Text = fila.Cells[4].Value.ToString();
             txtDireccionTutor.Text = fila.Cells[5].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
+        }
+
+        private void dgvTutor_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvTutor.ClearSelection();
         }
     }
 }

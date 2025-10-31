@@ -21,7 +21,20 @@ namespace CapaPresentacion
             txtIDDocente.Enabled = false;
             listarDocente();
         }
-
+        void deshabilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnDeshabilitar.Enabled = false;
+            btnCerrar.Enabled = false;
+        }
+        void habilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            btnDeshabilitar.Enabled = true;
+            btnCerrar.Enabled = true;
+        }
         private void listarDocente()
         {
             dgvDocente.DataSource = logDocente.Instancia.listarDocentes();
@@ -38,6 +51,7 @@ namespace CapaPresentacion
             btnAgregar.Visible = true;
             limpiarVariables();
             btnModificar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void limpiarVariables()
@@ -71,6 +85,7 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxDocente.Enabled = false;
             listarDocente();
+            habilitarBotonesPrincipales();
         }
 
 
@@ -79,6 +94,7 @@ namespace CapaPresentacion
             gbxDocente.Enabled = true;
             btnModificar.Visible=true;
             btnAgregar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -102,11 +118,13 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxDocente.Enabled = false;
             listarDocente();
+            habilitarBotonesPrincipales();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             gbxDocente.Enabled = false;
+            habilitarBotonesPrincipales();
         }
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)

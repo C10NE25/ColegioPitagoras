@@ -115,9 +115,11 @@
             this.dgvEstudiante.ReadOnly = true;
             this.dgvEstudiante.RowHeadersWidth = 92;
             this.dgvEstudiante.RowTemplate.Height = 37;
+            this.dgvEstudiante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEstudiante.Size = new System.Drawing.Size(1545, 601);
             this.dgvEstudiante.TabIndex = 12;
             this.dgvEstudiante.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiante_CellClick);
+            this.dgvEstudiante.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvEstudiante_DataBindingComplete);
             // 
             // gbxEstudiante
             // 

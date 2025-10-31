@@ -27,13 +27,27 @@ namespace CapaPresentacion
             dgvEstudiante.DataSource = logEstudiante.Instancia.ListarEstudiantes();
         }
 
-
+        void deshabilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnDeshabilitar.Enabled = false;
+            btnCerrar.Enabled = false;
+        }
+        void habilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            btnDeshabilitar.Enabled = true;
+            btnCerrar.Enabled = true;
+        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             gbxEstudiante.Enabled = true;
             btnAgregar.Visible = true;
             limpiarVariables();
             btnModificar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void limpiarVariables()
@@ -69,26 +83,16 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxEstudiante.Enabled = false;
             listarEstudiante();
+            habilitarBotonesPrincipales();
         }
 
-        private void dgvEstudiante_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dgvEstudiante.Rows[e.RowIndex];
-            txtIDEstudiante.Text = fila.Cells[0].Value.ToString();
-            txtNombreEstudiante.Text = fila.Cells[1].Value.ToString();
-            txtApellidoEstudiante.Text = fila.Cells[2].Value.ToString();
-            txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
-            dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
-            txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();
-            txtIDTutor.Text = fila.Cells[6].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             gbxEstudiante.Enabled = true;
             btnModificar.Visible = true;
             btnAgregar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -113,12 +117,13 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxEstudiante.Enabled = false;
             listarEstudiante();
-
+            habilitarBotonesPrincipales();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             gbxEstudiante.Enabled = false;
+            habilitarBotonesPrincipales();
         }
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
@@ -143,6 +148,24 @@ namespace CapaPresentacion
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvEstudiante_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvEstudiante.Rows[e.RowIndex];
+            txtIDEstudiante.Text = fila.Cells[0].Value.ToString();
+            txtNombreEstudiante.Text = fila.Cells[1].Value.ToString();
+            txtApellidoEstudiante.Text = fila.Cells[2].Value.ToString();
+            txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
+            dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
+            txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();
+            txtIDTutor.Text = fila.Cells[6].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
+        }
+
+        private void dgvEstudiante_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvEstudiante.ClearSelection();
         }
     }
 }

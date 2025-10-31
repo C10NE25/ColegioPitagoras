@@ -21,7 +21,20 @@ namespace CapaPresentacion
             txtIDDocente.Enabled = false;
             listarDocente();
         }
-
+        void deshabilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = false;
+            btnEditar.Enabled = false;
+            btnDeshabilitar.Enabled = false;
+            btnCerrar.Enabled = false;
+        }
+        void habilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = true;
+            btnEditar.Enabled = true;
+            btnDeshabilitar.Enabled = true;
+            btnCerrar.Enabled = true;
+        }
         private void listarDocente()
         {
             dgvDocente.DataSource = logDocente.Instancia.listarDocentes();
@@ -38,6 +51,7 @@ namespace CapaPresentacion
             btnAgregar.Visible = true;
             limpiarVariables();
             btnModificar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void limpiarVariables()
@@ -71,25 +85,16 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxDocente.Enabled = false;
             listarDocente();
+            habilitarBotonesPrincipales();
         }
 
-        private void dgvDocente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
-            txtIDDocente.Text = fila.Cells[0].Value.ToString();
-            txtDniDocente.Text = fila.Cells[1].Value.ToString();
-            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
-            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
-            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             gbxDocente.Enabled = true;
             btnModificar.Visible=true;
             btnAgregar.Visible = false;
+            deshabilitarBotonesPrincipales();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -113,11 +118,13 @@ namespace CapaPresentacion
             limpiarVariables();
             gbxDocente.Enabled = false;
             listarDocente();
+            habilitarBotonesPrincipales();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             gbxDocente.Enabled = false;
+            habilitarBotonesPrincipales();
         }
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
@@ -141,6 +148,18 @@ namespace CapaPresentacion
         private void dgvDocente_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvDocente.ClearSelection();
+        }
+
+        private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
+            txtIDDocente.Text = fila.Cells[0].Value.ToString();
+            txtDniDocente.Text = fila.Cells[1].Value.ToString();
+            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
+            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
+            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
+            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
         }
     }
 }

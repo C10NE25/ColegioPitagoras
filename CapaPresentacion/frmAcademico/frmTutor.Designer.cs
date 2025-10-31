@@ -57,24 +57,28 @@
             // 
             // dgvTutor
             // 
+            this.dgvTutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTutor.Location = new System.Drawing.Point(54, 78);
             this.dgvTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvTutor.MultiSelect = false;
             this.dgvTutor.Name = "dgvTutor";
             this.dgvTutor.ReadOnly = true;
             this.dgvTutor.RowHeadersWidth = 92;
             this.dgvTutor.RowTemplate.Height = 37;
-            this.dgvTutor.Size = new System.Drawing.Size(800, 269);
+            this.dgvTutor.Size = new System.Drawing.Size(709, 269);
             this.dgvTutor.TabIndex = 0;
             this.dgvTutor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellDoubleClick);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(549, 26);
+            this.btnAgregar.Location = new System.Drawing.Point(578, 26);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(181, 41);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -83,10 +87,10 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(549, 83);
+            this.btnModificar.Location = new System.Drawing.Point(578, 83);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(99, 41);
+            this.btnModificar.Size = new System.Drawing.Size(181, 41);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -95,10 +99,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(549, 138);
+            this.btnCancelar.Location = new System.Drawing.Point(578, 138);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(181, 41);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -106,10 +110,11 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(876, 283);
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.Location = new System.Drawing.Point(810, 283);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(99, 43);
+            this.btnCerrar.Size = new System.Drawing.Size(165, 43);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -128,6 +133,8 @@
             // 
             // gbxTutor
             // 
+            this.gbxTutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxTutor.Controls.Add(this.cbxEstado);
             this.gbxTutor.Controls.Add(this.label7);
             this.gbxTutor.Controls.Add(this.btnAgregar);
@@ -144,11 +151,11 @@
             this.gbxTutor.Controls.Add(this.txtNombreTutor);
             this.gbxTutor.Controls.Add(this.txtIDTutor);
             this.gbxTutor.Controls.Add(this.txtDniTutor);
-            this.gbxTutor.Location = new System.Drawing.Point(59, 387);
+            this.gbxTutor.Location = new System.Drawing.Point(79, 388);
             this.gbxTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.gbxTutor.Name = "gbxTutor";
             this.gbxTutor.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.gbxTutor.Size = new System.Drawing.Size(669, 195);
+            this.gbxTutor.Size = new System.Drawing.Size(780, 195);
             this.gbxTutor.TabIndex = 6;
             this.gbxTutor.TabStop = false;
             this.gbxTutor.Text = "Datos del Tutor";
@@ -274,10 +281,11 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(876, 89);
+            this.btnNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNuevo.Location = new System.Drawing.Point(810, 89);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(99, 41);
+            this.btnNuevo.Size = new System.Drawing.Size(165, 41);
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -285,10 +293,11 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(876, 156);
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Location = new System.Drawing.Point(810, 156);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(99, 41);
+            this.btnEditar.Size = new System.Drawing.Size(165, 41);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -296,10 +305,11 @@
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(876, 219);
+            this.btnDeshabilitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeshabilitar.Location = new System.Drawing.Point(810, 219);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(99, 43);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(165, 43);
             this.btnDeshabilitar.TabIndex = 9;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;

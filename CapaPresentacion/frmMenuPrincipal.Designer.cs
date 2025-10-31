@@ -483,7 +483,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 761);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenuLateral);
-            this.MinimumSize = new System.Drawing.Size(740, 477);
+            this.MinimumSize = new System.Drawing.Size(1250, 800);
             this.Name = "frmMenuPrincipal";
             this.Text = "t ";
             this.panelMenuLateral.ResumeLayout(false);

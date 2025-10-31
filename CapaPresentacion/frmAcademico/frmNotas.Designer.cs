@@ -35,6 +35,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvNota = new System.Windows.Forms.DataGridView();
             this.gbxNotas = new System.Windows.Forms.GroupBox();
+            this.cmbTipoEvaluacion = new System.Windows.Forms.ComboBox();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -46,16 +47,20 @@
             this.txtNotaNumerica = new System.Windows.Forms.TextBox();
             this.txtIDMatriculaEst = new System.Windows.Forms.TextBox();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
-            this.cmbTipoEvaluacion = new System.Windows.Forms.ComboBox();
+            this.gbxBusqueda = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMatriculaBusqueda = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNota)).BeginInit();
             this.gbxNotas.SuspendLayout();
+            this.gbxBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 79);
+            this.label1.Location = new System.Drawing.Point(121, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 56);
             this.label1.TabIndex = 47;
@@ -100,7 +105,7 @@
             // dgvNota
             // 
             this.dgvNota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNota.Location = new System.Drawing.Point(108, 167);
+            this.dgvNota.Location = new System.Drawing.Point(107, 255);
             this.dgvNota.Name = "dgvNota";
             this.dgvNota.ReadOnly = true;
             this.dgvNota.RowHeadersWidth = 92;
@@ -123,12 +128,20 @@
             this.gbxNotas.Controls.Add(this.txtNotaNumerica);
             this.gbxNotas.Controls.Add(this.txtIDMatriculaEst);
             this.gbxNotas.Controls.Add(this.txtIDCurso);
-            this.gbxNotas.Location = new System.Drawing.Point(119, 857);
+            this.gbxNotas.Location = new System.Drawing.Point(120, 906);
             this.gbxNotas.Name = "gbxNotas";
             this.gbxNotas.Size = new System.Drawing.Size(1562, 435);
             this.gbxNotas.TabIndex = 50;
             this.gbxNotas.TabStop = false;
             this.gbxNotas.Text = "Notas de estudiantes";
+            // 
+            // cmbTipoEvaluacion
+            // 
+            this.cmbTipoEvaluacion.FormattingEnabled = true;
+            this.cmbTipoEvaluacion.Location = new System.Drawing.Point(259, 192);
+            this.cmbTipoEvaluacion.Name = "cmbTipoEvaluacion";
+            this.cmbTipoEvaluacion.Size = new System.Drawing.Size(274, 37);
+            this.cmbTipoEvaluacion.TabIndex = 14;
             // 
             // cbxEstado
             // 
@@ -227,19 +240,49 @@
             this.txtIDCurso.Size = new System.Drawing.Size(338, 35);
             this.txtIDCurso.TabIndex = 0;
             // 
-            // cmbTipoEvaluacion
+            // gbxBusqueda
             // 
-            this.cmbTipoEvaluacion.FormattingEnabled = true;
-            this.cmbTipoEvaluacion.Location = new System.Drawing.Point(259, 192);
-            this.cmbTipoEvaluacion.Name = "cmbTipoEvaluacion";
-            this.cmbTipoEvaluacion.Size = new System.Drawing.Size(274, 37);
-            this.cmbTipoEvaluacion.TabIndex = 14;
+            this.gbxBusqueda.Controls.Add(this.btnBuscar);
+            this.gbxBusqueda.Controls.Add(this.txtMatriculaBusqueda);
+            this.gbxBusqueda.Controls.Add(this.label6);
+            this.gbxBusqueda.Location = new System.Drawing.Point(264, 129);
+            this.gbxBusqueda.Name = "gbxBusqueda";
+            this.gbxBusqueda.Size = new System.Drawing.Size(1221, 93);
+            this.gbxBusqueda.TabIndex = 54;
+            this.gbxBusqueda.TabStop = false;
+            this.gbxBusqueda.Text = "Busqueda de Notas por Alumno";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(261, 29);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Id Matricula Estudiante:";
+            // 
+            // txtMatriculaBusqueda
+            // 
+            this.txtMatriculaBusqueda.Location = new System.Drawing.Point(287, 45);
+            this.txtMatriculaBusqueda.Name = "txtMatriculaBusqueda";
+            this.txtMatriculaBusqueda.Size = new System.Drawing.Size(158, 35);
+            this.txtMatriculaBusqueda.TabIndex = 56;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(628, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(224, 61);
+            this.btnBuscar.TabIndex = 57;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // frmNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1959, 1374);
+            this.Controls.Add(this.gbxBusqueda);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -252,6 +295,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvNota)).EndInit();
             this.gbxNotas.ResumeLayout(false);
             this.gbxNotas.PerformLayout();
+            this.gbxBusqueda.ResumeLayout(false);
+            this.gbxBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +323,9 @@
         private System.Windows.Forms.TextBox txtIDMatriculaEst;
         private System.Windows.Forms.TextBox txtIDCurso;
         private System.Windows.Forms.ComboBox cmbTipoEvaluacion;
+        private System.Windows.Forms.GroupBox gbxBusqueda;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtMatriculaBusqueda;
+        private System.Windows.Forms.Label label6;
     }
 }

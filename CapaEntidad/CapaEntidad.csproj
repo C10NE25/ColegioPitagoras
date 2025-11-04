@@ -42,15 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entApoderado.cs" />
-    <Compile Include="entCargo.cs" />
+    <Compile Include="entAsignatura.cs" />
+    <Compile Include="entTipoCargo.cs" />
     <Compile Include="entCurso.cs" />
     <Compile Include="entDocente.cs" />
     <Compile Include="entEstudiante.cs" />
     <Compile Include="entGradoAcademico.cs" />
     <Compile Include="entMatricula.cs" />
+    <Compile Include="entModalidadPago.cs" />
     <Compile Include="entNivelAcademico.cs" />
-    <Compile Include="Parentesco.cs" />
+    <Compile Include="entParentesco.cs" />
+    <Compile Include="entPeriodoAcademico.cs" />
+    <Compile Include="entTarifa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="entSeccion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

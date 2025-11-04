@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    internal class entCurso
+    public class entCurso
     {
+        public int IdCurso { get; set; }
+        public string NombreCurso { get; set; }
+        public int IdDocente { get; set; } // llave foranea
+        public int IdGrado { get; set; } // llave foranea
+        public bool EstadoCurso { get; set; }
     }
 }

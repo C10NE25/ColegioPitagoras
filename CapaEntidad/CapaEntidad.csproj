@@ -49,6 +49,7 @@
     <Compile Include="entGradoAcademico.cs" />
     <Compile Include="entMatricula.cs" />
     <Compile Include="entNivelAcademico.cs" />
+    <Compile Include="Parentesco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

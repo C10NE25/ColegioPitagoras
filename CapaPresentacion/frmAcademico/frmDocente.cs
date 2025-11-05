@@ -18,7 +18,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gbxDocente.Enabled = false;
-            txtIDDocente.Enabled = false;
+            txtBIDDocente.Enabled = false;
             listarDocente();
         }
 
@@ -42,13 +42,13 @@ namespace CapaPresentacion
 
         private void limpiarVariables()
         {
-            txtIDDocente.Text = "";
-            txtDniDocente.Text = "";
-            txtNombreDocente.Text = "";
-            txtApellidoDocente.Text = "";
-            txtNroCelularDocente.Text = "";
-            txtDireccionDocente.Text = "";
-            cbxEstado.Checked = false;
+            txtBIDDocente.Text = "";
+            txtBdniDocente.Text = "";
+            txtBNombreDocente.Text = "";
+            txtBApellidoPaternoDocente.Text = "";
+            txtBTelefonoDocente.Text = "";
+            txtBDireccionDocente.Text = "";
+            cbxEstadoDocente.Checked = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -56,12 +56,12 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.DniDoc = txtDniDocente.Text.Trim();
-                docente.NombreDoc = txtNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtApellidoDocente.Text.Trim();
-                docente.NumCelularDoc = txtNroCelularDocente.Text.Trim();
-                docente.DireccionDoc = txtDireccionDocente.Text.Trim();
-                docente.EstadoDoc=cbxEstado.Checked;
+                docente.DniDoc = txtBdniDocente.Text.Trim();
+                docente.NombreDoc = txtBNombreDocente.Text.Trim();
+                docente.ApellidosDoc = txtBApellidoPaternoDocente.Text.Trim();
+                docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
+                docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
+                docente.EstadoDoc=cbxEstadoDocente.Checked;
                 logDocente.Instancia.insertarDocente(docente);
             }
             catch (Exception ex)
@@ -76,13 +76,13 @@ namespace CapaPresentacion
         private void dgvDocente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
-            txtIDDocente.Text = fila.Cells[0].Value.ToString();
-            txtDniDocente.Text = fila.Cells[1].Value.ToString();
-            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
-            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
-            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
+            txtBIDDocente.Text = fila.Cells[0].Value.ToString();
+            txtBdniDocente.Text = fila.Cells[1].Value.ToString();
+            txtBNombreDocente.Text = fila.Cells[2].Value.ToString();
+            txtBApellidoPaternoDocente.Text = fila.Cells[3].Value.ToString();
+            txtBTelefonoDocente.Text = fila.Cells[4].Value.ToString();
+            txtBDireccionDocente.Text = fila.Cells[5].Value.ToString();
+            cbxEstadoDocente.Checked = Convert.ToBoolean(fila.Cells[6].Value);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -97,13 +97,13 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.IdDocente = int.Parse(txtIDDocente.Text.Trim());
-                docente.DniDoc=txtDniDocente.Text.Trim();
-                docente.NombreDoc = txtNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtApellidoDocente.Text.Trim();
-                docente.NumCelularDoc = txtNroCelularDocente.Text.Trim();
-                docente.DireccionDoc = txtDireccionDocente.Text.Trim();
-                docente.EstadoDoc=cbxEstado.Checked;
+                docente.IdDocente = int.Parse(txtBIDDocente.Text.Trim());
+                docente.DniDoc=txtBdniDocente.Text.Trim();
+                docente.NombreDoc = txtBNombreDocente.Text.Trim();
+                docente.ApellidosDoc = txtBApellidoPaternoDocente.Text.Trim();
+                docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
+                docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
+                docente.EstadoDoc=cbxEstadoDocente.Checked;
                 logDocente.Instancia.editarDocente(docente);
             }
             catch (Exception ex)
@@ -125,9 +125,9 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.IdDocente = int.Parse(txtIDDocente.Text.Trim());
-                cbxEstado.Checked = false;
-                docente.EstadoDoc = cbxEstado.Checked;
+                docente.IdDocente = int.Parse(txtBIDDocente.Text.Trim());
+                cbxEstadoDocente.Checked = false;
+                docente.EstadoDoc = cbxEstadoDocente.Checked;
                 logDocente.Instancia.deshabilitarDocente(docente);
             }
             catch (Exception ex)

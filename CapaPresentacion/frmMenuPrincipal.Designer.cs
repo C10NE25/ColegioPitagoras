@@ -57,10 +57,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenuLateral.SuspendLayout();
             this.panelTesoreriaSubMenu.SuspendLayout();
             this.panelAdministrativoSubMenu.SuspendLayout();
             this.panelAcademicoSubMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             this.panelMenuLateral.Controls.Add(this.panelLogo);
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
-            this.panelMenuLateral.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelMenuLateral.Margin = new System.Windows.Forms.Padding(1);
             this.panelMenuLateral.Name = "panelMenuLateral";
             this.panelMenuLateral.Size = new System.Drawing.Size(199, 761);
             this.panelMenuLateral.TabIndex = 0;
@@ -91,7 +93,7 @@
             this.panelTesoreriaSubMenu.Controls.Add(this.btnTipoPlanPago);
             this.panelTesoreriaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTesoreriaSubMenu.Location = new System.Drawing.Point(0, 723);
-            this.panelTesoreriaSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelTesoreriaSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelTesoreriaSubMenu.Name = "panelTesoreriaSubMenu";
             this.panelTesoreriaSubMenu.Size = new System.Drawing.Size(182, 132);
             this.panelTesoreriaSubMenu.TabIndex = 5;
@@ -102,7 +104,7 @@
             this.btnBoletaPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBoletaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBoletaPago.Location = new System.Drawing.Point(0, 66);
-            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnBoletaPago.Name = "btnBoletaPago";
             this.btnBoletaPago.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaPago.TabIndex = 8;
@@ -116,7 +118,7 @@
             this.btnPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanPago.Location = new System.Drawing.Point(0, 33);
-            this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnPlanPago.Name = "btnPlanPago";
             this.btnPlanPago.Size = new System.Drawing.Size(182, 33);
             this.btnPlanPago.TabIndex = 7;
@@ -130,7 +132,7 @@
             this.btnTipoPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTipoPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoPlanPago.Location = new System.Drawing.Point(0, 0);
-            this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnTipoPlanPago.Name = "btnTipoPlanPago";
             this.btnTipoPlanPago.Size = new System.Drawing.Size(182, 33);
             this.btnTipoPlanPago.TabIndex = 6;
@@ -144,7 +146,7 @@
             this.btnTesoreria.FlatAppearance.BorderSize = 0;
             this.btnTesoreria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTesoreria.Location = new System.Drawing.Point(0, 680);
-            this.btnTesoreria.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTesoreria.Margin = new System.Windows.Forms.Padding(1);
             this.btnTesoreria.Name = "btnTesoreria";
             this.btnTesoreria.Size = new System.Drawing.Size(182, 43);
             this.btnTesoreria.TabIndex = 4;
@@ -164,7 +166,7 @@
             this.panelAdministrativoSubMenu.Controls.Add(this.btnTipoDocumento);
             this.panelAdministrativoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdministrativoSubMenu.Location = new System.Drawing.Point(0, 441);
-            this.panelAdministrativoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelAdministrativoSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelAdministrativoSubMenu.Name = "panelAdministrativoSubMenu";
             this.panelAdministrativoSubMenu.Size = new System.Drawing.Size(182, 239);
             this.panelAdministrativoSubMenu.TabIndex = 3;
@@ -176,7 +178,7 @@
             this.btnMatricula.FlatAppearance.BorderSize = 0;
             this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMatricula.Location = new System.Drawing.Point(0, 198);
-            this.btnMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnMatricula.Margin = new System.Windows.Forms.Padding(1);
             this.btnMatricula.Name = "btnMatricula";
             this.btnMatricula.Size = new System.Drawing.Size(182, 34);
             this.btnMatricula.TabIndex = 12;
@@ -191,7 +193,7 @@
             this.btnInscripcion.FlatAppearance.BorderSize = 0;
             this.btnInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInscripcion.Location = new System.Drawing.Point(0, 165);
-            this.btnInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnInscripcion.Margin = new System.Windows.Forms.Padding(1);
             this.btnInscripcion.Name = "btnInscripcion";
             this.btnInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnInscripcion.TabIndex = 11;
@@ -206,7 +208,7 @@
             this.btnBoletaMatricula.FlatAppearance.BorderSize = 0;
             this.btnBoletaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBoletaMatricula.Location = new System.Drawing.Point(0, 132);
-            this.btnBoletaMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBoletaMatricula.Margin = new System.Windows.Forms.Padding(1);
             this.btnBoletaMatricula.Name = "btnBoletaMatricula";
             this.btnBoletaMatricula.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaMatricula.TabIndex = 10;
@@ -221,7 +223,7 @@
             this.btnBoletaInscripcion.FlatAppearance.BorderSize = 0;
             this.btnBoletaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBoletaInscripcion.Location = new System.Drawing.Point(0, 99);
-            this.btnBoletaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBoletaInscripcion.Margin = new System.Windows.Forms.Padding(1);
             this.btnBoletaInscripcion.Name = "btnBoletaInscripcion";
             this.btnBoletaInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnBoletaInscripcion.TabIndex = 9;
@@ -236,7 +238,7 @@
             this.btnCarpetaInscripcion.FlatAppearance.BorderSize = 0;
             this.btnCarpetaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarpetaInscripcion.Location = new System.Drawing.Point(0, 66);
-            this.btnCarpetaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCarpetaInscripcion.Margin = new System.Windows.Forms.Padding(1);
             this.btnCarpetaInscripcion.Name = "btnCarpetaInscripcion";
             this.btnCarpetaInscripcion.Size = new System.Drawing.Size(182, 33);
             this.btnCarpetaInscripcion.TabIndex = 8;
@@ -251,7 +253,7 @@
             this.btnDocumento.FlatAppearance.BorderSize = 0;
             this.btnDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDocumento.Location = new System.Drawing.Point(0, 33);
-            this.btnDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDocumento.Margin = new System.Windows.Forms.Padding(1);
             this.btnDocumento.Name = "btnDocumento";
             this.btnDocumento.Size = new System.Drawing.Size(182, 33);
             this.btnDocumento.TabIndex = 7;
@@ -266,7 +268,7 @@
             this.btnTipoDocumento.FlatAppearance.BorderSize = 0;
             this.btnTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDocumento.Location = new System.Drawing.Point(0, 0);
-            this.btnTipoDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTipoDocumento.Margin = new System.Windows.Forms.Padding(1);
             this.btnTipoDocumento.Name = "btnTipoDocumento";
             this.btnTipoDocumento.Size = new System.Drawing.Size(182, 33);
             this.btnTipoDocumento.TabIndex = 6;
@@ -280,7 +282,7 @@
             this.btnAdministrativo.FlatAppearance.BorderSize = 0;
             this.btnAdministrativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdministrativo.Location = new System.Drawing.Point(0, 398);
-            this.btnAdministrativo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAdministrativo.Margin = new System.Windows.Forms.Padding(1);
             this.btnAdministrativo.Name = "btnAdministrativo";
             this.btnAdministrativo.Size = new System.Drawing.Size(182, 43);
             this.btnAdministrativo.TabIndex = 2;
@@ -301,7 +303,7 @@
             this.panelAcademicoSubMenu.Controls.Add(this.btnTutor);
             this.panelAcademicoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAcademicoSubMenu.Location = new System.Drawing.Point(0, 129);
-            this.panelAcademicoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelAcademicoSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelAcademicoSubMenu.Name = "panelAcademicoSubMenu";
             this.panelAcademicoSubMenu.Size = new System.Drawing.Size(182, 269);
             this.panelAcademicoSubMenu.TabIndex = 1;
@@ -313,7 +315,7 @@
             this.btnNotas.FlatAppearance.BorderSize = 0;
             this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotas.Location = new System.Drawing.Point(0, 231);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(1);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.Size = new System.Drawing.Size(182, 33);
             this.btnNotas.TabIndex = 14;
@@ -328,7 +330,7 @@
             this.btnAsistencias.FlatAppearance.BorderSize = 0;
             this.btnAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsistencias.Location = new System.Drawing.Point(0, 198);
-            this.btnAsistencias.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAsistencias.Margin = new System.Windows.Forms.Padding(1);
             this.btnAsistencias.Name = "btnAsistencias";
             this.btnAsistencias.Size = new System.Drawing.Size(182, 33);
             this.btnAsistencias.TabIndex = 13;
@@ -343,7 +345,7 @@
             this.btnCurso.FlatAppearance.BorderSize = 0;
             this.btnCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCurso.Location = new System.Drawing.Point(0, 165);
-            this.btnCurso.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCurso.Margin = new System.Windows.Forms.Padding(1);
             this.btnCurso.Name = "btnCurso";
             this.btnCurso.Size = new System.Drawing.Size(182, 33);
             this.btnCurso.TabIndex = 5;
@@ -358,7 +360,7 @@
             this.btnGradoAcademico.FlatAppearance.BorderSize = 0;
             this.btnGradoAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGradoAcademico.Location = new System.Drawing.Point(0, 132);
-            this.btnGradoAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnGradoAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnGradoAcademico.Name = "btnGradoAcademico";
             this.btnGradoAcademico.Size = new System.Drawing.Size(182, 33);
             this.btnGradoAcademico.TabIndex = 4;
@@ -373,7 +375,7 @@
             this.btnNivelAcademico.FlatAppearance.BorderSize = 0;
             this.btnNivelAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNivelAcademico.Location = new System.Drawing.Point(0, 99);
-            this.btnNivelAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNivelAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnNivelAcademico.Name = "btnNivelAcademico";
             this.btnNivelAcademico.Size = new System.Drawing.Size(182, 33);
             this.btnNivelAcademico.TabIndex = 3;
@@ -388,7 +390,7 @@
             this.btnDocente.FlatAppearance.BorderSize = 0;
             this.btnDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDocente.Location = new System.Drawing.Point(0, 66);
-            this.btnDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDocente.Margin = new System.Windows.Forms.Padding(1);
             this.btnDocente.Name = "btnDocente";
             this.btnDocente.Size = new System.Drawing.Size(182, 33);
             this.btnDocente.TabIndex = 2;
@@ -403,7 +405,7 @@
             this.btnEstudiante.FlatAppearance.BorderSize = 0;
             this.btnEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstudiante.Location = new System.Drawing.Point(0, 33);
-            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(1);
             this.btnEstudiante.Name = "btnEstudiante";
             this.btnEstudiante.Size = new System.Drawing.Size(182, 33);
             this.btnEstudiante.TabIndex = 1;
@@ -418,7 +420,7 @@
             this.btnTutor.FlatAppearance.BorderSize = 0;
             this.btnTutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTutor.Location = new System.Drawing.Point(0, 0);
-            this.btnTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTutor.Margin = new System.Windows.Forms.Padding(1);
             this.btnTutor.Name = "btnTutor";
             this.btnTutor.Size = new System.Drawing.Size(182, 33);
             this.btnTutor.TabIndex = 0;
@@ -432,7 +434,7 @@
             this.btnAcademico.FlatAppearance.BorderSize = 0;
             this.btnAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcademico.Location = new System.Drawing.Point(0, 86);
-            this.btnAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnAcademico.Name = "btnAcademico";
             this.btnAcademico.Size = new System.Drawing.Size(182, 43);
             this.btnAcademico.TabIndex = 1;
@@ -443,20 +445,21 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
+            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(1);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(182, 86);
             this.panelLogo.TabIndex = 1;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.DimGray;
+            this.panelChildForm.BackColor = System.Drawing.Color.Transparent;
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(199, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(1);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1035, 761);
             this.panelChildForm.TabIndex = 1;
@@ -466,12 +469,22 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(374, 216);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(235, 277);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Print", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "PANEL ADMINISTRATIVO";
             // 
             // frmMenuPrincipal
             // 
@@ -487,6 +500,8 @@
             this.panelTesoreriaSubMenu.ResumeLayout(false);
             this.panelAdministrativoSubMenu.ResumeLayout(false);
             this.panelAcademicoSubMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -523,6 +538,7 @@
         private System.Windows.Forms.Button btnPlanPago;
         private System.Windows.Forms.Button btnTipoPlanPago;
         private System.Windows.Forms.Button btnTesoreria;
+        private System.Windows.Forms.Label label1;
     }
 }
 

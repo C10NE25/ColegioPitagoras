@@ -100,6 +100,7 @@
             // 
             this.btnBoletaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnBoletaPago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBoletaPago.FlatAppearance.BorderSize = 0;
             this.btnBoletaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBoletaPago.Location = new System.Drawing.Point(0, 66);
             this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
@@ -114,6 +115,7 @@
             // 
             this.btnPlanPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPlanPago.FlatAppearance.BorderSize = 0;
             this.btnPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanPago.Location = new System.Drawing.Point(0, 33);
             this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
@@ -128,6 +130,7 @@
             // 
             this.btnTipoPlanPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
             this.btnTipoPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoPlanPago.FlatAppearance.BorderSize = 0;
             this.btnTipoPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoPlanPago.Location = new System.Drawing.Point(0, 0);
             this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
@@ -480,7 +483,7 @@
             this.ClientSize = new System.Drawing.Size(1234, 761);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenuLateral);
-            this.MinimumSize = new System.Drawing.Size(740, 477);
+            this.MinimumSize = new System.Drawing.Size(1250, 800);
             this.Name = "frmMenuPrincipal";
             this.Text = "t ";
             this.panelMenuLateral.ResumeLayout(false);

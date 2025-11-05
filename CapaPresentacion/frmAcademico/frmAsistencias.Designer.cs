@@ -35,6 +35,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvAsistencia = new System.Windows.Forms.DataGridView();
             this.gbxAsistencias = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -43,17 +45,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDMatriculaEst = new System.Windows.Forms.TextBox();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.gbxBusqueda = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtMatriculaBusqueda = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCursoBusqueda = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.gbxAsistencias.SuspendLayout();
+            this.gbxBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 99);
+            this.label1.Location = new System.Drawing.Point(134, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 56);
             this.label1.TabIndex = 41;
@@ -98,7 +105,7 @@
             // dgvAsistencia
             // 
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsistencia.Location = new System.Drawing.Point(144, 190);
+            this.dgvAsistencia.Location = new System.Drawing.Point(144, 250);
             this.dgvAsistencia.Name = "dgvAsistencia";
             this.dgvAsistencia.ReadOnly = true;
             this.dgvAsistencia.RowHeadersWidth = 92;
@@ -119,12 +126,28 @@
             this.gbxAsistencias.Controls.Add(this.label2);
             this.gbxAsistencias.Controls.Add(this.txtIDMatriculaEst);
             this.gbxAsistencias.Controls.Add(this.txtIDCurso);
-            this.gbxAsistencias.Location = new System.Drawing.Point(371, 869);
+            this.gbxAsistencias.Location = new System.Drawing.Point(371, 896);
             this.gbxAsistencias.Name = "gbxAsistencias";
             this.gbxAsistencias.Size = new System.Drawing.Size(1062, 435);
             this.gbxAsistencias.TabIndex = 56;
             this.gbxAsistencias.TabStop = false;
             this.gbxAsistencias.Text = "Asistencias de estudiantes";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(27, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 29);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Fecha:";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(187, 191);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(460, 35);
+            this.dtpFecha.TabIndex = 14;
             // 
             // cbxEstado
             // 
@@ -198,27 +221,67 @@
             this.txtIDCurso.Size = new System.Drawing.Size(338, 35);
             this.txtIDCurso.TabIndex = 0;
             // 
-            // dtpFecha
+            // gbxBusqueda
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(187, 191);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(460, 35);
-            this.dtpFecha.TabIndex = 14;
+            this.gbxBusqueda.Controls.Add(this.txtCursoBusqueda);
+            this.gbxBusqueda.Controls.Add(this.label5);
+            this.gbxBusqueda.Controls.Add(this.btnBuscar);
+            this.gbxBusqueda.Controls.Add(this.txtMatriculaBusqueda);
+            this.gbxBusqueda.Controls.Add(this.label6);
+            this.gbxBusqueda.Location = new System.Drawing.Point(279, 129);
+            this.gbxBusqueda.Name = "gbxBusqueda";
+            this.gbxBusqueda.Size = new System.Drawing.Size(1221, 93);
+            this.gbxBusqueda.TabIndex = 60;
+            this.gbxBusqueda.TabStop = false;
+            this.gbxBusqueda.Text = "Busqueda de Asistencias por Alumno";
             // 
-            // label4
+            // btnBuscar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 29);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Fecha:";
+            this.btnBuscar.Location = new System.Drawing.Point(964, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(224, 61);
+            this.btnBuscar.TabIndex = 57;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtMatriculaBusqueda
+            // 
+            this.txtMatriculaBusqueda.Location = new System.Drawing.Point(287, 45);
+            this.txtMatriculaBusqueda.Name = "txtMatriculaBusqueda";
+            this.txtMatriculaBusqueda.Size = new System.Drawing.Size(158, 35);
+            this.txtMatriculaBusqueda.TabIndex = 56;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(261, 29);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Id Matricula Estudiante:";
+            // 
+            // txtCursoBusqueda
+            // 
+            this.txtCursoBusqueda.Location = new System.Drawing.Point(608, 42);
+            this.txtCursoBusqueda.Name = "txtCursoBusqueda";
+            this.txtCursoBusqueda.Size = new System.Drawing.Size(158, 35);
+            this.txtCursoBusqueda.TabIndex = 59;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(471, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 29);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Id Curso:";
             // 
             // frmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2002, 1374);
+            this.Controls.Add(this.gbxBusqueda);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -231,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).EndInit();
             this.gbxAsistencias.ResumeLayout(false);
             this.gbxAsistencias.PerformLayout();
+            this.gbxBusqueda.ResumeLayout(false);
+            this.gbxBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +320,11 @@
         private System.Windows.Forms.TextBox txtIDCurso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.GroupBox gbxBusqueda;
+        private System.Windows.Forms.TextBox txtCursoBusqueda;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtMatriculaBusqueda;
+        private System.Windows.Forms.Label label6;
     }
 }

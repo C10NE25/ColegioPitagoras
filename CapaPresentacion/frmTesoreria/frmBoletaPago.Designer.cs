@@ -35,6 +35,9 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvBoletaPago = new System.Windows.Forms.DataGridView();
             this.gbxBoletaPago = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
+            this.cmbModalidadPago = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -43,11 +46,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreDocente = new System.Windows.Forms.TextBox();
             this.txtIDPlangPago = new System.Windows.Forms.TextBox();
-            this.cmbModalidadPago = new System.Windows.Forms.ComboBox();
-            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.gbxBusqueda = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtEstudianteBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletaPago)).BeginInit();
             this.gbxBoletaPago.SuspendLayout();
+            this.gbxBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -99,7 +104,7 @@
             // dgvBoletaPago
             // 
             this.dgvBoletaPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBoletaPago.Location = new System.Drawing.Point(88, 157);
+            this.dgvBoletaPago.Location = new System.Drawing.Point(90, 256);
             this.dgvBoletaPago.Name = "dgvBoletaPago";
             this.dgvBoletaPago.ReadOnly = true;
             this.dgvBoletaPago.RowHeadersWidth = 92;
@@ -121,12 +126,36 @@
             this.gbxBoletaPago.Controls.Add(this.label2);
             this.gbxBoletaPago.Controls.Add(this.txtNombreDocente);
             this.gbxBoletaPago.Controls.Add(this.txtIDPlangPago);
-            this.gbxBoletaPago.Location = new System.Drawing.Point(292, 841);
+            this.gbxBoletaPago.Location = new System.Drawing.Point(294, 889);
             this.gbxBoletaPago.Name = "gbxBoletaPago";
             this.gbxBoletaPago.Size = new System.Drawing.Size(1103, 435);
             this.gbxBoletaPago.TabIndex = 104;
             this.gbxBoletaPago.TabStop = false;
             this.gbxBoletaPago.Text = "Datos del Pago";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 29);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Fecha de Pago:";
+            // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.Location = new System.Drawing.Point(265, 262);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(452, 35);
+            this.dtpFechaPago.TabIndex = 15;
+            // 
+            // cmbModalidadPago
+            // 
+            this.cmbModalidadPago.FormattingEnabled = true;
+            this.cmbModalidadPago.Location = new System.Drawing.Point(265, 174);
+            this.cmbModalidadPago.Name = "cmbModalidadPago";
+            this.cmbModalidadPago.Size = new System.Drawing.Size(310, 37);
+            this.cmbModalidadPago.TabIndex = 14;
             // 
             // btnAgregar
             // 
@@ -199,35 +228,49 @@
             this.txtIDPlangPago.Size = new System.Drawing.Size(139, 35);
             this.txtIDPlangPago.TabIndex = 1;
             // 
-            // cmbModalidadPago
+            // gbxBusqueda
             // 
-            this.cmbModalidadPago.FormattingEnabled = true;
-            this.cmbModalidadPago.Location = new System.Drawing.Point(265, 174);
-            this.cmbModalidadPago.Name = "cmbModalidadPago";
-            this.cmbModalidadPago.Size = new System.Drawing.Size(310, 37);
-            this.cmbModalidadPago.TabIndex = 14;
+            this.gbxBusqueda.Controls.Add(this.txtEstudianteBuscar);
+            this.gbxBusqueda.Controls.Add(this.btnBuscar);
+            this.gbxBusqueda.Controls.Add(this.label9);
+            this.gbxBusqueda.Location = new System.Drawing.Point(235, 139);
+            this.gbxBusqueda.Name = "gbxBusqueda";
+            this.gbxBusqueda.Size = new System.Drawing.Size(1221, 93);
+            this.gbxBusqueda.TabIndex = 108;
+            this.gbxBusqueda.TabStop = false;
+            this.gbxBusqueda.Text = "Busqueda de Pagos por Estudiante";
             // 
-            // dtpFechaPago
+            // btnBuscar
             // 
-            this.dtpFechaPago.Location = new System.Drawing.Point(265, 262);
-            this.dtpFechaPago.Name = "dtpFechaPago";
-            this.dtpFechaPago.Size = new System.Drawing.Size(452, 35);
-            this.dtpFechaPago.TabIndex = 15;
+            this.btnBuscar.Location = new System.Drawing.Point(964, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(224, 61);
+            this.btnBuscar.TabIndex = 57;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // label9
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 29);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Fecha de Pago:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(113, 42);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(132, 29);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "Estudiante:";
+            // 
+            // txtEstudianteBuscar
+            // 
+            this.txtEstudianteBuscar.Location = new System.Drawing.Point(274, 39);
+            this.txtEstudianteBuscar.Name = "txtEstudianteBuscar";
+            this.txtEstudianteBuscar.Size = new System.Drawing.Size(338, 35);
+            this.txtEstudianteBuscar.TabIndex = 58;
             // 
             // frmBoletaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1947, 1374);
+            this.Controls.Add(this.gbxBusqueda);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -240,6 +283,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletaPago)).EndInit();
             this.gbxBoletaPago.ResumeLayout(false);
             this.gbxBoletaPago.PerformLayout();
+            this.gbxBusqueda.ResumeLayout(false);
+            this.gbxBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +310,9 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPago;
         private System.Windows.Forms.ComboBox cmbModalidadPago;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbxBusqueda;
+        private System.Windows.Forms.TextBox txtEstudianteBuscar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label9;
     }
 }

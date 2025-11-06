@@ -9,44 +9,39 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datDocente
+    public class datAsignatura
     {
         #region singleton
-        private static readonly datDocente _instancia = new datDocente();
-        public static datDocente Instancia
+        private static readonly datAsignatura _instancia = new datAsignatura();
+        public static datAsignatura Instancia
         {
             get
             {
-                return datDocente._instancia;
+                return datAsignatura._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        ///Listado de Docentes
-        public List<entDocente> listarDocentes()
+
+        public List<entAsignatura> listarAsignatura()
         {
             SqlCommand cmd = null;
-            List<entDocente> lista = new List<entDocente>();
+            List<entAsignatura> lista = new List<entAsignatura>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDocente", cn);
+                cmd = new SqlCommand("spListarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entDocente Doc= new entDocente();
-                    Doc.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    Doc.DniDoc = dr["dniDoc"].ToString();
-                    Doc.NombreDoc = dr["nombreDoc"].ToString();
-                    Doc.ApellidosPatDoc = dr["apellidosPatDoc"].ToString();
-                    Doc.ApellidosMatDoc = dr["apellidosMatDoc"].ToString();
-                    Doc.NumCelularDoc = dr["numCelularDoc"].ToString();
-                    Doc.DireccionDoc= dr["direccionDoc"].ToString();
-                    Doc.EstadoDoc = Convert.ToBoolean(dr["estadoDoc"]);
-                    lista.Add(Doc);
+                    entAsignatura Asig = new entAsignatura();
+                    Asig.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
+                    Asig.NombreAsignatura = dr["nombreAsignatura"].ToString();
+                    Asig.EstadoAsignatura = Convert.ToBoolean(dr["estadoAsignatura"]);
+                    lista.Add(Asig);
                 }
             }
             catch (Exception e)
@@ -60,23 +55,18 @@ namespace CapaDatos
             return lista;
         }
 
-        ///Insertar Docente
-        public Boolean InsertarDocente(entDocente Doc)
+
+        public Boolean InsertarAsignatura(entAsignatura Asig)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDocente", cn);
+                cmd = new SqlCommand("spInsertarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@nombreAsignatura", Asig.NombreAsignatura);
+                cmd.Parameters.AddWithValue("@estadoAsignatura", Asig.EstadoAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -95,24 +85,18 @@ namespace CapaDatos
             return inserta;
         }
 
-        ///Editar Docente
-        public Boolean EditarDocente(entDocente Doc)
+        public Boolean EditarAsignatura(entAsignatura Asig)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarDocente", cn);
+                cmd = new SqlCommand("spEditarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", Doc.IdDocente);
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@idAsignatura", Asig.IdAsignatura);
+                cmd.Parameters.AddWithValue("@nombreAsignatura", Asig.NombreAsignatura);
+                cmd.Parameters.AddWithValue("@estadoAsignatura", Asig.EstadoAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -131,17 +115,16 @@ namespace CapaDatos
             return edita;
         }
 
-        ///deshabilitar Docente
-        public Boolean DeshabilitarDocente(entDocente doc)
+        public Boolean DeshabilitarAsignatura(entAsignatura Asig)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarDocente", cn);
+                cmd = new SqlCommand("spDeshabilitarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", doc.IdDocente);
+                cmd.Parameters.AddWithValue("@idAsignatura", Asig.IdAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

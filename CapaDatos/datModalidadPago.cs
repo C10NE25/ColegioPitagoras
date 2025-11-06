@@ -9,44 +9,40 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datDocente
+    public class datModalidadPago
     {
         #region singleton
-        private static readonly datDocente _instancia = new datDocente();
-        public static datDocente Instancia
+        private static readonly datModalidadPago _instancia = new datModalidadPago();
+        public static datModalidadPago Instancia
         {
             get
             {
-                return datDocente._instancia;
+                return datModalidadPago._instancia;
             }
         }
         #endregion singleton
 
+
         #region metodos
-        ///Listado de Docentes
-        public List<entDocente> listarDocentes()
+
+        public List<entModalidadPago> listarModalidadPago()
         {
             SqlCommand cmd = null;
-            List<entDocente> lista = new List<entDocente>();
+            List<entModalidadPago> lista = new List<entModalidadPago>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDocente", cn);
+                cmd = new SqlCommand("spListarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entDocente Doc= new entDocente();
-                    Doc.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    Doc.DniDoc = dr["dniDoc"].ToString();
-                    Doc.NombreDoc = dr["nombreDoc"].ToString();
-                    Doc.ApellidosPatDoc = dr["apellidosPatDoc"].ToString();
-                    Doc.ApellidosMatDoc = dr["apellidosMatDoc"].ToString();
-                    Doc.NumCelularDoc = dr["numCelularDoc"].ToString();
-                    Doc.DireccionDoc= dr["direccionDoc"].ToString();
-                    Doc.EstadoDoc = Convert.ToBoolean(dr["estadoDoc"]);
-                    lista.Add(Doc);
+                    entModalidadPago Mp = new entModalidadPago();
+                    Mp.idModalidadPago = Convert.ToInt32(dr["idModalidadPago"]);
+                    Mp.TipoModalidadPago = dr["tipoModalidadPago"].ToString();
+                    Mp.EstadoModalidadPago = Convert.ToBoolean(dr["estadoModalidadPago"]);
+                    lista.Add(Mp);
                 }
             }
             catch (Exception e)
@@ -60,23 +56,18 @@ namespace CapaDatos
             return lista;
         }
 
-        ///Insertar Docente
-        public Boolean InsertarDocente(entDocente Doc)
+
+        public Boolean InsertarModalidadPago(entModalidadPago Mp)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDocente", cn);
+                cmd = new SqlCommand("spInsertarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@tipoModalidadPago", Mp.TipoModalidadPago);
+                cmd.Parameters.AddWithValue("@estadoModalidadPago", Mp.EstadoModalidadPago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -95,24 +86,18 @@ namespace CapaDatos
             return inserta;
         }
 
-        ///Editar Docente
-        public Boolean EditarDocente(entDocente Doc)
+        public Boolean EditarModalidadPago(entModalidadPago Mp)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarDocente", cn);
+                cmd = new SqlCommand("spEditarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", Doc.IdDocente);
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@idModalidadPago", Mp.idModalidadPago);
+                cmd.Parameters.AddWithValue("@tipoModalidadPago", Mp.TipoModalidadPago);
+                cmd.Parameters.AddWithValue("@estadoModalidadPago", Mp.EstadoModalidadPago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -131,17 +116,16 @@ namespace CapaDatos
             return edita;
         }
 
-        ///deshabilitar Docente
-        public Boolean DeshabilitarDocente(entDocente doc)
+        public Boolean DeshabilitarModalidadPago(entModalidadPago Mp)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarDocente", cn);
+                cmd = new SqlCommand("spDeshabilitarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", doc.IdDocente);
+                cmd.Parameters.AddWithValue("@idModalidadPago", Mp.idModalidadPago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -162,3 +146,4 @@ namespace CapaDatos
         #endregion metodos
     }
 }
+

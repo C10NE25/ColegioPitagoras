@@ -9,44 +9,40 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datDocente
+    public class datPeriodoAcademico
     {
         #region singleton
-        private static readonly datDocente _instancia = new datDocente();
-        public static datDocente Instancia
+        private static readonly datPeriodoAcademico _instancia = new datPeriodoAcademico();
+        public static datPeriodoAcademico Instancia
         {
             get
             {
-                return datDocente._instancia;
+                return datPeriodoAcademico._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        ///Listado de Docentes
-        public List<entDocente> listarDocentes()
+
+        public List<entPeriodoAcademico> listarPeriodoAcademico()
         {
             SqlCommand cmd = null;
-            List<entDocente> lista = new List<entDocente>();
+            List<entPeriodoAcademico> lista = new List<entPeriodoAcademico>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDocente", cn);
+                cmd = new SqlCommand("spListarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entDocente Doc= new entDocente();
-                    Doc.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    Doc.DniDoc = dr["dniDoc"].ToString();
-                    Doc.NombreDoc = dr["nombreDoc"].ToString();
-                    Doc.ApellidosPatDoc = dr["apellidosPatDoc"].ToString();
-                    Doc.ApellidosMatDoc = dr["apellidosMatDoc"].ToString();
-                    Doc.NumCelularDoc = dr["numCelularDoc"].ToString();
-                    Doc.DireccionDoc= dr["direccionDoc"].ToString();
-                    Doc.EstadoDoc = Convert.ToBoolean(dr["estadoDoc"]);
-                    lista.Add(Doc);
+                    entPeriodoAcademico Pa = new entPeriodoAcademico();
+                    Pa.IdPeriodoAcademico = Convert.ToInt32(dr["idPeriodoAcademico"]);
+                    Pa.anioPeriodoAcademico = Convert.ToInt32(dr["anioPeriodoAcademico"]);
+                    Pa.NombrePeriodoAcademico = dr["nombrePeriodoAcademico"].ToString();
+                    Pa.EstadoPeriodoAcademico = Convert.ToBoolean(dr["estadoPeriodoAcademico"]);
+                    lista.Add(Pa);
                 }
             }
             catch (Exception e)
@@ -60,23 +56,19 @@ namespace CapaDatos
             return lista;
         }
 
-        ///Insertar Docente
-        public Boolean InsertarDocente(entDocente Doc)
+
+        public Boolean InsertarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDocente", cn);
+                cmd = new SqlCommand("spInsertarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@anioPeriodoAcademico", Pa.anioPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@nombrePeriodoAcademico", Pa.NombrePeriodoAcademico);
+                cmd.Parameters.AddWithValue("@estadoPeriodoAcademico", Pa.EstadoPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -95,24 +87,19 @@ namespace CapaDatos
             return inserta;
         }
 
-        ///Editar Docente
-        public Boolean EditarDocente(entDocente Doc)
+        public Boolean EditarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarDocente", cn);
+                cmd = new SqlCommand("spEditarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", Doc.IdDocente);
-                cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
-                cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
-                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
-                cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
-                cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
-                cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
+                cmd.Parameters.AddWithValue("@idPeriodoAcademico", Pa.IdPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@anioPeriodoAcademico", Pa.anioPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@nombrePeriodoAcademico", Pa.NombrePeriodoAcademico);
+                cmd.Parameters.AddWithValue("@estadoPeriodoAcademico", Pa.EstadoPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -131,17 +118,16 @@ namespace CapaDatos
             return edita;
         }
 
-        ///deshabilitar Docente
-        public Boolean DeshabilitarDocente(entDocente doc)
+        public Boolean DeshabilitarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarDocente", cn);
+                cmd = new SqlCommand("spDeshabilitarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDocente", doc.IdDocente);
+                cmd.Parameters.AddWithValue("@idPeriodoAcademico", Pa.IdPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

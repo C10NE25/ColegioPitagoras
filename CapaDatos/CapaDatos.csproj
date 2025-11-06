@@ -43,11 +43,17 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="datApoderado.cs" />
+    <Compile Include="datAsignatura.cs" />
     <Compile Include="datCargo.cs" />
     <Compile Include="datCurso.cs" />
     <Compile Include="datDocente.cs" />
     <Compile Include="datEstudiante.cs" />
     <Compile Include="datMatricula.cs" />
+    <Compile Include="datModalidadPago.cs" />
+    <Compile Include="datNivelAcademico.cs" />
+    <Compile Include="datParentesco.cs" />
+    <Compile Include="datPeriodoAcademico.cs" />
+    <Compile Include="datSeccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

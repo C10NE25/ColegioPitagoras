@@ -8,8 +8,8 @@ namespace CapaEntidad
 {
     public class entParentesco
     {
-        public int idParentesco { get; set; }
-
-        public string tipoParentesco { get; set; }
+        public int IdParentesco { get; set; }
+        public string TipoParentesco { get; set; }
+        public bool EstadoParentesco { get; set; }
     }
 }

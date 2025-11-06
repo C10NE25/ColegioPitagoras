@@ -12,5 +12,6 @@ namespace CapaEntidad
         public int IdEstudiante { get; set; }
         public DateTime Fecha { get; set; }
         public int IdTipoAsistencia { get; set; }
+        public bool EstadoAsistencia { get; set; }
     }
 }

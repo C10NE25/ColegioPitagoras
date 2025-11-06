@@ -10,7 +10,7 @@ namespace CapaEntidad
     {
         public int IdMatricula { get; set; }
         public int IdInscripcion { get; set; }
-        public int IdGrado { get; set; }
+        public int IdGradoAcademico { get; set; }
         public DateTime FechaMatricula { get; set; }
         public bool EstadoMatricula { get; set; }
     }

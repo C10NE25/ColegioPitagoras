@@ -59,8 +59,10 @@
     <Compile Include="entPeriodoAcademico.cs" />
     <Compile Include="entTarifa.cs" />
     <Compile Include="entPago.cs" />
+    <Compile Include="Notas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="entSeccion.cs" />
+    <Compile Include="TipoEvaluacion.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

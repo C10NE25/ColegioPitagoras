@@ -12,5 +12,6 @@ namespace CapaEntidad
         public int IdPago { get; set; }
         public int IdTipoCargo { get; set; }
         public decimal MontoPagado { get; set; }
+        public bool EstadoDetallePago { get; set; }
     }
 }

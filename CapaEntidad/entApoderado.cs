@@ -16,6 +16,6 @@ namespace CapaEntidad
         public string NumCelularApo { get; set; }
         public string DireccionApo { get; set; }
         public int IdParentesco { get; set; }
-        public bool EstadoApot { get; set; }
+        public bool EstadoApo { get; set; }
     }
 }

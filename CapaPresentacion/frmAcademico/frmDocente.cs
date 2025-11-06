@@ -18,7 +18,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             gbxDocente.Enabled = false;
-            txtIDDocente.Enabled = false;
+            txtBidDocente.Enabled = false;
             listarDocente();
         }
         void deshabilitarBotonesPrincipales()
@@ -56,12 +56,12 @@ namespace CapaPresentacion
 
         private void limpiarVariables()
         {
-            txtIDDocente.Text = "";
-            txtDniDocente.Text = "";
-            txtNombreDocente.Text = "";
-            txtApellidoDocente.Text = "";
-            txtNroCelularDocente.Text = "";
-            txtDireccionDocente.Text = "";
+            txtBidDocente.Text = "";
+            txtBdniDocente.Text = "";
+            txtBNombreDocente.Text = "";
+            txtBApellidoMDocente.Text = "";
+            txtBTelefonoDocente.Text = "";
+            txtBDireccionDocente.Text = "";
             cbxEstado.Checked = false;
         }
 
@@ -70,11 +70,11 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.DniDoc = txtDniDocente.Text.Trim();
-                docente.NombreDoc = txtNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtApellidoDocente.Text.Trim();
-                docente.NumCelularDoc = txtNroCelularDocente.Text.Trim();
-                docente.DireccionDoc = txtDireccionDocente.Text.Trim();
+                docente.DniDoc = txtBdniDocente.Text.Trim();
+                docente.NombreDoc = txtBNombreDocente.Text.Trim();
+                docente.ApellidosDoc = txtBApellidoMDocente.Text.Trim();
+                docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
+                docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
                 docente.EstadoDoc=cbxEstado.Checked;
                 logDocente.Instancia.insertarDocente(docente);
             }
@@ -102,12 +102,12 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.IdDocente = int.Parse(txtIDDocente.Text.Trim());
-                docente.DniDoc=txtDniDocente.Text.Trim();
-                docente.NombreDoc = txtNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtApellidoDocente.Text.Trim();
-                docente.NumCelularDoc = txtNroCelularDocente.Text.Trim();
-                docente.DireccionDoc = txtDireccionDocente.Text.Trim();
+                docente.IdDocente = int.Parse(txtBidDocente.Text.Trim());
+                docente.DniDoc=txtBdniDocente.Text.Trim();
+                docente.NombreDoc = txtBNombreDocente.Text.Trim();
+                docente.ApellidosDoc = txtBApellidoMDocente.Text.Trim();
+                docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
+                docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
                 docente.EstadoDoc=cbxEstado.Checked;
                 logDocente.Instancia.editarDocente(docente);
             }
@@ -132,7 +132,7 @@ namespace CapaPresentacion
             try
             {
                 entDocente docente = new entDocente();
-                docente.IdDocente = int.Parse(txtIDDocente.Text.Trim());
+                docente.IdDocente = int.Parse(txtBidDocente.Text.Trim());
                 cbxEstado.Checked = false;
                 docente.EstadoDoc = cbxEstado.Checked;
                 logDocente.Instancia.deshabilitarDocente(docente);
@@ -153,12 +153,12 @@ namespace CapaPresentacion
         private void dgvDocente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvDocente.Rows[e.RowIndex];
-            txtIDDocente.Text = fila.Cells[0].Value.ToString();
-            txtDniDocente.Text = fila.Cells[1].Value.ToString();
-            txtNombreDocente.Text = fila.Cells[2].Value.ToString();
-            txtApellidoDocente.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularDocente.Text = fila.Cells[4].Value.ToString();
-            txtDireccionDocente.Text = fila.Cells[5].Value.ToString();
+            txtBidDocente.Text = fila.Cells[0].Value.ToString();
+            txtBdniDocente.Text = fila.Cells[1].Value.ToString();
+            txtBNombreDocente.Text = fila.Cells[2].Value.ToString();
+            txtBApellidoMDocente.Text = fila.Cells[3].Value.ToString();
+            txtBTelefonoDocente.Text = fila.Cells[4].Value.ToString();
+            txtBDireccionDocente.Text = fila.Cells[5].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
         }
     }

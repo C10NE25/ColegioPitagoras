@@ -36,21 +36,23 @@
             this.dgvDocente = new System.Windows.Forms.DataGridView();
             this.gbxDocente = new System.Windows.Forms.GroupBox();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblDireccionDocente = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.lblTelefonoDocente = new System.Windows.Forms.Label();
+            this.lblApellidoMDocente = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.lblNombreDocente = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDireccionDocente = new System.Windows.Forms.TextBox();
-            this.txtNroCelularDocente = new System.Windows.Forms.TextBox();
-            this.txtApellidoDocente = new System.Windows.Forms.TextBox();
-            this.txtNombreDocente = new System.Windows.Forms.TextBox();
-            this.txtIDDocente = new System.Windows.Forms.TextBox();
-            this.txtDniDocente = new System.Windows.Forms.TextBox();
+            this.lbldniDocente = new System.Windows.Forms.Label();
+            this.lblidDocente = new System.Windows.Forms.Label();
+            this.txtBDireccionDocente = new System.Windows.Forms.TextBox();
+            this.txtBTelefonoDocente = new System.Windows.Forms.TextBox();
+            this.txtBApellidoMDocente = new System.Windows.Forms.TextBox();
+            this.txtBNombreDocente = new System.Windows.Forms.TextBox();
+            this.txtBidDocente = new System.Windows.Forms.TextBox();
+            this.txtBdniDocente = new System.Windows.Forms.TextBox();
+            this.txtBApellidoPDocente = new System.Windows.Forms.TextBox();
+            this.lblApellidoPDocente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
             this.gbxDocente.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +71,7 @@
             // btnDeshabilitar
             // 
             this.btnDeshabilitar.Location = new System.Drawing.Point(609, 321);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(99, 27);
             this.btnDeshabilitar.TabIndex = 23;
@@ -80,7 +82,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(508, 321);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 27);
             this.btnEditar.TabIndex = 22;
@@ -91,7 +93,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(407, 321);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 27);
             this.btnNuevo.TabIndex = 21;
@@ -102,7 +104,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Location = new System.Drawing.Point(710, 322);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(99, 26);
             this.btnCerrar.TabIndex = 19;
@@ -114,7 +116,7 @@
             // 
             this.dgvDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDocente.Location = new System.Drawing.Point(15, 47);
-            this.dgvDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvDocente.Margin = new System.Windows.Forms.Padding(1);
             this.dgvDocente.Name = "dgvDocente";
             this.dgvDocente.ReadOnly = true;
             this.dgvDocente.RowHeadersWidth = 92;
@@ -127,27 +129,29 @@
             // 
             // gbxDocente
             // 
+            this.gbxDocente.Controls.Add(this.lblApellidoPDocente);
+            this.gbxDocente.Controls.Add(this.txtBApellidoPDocente);
             this.gbxDocente.Controls.Add(this.cbxEstado);
-            this.gbxDocente.Controls.Add(this.label7);
+            this.gbxDocente.Controls.Add(this.lblDireccionDocente);
             this.gbxDocente.Controls.Add(this.btnAgregar);
-            this.gbxDocente.Controls.Add(this.label6);
-            this.gbxDocente.Controls.Add(this.label5);
+            this.gbxDocente.Controls.Add(this.lblTelefonoDocente);
+            this.gbxDocente.Controls.Add(this.lblApellidoMDocente);
             this.gbxDocente.Controls.Add(this.btnModificar);
-            this.gbxDocente.Controls.Add(this.label4);
+            this.gbxDocente.Controls.Add(this.lblNombreDocente);
             this.gbxDocente.Controls.Add(this.btnCancelar);
-            this.gbxDocente.Controls.Add(this.label3);
-            this.gbxDocente.Controls.Add(this.label2);
-            this.gbxDocente.Controls.Add(this.txtDireccionDocente);
-            this.gbxDocente.Controls.Add(this.txtNroCelularDocente);
-            this.gbxDocente.Controls.Add(this.txtApellidoDocente);
-            this.gbxDocente.Controls.Add(this.txtNombreDocente);
-            this.gbxDocente.Controls.Add(this.txtIDDocente);
-            this.gbxDocente.Controls.Add(this.txtDniDocente);
+            this.gbxDocente.Controls.Add(this.lbldniDocente);
+            this.gbxDocente.Controls.Add(this.lblidDocente);
+            this.gbxDocente.Controls.Add(this.txtBDireccionDocente);
+            this.gbxDocente.Controls.Add(this.txtBTelefonoDocente);
+            this.gbxDocente.Controls.Add(this.txtBApellidoMDocente);
+            this.gbxDocente.Controls.Add(this.txtBNombreDocente);
+            this.gbxDocente.Controls.Add(this.txtBidDocente);
+            this.gbxDocente.Controls.Add(this.txtBdniDocente);
             this.gbxDocente.Location = new System.Drawing.Point(15, 350);
-            this.gbxDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxDocente.Margin = new System.Windows.Forms.Padding(1);
             this.gbxDocente.Name = "gbxDocente";
-            this.gbxDocente.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.gbxDocente.Size = new System.Drawing.Size(792, 177);
+            this.gbxDocente.Padding = new System.Windows.Forms.Padding(1);
+            this.gbxDocente.Size = new System.Drawing.Size(792, 187);
             this.gbxDocente.TabIndex = 20;
             this.gbxDocente.TabStop = false;
             this.gbxDocente.Text = "Datos del Docente";
@@ -155,29 +159,29 @@
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(332, 24);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.cbxEstado.Location = new System.Drawing.Point(185, 23);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(1);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(120, 17);
+            this.cbxEstado.Size = new System.Drawing.Size(108, 30);
             this.cbxEstado.TabIndex = 13;
-            this.cbxEstado.Text = "Estado del Docente";
+            this.cbxEstado.Text = "Estado \r\n[Activo | Inactivo]";
             this.cbxEstado.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // lblDireccionDocente
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(279, 86);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Direccion:";
+            this.lblDireccionDocente.AutoSize = true;
+            this.lblDireccionDocente.Location = new System.Drawing.Point(542, 99);
+            this.lblDireccionDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblDireccionDocente.Name = "lblDireccionDocente";
+            this.lblDireccionDocente.Size = new System.Drawing.Size(55, 13);
+            this.lblDireccionDocente.TabIndex = 12;
+            this.lblDireccionDocente.Text = "Direccion:";
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(677, 50);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAgregar.Location = new System.Drawing.Point(246, 137);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(99, 31);
             this.btnAgregar.TabIndex = 1;
@@ -185,11 +189,31 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // lblTelefonoDocente
+            // 
+            this.lblTelefonoDocente.AutoSize = true;
+            this.lblTelefonoDocente.Location = new System.Drawing.Point(277, 106);
+            this.lblTelefonoDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblTelefonoDocente.Name = "lblTelefonoDocente";
+            this.lblTelefonoDocente.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefonoDocente.TabIndex = 11;
+            this.lblTelefonoDocente.Text = "Telefono:";
+            // 
+            // lblApellidoMDocente
+            // 
+            this.lblApellidoMDocente.AutoSize = true;
+            this.lblApellidoMDocente.Location = new System.Drawing.Point(538, 68);
+            this.lblApellidoMDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblApellidoMDocente.Name = "lblApellidoMDocente";
+            this.lblApellidoMDocente.Size = new System.Drawing.Size(89, 13);
+            this.lblApellidoMDocente.TabIndex = 10;
+            this.lblApellidoMDocente.Text = "Apellido Materno:";
+            // 
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(677, 90);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnModificar.Location = new System.Drawing.Point(347, 137);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 31);
             this.btnModificar.TabIndex = 2;
@@ -197,11 +221,21 @@
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // lblNombreDocente
+            // 
+            this.lblNombreDocente.AutoSize = true;
+            this.lblNombreDocente.Location = new System.Drawing.Point(11, 68);
+            this.lblNombreDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblNombreDocente.Name = "lblNombreDocente";
+            this.lblNombreDocente.Size = new System.Drawing.Size(47, 13);
+            this.lblNombreDocente.TabIndex = 9;
+            this.lblNombreDocente.Text = "Nombre:";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(677, 127);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCancelar.Location = new System.Drawing.Point(448, 137);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 31);
             this.btnCancelar.TabIndex = 3;
@@ -209,115 +243,104 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label6
+            // lbldniDocente
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(280, 58);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Nro Celular:";
+            this.lbldniDocente.AutoSize = true;
+            this.lbldniDocente.Location = new System.Drawing.Point(10, 99);
+            this.lbldniDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lbldniDocente.Name = "lbldniDocente";
+            this.lbldniDocente.Size = new System.Drawing.Size(29, 13);
+            this.lbldniDocente.TabIndex = 8;
+            this.lbldniDocente.Text = "DNI:";
             // 
-            // label5
+            // lblidDocente
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 115);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Apellido Paterno:";
+            this.lblidDocente.AutoSize = true;
+            this.lblidDocente.Location = new System.Drawing.Point(12, 31);
+            this.lblidDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidDocente.Name = "lblidDocente";
+            this.lblidDocente.Size = new System.Drawing.Size(21, 13);
+            this.lblidDocente.TabIndex = 7;
+            this.lblidDocente.Text = "ID:";
             // 
-            // label4
+            // txtBDireccionDocente
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 63);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Nombre:";
+            this.txtBDireccionDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBDireccionDocente.Location = new System.Drawing.Point(629, 97);
+            this.txtBDireccionDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBDireccionDocente.Name = "txtBDireccionDocente";
+            this.txtBDireccionDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBDireccionDocente.TabIndex = 5;
             // 
-            // label3
+            // txtBTelefonoDocente
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(282, 117);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "DNI:";
+            this.txtBTelefonoDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBTelefonoDocente.Location = new System.Drawing.Point(366, 99);
+            this.txtBTelefonoDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBTelefonoDocente.Name = "txtBTelefonoDocente";
+            this.txtBTelefonoDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBTelefonoDocente.TabIndex = 4;
             // 
-            // label2
+            // txtBApellidoMDocente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "ID:";
+            this.txtBApellidoMDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBApellidoMDocente.Location = new System.Drawing.Point(629, 65);
+            this.txtBApellidoMDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBApellidoMDocente.Name = "txtBApellidoMDocente";
+            this.txtBApellidoMDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBApellidoMDocente.TabIndex = 3;
             // 
-            // txtDireccionDocente
+            // txtBNombreDocente
             // 
-            this.txtDireccionDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDireccionDocente.Location = new System.Drawing.Point(345, 83);
-            this.txtDireccionDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtDireccionDocente.Name = "txtDireccionDocente";
-            this.txtDireccionDocente.Size = new System.Drawing.Size(147, 20);
-            this.txtDireccionDocente.TabIndex = 5;
+            this.txtBNombreDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBNombreDocente.Location = new System.Drawing.Point(101, 65);
+            this.txtBNombreDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBNombreDocente.Name = "txtBNombreDocente";
+            this.txtBNombreDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBNombreDocente.TabIndex = 2;
             // 
-            // txtNroCelularDocente
+            // txtBidDocente
             // 
-            this.txtNroCelularDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNroCelularDocente.Location = new System.Drawing.Point(345, 56);
-            this.txtNroCelularDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtNroCelularDocente.Name = "txtNroCelularDocente";
-            this.txtNroCelularDocente.Size = new System.Drawing.Size(147, 20);
-            this.txtNroCelularDocente.TabIndex = 4;
+            this.txtBidDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBidDocente.Location = new System.Drawing.Point(101, 31);
+            this.txtBidDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBidDocente.Name = "txtBidDocente";
+            this.txtBidDocente.Size = new System.Drawing.Size(62, 20);
+            this.txtBidDocente.TabIndex = 1;
             // 
-            // txtApellidoDocente
+            // txtBdniDocente
             // 
-            this.txtApellidoDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellidoDocente.Location = new System.Drawing.Point(99, 115);
-            this.txtApellidoDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtApellidoDocente.Name = "txtApellidoDocente";
-            this.txtApellidoDocente.Size = new System.Drawing.Size(147, 20);
-            this.txtApellidoDocente.TabIndex = 3;
+            this.txtBdniDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBdniDocente.Location = new System.Drawing.Point(101, 97);
+            this.txtBdniDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBdniDocente.Name = "txtBdniDocente";
+            this.txtBdniDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBdniDocente.TabIndex = 0;
             // 
-            // txtNombreDocente
+            // txtBApellidoPDocente
             // 
-            this.txtNombreDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreDocente.Location = new System.Drawing.Point(99, 61);
-            this.txtNombreDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtNombreDocente.Name = "txtNombreDocente";
-            this.txtNombreDocente.Size = new System.Drawing.Size(147, 20);
-            this.txtNombreDocente.TabIndex = 2;
+            this.txtBApellidoPDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBApellidoPDocente.Location = new System.Drawing.Point(366, 66);
+            this.txtBApellidoPDocente.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBApellidoPDocente.Name = "txtBApellidoPDocente";
+            this.txtBApellidoPDocente.Size = new System.Drawing.Size(147, 20);
+            this.txtBApellidoPDocente.TabIndex = 14;
             // 
-            // txtIDDocente
+            // lblApellidoPDocente
             // 
-            this.txtIDDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDDocente.Location = new System.Drawing.Point(99, 24);
-            this.txtIDDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtIDDocente.Name = "txtIDDocente";
-            this.txtIDDocente.Size = new System.Drawing.Size(62, 20);
-            this.txtIDDocente.TabIndex = 1;
-            // 
-            // txtDniDocente
-            // 
-            this.txtDniDocente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDniDocente.Location = new System.Drawing.Point(369, 115);
-            this.txtDniDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtDniDocente.Name = "txtDniDocente";
-            this.txtDniDocente.Size = new System.Drawing.Size(147, 20);
-            this.txtDniDocente.TabIndex = 0;
+            this.lblApellidoPDocente.AutoSize = true;
+            this.lblApellidoPDocente.Location = new System.Drawing.Point(277, 68);
+            this.lblApellidoPDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblApellidoPDocente.Name = "lblApellidoPDocente";
+            this.lblApellidoPDocente.Size = new System.Drawing.Size(87, 13);
+            this.lblApellidoPDocente.TabIndex = 15;
+            this.lblApellidoPDocente.Text = "Apellido Paterno:";
             // 
             // frmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 552);
+            this.ClientSize = new System.Drawing.Size(819, 551);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -325,7 +348,8 @@
             this.Controls.Add(this.dgvDocente);
             this.Controls.Add(this.gbxDocente);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "frmDocente";
             this.Text = "frmDocente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).EndInit();
@@ -346,20 +370,22 @@
         private System.Windows.Forms.DataGridView dgvDocente;
         private System.Windows.Forms.GroupBox gbxDocente;
         private System.Windows.Forms.CheckBox cbxEstado;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDireccionDocente;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDireccionDocente;
-        private System.Windows.Forms.TextBox txtNroCelularDocente;
-        private System.Windows.Forms.TextBox txtApellidoDocente;
-        private System.Windows.Forms.TextBox txtNombreDocente;
-        private System.Windows.Forms.TextBox txtIDDocente;
-        private System.Windows.Forms.TextBox txtDniDocente;
+        private System.Windows.Forms.Label lblTelefonoDocente;
+        private System.Windows.Forms.Label lblApellidoMDocente;
+        private System.Windows.Forms.Label lblNombreDocente;
+        private System.Windows.Forms.Label lbldniDocente;
+        private System.Windows.Forms.Label lblidDocente;
+        private System.Windows.Forms.TextBox txtBDireccionDocente;
+        private System.Windows.Forms.TextBox txtBTelefonoDocente;
+        private System.Windows.Forms.TextBox txtBApellidoMDocente;
+        private System.Windows.Forms.TextBox txtBNombreDocente;
+        private System.Windows.Forms.TextBox txtBidDocente;
+        private System.Windows.Forms.TextBox txtBdniDocente;
+        private System.Windows.Forms.Label lblApellidoPDocente;
+        private System.Windows.Forms.TextBox txtBApellidoPDocente;
     }
 }

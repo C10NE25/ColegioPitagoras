@@ -44,8 +44,10 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="datApoderado.cs" />
     <Compile Include="datAsignatura.cs" />
+    <Compile Include="datAsistencia.cs" />
     <Compile Include="datCargo.cs" />
     <Compile Include="datCurso.cs" />
+    <Compile Include="datDetallePago.cs" />
     <Compile Include="datDocente.cs" />
     <Compile Include="datEstudiante.cs" />
     <Compile Include="datGradoAcademico.cs" />
@@ -53,11 +55,15 @@
     <Compile Include="datMatricula.cs" />
     <Compile Include="datModalidadPago.cs" />
     <Compile Include="datNivelAcademico.cs" />
+    <Compile Include="datNotas.cs" />
+    <Compile Include="datPago.cs" />
     <Compile Include="datParentesco.cs" />
     <Compile Include="datPeriodoAcademico.cs" />
     <Compile Include="datSeccion.cs" />
     <Compile Include="datTarifa.cs" />
+    <Compile Include="datTipoAsistencia.cs" />
     <Compile Include="datTipoCargo.cs" />
+    <Compile Include="datTipoEvaluacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

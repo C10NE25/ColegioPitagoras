@@ -20,6 +20,7 @@ namespace CapaLogica
             }
         }
         #endregion singleton
+
         #region metodos
         public List<entMatricula> ListarMatricula()
         {

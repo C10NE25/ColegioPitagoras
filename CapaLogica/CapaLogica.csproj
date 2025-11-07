@@ -52,6 +52,7 @@
     <Compile Include="logMatricula.cs" />
     <Compile Include="logModalidadPago.cs" />
     <Compile Include="logNivelAcademico.cs" />
+    <Compile Include="logPago.cs" />
     <Compile Include="logParentesco.cs" />
     <Compile Include="logPeriodoAcademico.cs" />
     <Compile Include="logSeccion.cs" />

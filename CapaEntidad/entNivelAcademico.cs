@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    internal class entNivelAcademico
+    public class entNivelAcademico
     {
+        public int IdNivelAcademico { get; set; }
+        public string NombreNivelAcademico { get; set; }
+        public bool EstadoNivelAcademico { get; set; }
     }
 }

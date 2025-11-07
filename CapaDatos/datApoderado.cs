@@ -45,10 +45,11 @@ namespace CapaDatos
                     Apo.IdApoderado = Convert.ToInt32(dr["idApoderado"]);
                     Apo.DniApo = dr["dniApo"].ToString();
                     Apo.NombreApo = dr["nombreApo"].ToString();
-                    Apo.ApellidosApo = dr["apellidosApo"].ToString();
+                    Apo.ApellidosPatApo = dr["apellidosPatApo"].ToString();
+                    Apo.ApellidosMatApo = dr["apellidosMatApo"].ToString();
                     Apo.NumCelularApo = dr["numCelularApo"].ToString();
                     Apo.DireccionApo= dr["direccionApo"].ToString();
-                    Apo.EstadoApot = Convert.ToBoolean(dr["estadoApot"]);
+                    Apo.EstadoApo = Convert.ToBoolean(dr["estadoApo"]);
                     lista.Add(Apo);
                 }
 
@@ -77,10 +78,11 @@ namespace CapaDatos
 
                 cmd.Parameters.AddWithValue("@dniApo", apo.DniApo);
                 cmd.Parameters.AddWithValue("@nombreApo", apo.NombreApo);
-                cmd.Parameters.AddWithValue("@apellidosApo", apo.ApellidosApo);
+                cmd.Parameters.AddWithValue("@apellidosPatApo", apo.ApellidosPatApo);
+                cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosPatApo);
                 cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
                 cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
-                cmd.Parameters.AddWithValue("@estadoApot", apo.EstadoApot);
+                cmd.Parameters.AddWithValue("@estadoApo", apo.EstadoApo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -113,10 +115,11 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@idApoderado", apo.IdApoderado);
                 cmd.Parameters.AddWithValue("@dniApo", apo.DniApo);
                 cmd.Parameters.AddWithValue("@nombreApo", apo.NombreApo);
-                cmd.Parameters.AddWithValue("@apellidosApo", apo.ApellidosApo);
+                cmd.Parameters.AddWithValue("@apellidosPatApo", apo.ApellidosPatApo);
+                cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosPatApo);
                 cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
                 cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
-                cmd.Parameters.AddWithValue("@estadoApot", apo.EstadoApot);
+                cmd.Parameters.AddWithValue("@estadoApo", apo.EstadoApo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

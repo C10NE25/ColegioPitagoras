@@ -3,48 +3,47 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datMatricula
+    public class datPago
     {
         #region singleton
-        private static readonly datMatricula _instancia = new datMatricula();
+        private static readonly datPago _instancia = new datPago();
 
-        public static datMatricula Instancia
+        public static datPago Instancia
         {
             get
             {
-                return datMatricula._instancia;
+                return datPago._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entMatricula> ListarMatricula()
+        public List<entPago> ListarPago()
         {
             SqlCommand cmd = null;
-            List<entMatricula> lista = new List<entMatricula>();
+            List<entPago> lista = new List<entPago>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarMatricula", cn);
+                cmd = new SqlCommand("spListarPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entMatricula Mat = new entMatricula();
-                    Mat.IdMatricula = Convert.ToInt32(dr["idMatricula"]);
-                    Mat.IdInscripcion = Convert.ToInt32(dr["idInscripcion"]);
-                    Mat.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    Mat.FechaMatricula = Convert.ToDateTime(dr["fechaMatricula"]);
-                    Mat.EstadoMatricula = Convert.ToBoolean(dr["estadoMatricula"]);
-                    lista.Add(Mat);
+                    entPago P = new entPago();
+                    P.IdPago = Convert.ToInt32(dr["idPago"]);
+                    P.IdEstudiante = Convert.ToInt32(dr["idEstudiante"]);
+                    P.FechaPago = Convert.ToDateTime(dr["fechaPago"]);
+                    P.IdModalidadPago = Convert.ToInt32(dr["idModalidadPago"]);
+                    P.EstadoPago = Convert.ToBoolean(dr["estadoPago"]);
+                    lista.Add(P);
                 }
             }
             catch (Exception e)
@@ -56,24 +55,27 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
             return lista;
+
         }
 
-        public Boolean InsertarMatricula(entMatricula Mat)
+        public Boolean InsertarPago(entPago P)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarMatricula", cn);
+                cmd = new SqlCommand("spInsertarPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idInscripcion", Mat.IdInscripcion);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", Mat.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@fechaMatricula", Mat.FechaMatricula);
-                cmd.Parameters.AddWithValue("@estadoMatricula", Mat.EstadoMatricula);
+                cmd.Parameters.AddWithValue("@idEstudiante", P.IdEstudiante);
+                cmd.Parameters.AddWithValue("@fechaPago", P.FechaPago);
+                cmd.Parameters.AddWithValue("@idModalidadPago", P.IdModalidadPago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
-                inserta = (i > 0);
+                if (i > 0)
+                {
+                    inserta = true;
+                }
             }
             catch (Exception e)
             {
@@ -81,25 +83,27 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null)
-                    cmd.Connection.Close();
+                cmd.Connection.Close();
             }
             return inserta;
         }
 
-        public Boolean DeshabilitarMatricula(entMatricula Mat)
+        public Boolean DeshabilitarPago(entPago P)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarMatricula", cn);
+                cmd = new SqlCommand("spDeshabilitarPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idMatricula", Mat.IdMatricula);
+                cmd.Parameters.AddWithValue("@idPago", P.IdPago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
-                deshabilita = (i > 0);
+                if (i > 0)
+                {
+                    deshabilita = true;
+                }
             }
             catch (Exception e)
             {
@@ -107,11 +111,14 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null)
-                    cmd.Connection.Close();
+                cmd.Connection.Close();
             }
             return deshabilita;
         }
+
+
+
+
         #endregion metodos
     }
 }

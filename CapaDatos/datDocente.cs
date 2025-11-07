@@ -41,7 +41,8 @@ namespace CapaDatos
                     Doc.IdDocente = Convert.ToInt32(dr["idDocente"]);
                     Doc.DniDoc = dr["dniDoc"].ToString();
                     Doc.NombreDoc = dr["nombreDoc"].ToString();
-                    Doc.ApellidosDoc = dr["apellidosDoc"].ToString();
+                    Doc.ApellidosPatDoc = dr["apellidosPatDoc"].ToString();
+                    Doc.ApellidosMatDoc = dr["apellidosMatDoc"].ToString();
                     Doc.NumCelularDoc = dr["numCelularDoc"].ToString();
                     Doc.DireccionDoc= dr["direccionDoc"].ToString();
                     Doc.EstadoDoc = Convert.ToBoolean(dr["estadoDoc"]);
@@ -71,7 +72,8 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
                 cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("@apellidosDoc", Doc.ApellidosDoc);
+                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
+                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
                 cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
                 cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
                 cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);
@@ -106,7 +108,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@idDocente", Doc.IdDocente);
                 cmd.Parameters.AddWithValue("@dniDoc", Doc.DniDoc);
                 cmd.Parameters.AddWithValue("@nombreDoc", Doc.NombreDoc);
-                cmd.Parameters.AddWithValue("@apellidosDoc", Doc.ApellidosDoc);
+                cmd.Parameters.AddWithValue("apellidosPatDoc", Doc.ApellidosPatDoc);
+                cmd.Parameters.AddWithValue("apellidosMatDoc", Doc.ApellidosMatDoc);
                 cmd.Parameters.AddWithValue("@numCelularDoc", Doc.NumCelularDoc);
                 cmd.Parameters.AddWithValue("@direccionDoc", Doc.DireccionDoc);
                 cmd.Parameters.AddWithValue("@estadoDoc", Doc.EstadoDoc);

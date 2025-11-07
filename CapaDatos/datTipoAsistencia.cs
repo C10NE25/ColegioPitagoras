@@ -9,42 +9,38 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datCurso
+    public class datTipoAsistencia
     {
         #region singleton
-        private static readonly datCurso _instancia = new datCurso();
-
-        public static datCurso Instancia
+        private static readonly datTipoAsistencia _instancia = new datTipoAsistencia();
+        public static datTipoAsistencia Instancia
         {
             get
             {
-                return datCurso._instancia;
+                return datTipoAsistencia._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entCurso> ListarCurso()
+        public List<entTipoAsistencia> ListarTipoAsistencia()
         {
             SqlCommand cmd = null;
-            List<entCurso> lista = new List<entCurso>();
+            List<entTipoAsistencia> lista = new List<entTipoAsistencia>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCurso", cn);
+                cmd = new SqlCommand("spListarDocente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCurso C = new entCurso();
-                    C.IdCurso = Convert.ToInt32(dr["idCurso"]);
-                    C.NombreCurso = dr["nombreCurso"].ToString();
-                    C.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    C.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    C.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
-                    C.EstadoCurso = Convert.ToBoolean(dr["estadoCurso"]);
-                    lista.Add(C);
+                    entTipoAsistencia Tas = new entTipoAsistencia();
+                    Tas.IdTipoAsistencia = Convert.ToInt32(dr["idTipoAsistencia"]);
+                    Tas.TipoAsistencia = dr["tipoAsistencia"].ToString();
+                    Tas.estado = Convert.ToBoolean(dr["estado"]);
+                    lista.Add(Tas);
                 }
             }
             catch (Exception e)
@@ -58,24 +54,22 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean InsertarCurso(entCurso C)
+        public Boolean insertarTipoAsistencia(entTipoAsistencia Tas)
         {
             SqlCommand cmd = null;
-            Boolean inserta = false;
+            Boolean inserto = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCurso", cn);
+                cmd = new SqlCommand("spInsertarTipoAsistencia", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
+                cmd.Parameters.AddWithValue("@tipoAsistencia", Tas.TipoAsistencia);
+                cmd.Parameters.AddWithValue("@estado", Tas.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    inserta = true;
+                    inserto = true;
                 }
             }
             catch (Exception e)
@@ -86,29 +80,26 @@ namespace CapaDatos
             {
                 cmd.Connection.Close();
             }
-            return inserta;
+            return inserto;
         }
 
-        public Boolean EditarCurso(entCurso C)
+        public Boolean editarTipoAsistencia(entTipoAsistencia Tas)
         {
             SqlCommand cmd = null;
-            Boolean edita = false;
+            Boolean edito = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCurso", cn);
+                cmd = new SqlCommand("spEditarTipoAsistencia", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
-                cmd.Parameters.AddWithValue("@estadoCurso", C.EstadoCurso);
+                cmd.Parameters.AddWithValue("@idTipoAsistencia", Tas.IdTipoAsistencia);
+                cmd.Parameters.AddWithValue("@tipoAsistencia", Tas.TipoAsistencia);
+                cmd.Parameters.AddWithValue("@estado", Tas.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    edita = true;
+                    edito = true;
                 }
             }
             catch (Exception e)
@@ -119,25 +110,20 @@ namespace CapaDatos
             {
                 cmd.Connection.Close();
             }
-            return edita;
+            return edito;
         }
 
-        public Boolean DeshabilitarCurso(entCurso C)
+        public void deshabilitarTipoAsistencia(entTipoAsistencia P)
         {
             SqlCommand cmd = null;
-            Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCurso", cn);
+                cmd = new SqlCommand("spDeshabilitarTipoAsistencia", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
+                cmd.Parameters.AddWithValue("@idTipoAsistencia", P.IdTipoAsistencia);
                 cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    deshabilita = true;
-                }
+                cmd.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -147,8 +133,11 @@ namespace CapaDatos
             {
                 cmd.Connection.Close();
             }
-            return deshabilita;
         }
+
+
+
+
         #endregion metodos
     }
 }

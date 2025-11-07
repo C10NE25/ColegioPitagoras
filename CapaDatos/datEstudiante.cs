@@ -43,7 +43,8 @@ namespace CapaDatos
                     Est.IdEstudiante = Convert.ToInt32(dr["idEstudiante"]);
                     Est.DniEst = dr["dniEst"].ToString();
                     Est.NombreEst = dr["nombreEst"].ToString();
-                    Est.ApellidosEst = dr["apellidosEst"].ToString();
+                    Est.ApellidosPatEst = dr["apellidosPatEst"].ToString();
+                    Est.ApellidosMatEst = dr["apellidosMatEst"].ToString();
                     Est.FechaNacEst = Convert.ToDateTime(dr["fechaNacEst"]);
                     Est.DireccionEst = dr["direccionEst"].ToString();
                     Est.IdApoderado = Convert.ToInt32(dr["idApoderado"]);
@@ -74,7 +75,8 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@dniEst", Est.DniEst);
                 cmd.Parameters.AddWithValue("@nombreEst", Est.NombreEst);
-                cmd.Parameters.AddWithValue("@apellidosEst", Est.ApellidosEst);
+                cmd.Parameters.AddWithValue("@apellidoPatEst", Est.ApellidosPatEst);
+                cmd.Parameters.AddWithValue("@apellidoMatEst", Est.ApellidosMatEst);
                 cmd.Parameters.AddWithValue("@fechaNacEst", Est.FechaNacEst);
                 cmd.Parameters.AddWithValue("@direccionEst", Est.DireccionEst);
                 cmd.Parameters.AddWithValue("@idApoderado", Est.IdApoderado);
@@ -110,7 +112,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@idEstudiante", Est.IdEstudiante);
                 cmd.Parameters.AddWithValue("@dniEst", Est.DniEst);
                 cmd.Parameters.AddWithValue("@nombreEst", Est.NombreEst);
-                cmd.Parameters.AddWithValue("@apellidosEst", Est.ApellidosEst);
+                cmd.Parameters.AddWithValue("@apellidoPatEst", Est.ApellidosPatEst);
+                cmd.Parameters.AddWithValue("@apellidoMatEst", Est.ApellidosMatEst);
                 cmd.Parameters.AddWithValue("@fechaNacEst", Est.FechaNacEst);
                 cmd.Parameters.AddWithValue("@direccionEst", Est.DireccionEst);
                 cmd.Parameters.AddWithValue("@idApoderado", Est.IdApoderado);

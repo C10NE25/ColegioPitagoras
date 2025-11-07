@@ -9,42 +9,40 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datCurso
+    public class datPeriodoAcademico
     {
         #region singleton
-        private static readonly datCurso _instancia = new datCurso();
-
-        public static datCurso Instancia
+        private static readonly datPeriodoAcademico _instancia = new datPeriodoAcademico();
+        public static datPeriodoAcademico Instancia
         {
             get
             {
-                return datCurso._instancia;
+                return datPeriodoAcademico._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entCurso> ListarCurso()
+
+        public List<entPeriodoAcademico> listarPeriodoAcademico()
         {
             SqlCommand cmd = null;
-            List<entCurso> lista = new List<entCurso>();
+            List<entPeriodoAcademico> lista = new List<entPeriodoAcademico>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCurso", cn);
+                cmd = new SqlCommand("spListarModalidadPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCurso C = new entCurso();
-                    C.IdCurso = Convert.ToInt32(dr["idCurso"]);
-                    C.NombreCurso = dr["nombreCurso"].ToString();
-                    C.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    C.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    C.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
-                    C.EstadoCurso = Convert.ToBoolean(dr["estadoCurso"]);
-                    lista.Add(C);
+                    entPeriodoAcademico Pa = new entPeriodoAcademico();
+                    Pa.IdPeriodoAcademico = Convert.ToInt32(dr["idPeriodoAcademico"]);
+                    Pa.anioPeriodoAcademico = Convert.ToInt32(dr["anioPeriodoAcademico"]);
+                    Pa.NombrePeriodoAcademico = dr["nombrePeriodoAcademico"].ToString();
+                    Pa.EstadoPeriodoAcademico = Convert.ToBoolean(dr["estadoPeriodoAcademico"]);
+                    lista.Add(Pa);
                 }
             }
             catch (Exception e)
@@ -58,19 +56,19 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean InsertarCurso(entCurso C)
+
+        public Boolean InsertarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCurso", cn);
+                cmd = new SqlCommand("spInsertarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
+                cmd.Parameters.AddWithValue("@anioPeriodoAcademico", Pa.anioPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@nombrePeriodoAcademico", Pa.NombrePeriodoAcademico);
+                cmd.Parameters.AddWithValue("@estadoPeriodoAcademico", Pa.EstadoPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -89,21 +87,19 @@ namespace CapaDatos
             return inserta;
         }
 
-        public Boolean EditarCurso(entCurso C)
+        public Boolean EditarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCurso", cn);
+                cmd = new SqlCommand("spEditarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
-                cmd.Parameters.AddWithValue("@estadoCurso", C.EstadoCurso);
+                cmd.Parameters.AddWithValue("@idPeriodoAcademico", Pa.IdPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@anioPeriodoAcademico", Pa.anioPeriodoAcademico);
+                cmd.Parameters.AddWithValue("@nombrePeriodoAcademico", Pa.NombrePeriodoAcademico);
+                cmd.Parameters.AddWithValue("@estadoPeriodoAcademico", Pa.EstadoPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -122,16 +118,16 @@ namespace CapaDatos
             return edita;
         }
 
-        public Boolean DeshabilitarCurso(entCurso C)
+        public Boolean DeshabilitarPeriodoAcademico(entPeriodoAcademico Pa)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCurso", cn);
+                cmd = new SqlCommand("spDeshabilitarPeriodoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
+                cmd.Parameters.AddWithValue("@idPeriodoAcademico", Pa.IdPeriodoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

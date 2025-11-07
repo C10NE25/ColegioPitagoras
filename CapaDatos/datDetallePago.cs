@@ -9,42 +9,39 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datCurso
+    public class datDetallePago
     {
         #region singleton
-        private static readonly datCurso _instancia = new datCurso();
-
-        public static datCurso Instancia
+        private static readonly datDetallePago _instancia = new datDetallePago();
+        public static datDetallePago Instancia
         {
             get
             {
-                return datCurso._instancia;
+                return datDetallePago._instancia;
             }
         }
         #endregion singleton
-
         #region metodos
-        public List<entCurso> ListarCurso()
+        public List<entDetallePago> ListarDetallePago()
         {
             SqlCommand cmd = null;
-            List<entCurso> lista = new List<entCurso>();
+            List<entDetallePago> lista = new List<entDetallePago>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCurso", cn);
+                cmd = new SqlCommand("spListarDetallePago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCurso C = new entCurso();
-                    C.IdCurso = Convert.ToInt32(dr["idCurso"]);
-                    C.NombreCurso = dr["nombreCurso"].ToString();
-                    C.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    C.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    C.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
-                    C.EstadoCurso = Convert.ToBoolean(dr["estadoCurso"]);
-                    lista.Add(C);
+                    entDetallePago DP = new entDetallePago();
+                    DP.IdDetallePago = Convert.ToInt32(dr["idDetallePago"]);
+                    DP.IdPago = Convert.ToInt32(dr["idPago"]);
+                    DP.IdTipoCargo = Convert.ToInt32(dr["idTipoCargo"]);
+                    DP.MontoPagado = Convert.ToDecimal(dr["montoPagado"]);
+                    DP.EstadoDetallePago = Convert.ToBoolean(dr["estadoDetallePago"]);
+                    lista.Add(DP);
                 }
             }
             catch (Exception e)
@@ -58,19 +55,18 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean InsertarCurso(entCurso C)
+        public Boolean insertarDetallePago(entDetallePago DP)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCurso", cn);
+                cmd = new SqlCommand("spInsertarDetallePago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
+                cmd.Parameters.AddWithValue("@idPago", DP.IdPago);
+                cmd.Parameters.AddWithValue("@idTipoCargo", DP.IdTipoCargo);
+                cmd.Parameters.AddWithValue("@montoPagado", DP.MontoPagado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -89,21 +85,19 @@ namespace CapaDatos
             return inserta;
         }
 
-        public Boolean EditarCurso(entCurso C)
+        public Boolean editarDetallePago(entDetallePago DP)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCurso", cn);
+                cmd = new SqlCommand("spEditarDetallePago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
-                cmd.Parameters.AddWithValue("@estadoCurso", C.EstadoCurso);
+                cmd.Parameters.AddWithValue("@idDetallePago", DP.IdDetallePago);
+                cmd.Parameters.AddWithValue("@idPago", DP.IdPago);
+                cmd.Parameters.AddWithValue("@idTipoCargo", DP.IdTipoCargo);
+                cmd.Parameters.AddWithValue("@montoPagado", DP.MontoPagado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -122,16 +116,16 @@ namespace CapaDatos
             return edita;
         }
 
-        public Boolean DeshabilitarCurso(entCurso C)
+        public Boolean deshabilitarDetallePago(entDetallePago P)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCurso", cn);
+                cmd = new SqlCommand("spDeshabilitarDetallePago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
+                cmd.Parameters.AddWithValue("@idDetallePago", P.IdDetallePago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -149,6 +143,8 @@ namespace CapaDatos
             }
             return deshabilita;
         }
+
+
         #endregion metodos
     }
 }

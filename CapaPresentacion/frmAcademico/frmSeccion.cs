@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.frmAcademico
 {
-    public partial class frmBoletaPago : Form
+    public partial class frmSeccion : Form
     {
-        public frmBoletaPago()
+        public frmSeccion()
         {
             InitializeComponent();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

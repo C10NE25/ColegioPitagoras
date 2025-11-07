@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAcademico\frmAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmAsignatura.Designer.cs">
+      <DependentUpon>frmAsignatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAcademico\frmParentesco.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAcademico\frmParentesco.Designer.cs">
       <DependentUpon>frmParentesco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmPeriodoAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmPeriodoAcademico.Designer.cs">
+      <DependentUpon>frmPeriodoAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmSeccion.Designer.cs">
+      <DependentUpon>frmSeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcademico\frmTipoAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcademico\frmTipoAsistencia.Designer.cs">
+      <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdministrativo\frmBoletaInscripcion.cs">
       <SubType>Form</SubType>
@@ -87,12 +111,6 @@
     </Compile>
     <Compile Include="frmAdministrativo\frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTesoreria\frmBoletaPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTesoreria\frmBoletaPago.Designer.cs">
-      <DependentUpon>frmBoletaPago.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -154,17 +172,35 @@
     <Compile Include="frmAdministrativo\frmTipoDocumento.Designer.cs">
       <DependentUpon>frmTipoDocumento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTesoreria\frmPlanPago.cs">
+    <Compile Include="frmTesoreria\frmDetallePago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTesoreria\frmPlanPago.Designer.cs">
-      <DependentUpon>frmPlanPago.cs</DependentUpon>
+    <Compile Include="frmTesoreria\frmDetallePago.Designer.cs">
+      <DependentUpon>frmDetallePago.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTesoreria\frmTipoPlanPago.cs">
+    <Compile Include="frmTesoreria\frmModalidadPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTesoreria\frmTipoPlanPago.Designer.cs">
-      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
+    <Compile Include="frmTesoreria\frmModalidadPago.Designer.cs">
+      <DependentUpon>frmModalidadPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmPago.Designer.cs">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTarifa.Designer.cs">
+      <DependentUpon>frmTarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTesoreria\frmTipoCargo.Designer.cs">
+      <DependentUpon>frmTipoCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTesoreria\frmBoletaPago.resx">
-      <DependentUpon>frmBoletaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -221,12 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmTipoDocumento.resx">
       <DependentUpon>frmTipoDocumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTesoreria\frmPlanPago.resx">
-      <DependentUpon>frmPlanPago.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTesoreria\frmTipoPlanPago.resx">
-      <DependentUpon>frmTipoPlanPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

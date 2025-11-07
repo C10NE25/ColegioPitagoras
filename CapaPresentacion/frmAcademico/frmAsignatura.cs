@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.frmAcademico
 {
-    public partial class frmTipoPlanPago : Form
+    public partial class frmAsignatura : Form
     {
-        public frmTipoPlanPago()
+        public frmAsignatura()
         {
             InitializeComponent();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

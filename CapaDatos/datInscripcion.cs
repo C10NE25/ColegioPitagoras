@@ -3,48 +3,46 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datMatricula
+    public class datInscripcion
     {
         #region singleton
-        private static readonly datMatricula _instancia = new datMatricula();
+        private static readonly datInscripcion _instancia = new datInscripcion();
 
-        public static datMatricula Instancia
+        public static datInscripcion Instancia
         {
             get
             {
-                return datMatricula._instancia;
+                return datInscripcion._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entMatricula> ListarMatricula()
+        public List<entInscripcion> ListarInscripcion()
         {
             SqlCommand cmd = null;
-            List<entMatricula> lista = new List<entMatricula>();
+            List<entInscripcion> lista = new List<entInscripcion>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarMatricula", cn);
+                cmd = new SqlCommand("spListarInscripcion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entMatricula Mat = new entMatricula();
-                    Mat.IdMatricula = Convert.ToInt32(dr["idMatricula"]);
-                    Mat.IdInscripcion = Convert.ToInt32(dr["idInscripcion"]);
-                    Mat.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    Mat.FechaMatricula = Convert.ToDateTime(dr["fechaMatricula"]);
-                    Mat.EstadoMatricula = Convert.ToBoolean(dr["estadoMatricula"]);
-                    lista.Add(Mat);
+                    entInscripcion Ins = new entInscripcion();
+                    Ins.IdInscripcion = Convert.ToInt32(dr["idInscripcion"]);
+                    Ins.IdEstudiante = Convert.ToInt32(dr["idEstudiante"]);
+                    Ins.FechaInscripcion = Convert.ToDateTime(dr["fechaInscripcion"]);
+                    Ins.EstadoInscripcion = Convert.ToBoolean(dr["estadoInscripcion"]);
+                    lista.Add(Ins);
                 }
             }
             catch (Exception e)
@@ -58,22 +56,24 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean InsertarMatricula(entMatricula Mat)
+        public Boolean InsertarInscripcion(entInscripcion Ins)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarMatricula", cn);
+                cmd = new SqlCommand("spInsertarInscripcion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idInscripcion", Mat.IdInscripcion);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", Mat.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@fechaMatricula", Mat.FechaMatricula);
-                cmd.Parameters.AddWithValue("@estadoMatricula", Mat.EstadoMatricula);
+                cmd.Parameters.AddWithValue("@idEstudiante", Ins.IdEstudiante);
+                cmd.Parameters.AddWithValue("@fechaInscripcion", Ins.FechaInscripcion);
+                cmd.Parameters.AddWithValue("@estadoInscripcion", Ins.EstadoInscripcion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
-                inserta = (i > 0);
+                if (i > 0)
+                {
+                    inserta = true;
+                }
             }
             catch (Exception e)
             {
@@ -81,25 +81,27 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null)
-                    cmd.Connection.Close();
+                cmd.Connection.Close();
             }
             return inserta;
         }
 
-        public Boolean DeshabilitarMatricula(entMatricula Mat)
+        public Boolean DeshabilitarInscripcion(entInscripcion Ins)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarMatricula", cn);
+                cmd = new SqlCommand("spDeshabilitarInscripcion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idMatricula", Mat.IdMatricula);
+                cmd.Parameters.AddWithValue("@idInscripcion", Ins);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
-                deshabilita = (i > 0);
+                if (i > 0)
+                {
+                    deshabilita = true;
+                }
             }
             catch (Exception e)
             {
@@ -107,8 +109,7 @@ namespace CapaDatos
             }
             finally
             {
-                if (cmd != null)
-                    cmd.Connection.Close();
+                cmd.Connection.Close();
             }
             return deshabilita;
         }

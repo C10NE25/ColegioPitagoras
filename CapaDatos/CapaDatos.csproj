@@ -48,6 +48,8 @@
     <Compile Include="datCurso.cs" />
     <Compile Include="datDocente.cs" />
     <Compile Include="datEstudiante.cs" />
+    <Compile Include="datGradoAcademico.cs" />
+    <Compile Include="datInscripcion.cs" />
     <Compile Include="datMatricula.cs" />
     <Compile Include="datModalidadPago.cs" />
     <Compile Include="datNivelAcademico.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="datPeriodoAcademico.cs" />
     <Compile Include="datSeccion.cs" />
     <Compile Include="datTarifa.cs" />
+    <Compile Include="datTipoCargo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

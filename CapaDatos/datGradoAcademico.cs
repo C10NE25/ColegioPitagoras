@@ -9,42 +9,41 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datCurso
+    public class datGradoAcademico
     {
         #region singleton
-        private static readonly datCurso _instancia = new datCurso();
+        private static readonly datGradoAcademico _instancia = new datGradoAcademico();
 
-        public static datCurso Instancia
+        public static datGradoAcademico Instancia
         {
             get
             {
-                return datCurso._instancia;
+                return datGradoAcademico._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entCurso> ListarCurso()
+        public List<entGradoAcademico> ListarGradoAcademico()
         {
             SqlCommand cmd = null;
-            List<entCurso> lista = new List<entCurso>();
+            List<entGradoAcademico> lista = new List<entGradoAcademico>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCurso", cn);
+                cmd = new SqlCommand("spListarGradoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCurso C = new entCurso();
-                    C.IdCurso = Convert.ToInt32(dr["idCurso"]);
-                    C.NombreCurso = dr["nombreCurso"].ToString();
-                    C.IdDocente = Convert.ToInt32(dr["idDocente"]);
-                    C.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
-                    C.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
-                    C.EstadoCurso = Convert.ToBoolean(dr["estadoCurso"]);
-                    lista.Add(C);
+                    entGradoAcademico Ga = new entGradoAcademico();
+                    Ga.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
+                    Ga.NombreGradoAcademico = dr["nombreGradoAcademico"].ToString();
+                    Ga.IdNivelAcademico = Convert.ToInt32(dr["idNivelAcademico"]);
+                    Ga.IdSeccion = Convert.ToInt32(dr["idSeccion"]);
+                    Ga.EstadoGradoAcademico= Convert.ToBoolean(dr["estadoGradoAcademico"]);
+                    lista.Add(Ga);
                 }
             }
             catch (Exception e)
@@ -58,19 +57,19 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean InsertarCurso(entCurso C)
+        public Boolean InsertarGradoAcademico(entGradoAcademico Ga)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCurso", cn);
+                cmd = new SqlCommand("spInsertarGradoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
+                cmd.Parameters.AddWithValue("@nombreGradoAcademico", Ga.NombreGradoAcademico);
+                cmd.Parameters.AddWithValue("@idNivelAcademico", Ga.IdNivelAcademico);
+                cmd.Parameters.AddWithValue("@idSeccion", Ga.IdSeccion);
+                cmd.Parameters.AddWithValue("@estadoGradoAcademico", Ga.EstadoGradoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -89,21 +88,20 @@ namespace CapaDatos
             return inserta;
         }
 
-        public Boolean EditarCurso(entCurso C)
+        public Boolean EditarGradoAcademico(entGradoAcademico Ga)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCurso", cn);
+                cmd = new SqlCommand("spEditarGradoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
-                cmd.Parameters.AddWithValue("@nombreCurso", C.NombreCurso);
-                cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
-                cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
-                cmd.Parameters.AddWithValue("@estadoCurso", C.EstadoCurso);
+                cmd.Parameters.AddWithValue("@idGradoAcademico", Ga.IdGradoAcademico);
+                cmd.Parameters.AddWithValue("@nombreGradoAcademico", Ga.NombreGradoAcademico);
+                cmd.Parameters.AddWithValue("@idNivelAcademico", Ga.IdNivelAcademico);
+                cmd.Parameters.AddWithValue("@idSeccion", Ga.IdSeccion);
+                cmd.Parameters.AddWithValue("@estadoGradoAcademico", Ga.EstadoGradoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -122,16 +120,16 @@ namespace CapaDatos
             return edita;
         }
 
-        public Boolean DeshabilitarCurso(entCurso C)
+        public Boolean DeshabilitarGradoAcademico(entGradoAcademico Ga)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCurso", cn);
+                cmd = new SqlCommand("spDeshabilitarGradoAcademico", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idCurso", C.IdCurso);
+                cmd.Parameters.AddWithValue("@idGradoAcademico", Ga.IdGradoAcademico);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

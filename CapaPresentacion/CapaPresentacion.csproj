@@ -186,6 +186,9 @@
     <EmbeddedResource Include="frmAcademico\frmParentesco.resx">
       <DependentUpon>frmParentesco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmPeriodoAcademico.resx">
+      <DependentUpon>frmPeriodoAcademico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmSeccion.resx">
       <DependentUpon>frmSeccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTesoreria\frmModalidadPago.resx">
       <DependentUpon>frmModalidadPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmTarifa.resx">
+      <DependentUpon>frmTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

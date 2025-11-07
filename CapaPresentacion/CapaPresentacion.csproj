@@ -228,14 +228,8 @@
     <EmbeddedResource Include="frmTesoreria\frmModalidadPago.resx">
       <DependentUpon>frmModalidadPago.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="frmTesoreria\frmTarifa.resx">
-      <DependentUpon>frmTarifa.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
-      <DependentUpon>frmTipoCargo.cs</DependentUpon>
->>>>>>> 1f234f1ef9791b717044072ac0d3d62196ad7271
-    </EmbeddedResource>
+
+
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

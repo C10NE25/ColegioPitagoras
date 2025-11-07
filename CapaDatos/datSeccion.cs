@@ -115,7 +115,7 @@ namespace CapaDatos
             return edita;
         }
 
-        public Boolean DeshabilitarNivelAcademico(entSeccion Sec)
+        public Boolean DeshabilitarSeccion(entSeccion Sec)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;

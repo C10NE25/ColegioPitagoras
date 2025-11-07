@@ -47,7 +47,9 @@
     <Compile Include="logDocente.cs" />
     <Compile Include="logEstudiante.cs" />
     <Compile Include="logMatricula.cs" />
+    <Compile Include="logNivelAcademico.cs" />
     <Compile Include="logParentesco.cs" />
+    <Compile Include="logSeccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

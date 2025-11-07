@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="logApoderado.cs" />
     <Compile Include="logAsignatura.cs" />
+    <Compile Include="logAsistencia.cs" />
     <Compile Include="logCargo.cs" />
     <Compile Include="logCurso.cs" />
+    <Compile Include="logDetallePago.cs" />
     <Compile Include="logDocente.cs" />
     <Compile Include="logEstudiante.cs" />
     <Compile Include="logGradoAcademico.cs" />
@@ -52,12 +54,15 @@
     <Compile Include="logMatricula.cs" />
     <Compile Include="logModalidadPago.cs" />
     <Compile Include="logNivelAcademico.cs" />
+    <Compile Include="logNotas.cs" />
     <Compile Include="logPago.cs" />
     <Compile Include="logParentesco.cs" />
     <Compile Include="logPeriodoAcademico.cs" />
     <Compile Include="logSeccion.cs" />
     <Compile Include="logTarifa.cs" />
+    <Compile Include="logTipoAsistencia.cs" />
     <Compile Include="logTipoCargo.cs" />
+    <Compile Include="logTipoEvaluacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

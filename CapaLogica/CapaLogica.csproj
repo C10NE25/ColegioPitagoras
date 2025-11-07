@@ -47,12 +47,16 @@
     <Compile Include="logCurso.cs" />
     <Compile Include="logDocente.cs" />
     <Compile Include="logEstudiante.cs" />
+    <Compile Include="logGradoAcademico.cs" />
+    <Compile Include="logInscripcion.cs" />
     <Compile Include="logMatricula.cs" />
     <Compile Include="logModalidadPago.cs" />
     <Compile Include="logNivelAcademico.cs" />
     <Compile Include="logParentesco.cs" />
     <Compile Include="logPeriodoAcademico.cs" />
     <Compile Include="logSeccion.cs" />
+    <Compile Include="logTarifa.cs" />
+    <Compile Include="logTipoCargo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

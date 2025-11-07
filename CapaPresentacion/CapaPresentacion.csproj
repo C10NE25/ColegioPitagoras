@@ -225,14 +225,6 @@
     <EmbeddedResource Include="frmTesoreria\frmModalidadPago.resx">
       <DependentUpon>frmModalidadPago.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> parent of dde3173 (Forms: Periodo Academico, Tarifa)
-=======
->>>>>>> parent of 1f234f1 (Formularios Tipo de Cargos y Modalidad de Pago (falta nombre variable))
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

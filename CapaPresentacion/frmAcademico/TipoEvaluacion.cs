@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.frmAcademico
 {
-    public partial class frmTipoDocumento : Form
+    public partial class TipoEvaluacion : Form
     {
-        public frmTipoDocumento()
+        public TipoEvaluacion()
         {
             InitializeComponent();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

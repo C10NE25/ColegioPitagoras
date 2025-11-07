@@ -204,8 +204,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAcademico\frmAsignatura.resx">
+      <DependentUpon>frmAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmParentesco.resx">
       <DependentUpon>frmParentesco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcademico\frmSeccion.resx">
+      <DependentUpon>frmSeccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmBoletaInscripcion.resx">
       <DependentUpon>frmBoletaInscripcion.cs</DependentUpon>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrativo\frmTipoDocumento.resx">
       <DependentUpon>frmTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmModalidadPago.resx">
+      <DependentUpon>frmModalidadPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

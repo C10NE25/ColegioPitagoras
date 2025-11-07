@@ -54,6 +54,7 @@
     <Compile Include="datParentesco.cs" />
     <Compile Include="datPeriodoAcademico.cs" />
     <Compile Include="datSeccion.cs" />
+    <Compile Include="datTarifa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

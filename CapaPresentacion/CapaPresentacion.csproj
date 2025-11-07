@@ -225,6 +225,9 @@
     <EmbeddedResource Include="frmTesoreria\frmModalidadPago.resx">
       <DependentUpon>frmModalidadPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
+      <DependentUpon>frmTipoCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

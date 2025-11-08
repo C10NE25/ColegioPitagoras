@@ -53,7 +53,7 @@ namespace CapaPresentacion
 
         private void btnTutor_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmApoderado());
+            openChildForms(new frmTutor());
 
             //Oculta el submenu luego de hacer click en una opcion
             hideSubMenu();
@@ -138,37 +138,27 @@ namespace CapaPresentacion
 
         private void btnTipoDocumento_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmTipoDocumento());
 
-            hideSubMenu();
         }
 
         private void btnDocumento_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmDocumento());
 
-            hideSubMenu();
         }
 
         private void btnCarpetaInscripcion_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmCarpetaInscripcion());
 
-            hideSubMenu();
         }
 
         private void btnBoletaInscripcion_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmBoletaInscripcion());
 
-            hideSubMenu();
         }
 
         private void btnBoletaMatricula_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmBoletaMatricula());
 
-            hideSubMenu();
         }
 
         private void btnInscripcion_Click(object sender, EventArgs e)

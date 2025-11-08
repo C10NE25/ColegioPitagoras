@@ -58,7 +58,7 @@ namespace CapaPresentacion
             txtDniEstudiante.Text = "";
             dtpFechaNacEstudiante.Value = DateTime.Now;
             txtDireccionEstudiante.Text = "";
-            txtIDTutor.Text = "";
+            //txtIDTutor.Text = "";
             cbxEstado.Checked = false;
         }
 
@@ -69,10 +69,10 @@ namespace CapaPresentacion
                 entEstudiante estudiante= new entEstudiante();
                 estudiante.DniEst = txtDniEstudiante.Text.Trim();
                 estudiante.NombreEst = txtNombreEstudiante.Text.Trim();
-                estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
+                //estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
                 estudiante.FechaNacEst = dtpFechaNacEstudiante.Value;
                 estudiante.DireccionEst = txtDireccionEstudiante.Text.Trim();
-                estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
+                //estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
                 estudiante.EstadoEst = cbxEstado.Checked;
                 logEstudiante.Instancia.InsertarEstudiante(estudiante);
             }
@@ -103,10 +103,10 @@ namespace CapaPresentacion
                 estudiante.IdEstudiante = Convert.ToInt32(txtIDEstudiante.Text.Trim());
                 estudiante.DniEst = txtDniEstudiante.Text.Trim();
                 estudiante.NombreEst = txtNombreEstudiante.Text.Trim();
-                estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
+                //estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
                 estudiante.FechaNacEst = dtpFechaNacEstudiante.Value;
                 estudiante.DireccionEst = txtDireccionEstudiante.Text.Trim();
-                estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
+               // estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
                 estudiante.EstadoEst = cbxEstado.Checked;
                 logEstudiante.Instancia.EditarEstudiante(estudiante);
             }
@@ -159,7 +159,7 @@ namespace CapaPresentacion
             txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
             dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
             txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();
-            txtIDTutor.Text = fila.Cells[6].Value.ToString();
+            //txtIDTutor.Text = fila.Cells[6].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
         }
 

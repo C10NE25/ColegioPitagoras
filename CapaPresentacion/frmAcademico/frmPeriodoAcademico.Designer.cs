@@ -30,6 +30,9 @@
         {
             this.dgvPeriodoAcademico = new System.Windows.Forms.DataGridView();
             this.gbxSeccion = new System.Windows.Forms.GroupBox();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.txtNombrePeriodoAcademico = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
@@ -41,9 +44,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNombrePeriodoAcademico = new System.Windows.Forms.TextBox();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodoAcademico)).BeginInit();
             this.gbxSeccion.SuspendLayout();
@@ -81,7 +81,35 @@
             this.gbxSeccion.Size = new System.Drawing.Size(585, 240);
             this.gbxSeccion.TabIndex = 59;
             this.gbxSeccion.TabStop = false;
-            this.gbxSeccion.Text = "Datos de la Asignatura";
+            this.gbxSeccion.Text = "Datos del Periodo Academico";
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Location = new System.Drawing.Point(453, 184);
+            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(127, 38);
+            this.btnDeshabilitar.TabIndex = 65;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            // 
+            // txtNombrePeriodoAcademico
+            // 
+            this.txtNombrePeriodoAcademico.Location = new System.Drawing.Point(236, 100);
+            this.txtNombrePeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
+            this.txtNombrePeriodoAcademico.Name = "txtNombrePeriodoAcademico";
+            this.txtNombrePeriodoAcademico.Size = new System.Drawing.Size(195, 22);
+            this.txtNombrePeriodoAcademico.TabIndex = 64;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 106);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 16);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Nombre del Periodo Academico";
             // 
             // btnAgregar
             // 
@@ -192,34 +220,6 @@
             this.btnCerrar.TabIndex = 60;
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 106);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(201, 16);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Nombre del Periodo Academico";
-            // 
-            // txtNombrePeriodoAcademico
-            // 
-            this.txtNombrePeriodoAcademico.Location = new System.Drawing.Point(236, 100);
-            this.txtNombrePeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
-            this.txtNombrePeriodoAcademico.Name = "txtNombrePeriodoAcademico";
-            this.txtNombrePeriodoAcademico.Size = new System.Drawing.Size(195, 22);
-            this.txtNombrePeriodoAcademico.TabIndex = 64;
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(453, 184);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(127, 38);
-            this.btnDeshabilitar.TabIndex = 65;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 

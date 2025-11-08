@@ -30,23 +30,23 @@
         {
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
-            this.txtNombrePeriodoAcademico = new System.Windows.Forms.TextBox();
+            this.txtMontoTarifa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdPeriodoAcademico = new System.Windows.Forms.TextBox();
+            this.txtIdTarifa = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.txtPeriodoAnioAcademico = new System.Windows.Forms.TextBox();
+            this.txtNombreTarifa = new System.Windows.Forms.TextBox();
             this.dgvTarifa = new System.Windows.Forms.DataGridView();
             this.gbxSeccion = new System.Windows.Forms.GroupBox();
+            this.cbAnioAcademico = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifa)).BeginInit();
             this.gbxSeccion.SuspendLayout();
             this.SuspendLayout();
@@ -72,13 +72,13 @@
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
             // 
-            // txtNombrePeriodoAcademico
+            // txtMontoTarifa
             // 
-            this.txtNombrePeriodoAcademico.Location = new System.Drawing.Point(319, 100);
-            this.txtNombrePeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
-            this.txtNombrePeriodoAcademico.Name = "txtNombrePeriodoAcademico";
-            this.txtNombrePeriodoAcademico.Size = new System.Drawing.Size(112, 22);
-            this.txtNombrePeriodoAcademico.TabIndex = 64;
+            this.txtMontoTarifa.Location = new System.Drawing.Point(319, 100);
+            this.txtMontoTarifa.Margin = new System.Windows.Forms.Padding(1);
+            this.txtMontoTarifa.Name = "txtMontoTarifa";
+            this.txtMontoTarifa.Size = new System.Drawing.Size(112, 22);
+            this.txtMontoTarifa.TabIndex = 64;
             // 
             // label4
             // 
@@ -143,13 +143,13 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Id Tarifa";
             // 
-            // txtIdPeriodoAcademico
+            // txtIdTarifa
             // 
-            this.txtIdPeriodoAcademico.Location = new System.Drawing.Point(236, 28);
-            this.txtIdPeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
-            this.txtIdPeriodoAcademico.Name = "txtIdPeriodoAcademico";
-            this.txtIdPeriodoAcademico.Size = new System.Drawing.Size(75, 22);
-            this.txtIdPeriodoAcademico.TabIndex = 1;
+            this.txtIdTarifa.Location = new System.Drawing.Point(236, 28);
+            this.txtIdTarifa.Margin = new System.Windows.Forms.Padding(1);
+            this.txtIdTarifa.Name = "txtIdTarifa";
+            this.txtIdTarifa.Size = new System.Drawing.Size(75, 22);
+            this.txtIdTarifa.TabIndex = 1;
             // 
             // btnCerrar
             // 
@@ -161,13 +161,13 @@
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // txtPeriodoAnioAcademico
+            // txtNombreTarifa
             // 
-            this.txtPeriodoAnioAcademico.Location = new System.Drawing.Point(236, 63);
-            this.txtPeriodoAnioAcademico.Margin = new System.Windows.Forms.Padding(1);
-            this.txtPeriodoAnioAcademico.Name = "txtPeriodoAnioAcademico";
-            this.txtPeriodoAnioAcademico.Size = new System.Drawing.Size(195, 22);
-            this.txtPeriodoAnioAcademico.TabIndex = 0;
+            this.txtNombreTarifa.Location = new System.Drawing.Point(236, 63);
+            this.txtNombreTarifa.Margin = new System.Windows.Forms.Padding(1);
+            this.txtNombreTarifa.Name = "txtNombreTarifa";
+            this.txtNombreTarifa.Size = new System.Drawing.Size(195, 22);
+            this.txtNombreTarifa.TabIndex = 0;
             // 
             // dgvTarifa
             // 
@@ -184,18 +184,18 @@
             // 
             // gbxSeccion
             // 
-            this.gbxSeccion.Controls.Add(this.comboBox1);
+            this.gbxSeccion.Controls.Add(this.cbAnioAcademico);
             this.gbxSeccion.Controls.Add(this.label5);
             this.gbxSeccion.Controls.Add(this.btnDeshabilitar);
-            this.gbxSeccion.Controls.Add(this.txtNombrePeriodoAcademico);
+            this.gbxSeccion.Controls.Add(this.txtMontoTarifa);
             this.gbxSeccion.Controls.Add(this.label4);
             this.gbxSeccion.Controls.Add(this.btnAgregar);
             this.gbxSeccion.Controls.Add(this.btnModificar);
             this.gbxSeccion.Controls.Add(this.cbxEstado);
             this.gbxSeccion.Controls.Add(this.label3);
             this.gbxSeccion.Controls.Add(this.label2);
-            this.gbxSeccion.Controls.Add(this.txtIdPeriodoAcademico);
-            this.gbxSeccion.Controls.Add(this.txtPeriodoAnioAcademico);
+            this.gbxSeccion.Controls.Add(this.txtIdTarifa);
+            this.gbxSeccion.Controls.Add(this.txtNombreTarifa);
             this.gbxSeccion.Location = new System.Drawing.Point(42, 320);
             this.gbxSeccion.Margin = new System.Windows.Forms.Padding(1);
             this.gbxSeccion.Name = "gbxSeccion";
@@ -203,7 +203,25 @@
             this.gbxSeccion.Size = new System.Drawing.Size(585, 292);
             this.gbxSeccion.TabIndex = 66;
             this.gbxSeccion.TabStop = false;
-            this.gbxSeccion.Text = "Datos de la Asignatura";
+            this.gbxSeccion.Text = "Dato de la Tarifa";
+            // 
+            // cbAnioAcademico
+            // 
+            this.cbAnioAcademico.FormattingEnabled = true;
+            this.cbAnioAcademico.Location = new System.Drawing.Point(236, 136);
+            this.cbAnioAcademico.Name = "cbAnioAcademico";
+            this.cbAnioAcademico.Size = new System.Drawing.Size(195, 24);
+            this.cbAnioAcademico.TabIndex = 67;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 136);
+            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Año Academico";
             // 
             // label1
             // 
@@ -236,24 +254,6 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 136);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 16);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Año Academico";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(236, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 24);
-            this.comboBox1.TabIndex = 67;
-            // 
             // frmTarifa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,22 +281,22 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnDeshabilitar;
-        private System.Windows.Forms.TextBox txtNombrePeriodoAcademico;
+        private System.Windows.Forms.TextBox txtMontoTarifa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.CheckBox cbxEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdPeriodoAcademico;
+        private System.Windows.Forms.TextBox txtIdTarifa;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.TextBox txtPeriodoAnioAcademico;
+        private System.Windows.Forms.TextBox txtNombreTarifa;
         private System.Windows.Forms.DataGridView dgvTarifa;
         private System.Windows.Forms.GroupBox gbxSeccion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbAnioAcademico;
         private System.Windows.Forms.Label label5;
     }
 }

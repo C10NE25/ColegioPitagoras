@@ -53,7 +53,7 @@ namespace CapaPresentacion
 
         private void btnTutor_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmTutor());
+            openChildForms(new frmApoderado());
 
             //Oculta el submenu luego de hacer click en una opcion
             hideSubMenu();

@@ -54,7 +54,7 @@ namespace CapaPresentacion
         {
             txtIDEstudiante.Text = "";
             txtNombreEstudiante.Text = "";
-            txtApellidoEstudiante.Text = "";
+            txtApellidoPEstudiante.Text = "";
             txtDniEstudiante.Text = "";
             dtpFechaNacEstudiante.Value = DateTime.Now;
             txtDireccionEstudiante.Text = "";
@@ -69,7 +69,7 @@ namespace CapaPresentacion
                 entEstudiante estudiante= new entEstudiante();
                 estudiante.DniEst = txtDniEstudiante.Text.Trim();
                 estudiante.NombreEst = txtNombreEstudiante.Text.Trim();
-                estudiante.ApellidosEst = txtApellidoEstudiante.Text.Trim();
+                estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
                 estudiante.FechaNacEst = dtpFechaNacEstudiante.Value;
                 estudiante.DireccionEst = txtDireccionEstudiante.Text.Trim();
                 estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
@@ -103,7 +103,7 @@ namespace CapaPresentacion
                 estudiante.IdEstudiante = Convert.ToInt32(txtIDEstudiante.Text.Trim());
                 estudiante.DniEst = txtDniEstudiante.Text.Trim();
                 estudiante.NombreEst = txtNombreEstudiante.Text.Trim();
-                estudiante.ApellidosEst = txtApellidoEstudiante.Text.Trim();
+                estudiante.ApellidosEst = txtApellidoPEstudiante.Text.Trim();
                 estudiante.FechaNacEst = dtpFechaNacEstudiante.Value;
                 estudiante.DireccionEst = txtDireccionEstudiante.Text.Trim();
                 estudiante.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
@@ -155,7 +155,7 @@ namespace CapaPresentacion
             DataGridViewRow fila = dgvEstudiante.Rows[e.RowIndex];
             txtIDEstudiante.Text = fila.Cells[0].Value.ToString();
             txtNombreEstudiante.Text = fila.Cells[1].Value.ToString();
-            txtApellidoEstudiante.Text = fila.Cells[2].Value.ToString();
+            txtApellidoPEstudiante.Text = fila.Cells[2].Value.ToString();
             txtDniEstudiante.Text = fila.Cells[3].Value.ToString();
             dtpFechaNacEstudiante.Value = Convert.ToDateTime(fila.Cells[4].Value);
             txtDireccionEstudiante.Text = fila.Cells[5].Value.ToString();

@@ -72,7 +72,8 @@ namespace CapaPresentacion
                 entDocente docente = new entDocente();
                 docente.DniDoc = txtBdniDocente.Text.Trim();
                 docente.NombreDoc = txtBNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtBApellidoMDocente.Text.Trim();
+                docente.ApellidosPatDoc = txtBApellidoPDocente.Text.Trim();
+                docente.ApellidosMatDoc = txtBApellidoMDocente.Text.Trim();
                 docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
                 docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
                 docente.EstadoDoc=cbxEstado.Checked;
@@ -105,7 +106,8 @@ namespace CapaPresentacion
                 docente.IdDocente = int.Parse(txtBidDocente.Text.Trim());
                 docente.DniDoc=txtBdniDocente.Text.Trim();
                 docente.NombreDoc = txtBNombreDocente.Text.Trim();
-                docente.ApellidosDoc = txtBApellidoMDocente.Text.Trim();
+                docente.ApellidosPatDoc = txtBApellidoPDocente.Text.Trim();
+                docente.ApellidosMatDoc = txtBApellidoMDocente.Text.Trim();
                 docente.NumCelularDoc = txtBTelefonoDocente.Text.Trim();
                 docente.DireccionDoc = txtBDireccionDocente.Text.Trim();
                 docente.EstadoDoc=cbxEstado.Checked;
@@ -156,10 +158,11 @@ namespace CapaPresentacion
             txtBidDocente.Text = fila.Cells[0].Value.ToString();
             txtBdniDocente.Text = fila.Cells[1].Value.ToString();
             txtBNombreDocente.Text = fila.Cells[2].Value.ToString();
-            txtBApellidoMDocente.Text = fila.Cells[3].Value.ToString();
-            txtBTelefonoDocente.Text = fila.Cells[4].Value.ToString();
-            txtBDireccionDocente.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
+            txtBApellidoPDocente.Text = fila.Cells[3].Value.ToString();
+            txtBApellidoMDocente.Text = fila.Cells[4].Value.ToString();
+            txtBTelefonoDocente.Text = fila.Cells[5].Value.ToString();
+            txtBDireccionDocente.Text = fila.Cells[6].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
         }
     }
 }

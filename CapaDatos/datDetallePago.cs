@@ -21,6 +21,7 @@ namespace CapaDatos
             }
         }
         #endregion singleton
+
         #region metodos
         public List<entDetallePago> ListarDetallePago()
         {

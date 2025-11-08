@@ -143,7 +143,7 @@ namespace CapaPresentacion
         {
             DataGridViewRow fila = dgvNivelAcademico.Rows[e.RowIndex];
             txtIDNivelAcademico.Text = fila.Cells[0].Value.ToString();
-            txtIDNivelAcademico.Text = fila.Cells[1].Value.ToString();
+            txtNombreNivel.Text = fila.Cells[1].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[2].Value);
         }
     }

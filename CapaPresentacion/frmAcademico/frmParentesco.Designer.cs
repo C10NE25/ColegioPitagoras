@@ -31,18 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvParenteco = new System.Windows.Forms.DataGridView();
             this.gbxParentesco = new System.Windows.Forms.GroupBox();
-            this.lblidDocente = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxEstado = new System.Windows.Forms.CheckBox();
-            this.txtBIdParentesco = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.txtBtipoParentesco = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtBIdParentesco = new System.Windows.Forms.TextBox();
+            this.cbxEstado = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblidDocente = new System.Windows.Forms.Label();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParenteco)).BeginInit();
             this.gbxParentesco.SuspendLayout();
             this.SuspendLayout();
@@ -51,20 +51,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 26);
+            this.label1.Size = new System.Drawing.Size(148, 31);
             this.label1.TabIndex = 18;
             this.label1.Text = "Parentesco";
             // 
             // dgvParenteco
             // 
             this.dgvParenteco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParenteco.Location = new System.Drawing.Point(13, 39);
+            this.dgvParenteco.Location = new System.Drawing.Point(17, 48);
+            this.dgvParenteco.Margin = new System.Windows.Forms.Padding(4);
             this.dgvParenteco.Name = "dgvParenteco";
-            this.dgvParenteco.Size = new System.Drawing.Size(775, 170);
+            this.dgvParenteco.RowHeadersWidth = 51;
+            this.dgvParenteco.Size = new System.Drawing.Size(1033, 209);
             this.dgvParenteco.TabIndex = 19;
+            this.dgvParenteco.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParenteco_CellClick);
             // 
             // gbxParentesco
             // 
@@ -76,84 +79,126 @@
             this.gbxParentesco.Controls.Add(this.cbxEstado);
             this.gbxParentesco.Controls.Add(this.label2);
             this.gbxParentesco.Controls.Add(this.lblidDocente);
-            this.gbxParentesco.Location = new System.Drawing.Point(15, 276);
+            this.gbxParentesco.Location = new System.Drawing.Point(20, 340);
+            this.gbxParentesco.Margin = new System.Windows.Forms.Padding(4);
             this.gbxParentesco.Name = "gbxParentesco";
-            this.gbxParentesco.Size = new System.Drawing.Size(773, 101);
+            this.gbxParentesco.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxParentesco.Size = new System.Drawing.Size(1031, 124);
             this.gbxParentesco.TabIndex = 20;
             this.gbxParentesco.TabStop = false;
             this.gbxParentesco.Text = "Datos Parentesco";
             // 
-            // lblidDocente
+            // btnAgregar
             // 
-            this.lblidDocente.AutoSize = true;
-            this.lblidDocente.Location = new System.Drawing.Point(4, 25);
-            this.lblidDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblidDocente.Name = "lblidDocente";
-            this.lblidDocente.Size = new System.Drawing.Size(21, 13);
-            this.lblidDocente.TabIndex = 8;
-            this.lblidDocente.Text = "ID:";
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Location = new System.Drawing.Point(616, 70);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(132, 38);
+            this.btnAgregar.TabIndex = 28;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label2
+            // btnModificar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo de Parentesco";
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(751, 70);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(132, 38);
+            this.btnModificar.TabIndex = 29;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // txtBtipoParentesco
+            // 
+            this.txtBtipoParentesco.Location = new System.Drawing.Point(144, 66);
+            this.txtBtipoParentesco.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBtipoParentesco.Name = "txtBtipoParentesco";
+            this.txtBtipoParentesco.Size = new System.Drawing.Size(132, 22);
+            this.txtBtipoParentesco.TabIndex = 16;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(885, 70);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(132, 38);
+            this.btnCancelar.TabIndex = 30;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // txtBIdParentesco
+            // 
+            this.txtBIdParentesco.Location = new System.Drawing.Point(144, 27);
+            this.txtBIdParentesco.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBIdParentesco.Name = "txtBIdParentesco";
+            this.txtBIdParentesco.Size = new System.Drawing.Size(132, 22);
+            this.txtBIdParentesco.TabIndex = 15;
             // 
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(256, 17);
+            this.cbxEstado.Location = new System.Drawing.Point(341, 21);
             this.cbxEstado.Margin = new System.Windows.Forms.Padding(1);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(108, 30);
+            this.cbxEstado.Size = new System.Drawing.Size(129, 36);
             this.cbxEstado.TabIndex = 14;
             this.cbxEstado.Text = "Estado \r\n[Activo | Inactivo]";
             this.cbxEstado.UseVisualStyleBackColor = true;
             // 
-            // txtBIdParentesco
+            // label2
             // 
-            this.txtBIdParentesco.Location = new System.Drawing.Point(108, 22);
-            this.txtBIdParentesco.Name = "txtBIdParentesco";
-            this.txtBIdParentesco.Size = new System.Drawing.Size(100, 20);
-            this.txtBIdParentesco.TabIndex = 15;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tipo de Parentesco";
             // 
-            // txtBtipoParentesco
+            // lblidDocente
             // 
-            this.txtBtipoParentesco.Location = new System.Drawing.Point(108, 54);
-            this.txtBtipoParentesco.Name = "txtBtipoParentesco";
-            this.txtBtipoParentesco.Size = new System.Drawing.Size(100, 20);
-            this.txtBtipoParentesco.TabIndex = 16;
+            this.lblidDocente.AutoSize = true;
+            this.lblidDocente.Location = new System.Drawing.Point(5, 31);
+            this.lblidDocente.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblidDocente.Name = "lblidDocente";
+            this.lblidDocente.Size = new System.Drawing.Size(23, 16);
+            this.lblidDocente.TabIndex = 8;
+            this.lblidDocente.Text = "ID:";
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(588, 224);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(784, 276);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(99, 27);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(132, 33);
             this.btnDeshabilitar.TabIndex = 27;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(487, 224);
+            this.btnEditar.Location = new System.Drawing.Point(649, 276);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(99, 27);
+            this.btnEditar.Size = new System.Drawing.Size(132, 33);
             this.btnEditar.TabIndex = 26;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(386, 224);
+            this.btnNuevo.Location = new System.Drawing.Point(515, 276);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(99, 27);
+            this.btnNuevo.Size = new System.Drawing.Size(132, 33);
             this.btnNuevo.TabIndex = 25;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -161,52 +206,20 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(689, 225);
+            this.btnCerrar.Location = new System.Drawing.Point(919, 277);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(99, 26);
+            this.btnCerrar.Size = new System.Drawing.Size(132, 32);
             this.btnCerrar.TabIndex = 24;
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(462, 57);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 31);
-            this.btnAgregar.TabIndex = 28;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(563, 57);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(99, 31);
-            this.btnModificar.TabIndex = 29;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(664, 57);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 31);
-            this.btnCancelar.TabIndex = 30;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmParentesco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 419);
+            this.ClientSize = new System.Drawing.Size(1067, 516);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -215,6 +228,7 @@
             this.Controls.Add(this.dgvParenteco);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmParentesco";
             this.Text = "frmParentesco";
             ((System.ComponentModel.ISupportInitialize)(this.dgvParenteco)).EndInit();

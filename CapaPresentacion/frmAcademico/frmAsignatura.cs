@@ -95,14 +95,14 @@ namespace CapaPresentacion.frmAcademico
             try
             {
                 entAsignatura asig = new entAsignatura();
-                asig.NombreAsignatura = txtIdAsignatura.Text.Trim();
+                asig.NombreAsignatura = txtNombreAsignatura.Text.Trim();
                 asig.EstadoAsignatura = cbxEstado.Checked;
                 logAsignatura.Instancia.insertarAsignatura(asig);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar parentesco: " + ex.Message);
+                MessageBox.Show("Error al agregar Nivel Academico:: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;

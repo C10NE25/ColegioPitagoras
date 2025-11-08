@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvPeriodoAcademico = new System.Windows.Forms.DataGridView();
-            this.gbxSeccion = new System.Windows.Forms.GroupBox();
+            this.gbxPeriodoAcademico = new System.Windows.Forms.GroupBox();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.txtNombrePeriodoAcademico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodoAcademico)).BeginInit();
-            this.gbxSeccion.SuspendLayout();
+            this.gbxPeriodoAcademico.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPeriodoAcademico
@@ -61,27 +61,28 @@
             this.dgvPeriodoAcademico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeriodoAcademico.Size = new System.Drawing.Size(416, 217);
             this.dgvPeriodoAcademico.TabIndex = 58;
+            this.dgvPeriodoAcademico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodoAcademico_CellClick);
             // 
-            // gbxSeccion
+            // gbxPeriodoAcademico
             // 
-            this.gbxSeccion.Controls.Add(this.btnDeshabilitar);
-            this.gbxSeccion.Controls.Add(this.txtNombrePeriodoAcademico);
-            this.gbxSeccion.Controls.Add(this.label4);
-            this.gbxSeccion.Controls.Add(this.btnAgregar);
-            this.gbxSeccion.Controls.Add(this.btnModificar);
-            this.gbxSeccion.Controls.Add(this.cbxEstado);
-            this.gbxSeccion.Controls.Add(this.label3);
-            this.gbxSeccion.Controls.Add(this.label2);
-            this.gbxSeccion.Controls.Add(this.txtIdPeriodoAcademico);
-            this.gbxSeccion.Controls.Add(this.txtPeriodoAnioAcademico);
-            this.gbxSeccion.Location = new System.Drawing.Point(22, 311);
-            this.gbxSeccion.Margin = new System.Windows.Forms.Padding(1);
-            this.gbxSeccion.Name = "gbxSeccion";
-            this.gbxSeccion.Padding = new System.Windows.Forms.Padding(1);
-            this.gbxSeccion.Size = new System.Drawing.Size(585, 240);
-            this.gbxSeccion.TabIndex = 59;
-            this.gbxSeccion.TabStop = false;
-            this.gbxSeccion.Text = "Datos del Periodo Academico";
+            this.gbxPeriodoAcademico.Controls.Add(this.btnDeshabilitar);
+            this.gbxPeriodoAcademico.Controls.Add(this.txtNombrePeriodoAcademico);
+            this.gbxPeriodoAcademico.Controls.Add(this.label4);
+            this.gbxPeriodoAcademico.Controls.Add(this.btnAgregar);
+            this.gbxPeriodoAcademico.Controls.Add(this.btnModificar);
+            this.gbxPeriodoAcademico.Controls.Add(this.cbxEstado);
+            this.gbxPeriodoAcademico.Controls.Add(this.label3);
+            this.gbxPeriodoAcademico.Controls.Add(this.label2);
+            this.gbxPeriodoAcademico.Controls.Add(this.txtIdPeriodoAcademico);
+            this.gbxPeriodoAcademico.Controls.Add(this.txtPeriodoAnioAcademico);
+            this.gbxPeriodoAcademico.Location = new System.Drawing.Point(22, 311);
+            this.gbxPeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
+            this.gbxPeriodoAcademico.Name = "gbxPeriodoAcademico";
+            this.gbxPeriodoAcademico.Padding = new System.Windows.Forms.Padding(1);
+            this.gbxPeriodoAcademico.Size = new System.Drawing.Size(585, 240);
+            this.gbxPeriodoAcademico.TabIndex = 59;
+            this.gbxPeriodoAcademico.TabStop = false;
+            this.gbxPeriodoAcademico.Text = "Datos del Periodo Academico";
             // 
             // btnDeshabilitar
             // 
@@ -92,6 +93,7 @@
             this.btnDeshabilitar.TabIndex = 65;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
             // 
             // txtNombrePeriodoAcademico
             // 
@@ -121,6 +123,7 @@
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -132,6 +135,7 @@
             this.btnModificar.TabIndex = 15;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // cbxEstado
             // 
@@ -200,6 +204,7 @@
             this.btnEditar.TabIndex = 62;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -210,6 +215,7 @@
             this.btnNuevo.TabIndex = 61;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCerrar
             // 
@@ -220,6 +226,7 @@
             this.btnCerrar.TabIndex = 60;
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnCancelar
             // 
@@ -231,6 +238,7 @@
             this.btnCancelar.TabIndex = 63;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmPeriodoAcademico
             // 
@@ -239,7 +247,7 @@
             this.ClientSize = new System.Drawing.Size(654, 590);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dgvPeriodoAcademico);
-            this.Controls.Add(this.gbxSeccion);
+            this.Controls.Add(this.gbxPeriodoAcademico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -248,8 +256,8 @@
             this.Name = "frmPeriodoAcademico";
             this.Text = "frmPeriodoAcademico";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeriodoAcademico)).EndInit();
-            this.gbxSeccion.ResumeLayout(false);
-            this.gbxSeccion.PerformLayout();
+            this.gbxPeriodoAcademico.ResumeLayout(false);
+            this.gbxPeriodoAcademico.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +266,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPeriodoAcademico;
-        private System.Windows.Forms.GroupBox gbxSeccion;
+        private System.Windows.Forms.GroupBox gbxPeriodoAcademico;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.CheckBox cbxEstado;

@@ -13,5 +13,9 @@ namespace CapaEntidad
         public int anioPeriodoAcademico { get; set; }
         public string NombrePeriodoAcademico { get; set; }
         public bool EstadoPeriodoAcademico { get; set; }
+        public string NombreCompleto
+        {
+            get { return $"{anioPeriodoAcademico} - {NombrePeriodoAcademico}"; }
+        }
     }
 }

@@ -41,26 +41,27 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.txtNombreTarifa = new System.Windows.Forms.TextBox();
             this.dgvTarifa = new System.Windows.Forms.DataGridView();
-            this.gbxSeccion = new System.Windows.Forms.GroupBox();
+            this.gbxTarifa = new System.Windows.Forms.GroupBox();
             this.cbAnioAcademico = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifa)).BeginInit();
-            this.gbxSeccion.SuspendLayout();
+            this.gbxTarifa.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(495, 168);
+            this.btnCancelar.Location = new System.Drawing.Point(888, 168);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(132, 38);
             this.btnCancelar.TabIndex = 70;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnDeshabilitar
             // 
@@ -100,6 +101,7 @@
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -153,13 +155,14 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(495, 223);
+            this.btnCerrar.Location = new System.Drawing.Point(888, 235);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(132, 32);
             this.btnCerrar.TabIndex = 67;
             this.btnCerrar.Text = "Salir";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // txtNombreTarifa
             // 
@@ -179,31 +182,31 @@
             this.dgvTarifa.RowHeadersWidth = 92;
             this.dgvTarifa.RowTemplate.Height = 37;
             this.dgvTarifa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTarifa.Size = new System.Drawing.Size(416, 217);
+            this.dgvTarifa.Size = new System.Drawing.Size(809, 217);
             this.dgvTarifa.TabIndex = 65;
             // 
-            // gbxSeccion
+            // gbxTarifa
             // 
-            this.gbxSeccion.Controls.Add(this.cbAnioAcademico);
-            this.gbxSeccion.Controls.Add(this.label5);
-            this.gbxSeccion.Controls.Add(this.btnDeshabilitar);
-            this.gbxSeccion.Controls.Add(this.txtMontoTarifa);
-            this.gbxSeccion.Controls.Add(this.label4);
-            this.gbxSeccion.Controls.Add(this.btnAgregar);
-            this.gbxSeccion.Controls.Add(this.btnModificar);
-            this.gbxSeccion.Controls.Add(this.cbxEstado);
-            this.gbxSeccion.Controls.Add(this.label3);
-            this.gbxSeccion.Controls.Add(this.label2);
-            this.gbxSeccion.Controls.Add(this.txtIdTarifa);
-            this.gbxSeccion.Controls.Add(this.txtNombreTarifa);
-            this.gbxSeccion.Location = new System.Drawing.Point(42, 320);
-            this.gbxSeccion.Margin = new System.Windows.Forms.Padding(1);
-            this.gbxSeccion.Name = "gbxSeccion";
-            this.gbxSeccion.Padding = new System.Windows.Forms.Padding(1);
-            this.gbxSeccion.Size = new System.Drawing.Size(585, 292);
-            this.gbxSeccion.TabIndex = 66;
-            this.gbxSeccion.TabStop = false;
-            this.gbxSeccion.Text = "Dato de la Tarifa";
+            this.gbxTarifa.Controls.Add(this.cbAnioAcademico);
+            this.gbxTarifa.Controls.Add(this.label5);
+            this.gbxTarifa.Controls.Add(this.btnDeshabilitar);
+            this.gbxTarifa.Controls.Add(this.txtMontoTarifa);
+            this.gbxTarifa.Controls.Add(this.label4);
+            this.gbxTarifa.Controls.Add(this.btnAgregar);
+            this.gbxTarifa.Controls.Add(this.btnModificar);
+            this.gbxTarifa.Controls.Add(this.cbxEstado);
+            this.gbxTarifa.Controls.Add(this.label3);
+            this.gbxTarifa.Controls.Add(this.label2);
+            this.gbxTarifa.Controls.Add(this.txtIdTarifa);
+            this.gbxTarifa.Controls.Add(this.txtNombreTarifa);
+            this.gbxTarifa.Location = new System.Drawing.Point(42, 320);
+            this.gbxTarifa.Margin = new System.Windows.Forms.Padding(1);
+            this.gbxTarifa.Name = "gbxTarifa";
+            this.gbxTarifa.Padding = new System.Windows.Forms.Padding(1);
+            this.gbxTarifa.Size = new System.Drawing.Size(585, 292);
+            this.gbxTarifa.TabIndex = 66;
+            this.gbxTarifa.TabStop = false;
+            this.gbxTarifa.Text = "Dato de la Tarifa";
             // 
             // cbAnioAcademico
             // 
@@ -236,33 +239,35 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(495, 121);
+            this.btnEditar.Location = new System.Drawing.Point(888, 118);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(132, 33);
             this.btnEditar.TabIndex = 69;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(495, 72);
+            this.btnNuevo.Location = new System.Drawing.Point(888, 72);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(132, 33);
             this.btnNuevo.TabIndex = 68;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmTarifa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 640);
+            this.ClientSize = new System.Drawing.Size(1069, 640);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvTarifa);
-            this.Controls.Add(this.gbxSeccion);
+            this.Controls.Add(this.gbxTarifa);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -270,8 +275,8 @@
             this.Name = "frmTarifa";
             this.Text = "frmTarifa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifa)).EndInit();
-            this.gbxSeccion.ResumeLayout(false);
-            this.gbxSeccion.PerformLayout();
+            this.gbxTarifa.ResumeLayout(false);
+            this.gbxTarifa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +297,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtNombreTarifa;
         private System.Windows.Forms.DataGridView dgvTarifa;
-        private System.Windows.Forms.GroupBox gbxSeccion;
+        private System.Windows.Forms.GroupBox gbxTarifa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;

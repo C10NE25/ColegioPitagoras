@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaPresentacion.frmAcademico;
+using CapaPresentacion.frmTesoreria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -151,10 +153,7 @@ namespace CapaPresentacion
 
         }
 
-        private void btnBoletaInscripcion_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnBoletaMatricula_Click(object sender, EventArgs e)
         {
@@ -187,6 +186,20 @@ namespace CapaPresentacion
         private void btnBoletaPago_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnTarifa_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmTarifa());
+
+            hideSubMenu();
+        }
+
+        private void btnPeriodoAcademico_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmPeriodoAcademico());
+
+            hideSubMenu();
         }
     }
 }

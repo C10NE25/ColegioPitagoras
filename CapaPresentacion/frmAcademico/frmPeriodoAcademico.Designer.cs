@@ -59,7 +59,7 @@
             this.dgvPeriodoAcademico.RowHeadersWidth = 92;
             this.dgvPeriodoAcademico.RowTemplate.Height = 37;
             this.dgvPeriodoAcademico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeriodoAcademico.Size = new System.Drawing.Size(416, 217);
+            this.dgvPeriodoAcademico.Size = new System.Drawing.Size(820, 217);
             this.dgvPeriodoAcademico.TabIndex = 58;
             this.dgvPeriodoAcademico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeriodoAcademico_CellClick);
             // 
@@ -197,7 +197,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(475, 112);
+            this.btnEditar.Location = new System.Drawing.Point(884, 111);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(132, 33);
@@ -208,7 +208,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(475, 63);
+            this.btnNuevo.Location = new System.Drawing.Point(884, 63);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(132, 33);
@@ -219,7 +219,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(475, 214);
+            this.btnCerrar.Location = new System.Drawing.Point(884, 248);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(132, 32);
@@ -231,7 +231,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(475, 162);
+            this.btnCancelar.Location = new System.Drawing.Point(884, 162);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(132, 38);
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 590);
+            this.ClientSize = new System.Drawing.Size(1063, 590);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dgvPeriodoAcademico);
             this.Controls.Add(this.gbxPeriodoAcademico);

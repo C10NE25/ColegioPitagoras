@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.panelTesoreriaSubMenu = new System.Windows.Forms.Panel();
+            this.btnTarifa = new System.Windows.Forms.Button();
             this.btnBoletaPago = new System.Windows.Forms.Button();
             this.btnPlanPago = new System.Windows.Forms.Button();
             this.btnTipoPlanPago = new System.Windows.Forms.Button();
@@ -38,8 +39,7 @@
             this.panelAdministrativoSubMenu = new System.Windows.Forms.Panel();
             this.btnMatricula = new System.Windows.Forms.Button();
             this.btnInscripcion = new System.Windows.Forms.Button();
-            this.btnBoletaMatricula = new System.Windows.Forms.Button();
-            this.btnBoletaInscripcion = new System.Windows.Forms.Button();
+            this.btnPeriodoAcademico = new System.Windows.Forms.Button();
             this.btnCarpetaInscripcion = new System.Windows.Forms.Button();
             this.btnDocumento = new System.Windows.Forms.Button();
             this.btnTipoDocumento = new System.Windows.Forms.Button();
@@ -78,23 +78,39 @@
             this.panelMenuLateral.Controls.Add(this.panelLogo);
             this.panelMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLateral.Location = new System.Drawing.Point(0, 0);
-            this.panelMenuLateral.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelMenuLateral.Margin = new System.Windows.Forms.Padding(1);
             this.panelMenuLateral.Name = "panelMenuLateral";
-            this.panelMenuLateral.Size = new System.Drawing.Size(199, 761);
+            this.panelMenuLateral.Size = new System.Drawing.Size(265, 937);
             this.panelMenuLateral.TabIndex = 0;
             // 
             // panelTesoreriaSubMenu
             // 
             this.panelTesoreriaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
+            this.panelTesoreriaSubMenu.Controls.Add(this.btnTarifa);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnBoletaPago);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnPlanPago);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnTipoPlanPago);
             this.panelTesoreriaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTesoreriaSubMenu.Location = new System.Drawing.Point(0, 723);
-            this.panelTesoreriaSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelTesoreriaSubMenu.Location = new System.Drawing.Point(0, 780);
+            this.panelTesoreriaSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelTesoreriaSubMenu.Name = "panelTesoreriaSubMenu";
-            this.panelTesoreriaSubMenu.Size = new System.Drawing.Size(182, 132);
+            this.panelTesoreriaSubMenu.Size = new System.Drawing.Size(244, 162);
             this.panelTesoreriaSubMenu.TabIndex = 5;
+            // 
+            // btnTarifa
+            // 
+            this.btnTarifa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
+            this.btnTarifa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTarifa.FlatAppearance.BorderSize = 0;
+            this.btnTarifa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTarifa.Location = new System.Drawing.Point(0, 123);
+            this.btnTarifa.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTarifa.Name = "btnTarifa";
+            this.btnTarifa.Size = new System.Drawing.Size(244, 41);
+            this.btnTarifa.TabIndex = 9;
+            this.btnTarifa.Text = "Tarifa";
+            this.btnTarifa.UseVisualStyleBackColor = false;
+            this.btnTarifa.Click += new System.EventHandler(this.btnTarifa_Click);
             // 
             // btnBoletaPago
             // 
@@ -102,10 +118,10 @@
             this.btnBoletaPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBoletaPago.FlatAppearance.BorderSize = 0;
             this.btnBoletaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBoletaPago.Location = new System.Drawing.Point(0, 66);
-            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBoletaPago.Location = new System.Drawing.Point(0, 82);
+            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnBoletaPago.Name = "btnBoletaPago";
-            this.btnBoletaPago.Size = new System.Drawing.Size(182, 33);
+            this.btnBoletaPago.Size = new System.Drawing.Size(244, 41);
             this.btnBoletaPago.TabIndex = 8;
             this.btnBoletaPago.Text = "Boleta de Pago";
             this.btnBoletaPago.UseVisualStyleBackColor = false;
@@ -117,10 +133,10 @@
             this.btnPlanPago.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlanPago.FlatAppearance.BorderSize = 0;
             this.btnPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanPago.Location = new System.Drawing.Point(0, 33);
-            this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnPlanPago.Location = new System.Drawing.Point(0, 41);
+            this.btnPlanPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnPlanPago.Name = "btnPlanPago";
-            this.btnPlanPago.Size = new System.Drawing.Size(182, 33);
+            this.btnPlanPago.Size = new System.Drawing.Size(244, 41);
             this.btnPlanPago.TabIndex = 7;
             this.btnPlanPago.Text = "Plan de Pago";
             this.btnPlanPago.UseVisualStyleBackColor = false;
@@ -133,9 +149,9 @@
             this.btnTipoPlanPago.FlatAppearance.BorderSize = 0;
             this.btnTipoPlanPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoPlanPago.Location = new System.Drawing.Point(0, 0);
-            this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTipoPlanPago.Margin = new System.Windows.Forms.Padding(1);
             this.btnTipoPlanPago.Name = "btnTipoPlanPago";
-            this.btnTipoPlanPago.Size = new System.Drawing.Size(182, 33);
+            this.btnTipoPlanPago.Size = new System.Drawing.Size(244, 41);
             this.btnTipoPlanPago.TabIndex = 6;
             this.btnTipoPlanPago.Text = "Tipo de Plan de Pago";
             this.btnTipoPlanPago.UseVisualStyleBackColor = false;
@@ -146,10 +162,10 @@
             this.btnTesoreria.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTesoreria.FlatAppearance.BorderSize = 0;
             this.btnTesoreria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTesoreria.Location = new System.Drawing.Point(0, 680);
-            this.btnTesoreria.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTesoreria.Location = new System.Drawing.Point(0, 727);
+            this.btnTesoreria.Margin = new System.Windows.Forms.Padding(1);
             this.btnTesoreria.Name = "btnTesoreria";
-            this.btnTesoreria.Size = new System.Drawing.Size(182, 43);
+            this.btnTesoreria.Size = new System.Drawing.Size(244, 53);
             this.btnTesoreria.TabIndex = 4;
             this.btnTesoreria.Text = "Tesoreria";
             this.btnTesoreria.UseVisualStyleBackColor = true;
@@ -160,16 +176,15 @@
             this.panelAdministrativoSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelAdministrativoSubMenu.Controls.Add(this.btnMatricula);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnInscripcion);
-            this.panelAdministrativoSubMenu.Controls.Add(this.btnBoletaMatricula);
-            this.panelAdministrativoSubMenu.Controls.Add(this.btnBoletaInscripcion);
+            this.panelAdministrativoSubMenu.Controls.Add(this.btnPeriodoAcademico);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnCarpetaInscripcion);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnDocumento);
             this.panelAdministrativoSubMenu.Controls.Add(this.btnTipoDocumento);
             this.panelAdministrativoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdministrativoSubMenu.Location = new System.Drawing.Point(0, 441);
-            this.panelAdministrativoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelAdministrativoSubMenu.Location = new System.Drawing.Point(0, 473);
+            this.panelAdministrativoSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelAdministrativoSubMenu.Name = "panelAdministrativoSubMenu";
-            this.panelAdministrativoSubMenu.Size = new System.Drawing.Size(182, 239);
+            this.panelAdministrativoSubMenu.Size = new System.Drawing.Size(244, 254);
             this.panelAdministrativoSubMenu.TabIndex = 3;
             // 
             // btnMatricula
@@ -178,10 +193,10 @@
             this.btnMatricula.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMatricula.FlatAppearance.BorderSize = 0;
             this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMatricula.Location = new System.Drawing.Point(0, 198);
-            this.btnMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnMatricula.Location = new System.Drawing.Point(0, 205);
+            this.btnMatricula.Margin = new System.Windows.Forms.Padding(1);
             this.btnMatricula.Name = "btnMatricula";
-            this.btnMatricula.Size = new System.Drawing.Size(182, 34);
+            this.btnMatricula.Size = new System.Drawing.Size(244, 42);
             this.btnMatricula.TabIndex = 12;
             this.btnMatricula.Text = "Matricula";
             this.btnMatricula.UseVisualStyleBackColor = false;
@@ -193,44 +208,29 @@
             this.btnInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInscripcion.FlatAppearance.BorderSize = 0;
             this.btnInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscripcion.Location = new System.Drawing.Point(0, 165);
-            this.btnInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnInscripcion.Location = new System.Drawing.Point(0, 164);
+            this.btnInscripcion.Margin = new System.Windows.Forms.Padding(1);
             this.btnInscripcion.Name = "btnInscripcion";
-            this.btnInscripcion.Size = new System.Drawing.Size(182, 33);
+            this.btnInscripcion.Size = new System.Drawing.Size(244, 41);
             this.btnInscripcion.TabIndex = 11;
             this.btnInscripcion.Text = "Inscripcion";
             this.btnInscripcion.UseVisualStyleBackColor = false;
             this.btnInscripcion.Click += new System.EventHandler(this.btnInscripcion_Click);
             // 
-            // btnBoletaMatricula
+            // btnPeriodoAcademico
             // 
-            this.btnBoletaMatricula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
-            this.btnBoletaMatricula.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaMatricula.FlatAppearance.BorderSize = 0;
-            this.btnBoletaMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBoletaMatricula.Location = new System.Drawing.Point(0, 132);
-            this.btnBoletaMatricula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.btnBoletaMatricula.Name = "btnBoletaMatricula";
-            this.btnBoletaMatricula.Size = new System.Drawing.Size(182, 33);
-            this.btnBoletaMatricula.TabIndex = 10;
-            this.btnBoletaMatricula.Text = "Boleta de Matricula";
-            this.btnBoletaMatricula.UseVisualStyleBackColor = false;
-            this.btnBoletaMatricula.Click += new System.EventHandler(this.btnBoletaMatricula_Click);
-            // 
-            // btnBoletaInscripcion
-            // 
-            this.btnBoletaInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
-            this.btnBoletaInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaInscripcion.FlatAppearance.BorderSize = 0;
-            this.btnBoletaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBoletaInscripcion.Location = new System.Drawing.Point(0, 99);
-            this.btnBoletaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.btnBoletaInscripcion.Name = "btnBoletaInscripcion";
-            this.btnBoletaInscripcion.Size = new System.Drawing.Size(182, 33);
-            this.btnBoletaInscripcion.TabIndex = 9;
-            this.btnBoletaInscripcion.Text = "Boleta de Inscripcion";
-            this.btnBoletaInscripcion.UseVisualStyleBackColor = false;
-            this.btnBoletaInscripcion.Click += new System.EventHandler(this.btnBoletaInscripcion_Click);
+            this.btnPeriodoAcademico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
+            this.btnPeriodoAcademico.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPeriodoAcademico.FlatAppearance.BorderSize = 0;
+            this.btnPeriodoAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeriodoAcademico.Location = new System.Drawing.Point(0, 123);
+            this.btnPeriodoAcademico.Margin = new System.Windows.Forms.Padding(1);
+            this.btnPeriodoAcademico.Name = "btnPeriodoAcademico";
+            this.btnPeriodoAcademico.Size = new System.Drawing.Size(244, 41);
+            this.btnPeriodoAcademico.TabIndex = 9;
+            this.btnPeriodoAcademico.Text = "Periodo Academico";
+            this.btnPeriodoAcademico.UseVisualStyleBackColor = false;
+            this.btnPeriodoAcademico.Click += new System.EventHandler(this.btnPeriodoAcademico_Click);
             // 
             // btnCarpetaInscripcion
             // 
@@ -238,10 +238,10 @@
             this.btnCarpetaInscripcion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCarpetaInscripcion.FlatAppearance.BorderSize = 0;
             this.btnCarpetaInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarpetaInscripcion.Location = new System.Drawing.Point(0, 66);
-            this.btnCarpetaInscripcion.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCarpetaInscripcion.Location = new System.Drawing.Point(0, 82);
+            this.btnCarpetaInscripcion.Margin = new System.Windows.Forms.Padding(1);
             this.btnCarpetaInscripcion.Name = "btnCarpetaInscripcion";
-            this.btnCarpetaInscripcion.Size = new System.Drawing.Size(182, 33);
+            this.btnCarpetaInscripcion.Size = new System.Drawing.Size(244, 41);
             this.btnCarpetaInscripcion.TabIndex = 8;
             this.btnCarpetaInscripcion.Text = "Carpeta de Inscripcion";
             this.btnCarpetaInscripcion.UseVisualStyleBackColor = false;
@@ -253,10 +253,10 @@
             this.btnDocumento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDocumento.FlatAppearance.BorderSize = 0;
             this.btnDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocumento.Location = new System.Drawing.Point(0, 33);
-            this.btnDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDocumento.Location = new System.Drawing.Point(0, 41);
+            this.btnDocumento.Margin = new System.Windows.Forms.Padding(1);
             this.btnDocumento.Name = "btnDocumento";
-            this.btnDocumento.Size = new System.Drawing.Size(182, 33);
+            this.btnDocumento.Size = new System.Drawing.Size(244, 41);
             this.btnDocumento.TabIndex = 7;
             this.btnDocumento.Text = "Documento";
             this.btnDocumento.UseVisualStyleBackColor = false;
@@ -269,9 +269,9 @@
             this.btnTipoDocumento.FlatAppearance.BorderSize = 0;
             this.btnTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDocumento.Location = new System.Drawing.Point(0, 0);
-            this.btnTipoDocumento.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTipoDocumento.Margin = new System.Windows.Forms.Padding(1);
             this.btnTipoDocumento.Name = "btnTipoDocumento";
-            this.btnTipoDocumento.Size = new System.Drawing.Size(182, 33);
+            this.btnTipoDocumento.Size = new System.Drawing.Size(244, 41);
             this.btnTipoDocumento.TabIndex = 6;
             this.btnTipoDocumento.Text = "Tipo de Documento";
             this.btnTipoDocumento.UseVisualStyleBackColor = false;
@@ -282,10 +282,10 @@
             this.btnAdministrativo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdministrativo.FlatAppearance.BorderSize = 0;
             this.btnAdministrativo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdministrativo.Location = new System.Drawing.Point(0, 398);
-            this.btnAdministrativo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAdministrativo.Location = new System.Drawing.Point(0, 420);
+            this.btnAdministrativo.Margin = new System.Windows.Forms.Padding(1);
             this.btnAdministrativo.Name = "btnAdministrativo";
-            this.btnAdministrativo.Size = new System.Drawing.Size(182, 43);
+            this.btnAdministrativo.Size = new System.Drawing.Size(244, 53);
             this.btnAdministrativo.TabIndex = 2;
             this.btnAdministrativo.Text = "Administrativo";
             this.btnAdministrativo.UseVisualStyleBackColor = true;
@@ -303,10 +303,10 @@
             this.panelAcademicoSubMenu.Controls.Add(this.btnEstudiante);
             this.panelAcademicoSubMenu.Controls.Add(this.btnTutor);
             this.panelAcademicoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAcademicoSubMenu.Location = new System.Drawing.Point(0, 129);
-            this.panelAcademicoSubMenu.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelAcademicoSubMenu.Location = new System.Drawing.Point(0, 89);
+            this.panelAcademicoSubMenu.Margin = new System.Windows.Forms.Padding(1);
             this.panelAcademicoSubMenu.Name = "panelAcademicoSubMenu";
-            this.panelAcademicoSubMenu.Size = new System.Drawing.Size(182, 269);
+            this.panelAcademicoSubMenu.Size = new System.Drawing.Size(244, 331);
             this.panelAcademicoSubMenu.TabIndex = 1;
             // 
             // btnNotas
@@ -315,10 +315,10 @@
             this.btnNotas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNotas.FlatAppearance.BorderSize = 0;
             this.btnNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotas.Location = new System.Drawing.Point(0, 231);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNotas.Location = new System.Drawing.Point(0, 287);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(1);
             this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(182, 33);
+            this.btnNotas.Size = new System.Drawing.Size(244, 41);
             this.btnNotas.TabIndex = 14;
             this.btnNotas.Text = "Notas";
             this.btnNotas.UseVisualStyleBackColor = false;
@@ -330,10 +330,10 @@
             this.btnAsistencias.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAsistencias.FlatAppearance.BorderSize = 0;
             this.btnAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsistencias.Location = new System.Drawing.Point(0, 198);
-            this.btnAsistencias.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAsistencias.Location = new System.Drawing.Point(0, 246);
+            this.btnAsistencias.Margin = new System.Windows.Forms.Padding(1);
             this.btnAsistencias.Name = "btnAsistencias";
-            this.btnAsistencias.Size = new System.Drawing.Size(182, 33);
+            this.btnAsistencias.Size = new System.Drawing.Size(244, 41);
             this.btnAsistencias.TabIndex = 13;
             this.btnAsistencias.Text = "Asistencias";
             this.btnAsistencias.UseVisualStyleBackColor = false;
@@ -345,10 +345,10 @@
             this.btnCurso.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCurso.FlatAppearance.BorderSize = 0;
             this.btnCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCurso.Location = new System.Drawing.Point(0, 165);
-            this.btnCurso.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCurso.Location = new System.Drawing.Point(0, 205);
+            this.btnCurso.Margin = new System.Windows.Forms.Padding(1);
             this.btnCurso.Name = "btnCurso";
-            this.btnCurso.Size = new System.Drawing.Size(182, 33);
+            this.btnCurso.Size = new System.Drawing.Size(244, 41);
             this.btnCurso.TabIndex = 5;
             this.btnCurso.Text = "Curso";
             this.btnCurso.UseVisualStyleBackColor = false;
@@ -360,10 +360,10 @@
             this.btnGradoAcademico.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnGradoAcademico.FlatAppearance.BorderSize = 0;
             this.btnGradoAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGradoAcademico.Location = new System.Drawing.Point(0, 132);
-            this.btnGradoAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnGradoAcademico.Location = new System.Drawing.Point(0, 164);
+            this.btnGradoAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnGradoAcademico.Name = "btnGradoAcademico";
-            this.btnGradoAcademico.Size = new System.Drawing.Size(182, 33);
+            this.btnGradoAcademico.Size = new System.Drawing.Size(244, 41);
             this.btnGradoAcademico.TabIndex = 4;
             this.btnGradoAcademico.Text = "Grado Academico";
             this.btnGradoAcademico.UseVisualStyleBackColor = false;
@@ -375,10 +375,10 @@
             this.btnNivelAcademico.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNivelAcademico.FlatAppearance.BorderSize = 0;
             this.btnNivelAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNivelAcademico.Location = new System.Drawing.Point(0, 99);
-            this.btnNivelAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNivelAcademico.Location = new System.Drawing.Point(0, 123);
+            this.btnNivelAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnNivelAcademico.Name = "btnNivelAcademico";
-            this.btnNivelAcademico.Size = new System.Drawing.Size(182, 33);
+            this.btnNivelAcademico.Size = new System.Drawing.Size(244, 41);
             this.btnNivelAcademico.TabIndex = 3;
             this.btnNivelAcademico.Text = "Nivel Academico";
             this.btnNivelAcademico.UseVisualStyleBackColor = false;
@@ -390,10 +390,10 @@
             this.btnDocente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDocente.FlatAppearance.BorderSize = 0;
             this.btnDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocente.Location = new System.Drawing.Point(0, 66);
-            this.btnDocente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDocente.Location = new System.Drawing.Point(0, 82);
+            this.btnDocente.Margin = new System.Windows.Forms.Padding(1);
             this.btnDocente.Name = "btnDocente";
-            this.btnDocente.Size = new System.Drawing.Size(182, 33);
+            this.btnDocente.Size = new System.Drawing.Size(244, 41);
             this.btnDocente.TabIndex = 2;
             this.btnDocente.Text = "Docente";
             this.btnDocente.UseVisualStyleBackColor = false;
@@ -405,10 +405,10 @@
             this.btnEstudiante.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEstudiante.FlatAppearance.BorderSize = 0;
             this.btnEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstudiante.Location = new System.Drawing.Point(0, 33);
-            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEstudiante.Location = new System.Drawing.Point(0, 41);
+            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(1);
             this.btnEstudiante.Name = "btnEstudiante";
-            this.btnEstudiante.Size = new System.Drawing.Size(182, 33);
+            this.btnEstudiante.Size = new System.Drawing.Size(244, 41);
             this.btnEstudiante.TabIndex = 1;
             this.btnEstudiante.Text = "Estudiante";
             this.btnEstudiante.UseVisualStyleBackColor = false;
@@ -421,9 +421,9 @@
             this.btnTutor.FlatAppearance.BorderSize = 0;
             this.btnTutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTutor.Location = new System.Drawing.Point(0, 0);
-            this.btnTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnTutor.Margin = new System.Windows.Forms.Padding(1);
             this.btnTutor.Name = "btnTutor";
-            this.btnTutor.Size = new System.Drawing.Size(182, 33);
+            this.btnTutor.Size = new System.Drawing.Size(244, 41);
             this.btnTutor.TabIndex = 0;
             this.btnTutor.Text = "Tutor";
             this.btnTutor.UseVisualStyleBackColor = false;
@@ -434,10 +434,10 @@
             this.btnAcademico.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAcademico.FlatAppearance.BorderSize = 0;
             this.btnAcademico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcademico.Location = new System.Drawing.Point(0, 86);
-            this.btnAcademico.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAcademico.Location = new System.Drawing.Point(0, 36);
+            this.btnAcademico.Margin = new System.Windows.Forms.Padding(1);
             this.btnAcademico.Name = "btnAcademico";
-            this.btnAcademico.Size = new System.Drawing.Size(182, 43);
+            this.btnAcademico.Size = new System.Drawing.Size(244, 53);
             this.btnAcademico.TabIndex = 1;
             this.btnAcademico.Text = "Academico";
             this.btnAcademico.UseVisualStyleBackColor = true;
@@ -448,9 +448,9 @@
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(1);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(182, 86);
+            this.panelLogo.Size = new System.Drawing.Size(244, 36);
             this.panelLogo.TabIndex = 1;
             // 
             // panelChildForm
@@ -458,32 +458,33 @@
             this.panelChildForm.BackColor = System.Drawing.Color.DimGray;
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(199, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panelChildForm.Location = new System.Drawing.Point(265, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(1);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1035, 761);
+            this.panelChildForm.Size = new System.Drawing.Size(1380, 937);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(374, 216);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(499, 266);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(313, 341);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 761);
+            this.ClientSize = new System.Drawing.Size(1645, 937);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenuLateral);
-            this.MinimumSize = new System.Drawing.Size(1250, 800);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1661, 974);
             this.Name = "frmMenuPrincipal";
             this.Text = "t ";
             this.panelMenuLateral.ResumeLayout(false);
@@ -515,8 +516,7 @@
         private System.Windows.Forms.Panel panelAdministrativoSubMenu;
         private System.Windows.Forms.Button btnMatricula;
         private System.Windows.Forms.Button btnInscripcion;
-        private System.Windows.Forms.Button btnBoletaMatricula;
-        private System.Windows.Forms.Button btnBoletaInscripcion;
+        private System.Windows.Forms.Button btnPeriodoAcademico;
         private System.Windows.Forms.Button btnCarpetaInscripcion;
         private System.Windows.Forms.Button btnDocumento;
         private System.Windows.Forms.Button btnTipoDocumento;
@@ -526,6 +526,7 @@
         private System.Windows.Forms.Button btnPlanPago;
         private System.Windows.Forms.Button btnTipoPlanPago;
         private System.Windows.Forms.Button btnTesoreria;
+        private System.Windows.Forms.Button btnTarifa;
     }
 }
 

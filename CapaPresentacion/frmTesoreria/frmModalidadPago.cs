@@ -73,7 +73,7 @@ namespace CapaPresentacion.frmTesoreria
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al deshabilitar Modalidad Pago: " + ex.Message);
 
             }
             limpiarVariables();
@@ -99,7 +99,7 @@ namespace CapaPresentacion.frmTesoreria
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar parentesco: " + ex.Message);
+                MessageBox.Show("Error al agregar Modalidad Pago: " + ex.Message);
             }
             limpiarVariables();
             gbxModalidadPago.Enabled = false;
@@ -119,7 +119,7 @@ namespace CapaPresentacion.frmTesoreria
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al modificar Modalidad Pago: " + ex.Message);
             }
             limpiarVariables();
             gbxModalidadPago.Enabled = false;

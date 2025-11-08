@@ -82,7 +82,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al deshabilitar Seccion: " + ex.Message);
 
             }
             limpiarVariables();
@@ -102,7 +102,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar parentesco: " + ex.Message);
+                MessageBox.Show("Error al agregar Seccion: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;
@@ -122,7 +122,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al modificar Seccion: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;

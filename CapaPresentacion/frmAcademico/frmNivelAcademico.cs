@@ -106,7 +106,7 @@ namespace CapaPresentacion
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al agregar parentesco: " + ex.Message);
+                MessageBox.Show("Error al agregar Nivel Academico: " + ex.Message);
             }
             limpiarVariables();
             gbxNivelAcademico.Enabled = false;

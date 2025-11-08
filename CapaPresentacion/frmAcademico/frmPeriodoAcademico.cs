@@ -133,7 +133,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al deshabilitar Periodo Academico: " + ex.Message);
 
             }
             limpiarVariables();

@@ -77,8 +77,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar Nivel Academico: " + ex.Message);
-
+                MessageBox.Show("Error al deshabilitar Asignatura: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;
@@ -102,7 +101,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al agregar Nivel Academico:: " + ex.Message);
+                MessageBox.Show("Error al agregar Asignatura: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;
@@ -122,7 +121,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar Nivel Academico: " + ex.Message);
+                MessageBox.Show("Error al modificar Asignatura: " + ex.Message);
             }
             limpiarVariables();
             gbxSeccion.Enabled = false;

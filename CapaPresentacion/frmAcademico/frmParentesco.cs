@@ -19,6 +19,7 @@ namespace CapaPresentacion.frmAcademico
             InitializeComponent();
             gbxParentesco.Enabled = false;
             txtBIdParentesco.Enabled = false;
+            listarParentesco();
         }
         void deshabilitarBotonesPrincipales()
         {

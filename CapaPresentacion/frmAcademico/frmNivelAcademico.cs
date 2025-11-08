@@ -17,6 +17,9 @@ namespace CapaPresentacion
         public frmNivelAcademico()
         {
             InitializeComponent();
+            gbxNivelAcademico.Enabled = false;
+            txtIDNivelAcademico.Enabled = false;
+            listarNivelAcademico();
         }
         void deshabilitarBotonesPrincipales()
         {

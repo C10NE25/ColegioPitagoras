@@ -53,8 +53,6 @@
             this.txtBNombreDocente = new System.Windows.Forms.TextBox();
             this.txtBidDocente = new System.Windows.Forms.TextBox();
             this.txtBdniDocente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocente)).BeginInit();
             this.gbxDocente.SuspendLayout();
             this.SuspendLayout();
@@ -131,8 +129,6 @@
             // 
             // gbxDocente
             // 
-            this.gbxDocente.Controls.Add(this.comboBox1);
-            this.gbxDocente.Controls.Add(this.label2);
             this.gbxDocente.Controls.Add(this.lblApellidoPDocente);
             this.gbxDocente.Controls.Add(this.txtBApellidoPDocente);
             this.gbxDocente.Controls.Add(this.cbxEstado);
@@ -340,24 +336,6 @@
             this.txtBdniDocente.Size = new System.Drawing.Size(195, 22);
             this.txtBdniDocente.TabIndex = 0;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 178);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Parentesco:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(195, 24);
-            this.comboBox1.TabIndex = 17;
-            // 
             // frmDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,7 +387,5 @@
         private System.Windows.Forms.TextBox txtBdniDocente;
         private System.Windows.Forms.Label lblApellidoPDocente;
         private System.Windows.Forms.TextBox txtBApellidoPDocente;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
     }
 }

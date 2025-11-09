@@ -60,7 +60,7 @@ namespace CapaPresentacion
             txtIDTutor.Text = "";
             txtDniTutor.Text = "";
             txtNombreTutor.Text = "";
-            txtApellidoTutor.Text = "";
+            txtApellidoPTutor.Text = "";
             txtNroCelularTutor.Text = "";
             txtDireccionTutor.Text = "";
             cbxEstado.Checked = false;
@@ -74,10 +74,11 @@ namespace CapaPresentacion
                 entApoderado tutor = new entApoderado();
                 tutor.DniApo = txtDniTutor.Text.Trim();
                 tutor.NombreApo = txtNombreTutor.Text.Trim();
-                //tutor.ApellidosApo = txtApellidoTutor.Text.Trim();
+                tutor.ApellidosPatApo = txtApellidoPTutor.Text.Trim();
+                tutor.ApellidosMatApo=txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
-                //tutor.EstadoApot = cbxEstado.Checked;
+                tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.InsertarApoderado(tutor);
             }
             catch (Exception ex)
@@ -107,10 +108,11 @@ namespace CapaPresentacion
                 tutor.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
                 tutor.DniApo = txtDniTutor.Text.Trim();
                 tutor.NombreApo = txtNombreTutor.Text.Trim();
-                //tutor.ApellidosApo = txtApellidoTutor.Text.Trim();
+                tutor.ApellidosPatApo = txtApellidoPTutor.Text.Trim();
+                tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
-                //tutor.EstadoApot = cbxEstado.Checked;
+                tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.EditarApoderado(tutor);
             }
             catch (Exception ex)
@@ -136,7 +138,7 @@ namespace CapaPresentacion
                 entApoderado tutor = new entApoderado();
                 tutor.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
                 cbxEstado.Checked = false;
-                //tutor.EstadoApot = cbxEstado.Checked;
+                tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.DeshabilitarApoderado(tutor);
             }
             catch (Exception ex)
@@ -154,10 +156,11 @@ namespace CapaPresentacion
             txtIDTutor.Text = fila.Cells[0].Value.ToString();
             txtDniTutor.Text = fila.Cells[1].Value.ToString();
             txtNombreTutor.Text = fila.Cells[2].Value.ToString();
-            txtApellidoTutor.Text = fila.Cells[3].Value.ToString();
-            txtNroCelularTutor.Text = fila.Cells[4].Value.ToString();
-            txtDireccionTutor.Text = fila.Cells[5].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[6].Value);
+            txtApellidoPTutor.Text = fila.Cells[3].Value.ToString();
+            txtApellidoMTutor.Text = fila.Cells[4].Value.ToString();
+            txtNroCelularTutor.Text = fila.Cells[5].Value.ToString();
+            txtDireccionTutor.Text = fila.Cells[6].Value.ToString();
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
         }
 
         private void dgvTutor_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

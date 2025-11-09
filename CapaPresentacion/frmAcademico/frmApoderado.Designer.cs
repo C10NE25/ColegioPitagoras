@@ -35,6 +35,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxTutor = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtApellidoMTutor = new System.Windows.Forms.TextBox();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,15 +46,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDireccionTutor = new System.Windows.Forms.TextBox();
             this.txtNroCelularTutor = new System.Windows.Forms.TextBox();
-            this.txtApellidoTutor = new System.Windows.Forms.TextBox();
+            this.txtApellidoPTutor = new System.Windows.Forms.TextBox();
             this.txtNombreTutor = new System.Windows.Forms.TextBox();
             this.txtIDTutor = new System.Windows.Forms.TextBox();
             this.txtDniTutor = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).BeginInit();
             this.gbxTutor.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.dgvTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTutor.Location = new System.Drawing.Point(16, 53);
-            this.dgvTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvTutor.Margin = new System.Windows.Forms.Padding(1);
             this.dgvTutor.MultiSelect = false;
             this.dgvTutor.Name = "dgvTutor";
             this.dgvTutor.ReadOnly = true;
@@ -77,7 +77,7 @@
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(271, 186);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(133, 26);
             this.btnAgregar.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Location = new System.Drawing.Point(419, 186);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(133, 26);
             this.btnModificar.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Location = new System.Drawing.Point(569, 186);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(133, 26);
             this.btnCancelar.TabIndex = 3;
@@ -112,7 +112,7 @@
             // btnCerrar
             // 
             this.btnCerrar.Location = new System.Drawing.Point(901, 332);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(102, 25);
             this.btnCerrar.TabIndex = 4;
@@ -134,7 +134,7 @@
             // gbxTutor
             // 
             this.gbxTutor.Controls.Add(this.label8);
-            this.gbxTutor.Controls.Add(this.textBox1);
+            this.gbxTutor.Controls.Add(this.txtApellidoMTutor);
             this.gbxTutor.Controls.Add(this.cbxEstado);
             this.gbxTutor.Controls.Add(this.label7);
             this.gbxTutor.Controls.Add(this.btnAgregar);
@@ -147,24 +147,42 @@
             this.gbxTutor.Controls.Add(this.label2);
             this.gbxTutor.Controls.Add(this.txtDireccionTutor);
             this.gbxTutor.Controls.Add(this.txtNroCelularTutor);
-            this.gbxTutor.Controls.Add(this.txtApellidoTutor);
+            this.gbxTutor.Controls.Add(this.txtApellidoPTutor);
             this.gbxTutor.Controls.Add(this.txtNombreTutor);
             this.gbxTutor.Controls.Add(this.txtIDTutor);
             this.gbxTutor.Controls.Add(this.txtDniTutor);
             this.gbxTutor.Location = new System.Drawing.Point(16, 384);
-            this.gbxTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxTutor.Margin = new System.Windows.Forms.Padding(1);
             this.gbxTutor.Name = "gbxTutor";
-            this.gbxTutor.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxTutor.Padding = new System.Windows.Forms.Padding(1);
             this.gbxTutor.Size = new System.Drawing.Size(987, 240);
             this.gbxTutor.TabIndex = 6;
             this.gbxTutor.TabStop = false;
             this.gbxTutor.Text = "Datos del Apoderado";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(654, 71);
+            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 16);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Apellidos Materno:";
+            // 
+            // txtApellidoMTutor
+            // 
+            this.txtApellidoMTutor.Location = new System.Drawing.Point(775, 68);
+            this.txtApellidoMTutor.Margin = new System.Windows.Forms.Padding(1);
+            this.txtApellidoMTutor.Name = "txtApellidoMTutor";
+            this.txtApellidoMTutor.Size = new System.Drawing.Size(195, 22);
+            this.txtApellidoMTutor.TabIndex = 14;
+            // 
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
             this.cbxEstado.Location = new System.Drawing.Point(271, 28);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(1);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(166, 20);
             this.cbxEstado.TabIndex = 13;
@@ -234,7 +252,7 @@
             // txtDireccionTutor
             // 
             this.txtDireccionTutor.Location = new System.Drawing.Point(775, 107);
-            this.txtDireccionTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtDireccionTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDireccionTutor.Name = "txtDireccionTutor";
             this.txtDireccionTutor.Size = new System.Drawing.Size(195, 22);
             this.txtDireccionTutor.TabIndex = 5;
@@ -242,23 +260,23 @@
             // txtNroCelularTutor
             // 
             this.txtNroCelularTutor.Location = new System.Drawing.Point(439, 104);
-            this.txtNroCelularTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtNroCelularTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNroCelularTutor.Name = "txtNroCelularTutor";
             this.txtNroCelularTutor.Size = new System.Drawing.Size(195, 22);
             this.txtNroCelularTutor.TabIndex = 4;
             // 
-            // txtApellidoTutor
+            // txtApellidoPTutor
             // 
-            this.txtApellidoTutor.Location = new System.Drawing.Point(439, 69);
-            this.txtApellidoTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.txtApellidoTutor.Name = "txtApellidoTutor";
-            this.txtApellidoTutor.Size = new System.Drawing.Size(195, 22);
-            this.txtApellidoTutor.TabIndex = 3;
+            this.txtApellidoPTutor.Location = new System.Drawing.Point(439, 69);
+            this.txtApellidoPTutor.Margin = new System.Windows.Forms.Padding(1);
+            this.txtApellidoPTutor.Name = "txtApellidoPTutor";
+            this.txtApellidoPTutor.Size = new System.Drawing.Size(195, 22);
+            this.txtApellidoPTutor.TabIndex = 3;
             // 
             // txtNombreTutor
             // 
             this.txtNombreTutor.Location = new System.Drawing.Point(103, 69);
-            this.txtNombreTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtNombreTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNombreTutor.Name = "txtNombreTutor";
             this.txtNombreTutor.Size = new System.Drawing.Size(195, 22);
             this.txtNombreTutor.TabIndex = 2;
@@ -266,7 +284,7 @@
             // txtIDTutor
             // 
             this.txtIDTutor.Location = new System.Drawing.Point(130, 29);
-            this.txtIDTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtIDTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtIDTutor.Name = "txtIDTutor";
             this.txtIDTutor.Size = new System.Drawing.Size(81, 22);
             this.txtIDTutor.TabIndex = 1;
@@ -274,7 +292,7 @@
             // txtDniTutor
             // 
             this.txtDniTutor.Location = new System.Drawing.Point(103, 103);
-            this.txtDniTutor.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtDniTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDniTutor.Name = "txtDniTutor";
             this.txtDniTutor.Size = new System.Drawing.Size(195, 22);
             this.txtDniTutor.TabIndex = 0;
@@ -282,7 +300,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(583, 334);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(102, 27);
             this.btnNuevo.TabIndex = 7;
@@ -293,7 +311,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(687, 334);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(102, 27);
             this.btnEditar.TabIndex = 8;
@@ -304,31 +322,13 @@
             // btnDeshabilitar
             // 
             this.btnDeshabilitar.Location = new System.Drawing.Point(791, 332);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(102, 29);
             this.btnDeshabilitar.TabIndex = 9;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
             this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(654, 71);
-            this.label8.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 16);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Apellidos Materno:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(775, 68);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 14;
             // 
             // frmTutor
             // 
@@ -343,7 +343,7 @@
             this.Controls.Add(this.dgvTutor);
             this.Controls.Add(this.gbxTutor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "frmTutor";
             this.Text = "frmTutor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
@@ -370,7 +370,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDireccionTutor;
         private System.Windows.Forms.TextBox txtNroCelularTutor;
-        private System.Windows.Forms.TextBox txtApellidoTutor;
+        private System.Windows.Forms.TextBox txtApellidoPTutor;
         private System.Windows.Forms.TextBox txtNombreTutor;
         private System.Windows.Forms.TextBox txtIDTutor;
         private System.Windows.Forms.TextBox txtDniTutor;
@@ -380,6 +380,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellidoMTutor;
     }
 }

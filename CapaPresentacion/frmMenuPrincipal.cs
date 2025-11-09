@@ -183,10 +183,7 @@ namespace CapaPresentacion
         {
         }
 
-        private void btnBoletaPago_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnTarifa_Click(object sender, EventArgs e)
         {
@@ -198,6 +195,13 @@ namespace CapaPresentacion
         private void btnPeriodoAcademico_Click(object sender, EventArgs e)
         {
             openChildForms(new frmPeriodoAcademico());
+
+            hideSubMenu();
+        }
+
+        private void btnTipoCargo_Click(object sender, EventArgs e)
+        {
+            openChildForms(new frmTipoCargo());
 
             hideSubMenu();
         }

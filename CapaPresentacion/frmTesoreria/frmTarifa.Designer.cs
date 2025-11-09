@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.txtMontoTarifa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,36 +39,17 @@
             this.txtNombreTarifa = new System.Windows.Forms.TextBox();
             this.dgvTarifa = new System.Windows.Forms.DataGridView();
             this.gbxTarifa = new System.Windows.Forms.GroupBox();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.cbAnioAcademico = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarifa)).BeginInit();
             this.gbxTarifa.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(888, 168);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(132, 38);
-            this.btnCancelar.TabIndex = 70;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(453, 236);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(127, 38);
-            this.btnDeshabilitar.TabIndex = 65;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
             // 
             // txtMontoTarifa
             // 
@@ -94,7 +72,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(179, 236);
+            this.btnAgregar.Location = new System.Drawing.Point(163, 236);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(132, 38);
@@ -102,17 +80,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(319, 236);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(132, 38);
-            this.btnModificar.TabIndex = 15;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // cbxEstado
             // 
@@ -182,18 +149,19 @@
             this.dgvTarifa.RowHeadersWidth = 92;
             this.dgvTarifa.RowTemplate.Height = 37;
             this.dgvTarifa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTarifa.Size = new System.Drawing.Size(809, 217);
+            this.dgvTarifa.Size = new System.Drawing.Size(804, 217);
             this.dgvTarifa.TabIndex = 65;
+            this.dgvTarifa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTarifa_CellClick);
             // 
             // gbxTarifa
             // 
+            this.gbxTarifa.Controls.Add(this.btnModificar);
+            this.gbxTarifa.Controls.Add(this.btnDeshabilitar);
             this.gbxTarifa.Controls.Add(this.cbAnioAcademico);
             this.gbxTarifa.Controls.Add(this.label5);
-            this.gbxTarifa.Controls.Add(this.btnDeshabilitar);
             this.gbxTarifa.Controls.Add(this.txtMontoTarifa);
             this.gbxTarifa.Controls.Add(this.label4);
             this.gbxTarifa.Controls.Add(this.btnAgregar);
-            this.gbxTarifa.Controls.Add(this.btnModificar);
             this.gbxTarifa.Controls.Add(this.cbxEstado);
             this.gbxTarifa.Controls.Add(this.label3);
             this.gbxTarifa.Controls.Add(this.label2);
@@ -203,10 +171,22 @@
             this.gbxTarifa.Margin = new System.Windows.Forms.Padding(1);
             this.gbxTarifa.Name = "gbxTarifa";
             this.gbxTarifa.Padding = new System.Windows.Forms.Padding(1);
-            this.gbxTarifa.Size = new System.Drawing.Size(585, 292);
+            this.gbxTarifa.Size = new System.Drawing.Size(603, 292);
             this.gbxTarifa.TabIndex = 66;
             this.gbxTarifa.TabStop = false;
             this.gbxTarifa.Text = "Dato de la Tarifa";
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeshabilitar.Location = new System.Drawing.Point(457, 236);
+            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(132, 38);
+            this.btnDeshabilitar.TabIndex = 68;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click_1);
             // 
             // cbAnioAcademico
             // 
@@ -259,6 +239,29 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(307, 236);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(132, 38);
+            this.btnModificar.TabIndex = 69;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(888, 176);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(132, 33);
+            this.btnCancelar.TabIndex = 70;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
             // frmTarifa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -283,13 +286,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.TextBox txtMontoTarifa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.CheckBox cbxEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -303,5 +302,8 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.ComboBox cbAnioAcademico;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -32,7 +32,7 @@
             this.panelMenuLateral = new System.Windows.Forms.Panel();
             this.panelTesoreriaSubMenu = new System.Windows.Forms.Panel();
             this.btnTarifa = new System.Windows.Forms.Button();
-            this.btnBoletaPago = new System.Windows.Forms.Button();
+            this.btnTipoCargo = new System.Windows.Forms.Button();
             this.btnPlanPago = new System.Windows.Forms.Button();
             this.btnTipoPlanPago = new System.Windows.Forms.Button();
             this.btnTesoreria = new System.Windows.Forms.Button();
@@ -87,7 +87,7 @@
             // 
             this.panelTesoreriaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(71)))), ((int)(((byte)(69)))));
             this.panelTesoreriaSubMenu.Controls.Add(this.btnTarifa);
-            this.panelTesoreriaSubMenu.Controls.Add(this.btnBoletaPago);
+            this.panelTesoreriaSubMenu.Controls.Add(this.btnTipoCargo);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnPlanPago);
             this.panelTesoreriaSubMenu.Controls.Add(this.btnTipoPlanPago);
             this.panelTesoreriaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -112,20 +112,20 @@
             this.btnTarifa.UseVisualStyleBackColor = false;
             this.btnTarifa.Click += new System.EventHandler(this.btnTarifa_Click);
             // 
-            // btnBoletaPago
+            // btnTipoCargo
             // 
-            this.btnBoletaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
-            this.btnBoletaPago.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBoletaPago.FlatAppearance.BorderSize = 0;
-            this.btnBoletaPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBoletaPago.Location = new System.Drawing.Point(0, 82);
-            this.btnBoletaPago.Margin = new System.Windows.Forms.Padding(1);
-            this.btnBoletaPago.Name = "btnBoletaPago";
-            this.btnBoletaPago.Size = new System.Drawing.Size(244, 41);
-            this.btnBoletaPago.TabIndex = 8;
-            this.btnBoletaPago.Text = "Boleta de Pago";
-            this.btnBoletaPago.UseVisualStyleBackColor = false;
-            this.btnBoletaPago.Click += new System.EventHandler(this.btnBoletaPago_Click);
+            this.btnTipoCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(104)))), ((int)(((byte)(102)))));
+            this.btnTipoCargo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTipoCargo.FlatAppearance.BorderSize = 0;
+            this.btnTipoCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoCargo.Location = new System.Drawing.Point(0, 82);
+            this.btnTipoCargo.Margin = new System.Windows.Forms.Padding(1);
+            this.btnTipoCargo.Name = "btnTipoCargo";
+            this.btnTipoCargo.Size = new System.Drawing.Size(244, 41);
+            this.btnTipoCargo.TabIndex = 8;
+            this.btnTipoCargo.Text = "Tipo Cargo";
+            this.btnTipoCargo.UseVisualStyleBackColor = false;
+            this.btnTipoCargo.Click += new System.EventHandler(this.btnTipoCargo_Click);
             // 
             // btnPlanPago
             // 
@@ -522,7 +522,7 @@
         private System.Windows.Forms.Button btnTipoDocumento;
         private System.Windows.Forms.Button btnAdministrativo;
         private System.Windows.Forms.Panel panelTesoreriaSubMenu;
-        private System.Windows.Forms.Button btnBoletaPago;
+        private System.Windows.Forms.Button btnTipoCargo;
         private System.Windows.Forms.Button btnPlanPago;
         private System.Windows.Forms.Button btnTipoPlanPago;
         private System.Windows.Forms.Button btnTesoreria;

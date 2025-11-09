@@ -76,10 +76,10 @@
     <Compile Include="frmAcademico\frmTipoAsistencia.Designer.cs">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAcademico\frmTipoCargo.cs">
+    <Compile Include="frmTesoreria\frmTipoCargo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcademico\frmTipoCargo.Designer.cs">
+    <Compile Include="frmTesoreria\frmTipoCargo.Designer.cs">
       <DependentUpon>frmTipoCargo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAcademico\frmTipoEvaluacion.cs">
@@ -184,12 +184,6 @@
     <Compile Include="frmTesoreria\frmTarifa.Designer.cs">
       <DependentUpon>frmTarifa.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTesoreria\frmTipoCargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTesoreria\frmTipoCargo.Designer.cs">
-      <DependentUpon>frmTipoCargo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAcademico\frmAsignatura.resx">
@@ -207,7 +201,7 @@
     <EmbeddedResource Include="frmAcademico\frmTipoAsistencia.resx">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAcademico\frmTipoCargo.resx">
+    <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
       <DependentUpon>frmTipoCargo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmTipoEvaluacion.resx">

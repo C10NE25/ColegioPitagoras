@@ -30,13 +30,12 @@ namespace CapaPresentacion.frmTesoreria
             cbAnioAcademico.ValueMember = "IdPeriodoAcademico";
         }
 
-
-
         void deshabilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
             btnDeshabilitar.Enabled = false;
+            //btnModificar.Enabled = false;
             btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
@@ -44,6 +43,7 @@ namespace CapaPresentacion.frmTesoreria
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
             btnDeshabilitar.Enabled = true;
+            btnModificar.Enabled = true;
             btnCerrar.Enabled = true;
         }
 
@@ -51,7 +51,7 @@ namespace CapaPresentacion.frmTesoreria
         {
             txtIdTarifa.Text = "";
             txtNombreTarifa.Text = "";
-            txtIdTarifa.Text = "";
+            txtMontoTarifa.Text = "";
             cbxEstado.Checked = false;
         }
         private void ListarTarifa()
@@ -64,16 +64,14 @@ namespace CapaPresentacion.frmTesoreria
             gbxTarifa.Enabled = true;
             btnAgregar.Visible = true;
             limpiarVariables();
-            btnModificar.Visible = false;
             deshabilitarBotonesPrincipales();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             gbxTarifa.Enabled = true;
-            btnModificar.Visible = true;
             btnAgregar.Visible = false;
-            deshabilitarBotonesPrincipales();
+            btnModificar.Visible = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -106,6 +104,64 @@ namespace CapaPresentacion.frmTesoreria
             limpiarVariables();
             gbxTarifa.Enabled = false;
             ListarTarifa();
+            habilitarBotonesPrincipales();
+        }
+
+
+        private void btnDeshabilitar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                entTarifa t = new entTarifa();
+                t.IdTarifa = Convert.ToInt32(txtIdTarifa.Text.Trim());
+                cbxEstado.Enabled = false;
+                t.EstadoTarifa = cbxEstado.Checked;
+                logTarifa.Instancia.DeshabilitarTarifa(t);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al deshabilitar Tarifa: " + ex.Message);
+            }
+            limpiarVariables();
+            gbxTarifa.Enabled = false;
+            ListarTarifa();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTarifa t = new entTarifa();
+                t.IdTarifa = Convert.ToInt32(txtIdTarifa.Text.Trim());
+                t.NombreTarifa = txtNombreTarifa.Text.Trim();
+                t.MontoTarifa = Convert.ToDecimal(txtMontoTarifa.Text.Trim());
+                t.IdPeriodoAcademico = Convert.ToInt32(cbAnioAcademico.SelectedValue);
+                t.EstadoTarifa = cbxEstado.Checked;
+                logTarifa.Instancia.editarTarifa(t);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar Tarifa: " + ex.Message);
+            }
+            limpiarVariables();
+            gbxTarifa.Enabled = false;
+            ListarTarifa();
+            habilitarBotonesPrincipales();
+        }
+
+        private void dgvTarifa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvTarifa.Rows[e.RowIndex];
+            txtIdTarifa.Text = fila.Cells[0].Value.ToString();
+            txtNombreTarifa.Text = fila.Cells[1].Value.ToString();
+            txtMontoTarifa.Text = fila.Cells[2].Value.ToString();
+            cbAnioAcademico.SelectedValue = Convert.ToInt32(fila.Cells[3].Value);
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[4].Value);
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            gbxTarifa.Enabled = false;
             habilitarBotonesPrincipales();
         }
     }

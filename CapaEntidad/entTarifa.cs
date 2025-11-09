@@ -13,5 +13,10 @@ namespace CapaEntidad
         public decimal MontoTarifa { get; set; }
         public int IdPeriodoAcademico { get; set; }
         public bool EstadoTarifa { get; set; }
+
+        public string NombreCompleto
+        {
+            get { return $"{NombreTarifa} - {MontoTarifa}"; }
+        }
     }
 }

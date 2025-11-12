@@ -95,7 +95,7 @@ namespace CapaPresentacion.frmAcademico
             try
             {
                 entSeccion seccion = new entSeccion();
-                seccion.NombreSeccion = txtIdSeccion.Text.Trim();
+                seccion.NombreSeccion = txtNombreSeccion.Text.Trim();
                 seccion.EstadoSeccion = cbxEstado.Checked;
                 logSeccion.Instancia.InsertarSeccion(seccion);
 

@@ -20,7 +20,7 @@ namespace CapaPresentacion
             gbxTutor.Enabled = false;
             txtIDTutor.Enabled = false;
             listarTutor();
-
+            CargarParentesco();
         }
 
         private void listarTutor()
@@ -37,14 +37,12 @@ namespace CapaPresentacion
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
             btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
             btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -75,7 +73,7 @@ namespace CapaPresentacion
                 tutor.DniApo = txtDniTutor.Text.Trim();
                 tutor.NombreApo = txtNombreTutor.Text.Trim();
                 tutor.ApellidosPatApo = txtApellidoPTutor.Text.Trim();
-                tutor.ApellidosMatApo=txtApellidoMTutor.Text.Trim();
+                tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
                 tutor.EstadoApo = cbxEstado.Checked;
@@ -95,7 +93,7 @@ namespace CapaPresentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             deshabilitarBotonesPrincipales();
-            gbxTutor.Enabled=true;
+            gbxTutor.Enabled = true;
             btnModificar.Visible = true;
             btnAgregar.Visible = false;
         }
@@ -166,6 +164,13 @@ namespace CapaPresentacion
         private void dgvTutor_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dgvTutor.ClearSelection();
+        }
+
+        private void CargarParentesco()
+        {
+            List<entParentesco> lista = logParentesco.Instancia.ListarParentesco();
+            cbParentesco.DataSource = lista;
+            cbParentesco.DisplayMember = "tipoParentesco"; // Propiedad personalizada
         }
     }
 }

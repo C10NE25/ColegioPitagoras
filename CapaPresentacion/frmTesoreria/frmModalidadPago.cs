@@ -17,12 +17,15 @@ namespace CapaPresentacion.frmTesoreria
         public frmModalidadPago()
         {
             InitializeComponent();
+            ListarModalidadPago();
+            gbxModalidadPago.Enabled = false;
+            txtIdModalidadPago.Enabled = false;
         }
         void deshabilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
+           btnDeshabilitar.Enabled = false;
             btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
@@ -136,7 +139,7 @@ namespace CapaPresentacion.frmTesoreria
         private void dgvModalidadPago_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvModalidadPago.Rows[e.RowIndex];
-            txtTipoModalidadPago.Text = fila.Cells[0].Value.ToString();
+            txtIdModalidadPago.Text = fila.Cells[0].Value.ToString();
             txtTipoModalidadPago.Text = fila.Cells[1].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[2].Value);
         }

@@ -26,14 +26,12 @@ namespace CapaPresentacion.frmAcademico
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
             btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
             btnCerrar.Enabled = true;
         }
 

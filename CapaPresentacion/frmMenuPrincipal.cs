@@ -17,193 +17,66 @@ namespace CapaPresentacion
         public frmMenuPrincipal()
         {
             InitializeComponent();
-            customizeDesing();
         }
 
-        //Metodo para ocultar los submenus
-        private void customizeDesing()
+        private void btnAbrirEstudiante_Click(object sender, EventArgs e)
         {
-            panelAcademicoSubMenu.Visible = false;
-            panelAdministrativoSubMenu.Visible = false;
-            panelTesoreriaSubMenu.Visible = false;
-        }
-        private void hideSubMenu()
-        {
-            if (panelAcademicoSubMenu.Visible == true)
-                panelAcademicoSubMenu.Visible = false;
-            if (panelAdministrativoSubMenu.Visible == true)
-                panelAdministrativoSubMenu.Visible = false;
-            if (panelTesoreriaSubMenu.Visible == true)
-                panelTesoreriaSubMenu.Visible = false;
-        }
-        //Metodo para mostrar los submenus
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
+            this.Hide();
+            using (var frm = new frmEstudiante())
             {
-                hideSubMenu();
-                subMenu.Visible = true;
+                frm.ShowDialog();
             }
-            else
-                subMenu.Visible = false;
+            this.Show();
         }
 
-        private void btnAcademico_Click(object sender, EventArgs e)
+        private void btnOpenDocente_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelAcademicoSubMenu);
+            this.Hide();
+            using (var frm = new frmDocente())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
 
-        private void btnTutor_Click(object sender, EventArgs e)
+        private void btnOpenCurso_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmTutor());
-
-            //Oculta el submenu luego de hacer click en una opcion
-            hideSubMenu();
-        }
-        //Variable para almacenar formulario hijo
-        private Form activeForm=null; 
-        //Panel para abrir formularios hijos
-        private void openChildForms(Form childForm)
-        {
-            //Si esta activo, lo cierra
-            if (activeForm != null)
-                activeForm.Close();
-            //Almacena el formulario en la variable
-            activeForm=childForm;
-            childForm.TopLevel=false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag= childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            this.Hide();
+            using (var frm = new frmCurso())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
 
-        private void btnEstudiante_Click(object sender, EventArgs e)
+        private void btnOpenGAcademico_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmEstudiante());
-
-            hideSubMenu();
+            this.Hide();
+            using (var frm = new frmGradoAcademico())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
 
-        private void btnDocente_Click(object sender, EventArgs e)
+        private void btnOpenAsistencia_Click(object sender, EventArgs e)
         {
-            openChildForms(new frmDocente());
-
-            hideSubMenu();
+            this.Hide();
+            using (var frm = new frmAsistencias())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
 
-        private void btnAdministrativo_Click(object sender, EventArgs e)
+        private void btnOpenNotas_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelAdministrativoSubMenu);
-        }
-
-        private void btnTesoreria_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelTesoreriaSubMenu);
-        }
-
-        private void btnNivelAcademico_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmNivelAcademico());
-
-            hideSubMenu();
-        }
-
-        private void btnGradoAcademico_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmGradoAcademico());
-
-            hideSubMenu();
-        }
-
-        private void btnCurso_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmCurso());
-
-            hideSubMenu();
-        }
-
-        private void btnAsistencias_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmAsistencias());
-
-            hideSubMenu();
-        }
-
-        private void btnNotas_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmNotas());
-
-            hideSubMenu();
-        }
-
-        private void btnTipoDocumento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDocumento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCarpetaInscripcion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void btnBoletaMatricula_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInscripcion_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmInscripcion());
-
-            hideSubMenu();
-        }
-
-        private void btnMatricula_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmMatricula());
-
-            hideSubMenu();
-        }
-
-        private void btnTipoPlanPago_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPlanPago_Click(object sender, EventArgs e)
-        {
-        }
-
-
-
-        private void btnTarifa_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmTarifa());
-
-            hideSubMenu();
-        }
-
-        private void btnPeriodoAcademico_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmPeriodoAcademico());
-
-            hideSubMenu();
-        }
-
-        private void btnTipoCargo_Click(object sender, EventArgs e)
-        {
-            openChildForms(new frmTipoCargo());
-
-            hideSubMenu();
+            this.Hide();
+            using (var frm = new frmNotas())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
     }
 }

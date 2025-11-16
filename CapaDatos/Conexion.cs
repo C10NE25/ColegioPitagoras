@@ -22,7 +22,7 @@ namespace CapaDatos
             * Initial Catalog= Nombre de la base de datos*/
             cn.ConnectionString =
                 "Data Source=C10N3\\USERDP; " +
-                "Initial Catalog = ColegioPitagoras4;" +
+                "Initial Catalog = BDColegioPitagoras;" +
                 "Integrated Security=true";
             return cn;
         }

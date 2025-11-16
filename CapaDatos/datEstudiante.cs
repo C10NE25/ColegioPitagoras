@@ -43,8 +43,8 @@ namespace CapaDatos
                     Est.IdEstudiante = Convert.ToInt32(dr["idEstudiante"]);
                     Est.DniEst = dr["dniEst"].ToString();
                     Est.NombreEst = dr["nombreEst"].ToString();
-                    Est.ApellidosPatEst = dr["apellidosPatEst"].ToString();
-                    Est.ApellidosMatEst = dr["apellidosMatEst"].ToString();
+                    Est.ApellidosPatEst = dr["apellidoPatEst"].ToString();
+                    Est.ApellidosMatEst = dr["apellidoMatEst"].ToString();
                     Est.FechaNacEst = Convert.ToDateTime(dr["fechaNacEst"]);
                     Est.DireccionEst = dr["direccionEst"].ToString();
                     Est.IdApoderado = Convert.ToInt32(dr["idApoderado"]);

@@ -12,20 +12,21 @@ using CapaLogica;
 
 namespace CapaPresentacion
 {
-    public partial class frmTutor : Form
+    public partial class frmApoderado : Form
     {
-        public frmTutor()
+        public frmApoderado()
         {
             InitializeComponent();
             gbxTutor.Enabled = false;
             txtIDTutor.Enabled = false;
+            cbxEstado.Checked = true;
             listarTutor();
             CargarParentesco();
         }
 
         private void listarTutor()
         {
-            dgvTutor.DataSource = logApoderado.Instancia.ListarApoderados();
+            dgvTipoParentesco.DataSource = logApoderado.Instancia.ListarApoderados();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -36,13 +37,11 @@ namespace CapaPresentacion
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -76,6 +75,7 @@ namespace CapaPresentacion
                 tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
+                tutor.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
                 tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.InsertarApoderado(tutor);
             }
@@ -110,6 +110,7 @@ namespace CapaPresentacion
                 tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
+                tutor.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
                 tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.EditarApoderado(tutor);
             }
@@ -150,7 +151,7 @@ namespace CapaPresentacion
 
         private void dgvTutor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow fila = dgvTutor.Rows[e.RowIndex];
+            DataGridViewRow fila = dgvTipoParentesco.Rows[e.RowIndex];
             txtIDTutor.Text = fila.Cells[0].Value.ToString();
             txtDniTutor.Text = fila.Cells[1].Value.ToString();
             txtNombreTutor.Text = fila.Cells[2].Value.ToString();
@@ -158,19 +159,28 @@ namespace CapaPresentacion
             txtApellidoMTutor.Text = fila.Cells[4].Value.ToString();
             txtNroCelularTutor.Text = fila.Cells[5].Value.ToString();
             txtDireccionTutor.Text = fila.Cells[6].Value.ToString();
-            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[7].Value);
+            cbParentesco.SelectedValue = fila.Cells[7].Value;
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[8].Value);
         }
 
         private void dgvTutor_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dgvTutor.ClearSelection();
+            dgvTipoParentesco.ClearSelection();
         }
 
         private void CargarParentesco()
         {
             List<entParentesco> lista = logParentesco.Instancia.ListarParentesco();
             cbParentesco.DataSource = lista;
+            cbParentesco.ValueMember = "idParentesco";
             cbParentesco.DisplayMember = "tipoParentesco"; // Propiedad personalizada
+        }
+
+        private void btnAddTipoParentesco_Click(object sender, EventArgs e)
+        {
+            var frm = new frmAcademico.frmTipoParentesco();
+            this.Hide();
+            frm.Show();
         }
     }
 }

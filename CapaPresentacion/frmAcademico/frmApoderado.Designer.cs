@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class frmTutor
+    partial class frmApoderado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvTutor = new System.Windows.Forms.DataGridView();
+            this.dgvTipoParentesco = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxTutor = new System.Windows.Forms.GroupBox();
+            this.btnAddTipoParentesco = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.cbParentesco = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,26 +54,25 @@
             this.txtDniTutor = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoParentesco)).BeginInit();
             this.gbxTutor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvTutor
+            // dgvTipoParentesco
             // 
-            this.dgvTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTutor.Location = new System.Drawing.Point(12, 43);
-            this.dgvTutor.Margin = new System.Windows.Forms.Padding(1);
-            this.dgvTutor.MultiSelect = false;
-            this.dgvTutor.Name = "dgvTutor";
-            this.dgvTutor.ReadOnly = true;
-            this.dgvTutor.RowHeadersWidth = 92;
-            this.dgvTutor.RowTemplate.Height = 37;
-            this.dgvTutor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTutor.Size = new System.Drawing.Size(734, 197);
-            this.dgvTutor.TabIndex = 0;
-            this.dgvTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellClick);
-            this.dgvTutor.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTutor_DataBindingComplete);
+            this.dgvTipoParentesco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoParentesco.Location = new System.Drawing.Point(12, 43);
+            this.dgvTipoParentesco.Margin = new System.Windows.Forms.Padding(1);
+            this.dgvTipoParentesco.MultiSelect = false;
+            this.dgvTipoParentesco.Name = "dgvTipoParentesco";
+            this.dgvTipoParentesco.ReadOnly = true;
+            this.dgvTipoParentesco.RowHeadersWidth = 92;
+            this.dgvTipoParentesco.RowTemplate.Height = 37;
+            this.dgvTipoParentesco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTipoParentesco.Size = new System.Drawing.Size(734, 197);
+            this.dgvTipoParentesco.TabIndex = 0;
+            this.dgvTipoParentesco.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutor_CellClick);
+            this.dgvTipoParentesco.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvTutor_DataBindingComplete);
             // 
             // btnAgregar
             // 
@@ -123,6 +123,7 @@
             // 
             // gbxTutor
             // 
+            this.gbxTutor.Controls.Add(this.btnAddTipoParentesco);
             this.gbxTutor.Controls.Add(this.label9);
             this.gbxTutor.Controls.Add(this.cbParentesco);
             this.gbxTutor.Controls.Add(this.label8);
@@ -152,10 +153,20 @@
             this.gbxTutor.TabStop = false;
             this.gbxTutor.Text = "Datos del Apoderado";
             // 
+            // btnAddTipoParentesco
+            // 
+            this.btnAddTipoParentesco.Location = new System.Drawing.Point(698, 57);
+            this.btnAddTipoParentesco.Name = "btnAddTipoParentesco";
+            this.btnAddTipoParentesco.Size = new System.Drawing.Size(25, 22);
+            this.btnAddTipoParentesco.TabIndex = 18;
+            this.btnAddTipoParentesco.Text = "+";
+            this.btnAddTipoParentesco.UseVisualStyleBackColor = true;
+            this.btnAddTipoParentesco.Click += new System.EventHandler(this.btnAddTipoParentesco_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(528, 63);
+            this.label9.Location = new System.Drawing.Point(501, 61);
             this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
@@ -165,7 +176,7 @@
             // cbParentesco
             // 
             this.cbParentesco.FormattingEnabled = true;
-            this.cbParentesco.Location = new System.Drawing.Point(596, 60);
+            this.cbParentesco.Location = new System.Drawing.Point(569, 58);
             this.cbParentesco.Name = "cbParentesco";
             this.cbParentesco.Size = new System.Drawing.Size(121, 21);
             this.cbParentesco.TabIndex = 16;
@@ -185,13 +196,15 @@
             this.txtApellidoMTutor.Location = new System.Drawing.Point(107, 123);
             this.txtApellidoMTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtApellidoMTutor.Name = "txtApellidoMTutor";
-            this.txtApellidoMTutor.Size = new System.Drawing.Size(147, 20);
+            this.txtApellidoMTutor.Size = new System.Drawing.Size(118, 20);
             this.txtApellidoMTutor.TabIndex = 14;
             // 
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(531, 95);
+            this.cbxEstado.Checked = true;
+            this.cbxEstado.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxEstado.Location = new System.Drawing.Point(504, 93);
             this.cbxEstado.Margin = new System.Windows.Forms.Padding(1);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(131, 17);
@@ -202,7 +215,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(283, 126);
+            this.label7.Location = new System.Drawing.Point(253, 126);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
@@ -212,7 +225,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(283, 94);
+            this.label6.Location = new System.Drawing.Point(253, 94);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 13);
@@ -235,14 +248,14 @@
             this.label4.Location = new System.Drawing.Point(12, 60);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Nombres:";
+            this.label4.Text = "Nombre:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(283, 60);
+            this.label3.Location = new System.Drawing.Point(253, 60);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
@@ -261,7 +274,7 @@
             // 
             // txtDireccionTutor
             // 
-            this.txtDireccionTutor.Location = new System.Drawing.Point(345, 123);
+            this.txtDireccionTutor.Location = new System.Drawing.Point(315, 123);
             this.txtDireccionTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDireccionTutor.Name = "txtDireccionTutor";
             this.txtDireccionTutor.Size = new System.Drawing.Size(147, 20);
@@ -269,7 +282,7 @@
             // 
             // txtNroCelularTutor
             // 
-            this.txtNroCelularTutor.Location = new System.Drawing.Point(345, 92);
+            this.txtNroCelularTutor.Location = new System.Drawing.Point(315, 92);
             this.txtNroCelularTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNroCelularTutor.Name = "txtNroCelularTutor";
             this.txtNroCelularTutor.Size = new System.Drawing.Size(147, 20);
@@ -280,7 +293,7 @@
             this.txtApellidoPTutor.Location = new System.Drawing.Point(107, 92);
             this.txtApellidoPTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtApellidoPTutor.Name = "txtApellidoPTutor";
-            this.txtApellidoPTutor.Size = new System.Drawing.Size(147, 20);
+            this.txtApellidoPTutor.Size = new System.Drawing.Size(118, 20);
             this.txtApellidoPTutor.TabIndex = 3;
             // 
             // txtNombreTutor
@@ -288,7 +301,7 @@
             this.txtNombreTutor.Location = new System.Drawing.Point(107, 57);
             this.txtNombreTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNombreTutor.Name = "txtNombreTutor";
-            this.txtNombreTutor.Size = new System.Drawing.Size(147, 20);
+            this.txtNombreTutor.Size = new System.Drawing.Size(118, 20);
             this.txtNombreTutor.TabIndex = 2;
             // 
             // txtIDTutor
@@ -301,7 +314,7 @@
             // 
             // txtDniTutor
             // 
-            this.txtDniTutor.Location = new System.Drawing.Point(345, 60);
+            this.txtDniTutor.Location = new System.Drawing.Point(315, 60);
             this.txtDniTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDniTutor.Name = "txtDniTutor";
             this.txtDniTutor.Size = new System.Drawing.Size(147, 20);
@@ -329,33 +342,22 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(673, 246);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(76, 25);
-            this.btnDeshabilitar.TabIndex = 9;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
-            // 
-            // frmTutor
+            // frmApoderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 484);
-            this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvTutor);
+            this.Controls.Add(this.dgvTipoParentesco);
             this.Controls.Add(this.gbxTutor);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.Name = "frmTutor";
+            this.Name = "frmApoderado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTutor";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoParentesco)).EndInit();
             this.gbxTutor.ResumeLayout(false);
             this.gbxTutor.PerformLayout();
             this.ResumeLayout(false);
@@ -365,7 +367,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvTutor;
+        private System.Windows.Forms.DataGridView dgvTipoParentesco;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
@@ -386,10 +388,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtApellidoMTutor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbParentesco;
+        private System.Windows.Forms.Button btnAddTipoParentesco;
     }
 }

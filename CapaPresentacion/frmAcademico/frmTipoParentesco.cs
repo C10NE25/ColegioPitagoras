@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.frmAcademico
 {
-    public partial class frmParentesco : Form
+    public partial class frmTipoParentesco : Form
     {
-        public frmParentesco()
+        public frmTipoParentesco()
         {
             InitializeComponent();
             gbxParentesco.Enabled = false;
@@ -25,15 +25,11 @@ namespace CapaPresentacion.frmAcademico
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
         private void listarParentesco()
         {

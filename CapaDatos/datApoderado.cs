@@ -49,6 +49,7 @@ namespace CapaDatos
                     Apo.ApellidosMatApo = dr["apellidosMatApo"].ToString();
                     Apo.NumCelularApo = dr["numCelularApo"].ToString();
                     Apo.DireccionApo= dr["direccionApo"].ToString();
+                    Apo.IdParentesco = Convert.ToInt32(dr["idParentesco"]);
                     Apo.EstadoApo = Convert.ToBoolean(dr["estadoApo"]);
                     lista.Add(Apo);
                 }
@@ -79,9 +80,10 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@dniApo", apo.DniApo);
                 cmd.Parameters.AddWithValue("@nombreApo", apo.NombreApo);
                 cmd.Parameters.AddWithValue("@apellidosPatApo", apo.ApellidosPatApo);
-                cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosPatApo);
+                cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosMatApo);
                 cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
                 cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
+                cmd.Parameters.AddWithValue("@idParentesco", apo.IdParentesco);
                 cmd.Parameters.AddWithValue("@estadoApo", apo.EstadoApo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -166,7 +168,46 @@ namespace CapaDatos
             }
             return deshabilita;
         }
+        //BuscarApoderadoPorDni
+        public entApoderado buscarApoderadoPorDni(string dniApo)
+        {
+            SqlCommand cmd = null;
+            entApoderado apo = null;
 
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spViewBasicApoderado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dniApo", dniApo);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    apo = new entApoderado()
+                    {
+                        IdApoderado = Convert.ToInt32(dr["idApoderado"]),
+                        NombreApo = dr["nombreApo"].ToString(),
+                        ApellidosPatApo = dr["apellidosPatApo"].ToString(),
+                        ApellidosMatApo = dr["apellidosMatApo"].ToString(),
+                        DniApo = dr["dniApo"].ToString()
+                    };
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return apo;
+        }
         #endregion metodo
 
     }

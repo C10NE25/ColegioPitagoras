@@ -46,6 +46,11 @@ namespace CapaLogica
         {
             datApoderado.Instancia.deshabilitarApoderado(Apo);
         }
+
+        public entApoderado BuscarApoderadoPorDni(string dni)
+        {
+            return datApoderado.Instancia.buscarApoderadoPorDni(dni);
+        }
         #endregion metodos
 
     }

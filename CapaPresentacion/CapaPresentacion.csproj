@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,11 +53,11 @@
     <Compile Include="frmAcademico\frmAsignatura.Designer.cs">
       <DependentUpon>frmAsignatura.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAcademico\frmParentesco.cs">
+    <Compile Include="frmAcademico\frmTipoParentesco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcademico\frmParentesco.Designer.cs">
-      <DependentUpon>frmParentesco.cs</DependentUpon>
+    <Compile Include="frmAcademico\frmTipoParentesco.Designer.cs">
+      <DependentUpon>frmTipoParentesco.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAcademico\frmPeriodoAcademico.cs">
       <SubType>Form</SubType>
@@ -189,8 +190,8 @@
     <EmbeddedResource Include="frmAcademico\frmAsignatura.resx">
       <DependentUpon>frmAsignatura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAcademico\frmParentesco.resx">
-      <DependentUpon>frmParentesco.cs</DependentUpon>
+    <EmbeddedResource Include="frmAcademico\frmTipoParentesco.resx">
+      <DependentUpon>frmTipoParentesco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmPeriodoAcademico.resx">
       <DependentUpon>frmPeriodoAcademico.cs</DependentUpon>
@@ -257,6 +258,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -280,6 +282,18 @@
       <Project>{c3b5f156-f7d5-441c-8eb0-f914342a1554}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconEstudiante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconEstudiante32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconDocente32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconCurso32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

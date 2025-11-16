@@ -39,13 +39,13 @@ namespace CapaPresentacion.frmAcademico
         {
             txtBIdParentesco.Text = "";
             txtBtipoParentesco.Text = "";
-            cbxEstado.Checked = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             gbxParentesco.Enabled = true;
             btnAgregar.Visible = true;
+            cbxEstado.Checked = true;
             limpiarVariables();
             btnModificar.Visible = false;
             deshabilitarBotonesPrincipales();

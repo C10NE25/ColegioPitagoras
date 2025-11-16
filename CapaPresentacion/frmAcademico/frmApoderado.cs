@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaLogica;
+using CapaPresentacion.frmAcademico;
 
 namespace CapaPresentacion
 {
@@ -60,7 +61,6 @@ namespace CapaPresentacion
             txtApellidoPTutor.Text = "";
             txtNroCelularTutor.Text = "";
             txtDireccionTutor.Text = "";
-            cbxEstado.Checked = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -178,9 +178,12 @@ namespace CapaPresentacion
 
         private void btnAddTipoParentesco_Click(object sender, EventArgs e)
         {
-            var frm = new frmAcademico.frmTipoParentesco();
             this.Hide();
-            frm.Show();
+            using (var frm = new frmTipoParentesco())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
     }
 }

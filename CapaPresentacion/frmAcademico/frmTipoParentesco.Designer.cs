@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTituloTipParentesco = new System.Windows.Forms.Label();
             this.dgvParenteco = new System.Windows.Forms.DataGridView();
             this.gbxParentesco = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -41,28 +40,18 @@
             this.lblidDocente = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.lblTitleTipoParentesco = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParenteco)).BeginInit();
             this.gbxParentesco.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTituloTipParentesco
-            // 
-            this.lblTituloTipParentesco.AutoSize = true;
-            this.lblTituloTipParentesco.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloTipParentesco.Location = new System.Drawing.Point(10, 9);
-            this.lblTituloTipParentesco.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblTituloTipParentesco.Name = "lblTituloTipParentesco";
-            this.lblTituloTipParentesco.Size = new System.Drawing.Size(165, 26);
-            this.lblTituloTipParentesco.TabIndex = 18;
-            this.lblTituloTipParentesco.Text = "Tipo Parentesco";
-            // 
             // dgvParenteco
             // 
             this.dgvParenteco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParenteco.Location = new System.Drawing.Point(13, 39);
+            this.dgvParenteco.Location = new System.Drawing.Point(10, 37);
             this.dgvParenteco.Name = "dgvParenteco";
             this.dgvParenteco.RowHeadersWidth = 51;
-            this.dgvParenteco.Size = new System.Drawing.Size(775, 170);
+            this.dgvParenteco.Size = new System.Drawing.Size(343, 368);
             this.dgvParenteco.TabIndex = 19;
             this.dgvParenteco.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParenteco_CellClick);
             // 
@@ -76,9 +65,9 @@
             this.gbxParentesco.Controls.Add(this.cbxEstado);
             this.gbxParentesco.Controls.Add(this.label2);
             this.gbxParentesco.Controls.Add(this.lblidDocente);
-            this.gbxParentesco.Location = new System.Drawing.Point(13, 244);
+            this.gbxParentesco.Location = new System.Drawing.Point(364, 37);
             this.gbxParentesco.Name = "gbxParentesco";
-            this.gbxParentesco.Size = new System.Drawing.Size(773, 101);
+            this.gbxParentesco.Size = new System.Drawing.Size(335, 128);
             this.gbxParentesco.TabIndex = 20;
             this.gbxParentesco.TabStop = false;
             this.gbxParentesco.Text = "Datos Parentesco";
@@ -86,7 +75,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(462, 57);
+            this.btnAgregar.Location = new System.Drawing.Point(24, 84);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(99, 31);
@@ -98,7 +87,7 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(563, 57);
+            this.btnModificar.Location = new System.Drawing.Point(125, 84);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 31);
@@ -118,7 +107,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(664, 57);
+            this.btnCancelar.Location = new System.Drawing.Point(226, 84);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 31);
@@ -141,7 +130,7 @@
             this.cbxEstado.AutoSize = true;
             this.cbxEstado.Checked = true;
             this.cbxEstado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxEstado.Location = new System.Drawing.Point(256, 17);
+            this.cbxEstado.Location = new System.Drawing.Point(217, 17);
             this.cbxEstado.Margin = new System.Windows.Forms.Padding(1);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(108, 30);
@@ -171,18 +160,18 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(689, 213);
+            this.btnEditar.Location = new System.Drawing.Point(258, 409);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(99, 27);
             this.btnEditar.TabIndex = 26;
-            this.btnEditar.Text = "Modificar";
+            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(588, 213);
+            this.btnNuevo.Location = new System.Drawing.Point(157, 409);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(99, 27);
@@ -191,20 +180,30 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // lblTitleTipoParentesco
+            // 
+            this.lblTitleTipoParentesco.AutoSize = true;
+            this.lblTitleTipoParentesco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleTipoParentesco.Location = new System.Drawing.Point(12, 9);
+            this.lblTitleTipoParentesco.Name = "lblTitleTipoParentesco";
+            this.lblTitleTipoParentesco.Size = new System.Drawing.Size(139, 20);
+            this.lblTitleTipoParentesco.TabIndex = 27;
+            this.lblTitleTipoParentesco.Text = "Tipo Parentesco";
+            // 
             // frmTipoParentesco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 362);
+            this.ClientSize = new System.Drawing.Size(711, 441);
+            this.Controls.Add(this.lblTitleTipoParentesco);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.gbxParentesco);
             this.Controls.Add(this.dgvParenteco);
-            this.Controls.Add(this.lblTituloTipParentesco);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmTipoParentesco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmParentesco";
+            this.Text = "Tipo Parentesco";
             ((System.ComponentModel.ISupportInitialize)(this.dgvParenteco)).EndInit();
             this.gbxParentesco.ResumeLayout(false);
             this.gbxParentesco.PerformLayout();
@@ -214,8 +213,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTituloTipParentesco;
         private System.Windows.Forms.DataGridView dgvParenteco;
         private System.Windows.Forms.GroupBox gbxParentesco;
         private System.Windows.Forms.Label lblidDocente;
@@ -228,5 +225,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblTitleTipoParentesco;
     }
 }

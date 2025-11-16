@@ -80,7 +80,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(213, 157);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(1);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 21);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 25);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.btnModificar.Location = new System.Drawing.Point(315, 157);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(1);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 21);
+            this.btnModificar.Size = new System.Drawing.Size(100, 25);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(417, 157);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(1);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 21);
+            this.btnCancelar.Size = new System.Drawing.Size(100, 25);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -193,7 +193,8 @@
             // 
             // txtApellidoMTutor
             // 
-            this.txtApellidoMTutor.Location = new System.Drawing.Point(107, 123);
+            this.txtApellidoMTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidoMTutor.Location = new System.Drawing.Point(111, 126);
             this.txtApellidoMTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtApellidoMTutor.Name = "txtApellidoMTutor";
             this.txtApellidoMTutor.Size = new System.Drawing.Size(118, 20);
@@ -274,6 +275,7 @@
             // 
             // txtDireccionTutor
             // 
+            this.txtDireccionTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDireccionTutor.Location = new System.Drawing.Point(315, 123);
             this.txtDireccionTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDireccionTutor.Name = "txtDireccionTutor";
@@ -282,6 +284,7 @@
             // 
             // txtNroCelularTutor
             // 
+            this.txtNroCelularTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNroCelularTutor.Location = new System.Drawing.Point(315, 92);
             this.txtNroCelularTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNroCelularTutor.Name = "txtNroCelularTutor";
@@ -290,7 +293,8 @@
             // 
             // txtApellidoPTutor
             // 
-            this.txtApellidoPTutor.Location = new System.Drawing.Point(107, 92);
+            this.txtApellidoPTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidoPTutor.Location = new System.Drawing.Point(111, 95);
             this.txtApellidoPTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtApellidoPTutor.Name = "txtApellidoPTutor";
             this.txtApellidoPTutor.Size = new System.Drawing.Size(118, 20);
@@ -298,7 +302,8 @@
             // 
             // txtNombreTutor
             // 
-            this.txtNombreTutor.Location = new System.Drawing.Point(107, 57);
+            this.txtNombreTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreTutor.Location = new System.Drawing.Point(111, 60);
             this.txtNombreTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtNombreTutor.Name = "txtNombreTutor";
             this.txtNombreTutor.Size = new System.Drawing.Size(118, 20);
@@ -306,7 +311,9 @@
             // 
             // txtIDTutor
             // 
-            this.txtIDTutor.Location = new System.Drawing.Point(110, 23);
+            this.txtIDTutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtIDTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDTutor.Location = new System.Drawing.Point(114, 26);
             this.txtIDTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtIDTutor.Name = "txtIDTutor";
             this.txtIDTutor.Size = new System.Drawing.Size(62, 20);
@@ -314,6 +321,7 @@
             // 
             // txtDniTutor
             // 
+            this.txtDniTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDniTutor.Location = new System.Drawing.Point(315, 60);
             this.txtDniTutor.Margin = new System.Windows.Forms.Padding(1);
             this.txtDniTutor.Name = "txtDniTutor";
@@ -322,7 +330,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(516, 247);
+            this.btnNuevo.Location = new System.Drawing.Point(591, 246);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(76, 24);
@@ -333,7 +341,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(595, 247);
+            this.btnEditar.Location = new System.Drawing.Point(670, 246);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(76, 25);

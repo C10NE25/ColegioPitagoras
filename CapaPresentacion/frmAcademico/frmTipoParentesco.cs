@@ -82,7 +82,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar parentesco: " + ex.Message);
+                MessageBox.Show("Error al modificar tipo parentesco: " + ex.Message);
             }
             limpiarVariables();
             gbxParentesco.Enabled = false;
@@ -111,7 +111,7 @@ namespace CapaPresentacion.frmAcademico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar parentesco: " + ex.Message);
+                MessageBox.Show("Error al deshabilitar tipo parentesco: " + ex.Message);
             }
             limpiarVariables();
             gbxParentesco.Enabled = false;

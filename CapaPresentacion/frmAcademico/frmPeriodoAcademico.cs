@@ -20,6 +20,7 @@ namespace CapaPresentacion.frmAcademico
             InitializeComponent();
             gbxPeriodoAcademico.Enabled = false;
             txtIdPeriodoAcademico.Enabled = false;
+            cbxEstado.Checked = true;
             ListarPeriodoAcademico();
         }
 
@@ -27,23 +28,18 @@ namespace CapaPresentacion.frmAcademico
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
 
         private void limpiarVariables()
         {
-            txtIdPeriodoAcademico.Text = "";
-            txtPeriodoAnioAcademico.Text = "";
-            txtNombrePeriodoAcademico.Text = "";
-            cbxEstado.Checked = false;
+            txtIdPeriodoAcademico.Clear();
+            txtPeriodoAnioAcademico.Clear();
+            txtNombrePeriodoAcademico.Clear();
         }
         private void ListarPeriodoAcademico()
         {

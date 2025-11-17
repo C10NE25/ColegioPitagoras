@@ -18,7 +18,7 @@ namespace CapaPresentacion.frmAcademico
         {
             InitializeComponent();
             gbxSeccion.Enabled = false;
-            txtIdAsignatura.Enabled = false;
+            cbxEstado.Checked = true;
             ListarAsignatura();
         }
 
@@ -39,7 +39,6 @@ namespace CapaPresentacion.frmAcademico
         {
             txtIdAsignatura.Text = "";
             txtNombreAsignatura.Text = "";
-            cbxEstado.Checked = false;
         }
         private void ListarAsignatura()
         {

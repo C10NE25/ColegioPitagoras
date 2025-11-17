@@ -31,7 +31,7 @@
             this.lblMenuAdministrativo = new System.Windows.Forms.Label();
             this.btnOpenNAcademico = new System.Windows.Forms.Button();
             this.btnOpenGAcademico = new System.Windows.Forms.Button();
-            this.btnAsignatura = new System.Windows.Forms.Button();
+            this.btnOpenModalidaPago = new System.Windows.Forms.Button();
             this.btnOpenApoderado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,14 +63,15 @@
             this.btnOpenGAcademico.Text = "Pago";
             this.btnOpenGAcademico.UseVisualStyleBackColor = true;
             // 
-            // btnAsignatura
+            // btnOpenModalidaPago
             // 
-            this.btnAsignatura.Location = new System.Drawing.Point(21, 155);
-            this.btnAsignatura.Name = "btnAsignatura";
-            this.btnAsignatura.Size = new System.Drawing.Size(197, 36);
-            this.btnAsignatura.TabIndex = 11;
-            this.btnAsignatura.Text = "Modalidad Pago";
-            this.btnAsignatura.UseVisualStyleBackColor = true;
+            this.btnOpenModalidaPago.Location = new System.Drawing.Point(21, 155);
+            this.btnOpenModalidaPago.Name = "btnOpenModalidaPago";
+            this.btnOpenModalidaPago.Size = new System.Drawing.Size(197, 36);
+            this.btnOpenModalidaPago.TabIndex = 11;
+            this.btnOpenModalidaPago.Text = "Modalidad Pago";
+            this.btnOpenModalidaPago.UseVisualStyleBackColor = true;
+            this.btnOpenModalidaPago.Click += new System.EventHandler(this.btnOpenModalidaPago_Click);
             // 
             // btnOpenApoderado
             // 
@@ -89,9 +90,10 @@
             this.Controls.Add(this.lblMenuAdministrativo);
             this.Controls.Add(this.btnOpenNAcademico);
             this.Controls.Add(this.btnOpenGAcademico);
-            this.Controls.Add(this.btnAsignatura);
+            this.Controls.Add(this.btnOpenModalidaPago);
             this.Controls.Add(this.btnOpenApoderado);
             this.Name = "frmMenuTesoreria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuTesoreria";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,7 +105,7 @@
         private System.Windows.Forms.Label lblMenuAdministrativo;
         private System.Windows.Forms.Button btnOpenNAcademico;
         private System.Windows.Forms.Button btnOpenGAcademico;
-        private System.Windows.Forms.Button btnAsignatura;
+        private System.Windows.Forms.Button btnOpenModalidaPago;
         private System.Windows.Forms.Button btnOpenApoderado;
     }
 }

@@ -65,7 +65,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 47);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -107,9 +107,9 @@
             this.gbxPago.Controls.Add(this.label3);
             this.gbxPago.Controls.Add(this.label2);
             this.gbxPago.Location = new System.Drawing.Point(13, 302);
-            this.gbxPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxPago.Margin = new System.Windows.Forms.Padding(2);
             this.gbxPago.Name = "gbxPago";
-            this.gbxPago.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxPago.Padding = new System.Windows.Forms.Padding(2);
             this.gbxPago.Size = new System.Drawing.Size(490, 224);
             this.gbxPago.TabIndex = 130;
             this.gbxPago.TabStop = false;
@@ -163,7 +163,7 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(182, 124);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(140, 21);
             this.comboBox2.TabIndex = 135;
@@ -172,7 +172,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(112, 61);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(210, 21);
             this.comboBox1.TabIndex = 134;
@@ -180,7 +180,7 @@
             // txtIdPago
             // 
             this.txtIdPago.Location = new System.Drawing.Point(98, 29);
-            this.txtIdPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdPago.Name = "txtIdPago";
             this.txtIdPago.Size = new System.Drawing.Size(98, 20);
             this.txtIdPago.TabIndex = 133;
@@ -257,9 +257,10 @@
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPago";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPago";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbxPago.ResumeLayout(false);

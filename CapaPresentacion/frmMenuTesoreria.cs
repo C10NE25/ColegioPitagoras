@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.frmTesoreria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace CapaPresentacion
         public frmMenuTesoreria()
         {
             InitializeComponent();
+        }
+
+        private void btnOpenModalidaPago_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmModalidadPago())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
     }
 }

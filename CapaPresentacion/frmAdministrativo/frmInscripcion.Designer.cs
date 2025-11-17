@@ -221,9 +221,10 @@
             this.Controls.Add(this.dgvInscripcion);
             this.Controls.Add(this.gbxInscripcion);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInscripcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInscripcion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInscripcion)).EndInit();
             this.gbxInscripcion.ResumeLayout(false);

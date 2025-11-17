@@ -214,6 +214,9 @@
     <EmbeddedResource Include="frmMenuTesoreria.resx">
       <DependentUpon>frmMenuTesoreria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmDetallePago.resx">
+      <DependentUpon>frmDetallePago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
       <DependentUpon>frmTipoCargo.cs</DependentUpon>
     </EmbeddedResource>

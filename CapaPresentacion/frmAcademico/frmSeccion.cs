@@ -19,6 +19,7 @@ namespace CapaPresentacion.frmAcademico
             InitializeComponent();
             gbxSeccion.Enabled = false;
             txtIdSeccion.Enabled = false;
+            cbxEstado.Checked = true;
             listarNivelSeccion();
         }
 
@@ -26,22 +27,18 @@ namespace CapaPresentacion.frmAcademico
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
+
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
 
         private void limpiarVariables()
         {
-            txtIdSeccion.Text = "";
-            txtNombreSeccion.Text = "";
-            cbxEstado.Checked = false;
+            txtIdSeccion.Clear();
+            txtNombreSeccion.Clear();
         }
         private void listarNivelSeccion()
         {

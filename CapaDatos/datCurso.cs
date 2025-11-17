@@ -71,6 +71,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@idDocente", C.IdDocente);
                 cmd.Parameters.AddWithValue("@idGradoAcademico", C.IdGradoAcademico);
                 cmd.Parameters.AddWithValue("@idAsignatura", C.IdAsignatura);
+                cmd.Parameters.AddWithValue("@estadoCurso", C.EstadoCurso);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

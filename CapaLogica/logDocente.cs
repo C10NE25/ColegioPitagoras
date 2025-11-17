@@ -45,6 +45,11 @@ namespace CapaLogica
         {
             datDocente.Instancia.DeshabilitarDocente(Doc);
         }
+
+        public entDocente searchDocente(string dni)
+        {
+            return datDocente.Instancia.buscarDocenteDni(dni);
+        }
         #endregion metodos
     }
 }

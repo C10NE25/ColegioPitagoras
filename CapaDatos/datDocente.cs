@@ -159,6 +159,46 @@ namespace CapaDatos
             }
             return deshabilita;
         }
+
+        public entDocente buscarDocenteDni(string dniDoc)
+        {
+            SqlCommand cmd = null;
+            entDocente doc = null;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spSearchDocente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DniDoc", dniDoc);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    doc = new entDocente()
+                    {
+                        IdDocente = Convert.ToInt32(dr["idDocente"]),
+                        NombreDoc = dr["nombreDoc"].ToString(),
+                        ApellidosPatDoc = dr["apellidosPatDoc"].ToString(),
+                        ApellidosMatDoc = dr["apellidosMatDoc"].ToString(),
+                        DniDoc = dr["dniDoc"].ToString()
+                    };
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return doc;
+        }
         #endregion metodos
     }
 }

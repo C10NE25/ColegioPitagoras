@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvGradoAcademico = new System.Windows.Forms.DataGridView();
             this.gbxGradoAcademico = new System.Windows.Forms.GroupBox();
             this.cbSeccion = new System.Windows.Forms.ComboBox();
@@ -62,45 +60,27 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Grado Academico";
             // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(299, 202);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(75, 24);
-            this.btnDeshabilitar.TabIndex = 35;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(221, 201);
+            this.btnEditar.Location = new System.Drawing.Point(378, 414);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 25);
             this.btnEditar.TabIndex = 34;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(143, 202);
+            this.btnNuevo.Location = new System.Drawing.Point(300, 415);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 24);
             this.btnNuevo.TabIndex = 33;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(377, 203);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 31;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvGradoAcademico
             // 
@@ -112,7 +92,7 @@
             this.dgvGradoAcademico.RowHeadersWidth = 92;
             this.dgvGradoAcademico.RowTemplate.Height = 37;
             this.dgvGradoAcademico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGradoAcademico.Size = new System.Drawing.Size(440, 148);
+            this.dgvGradoAcademico.Size = new System.Drawing.Size(440, 368);
             this.dgvGradoAcademico.TabIndex = 30;
             // 
             // gbxGradoAcademico
@@ -129,11 +109,11 @@
             this.gbxGradoAcademico.Controls.Add(this.label2);
             this.gbxGradoAcademico.Controls.Add(this.txtIDGradoAcademico);
             this.gbxGradoAcademico.Controls.Add(this.txtNombreGrado);
-            this.gbxGradoAcademico.Location = new System.Drawing.Point(13, 242);
+            this.gbxGradoAcademico.Location = new System.Drawing.Point(470, 42);
             this.gbxGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.gbxGradoAcademico.Name = "gbxGradoAcademico";
             this.gbxGradoAcademico.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxGradoAcademico.Size = new System.Drawing.Size(440, 195);
+            this.gbxGradoAcademico.Size = new System.Drawing.Size(332, 218);
             this.gbxGradoAcademico.TabIndex = 32;
             this.gbxGradoAcademico.TabStop = false;
             this.gbxGradoAcademico.Text = "Datos del Grado Academico";
@@ -142,7 +122,7 @@
             // 
             this.cbSeccion.FormattingEnabled = true;
             this.cbSeccion.Location = new System.Drawing.Point(109, 119);
-            this.cbSeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbSeccion.Margin = new System.Windows.Forms.Padding(2);
             this.cbSeccion.Name = "cbSeccion";
             this.cbSeccion.Size = new System.Drawing.Size(147, 21);
             this.cbSeccion.TabIndex = 16;
@@ -150,8 +130,8 @@
             // cbNivelAcademico
             // 
             this.cbNivelAcademico.FormattingEnabled = true;
-            this.cbNivelAcademico.Location = new System.Drawing.Point(109, 91);
-            this.cbNivelAcademico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbNivelAcademico.Location = new System.Drawing.Point(109, 88);
+            this.cbNivelAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.cbNivelAcademico.Name = "cbNivelAcademico";
             this.cbNivelAcademico.Size = new System.Drawing.Size(147, 21);
             this.cbNivelAcademico.TabIndex = 15;
@@ -159,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 119);
+            this.label4.Location = new System.Drawing.Point(11, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
@@ -169,7 +149,7 @@
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(134, 154);
+            this.cbxEstado.Location = new System.Drawing.Point(14, 155);
             this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(108, 17);
@@ -190,35 +170,38 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(317, 25);
+            this.btnAgregar.Location = new System.Drawing.Point(17, 182);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(89, 23);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(317, 58);
+            this.btnModificar.Location = new System.Drawing.Point(116, 181);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 25);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(317, 91);
+            this.btnCancelar.Location = new System.Drawing.Point(220, 180);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 25);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label3
             // 
@@ -236,15 +219,16 @@
             this.label2.Location = new System.Drawing.Point(11, 25);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Id del Grado Academico:";
+            this.label2.Text = "ID:";
             // 
             // txtIDGradoAcademico
             // 
-            this.txtIDGradoAcademico.Location = new System.Drawing.Point(134, 23);
+            this.txtIDGradoAcademico.Location = new System.Drawing.Point(109, 22);
             this.txtIDGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDGradoAcademico.Name = "txtIDGradoAcademico";
+            this.txtIDGradoAcademico.ReadOnly = true;
             this.txtIDGradoAcademico.Size = new System.Drawing.Size(62, 20);
             this.txtIDGradoAcademico.TabIndex = 1;
             // 
@@ -260,11 +244,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 461);
-            this.Controls.Add(this.btnDeshabilitar);
+            this.ClientSize = new System.Drawing.Size(826, 445);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvGradoAcademico);
             this.Controls.Add(this.gbxGradoAcademico);
             this.Controls.Add(this.label1);
@@ -284,10 +266,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvGradoAcademico;
         private System.Windows.Forms.GroupBox gbxGradoAcademico;
         private System.Windows.Forms.CheckBox cbxEstado;

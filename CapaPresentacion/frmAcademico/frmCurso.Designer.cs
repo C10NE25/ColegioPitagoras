@@ -33,12 +33,13 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvCurso = new System.Windows.Forms.DataGridView();
             this.gbxCurso = new System.Windows.Forms.GroupBox();
+            this.btnAddAsignatura = new System.Windows.Forms.Button();
+            this.btnAddGradoAcademico = new System.Windows.Forms.Button();
             this.cbAsignatura = new System.Windows.Forms.ComboBox();
             this.cbGradoAcademico = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
-            this.lblSearchDniDocente = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -46,13 +47,9 @@
             this.lblidCurso = new System.Windows.Forms.Label();
             this.txtIDCurso = new System.Windows.Forms.TextBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
+            this.lblSearchDniDocente = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtBSearchDocente = new System.Windows.Forms.TextBox();
-            this.btnAddGradoAcademico = new System.Windows.Forms.Button();
-            this.btnAddAsignatura = new System.Windows.Forms.Button();
-            this.btnAddDocente = new System.Windows.Forms.Button();
-            this.btnSearchDocente = new System.Windows.Forms.Button();
             this.txtBApellidoMDocente = new System.Windows.Forms.TextBox();
             this.txtBDniDocente = new System.Windows.Forms.TextBox();
             this.txtBApellidoPDocente = new System.Windows.Forms.TextBox();
@@ -61,6 +58,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnSearchDocente = new System.Windows.Forms.Button();
+            this.btnAddDocente = new System.Windows.Forms.Button();
+            this.txtBSearchDocente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             this.gbxCurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,6 +97,7 @@
             this.btnNuevo.TabIndex = 39;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvCurso
             // 
@@ -136,11 +137,31 @@
             this.gbxCurso.TabStop = false;
             this.gbxCurso.Text = "Datos del Curso";
             // 
+            // btnAddAsignatura
+            // 
+            this.btnAddAsignatura.Location = new System.Drawing.Point(264, 120);
+            this.btnAddAsignatura.Name = "btnAddAsignatura";
+            this.btnAddAsignatura.Size = new System.Drawing.Size(23, 21);
+            this.btnAddAsignatura.TabIndex = 21;
+            this.btnAddAsignatura.Text = "+";
+            this.btnAddAsignatura.UseVisualStyleBackColor = true;
+            this.btnAddAsignatura.Click += new System.EventHandler(this.btnAddAsignatura_Click);
+            // 
+            // btnAddGradoAcademico
+            // 
+            this.btnAddGradoAcademico.Location = new System.Drawing.Point(264, 88);
+            this.btnAddGradoAcademico.Name = "btnAddGradoAcademico";
+            this.btnAddGradoAcademico.Size = new System.Drawing.Size(23, 21);
+            this.btnAddGradoAcademico.TabIndex = 20;
+            this.btnAddGradoAcademico.Text = "+";
+            this.btnAddGradoAcademico.UseVisualStyleBackColor = true;
+            this.btnAddGradoAcademico.Click += new System.EventHandler(this.btnAddGradoAcademico_Click);
+            // 
             // cbAsignatura
             // 
             this.cbAsignatura.FormattingEnabled = true;
             this.cbAsignatura.Location = new System.Drawing.Point(109, 120);
-            this.cbAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAsignatura.Margin = new System.Windows.Forms.Padding(2);
             this.cbAsignatura.Name = "cbAsignatura";
             this.cbAsignatura.Size = new System.Drawing.Size(147, 21);
             this.cbAsignatura.TabIndex = 19;
@@ -149,7 +170,7 @@
             // 
             this.cbGradoAcademico.FormattingEnabled = true;
             this.cbGradoAcademico.Location = new System.Drawing.Point(109, 88);
-            this.cbGradoAcademico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.cbGradoAcademico.Name = "cbGradoAcademico";
             this.cbGradoAcademico.Size = new System.Drawing.Size(147, 21);
             this.cbGradoAcademico.TabIndex = 18;
@@ -184,16 +205,6 @@
             this.cbxEstado.TabIndex = 13;
             this.cbxEstado.Text = "Estado del Curso";
             this.cbxEstado.UseVisualStyleBackColor = true;
-            // 
-            // lblSearchDniDocente
-            // 
-            this.lblSearchDniDocente.AutoSize = true;
-            this.lblSearchDniDocente.Location = new System.Drawing.Point(14, 27);
-            this.lblSearchDniDocente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSearchDniDocente.Name = "lblSearchDniDocente";
-            this.lblSearchDniDocente.Size = new System.Drawing.Size(78, 13);
-            this.lblSearchDniDocente.TabIndex = 12;
-            this.lblSearchDniDocente.Text = "Ingrese el DNI:";
             // 
             // btnAgregar
             // 
@@ -267,6 +278,16 @@
             this.txtNombreCurso.Size = new System.Drawing.Size(147, 20);
             this.txtNombreCurso.TabIndex = 0;
             // 
+            // lblSearchDniDocente
+            // 
+            this.lblSearchDniDocente.AutoSize = true;
+            this.lblSearchDniDocente.Location = new System.Drawing.Point(14, 27);
+            this.lblSearchDniDocente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearchDniDocente.Name = "lblSearchDniDocente";
+            this.lblSearchDniDocente.Size = new System.Drawing.Size(78, 13);
+            this.lblSearchDniDocente.TabIndex = 12;
+            this.lblSearchDniDocente.Text = "Ingrese el DNI:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -300,51 +321,6 @@
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Docente";
-            // 
-            // txtBSearchDocente
-            // 
-            this.txtBSearchDocente.Location = new System.Drawing.Point(102, 23);
-            this.txtBSearchDocente.Name = "txtBSearchDocente";
-            this.txtBSearchDocente.Size = new System.Drawing.Size(171, 20);
-            this.txtBSearchDocente.TabIndex = 13;
-            // 
-            // btnAddGradoAcademico
-            // 
-            this.btnAddGradoAcademico.Location = new System.Drawing.Point(264, 88);
-            this.btnAddGradoAcademico.Name = "btnAddGradoAcademico";
-            this.btnAddGradoAcademico.Size = new System.Drawing.Size(23, 21);
-            this.btnAddGradoAcademico.TabIndex = 20;
-            this.btnAddGradoAcademico.Text = "+";
-            this.btnAddGradoAcademico.UseVisualStyleBackColor = true;
-            this.btnAddGradoAcademico.Click += new System.EventHandler(this.btnAddGradoAcademico_Click);
-            // 
-            // btnAddAsignatura
-            // 
-            this.btnAddAsignatura.Location = new System.Drawing.Point(264, 120);
-            this.btnAddAsignatura.Name = "btnAddAsignatura";
-            this.btnAddAsignatura.Size = new System.Drawing.Size(23, 21);
-            this.btnAddAsignatura.TabIndex = 21;
-            this.btnAddAsignatura.Text = "+";
-            this.btnAddAsignatura.UseVisualStyleBackColor = true;
-            this.btnAddAsignatura.Click += new System.EventHandler(this.btnAddAsignatura_Click);
-            // 
-            // btnAddDocente
-            // 
-            this.btnAddDocente.Location = new System.Drawing.Point(359, 23);
-            this.btnAddDocente.Name = "btnAddDocente";
-            this.btnAddDocente.Size = new System.Drawing.Size(23, 20);
-            this.btnAddDocente.TabIndex = 22;
-            this.btnAddDocente.Text = "+";
-            this.btnAddDocente.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchDocente
-            // 
-            this.btnSearchDocente.Location = new System.Drawing.Point(293, 23);
-            this.btnSearchDocente.Name = "btnSearchDocente";
-            this.btnSearchDocente.Size = new System.Drawing.Size(60, 20);
-            this.btnSearchDocente.TabIndex = 23;
-            this.btnSearchDocente.Text = "Buscar";
-            this.btnSearchDocente.UseVisualStyleBackColor = true;
             // 
             // txtBApellidoMDocente
             // 
@@ -421,6 +397,31 @@
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 39;
             this.label10.Text = "Nombre:";
+            // 
+            // btnSearchDocente
+            // 
+            this.btnSearchDocente.Location = new System.Drawing.Point(293, 23);
+            this.btnSearchDocente.Name = "btnSearchDocente";
+            this.btnSearchDocente.Size = new System.Drawing.Size(60, 20);
+            this.btnSearchDocente.TabIndex = 23;
+            this.btnSearchDocente.Text = "Buscar";
+            this.btnSearchDocente.UseVisualStyleBackColor = true;
+            // 
+            // btnAddDocente
+            // 
+            this.btnAddDocente.Location = new System.Drawing.Point(359, 23);
+            this.btnAddDocente.Name = "btnAddDocente";
+            this.btnAddDocente.Size = new System.Drawing.Size(23, 20);
+            this.btnAddDocente.TabIndex = 22;
+            this.btnAddDocente.Text = "+";
+            this.btnAddDocente.UseVisualStyleBackColor = true;
+            // 
+            // txtBSearchDocente
+            // 
+            this.txtBSearchDocente.Location = new System.Drawing.Point(102, 23);
+            this.txtBSearchDocente.Name = "txtBSearchDocente";
+            this.txtBSearchDocente.Size = new System.Drawing.Size(171, 20);
+            this.txtBSearchDocente.TabIndex = 13;
             // 
             // frmCurso
             // 

@@ -36,8 +36,8 @@ namespace CapaPresentacion.frmTesoreria
 
         private void limpiarVariables()
         {
-            txtIdModalidadPago.Text = "";
-            txtTipoModalidadPago.Text = "";
+            txtIdModalidadPago.Clear();
+            txtTipoModalidadPago.Clear();
         }
         private void ListarModalidadPago()
         {
@@ -60,12 +60,6 @@ namespace CapaPresentacion.frmTesoreria
             btnAgregar.Visible = false;
             deshabilitarBotonesPrincipales();
         }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try

@@ -78,5 +78,35 @@ namespace CapaPresentacion
             }
             this.Show();
         }
+
+        private void btnAbrirDocente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmDocente())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnOpenAdministrativo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmMenuAdministrativo())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnOpenTesoreria_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmMenuTesoreria())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

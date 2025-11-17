@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaPresentacion.frmAcademico;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,26 @@ namespace CapaPresentacion
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddGradoAcademico_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmGradoAcademico())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnAddAsignatura_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmAsignatura())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
         }
     }
 }

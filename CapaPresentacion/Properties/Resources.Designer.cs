@@ -63,6 +63,26 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IconAdministrativo32x32 {
+            get {
+                object obj = ResourceManager.GetObject("IconAdministrativo32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconAsistencia32x32 {
+            get {
+                object obj = ResourceManager.GetObject("IconAsistencia32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconCurso32x32 {
             get {
                 object obj = ResourceManager.GetObject("IconCurso32x32", resourceCulture);
@@ -86,6 +106,36 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap IconEstudiante32x32 {
             get {
                 object obj = ResourceManager.GetObject("IconEstudiante32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconNotas32x32 {
+            get {
+                object obj = ResourceManager.GetObject("IconNotas32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconTesoreria32x32 {
+            get {
+                object obj = ResourceManager.GetObject("IconTesoreria32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Pitagoras {
+            get {
+                object obj = ResourceManager.GetObject("Logo Pitagoras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.frmAcademico
+namespace CapaPresentacion
 {
-    public partial class TipoEvaluacion : Form
+    public partial class frmMenuAdministrativo : Form
     {
-        public TipoEvaluacion()
+        public frmMenuAdministrativo()
         {
             InitializeComponent();
         }

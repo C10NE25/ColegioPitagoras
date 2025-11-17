@@ -130,6 +130,7 @@ namespace CapaPresentacion
             txtBApellidoMDocente.Text = fila.Cells[4].Value.ToString();
             txtBDniDocente.Text = fila.Cells[1].Value.ToString();
             txtBSearchDocente.Text = fila.Cells[1].Value.ToString();
+            btnSearchDocente.Enabled = false;
         }
 
         private void btnSearchDocente_Click(object sender, EventArgs e)

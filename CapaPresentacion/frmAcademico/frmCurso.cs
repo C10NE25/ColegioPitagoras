@@ -1,4 +1,6 @@
-﻿using CapaPresentacion.frmAcademico;
+﻿using CapaEntidad;
+using CapaLogica;
+using CapaPresentacion.frmAcademico;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,43 @@ namespace CapaPresentacion
         public frmCurso()
         {
             InitializeComponent();
+        }
+
+        public void CargarGradoAcademico()
+        {
+            List<entGradoAcademico> lista = logGradoAcademico.Instancia.ListarGradoAcademico();
+            cbGradoAcademico.DataSource = lista;
+            cbGradoAcademico.DisplayMember = "NombreCompleto"; // Propiedad personalizada
+            cbGradoAcademico.ValueMember = "IdGradoAcademico";
+        }
+
+        public void CargarAsignatura()
+        {
+            List<entGradoAcademico> lista = logGradoAcademico.Instancia.ListarGradoAcademico();
+            cbAsignatura.DataSource = lista;
+            cbAsignatura.DisplayMember = "NombreCompleto"; // Propiedad personalizada
+            cbAsignatura.ValueMember = "IdAsignatura";
+        }
+
+        void deshabilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = false;
+        }
+        void habilitarBotonesPrincipales()
+        {
+            btnNuevo.Enabled = true;
+            btnCancelar.Enabled = true;
+        }
+
+        private void limpiarVariables()
+        {
+            txtNombreCurso.Text = "";
+        }
+
+
+        public void ListarDetallePago()
+        {
+            dgvCurso.DataSource = logDetallePago.Instancia.ListarDetallePago();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -41,6 +80,11 @@ namespace CapaPresentacion
                 frm.ShowDialog();
             }
             this.Show();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

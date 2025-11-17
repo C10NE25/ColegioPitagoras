@@ -12,5 +12,10 @@ namespace CapaEntidad
         public string NombreAsignatura { get; set; }
         public bool EstadoAsignatura { get; set; }
 
+
+        public string NombreCompleto
+        {
+            get { return $"{IdAsignatura} - {NombreAsignatura}"; }
+        }
     }
 }

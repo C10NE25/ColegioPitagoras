@@ -21,7 +21,7 @@ namespace CapaDatos
             /*Data Source= Nombre de su servidor, 
             * Initial Catalog= Nombre de la base de datos*/
             cn.ConnectionString =
-                "Data Source=C10N3\\USERDP; " +
+                "Data Source=DESKTOP-OAR169C\\SQLEXPRESS; " +
                 "Initial Catalog = BDColegioPitagoras;" +
                 "Integrated Security=true";
             return cn;

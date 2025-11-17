@@ -12,5 +12,9 @@ namespace CapaEntidad
         public string NombreTipoCargo { get; set; }
         public int IdTarifa { get; set; }
         public bool EstadoTipoCargo { get; set; }
+        public string NombreCompleto
+        {
+            get { return $"{IdTipoCargo} - {NombreTipoCargo}"; }
+        }
     }
 }

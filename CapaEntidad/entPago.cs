@@ -13,5 +13,9 @@ namespace CapaEntidad
         public DateTime FechaPago { get; set; }
         public int IdModalidadPago { get; set; }
         public bool EstadoPago { get; set; }
+        public string NombreCompleto
+        {
+            get { return $"{IdPago}"; }
+        }
     }
 }

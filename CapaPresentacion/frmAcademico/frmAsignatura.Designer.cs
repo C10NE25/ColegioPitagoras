@@ -53,7 +53,7 @@
             this.dgvAsignatura.Margin = new System.Windows.Forms.Padding(1);
             this.dgvAsignatura.Name = "dgvAsignatura";
             this.dgvAsignatura.ReadOnly = true;
-            this.dgvAsignatura.RowHeadersWidth = 92;
+            this.dgvAsignatura.RowHeadersWidth = 30;
             this.dgvAsignatura.RowTemplate.Height = 37;
             this.dgvAsignatura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAsignatura.Size = new System.Drawing.Size(333, 371);
@@ -151,6 +151,7 @@
             this.txtIdAsignatura.Location = new System.Drawing.Point(124, 23);
             this.txtIdAsignatura.Margin = new System.Windows.Forms.Padding(1);
             this.txtIdAsignatura.Name = "txtIdAsignatura";
+            this.txtIdAsignatura.ReadOnly = true;
             this.txtIdAsignatura.Size = new System.Drawing.Size(57, 20);
             this.txtIdAsignatura.TabIndex = 1;
             // 
@@ -217,8 +218,9 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnCerrar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAsignatura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAsignatura";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignatura)).EndInit();
             this.gbxSeccion.ResumeLayout(false);

@@ -36,7 +36,6 @@ namespace CapaPresentacion.frmAcademico
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
             btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
@@ -44,7 +43,6 @@ namespace CapaPresentacion.frmAcademico
             btnEditar.Enabled = true;
             btnDeshabilitar.Enabled = true;
             btnModificar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
 
         private void limpiarVariables()

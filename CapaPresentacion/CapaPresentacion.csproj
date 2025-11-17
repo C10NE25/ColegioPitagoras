@@ -77,6 +77,18 @@
     <Compile Include="frmAcademico\frmTipoAsistencia.Designer.cs">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuAdministrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuAdministrativo.Designer.cs">
+      <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuTesoreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuTesoreria.Designer.cs">
+      <DependentUpon>frmMenuTesoreria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTesoreria\frmTipoCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +100,6 @@
     </Compile>
     <Compile Include="frmAcademico\frmTipoEvaluacion.Designer.cs">
       <DependentUpon>frmTipoEvaluacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAcademico\TipoEvaluacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAcademico\TipoEvaluacion.Designer.cs">
-      <DependentUpon>TipoEvaluacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdministrativo\frmInscripcion.cs">
       <SubType>Form</SubType>
@@ -202,6 +208,15 @@
     <EmbeddedResource Include="frmAcademico\frmTipoAsistencia.resx">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuAdministrativo.resx">
+      <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuTesoreria.resx">
+      <DependentUpon>frmMenuTesoreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTesoreria\frmDetallePago.resx">
+      <DependentUpon>frmDetallePago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
       <DependentUpon>frmTipoCargo.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,19 +266,19 @@
       <DependentUpon>frmTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -294,6 +309,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconCurso32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconDocente32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconAsistencia32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconNotas32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconAdministrativo32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Pitagoras.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconTesoreria32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

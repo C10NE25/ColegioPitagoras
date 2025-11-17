@@ -20,27 +20,24 @@ namespace CapaPresentacion.frmTesoreria
             ListarModalidadPago();
             gbxModalidadPago.Enabled = false;
             txtIdModalidadPago.Enabled = false;
+            cbxEstado.Checked = true;
         }
         void deshabilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-           btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
+            btnCancelar.Enabled = true;
         }
 
         private void limpiarVariables()
         {
             txtIdModalidadPago.Text = "";
             txtTipoModalidadPago.Text = "";
-            cbxEstado.Checked = false;
         }
         private void ListarModalidadPago()
         {
@@ -62,26 +59,6 @@ namespace CapaPresentacion.frmTesoreria
             btnModificar.Visible = true;
             btnAgregar.Visible = false;
             deshabilitarBotonesPrincipales();
-        }
-
-        private void btnDeshabilitar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entModalidadPago mp = new entModalidadPago();
-                mp.idModalidadPago = Convert.ToInt32(txtTipoModalidadPago.Text.Trim());
-                cbxEstado.Enabled = false;
-                mp.EstadoModalidadPago = cbxEstado.Checked;
-                logModalidadPago.Instancia.DeshabilitarModalidadPago(mp);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al deshabilitar Modalidad Pago: " + ex.Message);
-
-            }
-            limpiarVariables();
-            gbxModalidadPago.Enabled = false;
-            ListarModalidadPago();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -142,6 +119,12 @@ namespace CapaPresentacion.frmTesoreria
             txtIdModalidadPago.Text = fila.Cells[0].Value.ToString();
             txtTipoModalidadPago.Text = fila.Cells[1].Value.ToString();
             cbxEstado.Checked = Convert.ToBoolean(fila.Cells[2].Value);
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            gbxModalidadPago.Enabled = false;
+            habilitarBotonesPrincipales();
         }
     }
 }

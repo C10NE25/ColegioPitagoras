@@ -19,21 +19,18 @@ namespace CapaPresentacion
             InitializeComponent();
             gbxDocente.Enabled = false;
             txtBidDocente.Enabled = false;
+            cbxEstado.Checked = true;
             listarDocente();
         }
         void deshabilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
         private void listarDocente()
         {
@@ -56,13 +53,12 @@ namespace CapaPresentacion
 
         private void limpiarVariables()
         {
-            txtBidDocente.Text = "";
-            txtBdniDocente.Text = "";
-            txtBNombreDocente.Text = "";
-            txtBApellidoMDocente.Text = "";
-            txtBTelefonoDocente.Text = "";
-            txtBDireccionDocente.Text = "";
-            cbxEstado.Checked = false;
+            txtBidDocente.Clear();
+            txtBdniDocente.Clear();
+            txtBNombreDocente.Clear();
+            txtBApellidoMDocente.Clear();
+            txtBTelefonoDocente.Clear();
+            txtBDireccionDocente.Clear();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

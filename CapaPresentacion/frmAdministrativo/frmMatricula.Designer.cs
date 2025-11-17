@@ -121,7 +121,7 @@
             // 
             this.cbGradoAcademico.FormattingEnabled = true;
             this.cbGradoAcademico.Location = new System.Drawing.Point(118, 81);
-            this.cbGradoAcademico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.cbGradoAcademico.Name = "cbGradoAcademico";
             this.cbGradoAcademico.Size = new System.Drawing.Size(143, 21);
             this.cbGradoAcademico.TabIndex = 27;
@@ -130,7 +130,7 @@
             // 
             this.cbInscripcion.FormattingEnabled = true;
             this.cbInscripcion.Location = new System.Drawing.Point(118, 51);
-            this.cbInscripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbInscripcion.Margin = new System.Windows.Forms.Padding(2);
             this.cbInscripcion.Name = "cbInscripcion";
             this.cbInscripcion.Size = new System.Drawing.Size(143, 21);
             this.cbInscripcion.TabIndex = 26;
@@ -256,9 +256,10 @@
             this.Controls.Add(this.dgvMatricula);
             this.Controls.Add(this.gbxMatricula);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMatricula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMatricula";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatricula)).EndInit();
             this.gbxMatricula.ResumeLayout(false);

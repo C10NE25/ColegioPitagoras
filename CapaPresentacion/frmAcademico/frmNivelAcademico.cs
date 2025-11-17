@@ -19,28 +19,24 @@ namespace CapaPresentacion
             InitializeComponent();
             gbxNivelAcademico.Enabled = false;
             txtIDNivelAcademico.Enabled = false;
+            cbxEstado.Checked = true;
             listarNivelAcademico();
         }
         void deshabilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = false;
             btnEditar.Enabled = false;
-            btnDeshabilitar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnDeshabilitar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
 
         private void limpiarVariables()
         {
             txtIDNivelAcademico.Text = "";
             txtNombreNivel.Text = "";
-            cbxEstado.Checked = false;
         }
         private void listarNivelAcademico()
         {

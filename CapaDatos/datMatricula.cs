@@ -40,8 +40,8 @@ namespace CapaDatos
                 {
                     entMatricula Mat = new entMatricula();
                     Mat.IdMatricula = Convert.ToInt32(dr["idMatricula"]);
-                    Mat.IdInscripcion = Convert.ToInt32(dr["idInscripcion"]);
-                    Mat.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
+                    Mat.inscripcion.IdInscripcion = Convert.ToInt32(dr["idInscripcion"]);
+                    Mat.gradoAcademico.IdGradoAcademico = Convert.ToInt32(dr["idGradoAcademico"]);
                     Mat.FechaMatricula = Convert.ToDateTime(dr["fechaMatricula"]);
                     Mat.EstadoMatricula = Convert.ToBoolean(dr["estadoMatricula"]);
                     lista.Add(Mat);
@@ -67,8 +67,8 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarMatricula", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idInscripcion", Mat.IdInscripcion);
-                cmd.Parameters.AddWithValue("@idGradoAcademico", Mat.IdGradoAcademico);
+                cmd.Parameters.AddWithValue("@idInscripcion", Mat.inscripcion.IdInscripcion);
+                cmd.Parameters.AddWithValue("@idGradoAcademico", Mat.inscripcion.IdInscripcion);
                 cmd.Parameters.AddWithValue("@fechaMatricula", Mat.FechaMatricula);
                 cmd.Parameters.AddWithValue("@estadoMatricula", Mat.EstadoMatricula);
                 cn.Open();

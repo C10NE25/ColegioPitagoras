@@ -42,6 +42,11 @@ namespace CapaLogica
         {
             datEstudiante.Instancia.DeshabilitarEstudiante(Est);
         }
+        
+        public entEstudiante BuscarEstudiantePorDni(string dniEst)
+        {
+            return datEstudiante.Instancia.buscarEstudiantePorDni(dniEst);
+        }
         #endregion metodos
     }
 }

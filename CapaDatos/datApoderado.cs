@@ -49,7 +49,7 @@ namespace CapaDatos
                     Apo.ApellidosMatApo = dr["apellidosMatApo"].ToString();
                     Apo.NumCelularApo = dr["numCelularApo"].ToString();
                     Apo.DireccionApo= dr["direccionApo"].ToString();
-                    Apo.IdParentesco = Convert.ToInt32(dr["idParentesco"]);
+                    Apo.parentesco.IdParentesco = Convert.ToInt32(dr["idParentesco"]);
                     Apo.EstadoApo = Convert.ToBoolean(dr["estadoApo"]);
                     lista.Add(Apo);
                 }
@@ -83,7 +83,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosMatApo);
                 cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
                 cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
-                cmd.Parameters.AddWithValue("@idParentesco", apo.IdParentesco);
+                cmd.Parameters.AddWithValue("@idParentesco", apo.parentesco.IdParentesco);
                 cmd.Parameters.AddWithValue("@estadoApo", apo.EstadoApo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

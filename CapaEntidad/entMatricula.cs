@@ -9,9 +9,15 @@ namespace CapaEntidad
     public class entMatricula
     {
         public int IdMatricula { get; set; }
-        public int IdInscripcion { get; set; }
-        public int IdGradoAcademico { get; set; }
+        public entInscripcion inscripcion { get; set; }
+        public entGradoAcademico gradoAcademico { get; set; }
         public DateTime FechaMatricula { get; set; }
         public bool EstadoMatricula { get; set; }
+
+        public entMatricula()
+        {
+            inscripcion = new entInscripcion();
+            gradoAcademico = new entGradoAcademico();
+        }
     }
 }

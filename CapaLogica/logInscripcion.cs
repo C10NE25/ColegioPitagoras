@@ -36,6 +36,11 @@ namespace CapaLogica
         {
             datInscripcion.Instancia.DeshabilitarInscripcion(I);
         }
+
+        public entInscripcion BuscarInscripcionPorId(int idInscripcion)
+        {
+            return datInscripcion.Instancia.BuscarInscripcionPorId(idInscripcion);
+        }
         #endregion metodos
     }
 }

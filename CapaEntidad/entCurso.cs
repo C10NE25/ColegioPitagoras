@@ -10,9 +10,16 @@ namespace CapaEntidad
     {
         public int IdCurso { get; set; }
         public string NombreCurso { get; set; }
-        public int IdDocente { get; set; } // llave foranea
-        public int IdGradoAcademico { get; set; } // llave foranea
-        public int IdAsignatura { get; set; } // llave foranea
+        public entDocente docente { get; set; } // llave foranea
+        public entGradoAcademico gradoAcademico { get; set; } // llave foranea
+        public entAsignatura asignatura { get; set; } // llave foranea
         public bool EstadoCurso { get; set; }
+
+        public entCurso()
+        {
+            docente = new entDocente();
+            gradoAcademico = new entGradoAcademico();
+            asignatura = new entAsignatura();
+        }
     }
 }

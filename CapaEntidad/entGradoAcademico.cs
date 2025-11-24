@@ -10,13 +10,14 @@ namespace CapaEntidad
     {
         public int IdGradoAcademico { get; set; }
         public string NombreGradoAcademico { get; set; }
-        public int IdNivelAcademico { get; set; }   // llave foranea
-        public int IdSeccion { get; set; } // llave foranea
+        public entNivelAcademico nivelAcademico { get; set; }   // llave foranea
+        public entSeccion seccion { get; set; } // llave foranea
         public bool EstadoGradoAcademico { get; set; }
 
-        public string NombreCompleto
+        public entGradoAcademico()
         {
-            get { return $"{IdGradoAcademico} - {NombreGradoAcademico}"; }
+            nivelAcademico = new entNivelAcademico();
+            seccion = new entSeccion();
         }
     }
 }

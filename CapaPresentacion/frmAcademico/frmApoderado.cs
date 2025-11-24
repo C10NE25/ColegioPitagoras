@@ -75,7 +75,7 @@ namespace CapaPresentacion
                 tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
-                tutor.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
+                tutor.parentesco.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
                 tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.InsertarApoderado(tutor);
             }
@@ -110,7 +110,7 @@ namespace CapaPresentacion
                 tutor.ApellidosMatApo = txtApellidoMTutor.Text.Trim();
                 tutor.NumCelularApo = txtNroCelularTutor.Text.Trim();
                 tutor.DireccionApo = txtDireccionTutor.Text.Trim();
-                tutor.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
+                tutor.parentesco.IdParentesco = Convert.ToInt32(cbParentesco.SelectedValue);
                 tutor.EstadoApo = cbxEstado.Checked;
                 logApoderado.Instancia.EditarApoderado(tutor);
             }

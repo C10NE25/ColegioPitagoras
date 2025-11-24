@@ -193,6 +193,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VistasClases\ApoderadoView.cs" />
+    <Compile Include="VistasClases\InscripcionView.cs" />
     <EmbeddedResource Include="frmAcademico\frmAsignatura.resx">
       <DependentUpon>frmAsignatura.cs</DependentUpon>
     </EmbeddedResource>

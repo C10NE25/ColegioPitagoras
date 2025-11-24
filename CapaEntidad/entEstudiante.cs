@@ -15,7 +15,12 @@ namespace CapaEntidad
         public string ApellidosMatEst { get; set; }
         public DateTime FechaNacEst { get; set; }
         public string DireccionEst { get; set; }
-        public int IdApoderado { get; set; }   // llave foranea
+        public entApoderado apoderado { get; set; }   // llave foranea
         public bool EstadoEst { get; set; }
+
+        public entEstudiante()
+        {
+            apoderado = new entApoderado();
+        }
     }
 }

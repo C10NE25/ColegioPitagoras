@@ -165,6 +165,45 @@ namespace CapaDatos
             return deshabilita;
         }
 
+        public entEstudiante buscarEstudiantePorDni(string dniEst)
+        {
+            SqlCommand cmd = null;
+            entEstudiante est = null;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spSearchEstudiante", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dniEst", dniEst);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    est = new entEstudiante()
+                    {
+                        IdApoderado = Convert.ToInt32(dr["idEstudiante"]),
+                        NombreEst = dr["nombreEst"].ToString(),
+                        ApellidosPatEst = dr["apellidoPatEst"].ToString(),
+                        ApellidosMatEst = dr["apellidoMatEst"].ToString(),
+                        DniEst = dr["dniEst"].ToString()
+                    };
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                    cmd.Connection.Close();
+            }
+            return est;
+        }
         #endregion metodos
     }
 }

@@ -9,9 +9,14 @@ namespace CapaEntidad
     public class entAsistencia
     {
         public int IdAsistencia { get; set; }
-        public int IdEstudiante { get; set; }
+        public entEstudiante estudiante { get; set; }
         public DateTime Fecha { get; set; }
         public int IdTipoAsistencia { get; set; }
         public bool EstadoAsistencia { get; set; }
+
+        public entAsistencia()
+        {
+            estudiante = new entEstudiante();
+        }
     }
 }

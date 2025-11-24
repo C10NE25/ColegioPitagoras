@@ -1,12 +1,13 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidad
+namespace CapaPresentacion.VistasClases
 {
-    public class entApoderado
+    public class ApoderadoView
     {
         public int IdApoderado { get; set; }
         public string DniApo { get; set; }
@@ -15,11 +16,7 @@ namespace CapaEntidad
         public string ApellidosMatApo { get; set; }
         public string NumCelularApo { get; set; }
         public string DireccionApo { get; set; }
-        public entParentesco parentesco { get; set; }
+        public int idParentesco { get; set; }
         public bool EstadoApo { get; set; }
-        public entApoderado()
-        {
-            parentesco = new entParentesco();
-        }
     }
 }

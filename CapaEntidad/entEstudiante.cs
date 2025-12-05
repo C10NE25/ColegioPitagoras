@@ -17,5 +17,12 @@ namespace CapaEntidad
         public string DireccionEst { get; set; }
         public int IdApoderado { get; set; }   // llave foranea
         public bool EstadoEst { get; set; }
+
+        public string NombreCompleto
+        {
+            get { return $"{NombreEst} {ApellidosPatEst} {ApellidosMatEst}"; }
+        }
+
+
     }
 }

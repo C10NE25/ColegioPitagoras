@@ -47,7 +47,7 @@ namespace CapaPresentacion
         {
             List<entAreaAcademica> lista = logAreaAcademica.Instancia.ListarAsignatura();
             cbAsignatura.DataSource = lista;
-            cbAsignatura.DisplayMember = "NombreGradoAcademico";
+            cbAsignatura.DisplayMember = "NombreAsignatura";
             cbAsignatura.ValueMember = "idAsignatura";
         }
 

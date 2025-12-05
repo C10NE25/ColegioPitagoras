@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogica;
+using CapaPresentacion.frmTesoreria;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,8 +68,8 @@ namespace CapaPresentacion.frmAcademico
         private void btnEditar_Click(object sender, EventArgs e)
         {
             gbxTipoCargo.Enabled = true;
-            btnAgregar.Visible = true;
-            btnModificar.Visible = false;
+            btnAgregar.Visible = false;
+            btnModificar.Visible = true;
             limpiarVariables();
             deshabilitarBotonesPrincipales();
         }
@@ -150,6 +151,26 @@ namespace CapaPresentacion.frmAcademico
             gbxTipoCargo.Enabled = false;
             ListarTipoCargo();
             habilitarBotonesPrincipales();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmTarifa())
+            {
+                frm.ShowDialog();
+            }
+            CargarTarifa();
+            this.Show();
+        }
+
+        private void dgvTipoCargo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvTipoCargo.Rows[e.RowIndex];
+            txtIdTipoCargo.Text = fila.Cells[0].Value.ToString();
+            txtNombreTipoCargo.Text = fila.Cells[1].Value.ToString();
+            cbTarifa.SelectedValue = fila.Cells[2].Value;
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[3].Value);
         }
     }
 }

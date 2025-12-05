@@ -49,23 +49,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 26);
+            this.label1.Size = new System.Drawing.Size(197, 31);
             this.label1.TabIndex = 85;
             this.label1.Text = "Tipo Asistencia";
             // 
             // dgvTipoAsistencia
             // 
             this.dgvTipoAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoAsistencia.Location = new System.Drawing.Point(13, 40);
-            this.dgvTipoAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTipoAsistencia.Location = new System.Drawing.Point(17, 49);
+            this.dgvTipoAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTipoAsistencia.Name = "dgvTipoAsistencia";
             this.dgvTipoAsistencia.RowHeadersWidth = 30;
             this.dgvTipoAsistencia.RowTemplate.Height = 24;
-            this.dgvTipoAsistencia.Size = new System.Drawing.Size(369, 332);
+            this.dgvTipoAsistencia.Size = new System.Drawing.Size(492, 409);
             this.dgvTipoAsistencia.TabIndex = 86;
+            this.dgvTipoAsistencia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoAsistencia_CellClick);
             this.dgvTipoAsistencia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoAsistencia_CellContentClick);
             // 
             // gbxTipoAsistencia
@@ -78,11 +78,11 @@
             this.gbxTipoAsistencia.Controls.Add(this.txtBidTipoAsistencia);
             this.gbxTipoAsistencia.Controls.Add(this.txtTipoAsistencia);
             this.gbxTipoAsistencia.Controls.Add(this.txtIdTipoAsistencia);
-            this.gbxTipoAsistencia.Location = new System.Drawing.Point(390, 45);
-            this.gbxTipoAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxTipoAsistencia.Location = new System.Drawing.Point(520, 55);
+            this.gbxTipoAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbxTipoAsistencia.Name = "gbxTipoAsistencia";
-            this.gbxTipoAsistencia.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxTipoAsistencia.Size = new System.Drawing.Size(290, 183);
+            this.gbxTipoAsistencia.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxTipoAsistencia.Size = new System.Drawing.Size(387, 225);
             this.gbxTipoAsistencia.TabIndex = 87;
             this.gbxTipoAsistencia.TabStop = false;
             this.gbxTipoAsistencia.Text = "Datos Tipo Asistencia";
@@ -90,10 +90,10 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(27, 140);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(36, 172);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(70, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(93, 36);
             this.btnAgregar.TabIndex = 140;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(110, 140);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Location = new System.Drawing.Point(147, 172);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(70, 29);
+            this.btnModificar.Size = new System.Drawing.Size(93, 36);
             this.btnModificar.TabIndex = 141;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(193, 140);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(257, 172);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(70, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(93, 36);
             this.btnCancelar.TabIndex = 142;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -126,56 +126,54 @@
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(8, 102);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxEstado.Location = new System.Drawing.Point(11, 126);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(149, 17);
+            this.cbxEstado.Size = new System.Drawing.Size(187, 20);
             this.cbxEstado.TabIndex = 133;
             this.cbxEstado.Text = "Estado de Tipo Asistencia";
             this.cbxEstado.UseVisualStyleBackColor = true;
             // 
             // txtBTipoAsistencia
             // 
-            this.txtBTipoAsistencia.Location = new System.Drawing.Point(106, 60);
-            this.txtBTipoAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBTipoAsistencia.Location = new System.Drawing.Point(141, 74);
+            this.txtBTipoAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBTipoAsistencia.Name = "txtBTipoAsistencia";
-            this.txtBTipoAsistencia.Size = new System.Drawing.Size(107, 20);
+            this.txtBTipoAsistencia.Size = new System.Drawing.Size(141, 22);
             this.txtBTipoAsistencia.TabIndex = 3;
             // 
             // txtBidTipoAsistencia
             // 
-            this.txtBidTipoAsistencia.Location = new System.Drawing.Point(106, 24);
-            this.txtBidTipoAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBidTipoAsistencia.Location = new System.Drawing.Point(141, 30);
+            this.txtBidTipoAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBidTipoAsistencia.Name = "txtBidTipoAsistencia";
-            this.txtBidTipoAsistencia.Size = new System.Drawing.Size(107, 20);
+            this.txtBidTipoAsistencia.Size = new System.Drawing.Size(141, 22);
             this.txtBidTipoAsistencia.TabIndex = 2;
             // 
             // txtTipoAsistencia
             // 
             this.txtTipoAsistencia.AutoSize = true;
-            this.txtTipoAsistencia.Location = new System.Drawing.Point(5, 63);
-            this.txtTipoAsistencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTipoAsistencia.Location = new System.Drawing.Point(7, 78);
             this.txtTipoAsistencia.Name = "txtTipoAsistencia";
-            this.txtTipoAsistencia.Size = new System.Drawing.Size(94, 13);
+            this.txtTipoAsistencia.Size = new System.Drawing.Size(119, 16);
             this.txtTipoAsistencia.TabIndex = 1;
             this.txtTipoAsistencia.Text = "Tipo de Asistencia";
             // 
             // txtIdTipoAsistencia
             // 
             this.txtIdTipoAsistencia.AutoSize = true;
-            this.txtIdTipoAsistencia.Location = new System.Drawing.Point(5, 26);
-            this.txtIdTipoAsistencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtIdTipoAsistencia.Location = new System.Drawing.Point(7, 32);
             this.txtIdTipoAsistencia.Name = "txtIdTipoAsistencia";
-            this.txtIdTipoAsistencia.Size = new System.Drawing.Size(21, 13);
+            this.txtIdTipoAsistencia.Size = new System.Drawing.Size(23, 16);
             this.txtIdTipoAsistencia.TabIndex = 0;
             this.txtIdTipoAsistencia.Text = "ID:";
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(306, 378);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(408, 465);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(76, 26);
+            this.btnEditar.Size = new System.Drawing.Size(101, 32);
             this.btnEditar.TabIndex = 145;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -183,10 +181,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(235, 378);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Location = new System.Drawing.Point(313, 465);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(68, 25);
+            this.btnNuevo.Size = new System.Drawing.Size(91, 31);
             this.btnNuevo.TabIndex = 144;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -194,16 +192,16 @@
             // 
             // frmTipoAsistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 409);
+            this.ClientSize = new System.Drawing.Size(919, 503);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.gbxTipoAsistencia);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTipoAsistencia);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTipoAsistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoAsistencia";

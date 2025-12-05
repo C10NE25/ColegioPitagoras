@@ -2,6 +2,7 @@
 using CapaLogica;
 using CapaPresentacion.frmAcademico;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,7 @@ namespace CapaPresentacion
         {
             List<entGradoAcademico> lista = logGradoAcademico.Instancia.ListarGradoAcademico();
             cbGradoAcademico.DataSource = lista;
-            cbGradoAcademico.DisplayMember = "nombreGradoAcademico";
+            cbGradoAcademico.DisplayMember = "NombreGradoAcademico";
             cbGradoAcademico.ValueMember = "idGradoAcademico";
         }
 
@@ -46,7 +47,7 @@ namespace CapaPresentacion
         {
             List<entAreaAcademica> lista = logAreaAcademica.Instancia.ListarAsignatura();
             cbAsignatura.DataSource = lista;
-            cbAsignatura.DisplayMember = "nombreAsignatura";
+            cbAsignatura.DisplayMember = "NombreGradoAcademico";
             cbAsignatura.ValueMember = "idAsignatura";
         }
 
@@ -58,7 +59,8 @@ namespace CapaPresentacion
         void habilitarBotonesPrincipales()
         {
             btnNuevo.Enabled = true;
-            btnCancelar.Enabled = true;
+            btnEditar.Enabled = true;
+            //btnCancelar.Enabled = true;
         }
 
         private void limpiarVariables()
@@ -79,6 +81,7 @@ namespace CapaPresentacion
             {
                 frm.ShowDialog();
             }
+            CargarGradoAcademico();
             this.Show();
         }
         private void btnAddAsignatura_Click(object sender, EventArgs e)
@@ -88,6 +91,7 @@ namespace CapaPresentacion
             {
                 frm.ShowDialog();
             }
+            CargarAsignatura();
             this.Show();
         }
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -177,7 +181,41 @@ namespace CapaPresentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                entCurso curso = new entCurso();
+                curso.IdCurso = Convert.ToInt32(txtIDCurso.Text.Trim());
+                curso.NombreCurso = txtNombreCurso.Text.Trim();
+                curso.IdDocente = idDocente;
+                curso.IdGradoAcademico = Convert.ToInt32(cbGradoAcademico.SelectedValue);
+                curso.IdAsignatura = Convert.ToInt32(cbAsignatura.SelectedValue);
+                curso.EstadoCurso = cbxEstado.Checked;
+                logCurso.Instancia.EditarCurso(curso);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar curso: " + ex);
+            }
+            limpiarVariables();
+            gbDatosDocente.Enabled = false;
+            ListarCurso();
+            habilitarBotonesPrincipales();
+        }
 
+        private void dgvCurso_CellBorderStyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCurso_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvCurso.Rows[e.RowIndex];
+            txtIDCurso.Text = fila.Cells[0].Value.ToString();
+            txtNombreCurso.Text = fila.Cells[1].Value.ToString();
+            idDocente = Convert.ToInt32(fila.Cells[2].Value);
+            cbGradoAcademico.SelectedValue = fila.Cells[3].Value;
+            cbAsignatura.SelectedValue = fila.Cells[4].Value;
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[5].Value);
         }
     }
 }

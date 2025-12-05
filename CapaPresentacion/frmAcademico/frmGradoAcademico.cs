@@ -149,5 +149,20 @@ namespace CapaPresentacion
             cargarSeccion();
             this.Show();
         }
+
+        /*private void dgvGradoAcademico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }*/
+
+        private void dgvGradoAcademico_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvGradoAcademico.Rows[e.RowIndex];
+            txtIDGradoAcademico.Text = fila.Cells[0].Value.ToString();
+            txtNombreGrado.Text = fila.Cells[1].Value.ToString();
+            cbNivelAcademico.SelectedValue = fila.Cells[2].Value;
+            cbSeccion.SelectedValue = fila.Cells[3].Value;
+            cbxEstado.Checked = Convert.ToBoolean(fila.Cells[4].Value);
+        }
     }
 }

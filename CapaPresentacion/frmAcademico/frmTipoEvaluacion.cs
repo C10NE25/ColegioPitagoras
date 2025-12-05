@@ -105,6 +105,11 @@ namespace CapaPresentacion.frmAcademico
 
         private void dgvTipoEvaluacion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgvTipoEvaluacion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow fila = dgvTipoEvaluacion.Rows[e.RowIndex];
             txtIdTipoEvaluacion.Text = fila.Cells[0].Value.ToString();
             txtNomTipoNota.Text = fila.Cells[1].Value.ToString();

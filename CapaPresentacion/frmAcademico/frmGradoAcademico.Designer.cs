@@ -55,19 +55,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 26);
+            this.label1.Size = new System.Drawing.Size(228, 31);
             this.label1.TabIndex = 29;
             this.label1.Text = "Grado Academico";
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(378, 414);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(504, 510);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 25);
+            this.btnEditar.Size = new System.Drawing.Size(100, 31);
             this.btnEditar.TabIndex = 34;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -75,10 +74,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(300, 415);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Location = new System.Drawing.Point(400, 511);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 24);
+            this.btnNuevo.Size = new System.Drawing.Size(100, 30);
             this.btnNuevo.TabIndex = 33;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -87,15 +86,17 @@
             // dgvGradoAcademico
             // 
             this.dgvGradoAcademico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGradoAcademico.Location = new System.Drawing.Point(13, 42);
-            this.dgvGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvGradoAcademico.Location = new System.Drawing.Point(17, 52);
+            this.dgvGradoAcademico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGradoAcademico.Name = "dgvGradoAcademico";
             this.dgvGradoAcademico.ReadOnly = true;
             this.dgvGradoAcademico.RowHeadersWidth = 92;
             this.dgvGradoAcademico.RowTemplate.Height = 37;
             this.dgvGradoAcademico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGradoAcademico.Size = new System.Drawing.Size(440, 368);
+            this.dgvGradoAcademico.Size = new System.Drawing.Size(587, 453);
             this.dgvGradoAcademico.TabIndex = 30;
+            this.dgvGradoAcademico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGradoAcademico_CellClick);
+           
             // 
             // gbxGradoAcademico
             // 
@@ -113,20 +114,21 @@
             this.gbxGradoAcademico.Controls.Add(this.label2);
             this.gbxGradoAcademico.Controls.Add(this.txtIDGradoAcademico);
             this.gbxGradoAcademico.Controls.Add(this.txtNombreGrado);
-            this.gbxGradoAcademico.Location = new System.Drawing.Point(470, 42);
-            this.gbxGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxGradoAcademico.Location = new System.Drawing.Point(627, 52);
+            this.gbxGradoAcademico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbxGradoAcademico.Name = "gbxGradoAcademico";
-            this.gbxGradoAcademico.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxGradoAcademico.Size = new System.Drawing.Size(332, 218);
+            this.gbxGradoAcademico.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxGradoAcademico.Size = new System.Drawing.Size(443, 268);
             this.gbxGradoAcademico.TabIndex = 32;
             this.gbxGradoAcademico.TabStop = false;
             this.gbxGradoAcademico.Text = "Datos del Grado Academico";
             // 
             // btnAddSeccion
             // 
-            this.btnAddSeccion.Location = new System.Drawing.Point(261, 119);
+            this.btnAddSeccion.Location = new System.Drawing.Point(348, 146);
+            this.btnAddSeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddSeccion.Name = "btnAddSeccion";
-            this.btnAddSeccion.Size = new System.Drawing.Size(24, 21);
+            this.btnAddSeccion.Size = new System.Drawing.Size(32, 26);
             this.btnAddSeccion.TabIndex = 18;
             this.btnAddSeccion.Text = "+";
             this.btnAddSeccion.UseVisualStyleBackColor = true;
@@ -134,9 +136,10 @@
             // 
             // btnAddNivelAcademico
             // 
-            this.btnAddNivelAcademico.Location = new System.Drawing.Point(261, 88);
+            this.btnAddNivelAcademico.Location = new System.Drawing.Point(348, 108);
+            this.btnAddNivelAcademico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddNivelAcademico.Name = "btnAddNivelAcademico";
-            this.btnAddNivelAcademico.Size = new System.Drawing.Size(24, 20);
+            this.btnAddNivelAcademico.Size = new System.Drawing.Size(32, 25);
             this.btnAddNivelAcademico.TabIndex = 17;
             this.btnAddNivelAcademico.Text = "+";
             this.btnAddNivelAcademico.UseVisualStyleBackColor = true;
@@ -145,38 +148,37 @@
             // cbSeccion
             // 
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(109, 119);
-            this.cbSeccion.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSeccion.Location = new System.Drawing.Point(145, 146);
+            this.cbSeccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSeccion.Name = "cbSeccion";
-            this.cbSeccion.Size = new System.Drawing.Size(147, 21);
+            this.cbSeccion.Size = new System.Drawing.Size(195, 24);
             this.cbSeccion.TabIndex = 16;
             // 
             // cbNivelAcademico
             // 
             this.cbNivelAcademico.FormattingEnabled = true;
-            this.cbNivelAcademico.Location = new System.Drawing.Point(109, 88);
-            this.cbNivelAcademico.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNivelAcademico.Location = new System.Drawing.Point(145, 108);
+            this.cbNivelAcademico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNivelAcademico.Name = "cbNivelAcademico";
-            this.cbNivelAcademico.Size = new System.Drawing.Size(147, 21);
+            this.cbNivelAcademico.Size = new System.Drawing.Size(195, 24);
             this.cbNivelAcademico.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 122);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(15, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 14;
             this.label4.Text = "Seccion";
             // 
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(14, 155);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxEstado.Location = new System.Drawing.Point(19, 191);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(108, 17);
+            this.cbxEstado.Size = new System.Drawing.Size(135, 20);
             this.cbxEstado.TabIndex = 13;
             this.cbxEstado.Text = "Estado del Grado";
             this.cbxEstado.UseVisualStyleBackColor = true;
@@ -184,20 +186,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 91);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(15, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 13);
+            this.label7.Size = new System.Drawing.Size(110, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "Nivel Academico";
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(17, 182);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(23, 224);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(89, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(119, 28);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -206,10 +207,10 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(116, 181);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Location = new System.Drawing.Point(155, 223);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(89, 25);
+            this.btnModificar.Size = new System.Drawing.Size(119, 31);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -218,10 +219,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(220, 180);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(293, 222);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 25);
+            this.btnCancelar.Size = new System.Drawing.Size(119, 31);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -230,52 +231,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(15, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.Size = new System.Drawing.Size(122, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre del Grado:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(15, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(23, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "ID:";
             // 
             // txtIDGradoAcademico
             // 
-            this.txtIDGradoAcademico.Location = new System.Drawing.Point(109, 22);
-            this.txtIDGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIDGradoAcademico.Location = new System.Drawing.Point(145, 27);
+            this.txtIDGradoAcademico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDGradoAcademico.Name = "txtIDGradoAcademico";
             this.txtIDGradoAcademico.ReadOnly = true;
-            this.txtIDGradoAcademico.Size = new System.Drawing.Size(62, 20);
+            this.txtIDGradoAcademico.Size = new System.Drawing.Size(81, 22);
             this.txtIDGradoAcademico.TabIndex = 1;
             // 
             // txtNombreGrado
             // 
-            this.txtNombreGrado.Location = new System.Drawing.Point(109, 55);
-            this.txtNombreGrado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreGrado.Location = new System.Drawing.Point(145, 68);
+            this.txtNombreGrado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreGrado.Name = "txtNombreGrado";
-            this.txtNombreGrado.Size = new System.Drawing.Size(147, 20);
+            this.txtNombreGrado.Size = new System.Drawing.Size(195, 22);
             this.txtNombreGrado.TabIndex = 0;
             // 
             // frmGradoAcademico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 445);
+            this.ClientSize = new System.Drawing.Size(1101, 548);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvGradoAcademico);
             this.Controls.Add(this.gbxGradoAcademico);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGradoAcademico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGradoAcademico";

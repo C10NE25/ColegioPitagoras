@@ -49,23 +49,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 26);
+            this.label1.Size = new System.Drawing.Size(170, 31);
             this.label1.TabIndex = 42;
             this.label1.Text = "Evaluaciones";
             // 
             // dgvTipoEvaluacion
             // 
             this.dgvTipoEvaluacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipoEvaluacion.Location = new System.Drawing.Point(13, 37);
-            this.dgvTipoEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoEvaluacion.Location = new System.Drawing.Point(17, 46);
+            this.dgvTipoEvaluacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTipoEvaluacion.Name = "dgvTipoEvaluacion";
             this.dgvTipoEvaluacion.RowHeadersWidth = 30;
             this.dgvTipoEvaluacion.RowTemplate.Height = 24;
-            this.dgvTipoEvaluacion.Size = new System.Drawing.Size(324, 362);
+            this.dgvTipoEvaluacion.Size = new System.Drawing.Size(432, 446);
             this.dgvTipoEvaluacion.TabIndex = 43;
+            this.dgvTipoEvaluacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoEvaluacion_CellClick);
             this.dgvTipoEvaluacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoEvaluacion_CellContentClick);
             // 
             // gbTipoEvaluacion
@@ -78,11 +78,11 @@
             this.gbTipoEvaluacion.Controls.Add(this.label3);
             this.gbTipoEvaluacion.Controls.Add(this.label2);
             this.gbTipoEvaluacion.Controls.Add(this.txtIdTipoEvaluacion);
-            this.gbTipoEvaluacion.Location = new System.Drawing.Point(353, 37);
-            this.gbTipoEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTipoEvaluacion.Location = new System.Drawing.Point(471, 46);
+            this.gbTipoEvaluacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbTipoEvaluacion.Name = "gbTipoEvaluacion";
-            this.gbTipoEvaluacion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbTipoEvaluacion.Size = new System.Drawing.Size(269, 176);
+            this.gbTipoEvaluacion.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbTipoEvaluacion.Size = new System.Drawing.Size(359, 217);
             this.gbTipoEvaluacion.TabIndex = 44;
             this.gbTipoEvaluacion.TabStop = false;
             this.gbTipoEvaluacion.Text = "Dato de Evaluaciones";
@@ -90,10 +90,10 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(30, 131);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(40, 161);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(70, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(93, 36);
             this.btnAgregar.TabIndex = 151;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(104, 131);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Location = new System.Drawing.Point(139, 161);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(70, 29);
+            this.btnModificar.Size = new System.Drawing.Size(93, 36);
             this.btnModificar.TabIndex = 152;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -114,10 +114,10 @@
             // cbxEstado
             // 
             this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(10, 100);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxEstado.Location = new System.Drawing.Point(13, 123);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(154, 17);
+            this.cbxEstado.Size = new System.Drawing.Size(192, 20);
             this.cbxEstado.TabIndex = 134;
             this.cbxEstado.Text = "Estado de Tipo Evaluacion";
             this.cbxEstado.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(178, 131);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(237, 161);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(70, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(93, 36);
             this.btnCancelar.TabIndex = 153;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -136,47 +136,45 @@
             // 
             // txtNomTipoNota
             // 
-            this.txtNomTipoNota.Location = new System.Drawing.Point(110, 58);
-            this.txtNomTipoNota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomTipoNota.Location = new System.Drawing.Point(147, 71);
+            this.txtNomTipoNota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomTipoNota.Name = "txtNomTipoNota";
-            this.txtNomTipoNota.Size = new System.Drawing.Size(126, 20);
+            this.txtNomTipoNota.Size = new System.Drawing.Size(167, 22);
             this.txtNomTipoNota.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(11, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 13);
+            this.label3.Size = new System.Drawing.Size(124, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tipo de Evaluacion";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.Size = new System.Drawing.Size(23, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID:";
             // 
             // txtIdTipoEvaluacion
             // 
-            this.txtIdTipoEvaluacion.Location = new System.Drawing.Point(110, 28);
-            this.txtIdTipoEvaluacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdTipoEvaluacion.Location = new System.Drawing.Point(147, 34);
+            this.txtIdTipoEvaluacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdTipoEvaluacion.Name = "txtIdTipoEvaluacion";
             this.txtIdTipoEvaluacion.ReadOnly = true;
-            this.txtIdTipoEvaluacion.Size = new System.Drawing.Size(60, 20);
+            this.txtIdTipoEvaluacion.Size = new System.Drawing.Size(79, 22);
             this.txtIdTipoEvaluacion.TabIndex = 0;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(261, 405);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(348, 498);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(76, 26);
+            this.btnEditar.Size = new System.Drawing.Size(101, 32);
             this.btnEditar.TabIndex = 149;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -184,10 +182,10 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(191, 406);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Location = new System.Drawing.Point(255, 500);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(68, 25);
+            this.btnNuevo.Size = new System.Drawing.Size(91, 31);
             this.btnNuevo.TabIndex = 148;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -195,16 +193,16 @@
             // 
             // frmTipoEvaluacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 439);
+            this.ClientSize = new System.Drawing.Size(844, 540);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.gbTipoEvaluacion);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTipoEvaluacion);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTipoEvaluacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoEvaluacion";

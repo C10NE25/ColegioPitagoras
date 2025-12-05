@@ -18,6 +18,8 @@ namespace CapaPresentacion.frmAcademico
         {
             InitializeComponent();
             listarTipoEvaluacion();
+            habilitarBotonesPrincipales();
+            gbxTipoAsistencia.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -64,7 +66,7 @@ namespace CapaPresentacion.frmAcademico
             {
                 entTipoAsistencia tipoAsistencia = new entTipoAsistencia();
                 tipoAsistencia.IdTipoAsistencia = Convert.ToInt32(txtBidTipoAsistencia.Text.Trim());
-                tipoAsistencia.TipoAsistencia = txtBidTipoAsistencia.Text.Trim();
+                tipoAsistencia.TipoAsistencia = txtTipoAsistencia.Text.Trim();
                 tipoAsistencia.estado = cbxEstado.Checked;
                 logTipoAsistencia.Instancia.EditarTipoAsistencia(tipoAsistencia);
             }
@@ -105,6 +107,11 @@ namespace CapaPresentacion.frmAcademico
         }
 
         private void dgvTipoAsistencia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvTipoAsistencia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvTipoAsistencia.Rows[e.RowIndex];
             txtBidTipoAsistencia.Text = fila.Cells[0].Value.ToString();

@@ -1,4 +1,5 @@
-﻿using CapaPresentacion.frmTesoreria;
+﻿using CapaPresentacion.frmAcademico;
+using CapaPresentacion.frmTesoreria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmApoderado());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }

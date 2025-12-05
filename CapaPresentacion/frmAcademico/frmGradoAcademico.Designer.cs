@@ -45,6 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDGradoAcademico = new System.Windows.Forms.TextBox();
             this.txtNombreGrado = new System.Windows.Forms.TextBox();
+            this.btnAddNivelAcademico = new System.Windows.Forms.Button();
+            this.btnAddSeccion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGradoAcademico)).BeginInit();
             this.gbxGradoAcademico.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +99,8 @@
             // 
             // gbxGradoAcademico
             // 
+            this.gbxGradoAcademico.Controls.Add(this.btnAddSeccion);
+            this.gbxGradoAcademico.Controls.Add(this.btnAddNivelAcademico);
             this.gbxGradoAcademico.Controls.Add(this.cbSeccion);
             this.gbxGradoAcademico.Controls.Add(this.cbNivelAcademico);
             this.gbxGradoAcademico.Controls.Add(this.label4);
@@ -240,6 +244,24 @@
             this.txtNombreGrado.Size = new System.Drawing.Size(147, 20);
             this.txtNombreGrado.TabIndex = 0;
             // 
+            // btnAddNivelAcademico
+            // 
+            this.btnAddNivelAcademico.Location = new System.Drawing.Point(261, 88);
+            this.btnAddNivelAcademico.Name = "btnAddNivelAcademico";
+            this.btnAddNivelAcademico.Size = new System.Drawing.Size(24, 20);
+            this.btnAddNivelAcademico.TabIndex = 17;
+            this.btnAddNivelAcademico.Text = "+";
+            this.btnAddNivelAcademico.UseVisualStyleBackColor = true;
+            // 
+            // btnAddSeccion
+            // 
+            this.btnAddSeccion.Location = new System.Drawing.Point(261, 119);
+            this.btnAddSeccion.Name = "btnAddSeccion";
+            this.btnAddSeccion.Size = new System.Drawing.Size(24, 21);
+            this.btnAddSeccion.TabIndex = 18;
+            this.btnAddSeccion.Text = "+";
+            this.btnAddSeccion.UseVisualStyleBackColor = true;
+            // 
             // frmGradoAcademico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,5 +304,7 @@
         private System.Windows.Forms.ComboBox cbSeccion;
         private System.Windows.Forms.ComboBox cbNivelAcademico;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnAddSeccion;
+        private System.Windows.Forms.Button btnAddNivelAcademico;
     }
 }

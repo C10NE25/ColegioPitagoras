@@ -44,7 +44,7 @@ namespace CapaPresentacion
 
         public void CargarAsignatura()
         {
-            List<entAsignatura> lista = logAsignatura.Instancia.ListarAsignatura();
+            List<entAreaAcademica> lista = logAreaAcademica.Instancia.ListarAsignatura();
             cbAsignatura.DataSource = lista;
             cbAsignatura.DisplayMember = "nombreAsignatura";
             cbAsignatura.ValueMember = "idAsignatura";
@@ -84,7 +84,7 @@ namespace CapaPresentacion
         private void btnAddAsignatura_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var frm = new frmAsignatura())
+            using (var frm = new frmAreaAcademica())
             {
                 frm.ShowDialog();
             }

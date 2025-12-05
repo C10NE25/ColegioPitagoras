@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.frmAcademico
 {
-    public partial class frmAsignatura : Form
+    public partial class frmAreaAcademica : Form
     {
-        public frmAsignatura()
+        public frmAreaAcademica()
         {
             InitializeComponent();
             gbxSeccion.Enabled = false;
@@ -42,7 +42,7 @@ namespace CapaPresentacion.frmAcademico
         }
         private void ListarAsignatura()
         {
-            dgvAsignatura.DataSource = logAsignatura.Instancia.ListarAsignatura();
+            dgvAsignatura.DataSource = logAreaAcademica.Instancia.ListarAsignatura();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -66,11 +66,11 @@ namespace CapaPresentacion.frmAcademico
         {
             try
             {
-                entAsignatura asig = new entAsignatura();
+                entAreaAcademica asig = new entAreaAcademica();
                 asig.IdAsignatura = Convert.ToInt32(txtIdAsignatura.Text.Trim());
                 cbxEstado.Enabled = false;
                 asig.EstadoAsignatura = cbxEstado.Checked;
-                logAsignatura.Instancia.DeshabilitarAsignatura(asig);
+                logAreaAcademica.Instancia.DeshabilitarAsignatura(asig);
             }
             catch (Exception ex)
             {
@@ -90,10 +90,10 @@ namespace CapaPresentacion.frmAcademico
         {
             try
             {
-                entAsignatura asig = new entAsignatura();
+                entAreaAcademica asig = new entAreaAcademica();
                 asig.NombreAsignatura = txtNombreAsignatura.Text.Trim();
                 asig.EstadoAsignatura = cbxEstado.Checked;
-                logAsignatura.Instancia.insertarAsignatura(asig);
+                logAreaAcademica.Instancia.insertarAsignatura(asig);
 
             }
             catch (Exception ex)
@@ -110,11 +110,11 @@ namespace CapaPresentacion.frmAcademico
         {
             try
             {
-                entAsignatura asig = new entAsignatura();
+                entAreaAcademica asig = new entAreaAcademica();
                 asig.IdAsignatura = Convert.ToInt32(txtIdAsignatura.Text.Trim());
                 asig.NombreAsignatura = txtNombreAsignatura.Text.Trim();
                 asig.EstadoAsignatura = cbxEstado.Checked;
-                logAsignatura.Instancia.editarAsignatura(asig);
+                logAreaAcademica.Instancia.editarAsignatura(asig);
             }
             catch (Exception ex)
             {

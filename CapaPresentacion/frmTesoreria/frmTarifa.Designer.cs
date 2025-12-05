@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdTarifa = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.txtNombreTarifa = new System.Windows.Forms.TextBox();
             this.dgvTarifa = new System.Windows.Forms.DataGridView();
             this.gbxTarifa = new System.Windows.Forms.GroupBox();
@@ -120,17 +119,6 @@
             this.txtIdTarifa.Size = new System.Drawing.Size(57, 20);
             this.txtIdTarifa.TabIndex = 1;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(666, 191);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(99, 26);
-            this.btnCerrar.TabIndex = 67;
-            this.btnCerrar.Text = "Salir";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // txtNombreTarifa
             // 
             this.txtNombreTarifa.Location = new System.Drawing.Point(177, 51);
@@ -204,7 +192,7 @@
             // 
             this.cbAnioAcademico.FormattingEnabled = true;
             this.cbAnioAcademico.Location = new System.Drawing.Point(177, 110);
-            this.cbAnioAcademico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAnioAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.cbAnioAcademico.Name = "cbAnioAcademico";
             this.cbAnioAcademico.Size = new System.Drawing.Size(147, 21);
             this.cbAnioAcademico.TabIndex = 67;
@@ -269,14 +257,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 520);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dgvTarifa);
             this.Controls.Add(this.gbxTarifa);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTarifa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTarifa";
@@ -296,7 +283,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdTarifa;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtNombreTarifa;
         private System.Windows.Forms.DataGridView dgvTarifa;
         private System.Windows.Forms.GroupBox gbxTarifa;

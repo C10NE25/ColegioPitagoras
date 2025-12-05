@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.dgvMatricula = new System.Windows.Forms.DataGridView();
             this.gbxMatricula = new System.Windows.Forms.GroupBox();
             this.cbGradoAcademico = new System.Windows.Forms.ComboBox();
@@ -38,14 +37,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaMatricula = new System.Windows.Forms.DateTimePicker();
-            this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdMatricula = new System.Windows.Forms.TextBox();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatricula)).BeginInit();
             this.gbxMatricula.SuspendLayout();
             this.SuspendLayout();
@@ -63,23 +59,13 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(392, 323);
+            this.btnNuevo.Location = new System.Drawing.Point(279, 312);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(68, 25);
             this.btnNuevo.TabIndex = 123;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(544, 323);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(78, 24);
-            this.btnCerrar.TabIndex = 121;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
             // 
             // dgvMatricula
             // 
@@ -91,28 +77,24 @@
             this.dgvMatricula.RowHeadersWidth = 92;
             this.dgvMatricula.RowTemplate.Height = 37;
             this.dgvMatricula.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatricula.Size = new System.Drawing.Size(614, 270);
+            this.dgvMatricula.Size = new System.Drawing.Size(339, 270);
             this.dgvMatricula.TabIndex = 120;
             // 
             // gbxMatricula
             // 
             this.gbxMatricula.Controls.Add(this.cbGradoAcademico);
-            this.gbxMatricula.Controls.Add(this.cbInscripcion);
             this.gbxMatricula.Controls.Add(this.label5);
             this.gbxMatricula.Controls.Add(this.label3);
             this.gbxMatricula.Controls.Add(this.dtpFechaMatricula);
-            this.gbxMatricula.Controls.Add(this.cbxEstado);
             this.gbxMatricula.Controls.Add(this.btnAgregar);
-            this.gbxMatricula.Controls.Add(this.btnModificar);
             this.gbxMatricula.Controls.Add(this.btnCancelar);
-            this.gbxMatricula.Controls.Add(this.label4);
             this.gbxMatricula.Controls.Add(this.label2);
             this.gbxMatricula.Controls.Add(this.txtIdMatricula);
-            this.gbxMatricula.Location = new System.Drawing.Point(13, 358);
+            this.gbxMatricula.Location = new System.Drawing.Point(13, 341);
             this.gbxMatricula.Margin = new System.Windows.Forms.Padding(2);
             this.gbxMatricula.Name = "gbxMatricula";
             this.gbxMatricula.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxMatricula.Size = new System.Drawing.Size(609, 195);
+            this.gbxMatricula.Size = new System.Drawing.Size(334, 212);
             this.gbxMatricula.TabIndex = 122;
             this.gbxMatricula.TabStop = false;
             this.gbxMatricula.Text = "Datos de la Matricula";
@@ -120,7 +102,7 @@
             // cbGradoAcademico
             // 
             this.cbGradoAcademico.FormattingEnabled = true;
-            this.cbGradoAcademico.Location = new System.Drawing.Point(118, 81);
+            this.cbGradoAcademico.Location = new System.Drawing.Point(118, 57);
             this.cbGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.cbGradoAcademico.Name = "cbGradoAcademico";
             this.cbGradoAcademico.Size = new System.Drawing.Size(143, 21);
@@ -129,7 +111,7 @@
             // cbInscripcion
             // 
             this.cbInscripcion.FormattingEnabled = true;
-            this.cbInscripcion.Location = new System.Drawing.Point(118, 51);
+            this.cbInscripcion.Location = new System.Drawing.Point(502, 362);
             this.cbInscripcion.Margin = new System.Windows.Forms.Padding(2);
             this.cbInscripcion.Name = "cbInscripcion";
             this.cbInscripcion.Size = new System.Drawing.Size(143, 21);
@@ -138,7 +120,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 84);
+            this.label5.Location = new System.Drawing.Point(13, 60);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
@@ -148,7 +130,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 112);
+            this.label3.Location = new System.Drawing.Point(11, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
@@ -157,27 +139,16 @@
             // 
             // dtpFechaMatricula
             // 
-            this.dtpFechaMatricula.Location = new System.Drawing.Point(118, 112);
+            this.dtpFechaMatricula.Location = new System.Drawing.Point(118, 91);
             this.dtpFechaMatricula.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaMatricula.Name = "dtpFechaMatricula";
             this.dtpFechaMatricula.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaMatricula.TabIndex = 22;
             // 
-            // cbxEstado
-            // 
-            this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(16, 151);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(131, 17);
-            this.cbxEstado.TabIndex = 19;
-            this.cbxEstado.Text = "Estado de la Matricula";
-            this.cbxEstado.UseVisualStyleBackColor = true;
-            // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(489, 25);
+            this.btnAgregar.Location = new System.Drawing.Point(61, 161);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(98, 31);
@@ -185,21 +156,10 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(489, 60);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(98, 29);
-            this.btnModificar.TabIndex = 2;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(489, 93);
+            this.btnCancelar.Location = new System.Drawing.Point(163, 161);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(98, 30);
@@ -210,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 54);
+            this.label4.Location = new System.Drawing.Point(397, 365);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
@@ -235,27 +195,17 @@
             this.txtIdMatricula.Size = new System.Drawing.Size(62, 20);
             this.txtIdMatricula.TabIndex = 1;
             // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(463, 322);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(78, 24);
-            this.btnDeshabilitar.TabIndex = 125;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            // 
             // frmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 581);
-            this.Controls.Add(this.btnDeshabilitar);
+            this.ClientSize = new System.Drawing.Size(1028, 581);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.cbInscripcion);
             this.Controls.Add(this.dgvMatricula);
             this.Controls.Add(this.gbxMatricula);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMatricula";
@@ -273,14 +223,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dgvMatricula;
         private System.Windows.Forms.GroupBox gbxMatricula;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaMatricula;
-        private System.Windows.Forms.CheckBox cbxEstado;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -288,6 +235,5 @@
         private System.Windows.Forms.ComboBox cbGradoAcademico;
         private System.Windows.Forms.ComboBox cbInscripcion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnDeshabilitar;
     }
 }

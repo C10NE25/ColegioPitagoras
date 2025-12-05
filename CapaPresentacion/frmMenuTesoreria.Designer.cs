@@ -32,26 +32,23 @@
             this.btnOpenNAcademico = new System.Windows.Forms.Button();
             this.btnOpenGAcademico = new System.Windows.Forms.Button();
             this.btnOpenModalidaPago = new System.Windows.Forms.Button();
-            this.btnOpenApoderado = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblMenuAdministrativo
             // 
             this.lblMenuAdministrativo.AutoSize = true;
             this.lblMenuAdministrativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuAdministrativo.Location = new System.Drawing.Point(16, 25);
-            this.lblMenuAdministrativo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMenuAdministrativo.Location = new System.Drawing.Point(12, 20);
             this.lblMenuAdministrativo.Name = "lblMenuAdministrativo";
-            this.lblMenuAdministrativo.Size = new System.Drawing.Size(289, 29);
+            this.lblMenuAdministrativo.Size = new System.Drawing.Size(221, 25);
             this.lblMenuAdministrativo.TabIndex = 19;
             this.lblMenuAdministrativo.Text = "Elija la opcion a realizar!";
             // 
             // btnOpenNAcademico
             // 
-            this.btnOpenNAcademico.Location = new System.Drawing.Point(28, 242);
-            this.btnOpenNAcademico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpenNAcademico.Location = new System.Drawing.Point(17, 156);
             this.btnOpenNAcademico.Name = "btnOpenNAcademico";
-            this.btnOpenNAcademico.Size = new System.Drawing.Size(263, 44);
+            this.btnOpenNAcademico.Size = new System.Drawing.Size(197, 36);
             this.btnOpenNAcademico.TabIndex = 14;
             this.btnOpenNAcademico.Text = "Tipo Cargo";
             this.btnOpenNAcademico.UseVisualStyleBackColor = true;
@@ -59,47 +56,32 @@
             // 
             // btnOpenGAcademico
             // 
-            this.btnOpenGAcademico.Location = new System.Drawing.Point(28, 139);
-            this.btnOpenGAcademico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpenGAcademico.Location = new System.Drawing.Point(17, 72);
             this.btnOpenGAcademico.Name = "btnOpenGAcademico";
-            this.btnOpenGAcademico.Size = new System.Drawing.Size(263, 44);
+            this.btnOpenGAcademico.Size = new System.Drawing.Size(197, 36);
             this.btnOpenGAcademico.TabIndex = 12;
             this.btnOpenGAcademico.Text = "Pago";
             this.btnOpenGAcademico.UseVisualStyleBackColor = true;
             // 
             // btnOpenModalidaPago
             // 
-            this.btnOpenModalidaPago.Location = new System.Drawing.Point(28, 191);
-            this.btnOpenModalidaPago.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpenModalidaPago.Location = new System.Drawing.Point(17, 114);
             this.btnOpenModalidaPago.Name = "btnOpenModalidaPago";
-            this.btnOpenModalidaPago.Size = new System.Drawing.Size(263, 44);
+            this.btnOpenModalidaPago.Size = new System.Drawing.Size(197, 36);
             this.btnOpenModalidaPago.TabIndex = 11;
             this.btnOpenModalidaPago.Text = "Modalidad Pago";
             this.btnOpenModalidaPago.UseVisualStyleBackColor = true;
             this.btnOpenModalidaPago.Click += new System.EventHandler(this.btnOpenModalidaPago_Click);
             // 
-            // btnOpenApoderado
-            // 
-            this.btnOpenApoderado.Location = new System.Drawing.Point(28, 87);
-            this.btnOpenApoderado.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpenApoderado.Name = "btnOpenApoderado";
-            this.btnOpenApoderado.Size = new System.Drawing.Size(263, 44);
-            this.btnOpenApoderado.TabIndex = 10;
-            this.btnOpenApoderado.Text = "Detalle Pago";
-            this.btnOpenApoderado.UseVisualStyleBackColor = true;
-            this.btnOpenApoderado.Click += new System.EventHandler(this.btnOpenApoderado_Click);
-            // 
             // frmMenuTesoreria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 313);
+            this.ClientSize = new System.Drawing.Size(245, 212);
             this.Controls.Add(this.lblMenuAdministrativo);
             this.Controls.Add(this.btnOpenNAcademico);
             this.Controls.Add(this.btnOpenGAcademico);
             this.Controls.Add(this.btnOpenModalidaPago);
-            this.Controls.Add(this.btnOpenApoderado);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenuTesoreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuTesoreria";
@@ -114,6 +96,5 @@
         private System.Windows.Forms.Button btnOpenNAcademico;
         private System.Windows.Forms.Button btnOpenGAcademico;
         private System.Windows.Forms.Button btnOpenModalidaPago;
-        private System.Windows.Forms.Button btnOpenApoderado;
     }
 }

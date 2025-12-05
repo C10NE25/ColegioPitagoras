@@ -31,21 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.gbxPago = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtIdPago = new System.Windows.Forms.TextBox();
-            this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbxPago.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +71,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(274, 254);
+            this.btnNuevo.Location = new System.Drawing.Point(438, 243);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(68, 25);
@@ -82,31 +79,19 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(425, 254);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(78, 24);
-            this.btnCerrar.TabIndex = 126;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            // 
             // gbxPago
             // 
+            this.gbxPago.Controls.Add(this.label6);
+            this.gbxPago.Controls.Add(this.comboBox3);
             this.gbxPago.Controls.Add(this.btnAgregar);
-            this.gbxPago.Controls.Add(this.btnModificar);
             this.gbxPago.Controls.Add(this.btnCancelar);
             this.gbxPago.Controls.Add(this.dtpFechaPago);
             this.gbxPago.Controls.Add(this.comboBox2);
-            this.gbxPago.Controls.Add(this.comboBox1);
             this.gbxPago.Controls.Add(this.txtIdPago);
-            this.gbxPago.Controls.Add(this.cbxEstado);
             this.gbxPago.Controls.Add(this.label5);
             this.gbxPago.Controls.Add(this.label4);
-            this.gbxPago.Controls.Add(this.label3);
             this.gbxPago.Controls.Add(this.label2);
-            this.gbxPago.Location = new System.Drawing.Point(13, 302);
+            this.gbxPago.Location = new System.Drawing.Point(16, 272);
             this.gbxPago.Margin = new System.Windows.Forms.Padding(2);
             this.gbxPago.Name = "gbxPago";
             this.gbxPago.Padding = new System.Windows.Forms.Padding(2);
@@ -126,18 +111,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(367, 88);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(98, 41);
-            this.btnModificar.TabIndex = 138;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -168,15 +141,6 @@
             this.comboBox2.Size = new System.Drawing.Size(140, 21);
             this.comboBox2.TabIndex = 135;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 61);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 21);
-            this.comboBox1.TabIndex = 134;
-            // 
             // txtIdPago
             // 
             this.txtIdPago.Location = new System.Drawing.Point(98, 29);
@@ -184,17 +148,6 @@
             this.txtIdPago.Name = "txtIdPago";
             this.txtIdPago.Size = new System.Drawing.Size(98, 20);
             this.txtIdPago.TabIndex = 133;
-            // 
-            // cbxEstado
-            // 
-            this.cbxEstado.AutoSize = true;
-            this.cbxEstado.Location = new System.Drawing.Point(6, 153);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(104, 17);
-            this.cbxEstado.TabIndex = 132;
-            this.cbxEstado.Text = "Estado del Pago";
-            this.cbxEstado.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -219,7 +172,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 61);
+            this.label3.Location = new System.Drawing.Point(563, 304);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
@@ -236,27 +189,35 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Id Pago";
             // 
-            // btnDeshabilitar
+            // comboBox3
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(344, 253);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(78, 24);
-            this.btnDeshabilitar.TabIndex = 129;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(182, 153);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(140, 21);
+            this.comboBox3.TabIndex = 140;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 156);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 141;
+            this.label6.Text = "Tipo Cargo";
             // 
             // frmPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 565);
+            this.ClientSize = new System.Drawing.Size(971, 565);
             this.Controls.Add(this.gbxPago);
-            this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPago";
@@ -275,20 +236,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.GroupBox gbxPago;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdPago;
-        private System.Windows.Forms.CheckBox cbxEstado;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dtpFechaPago;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

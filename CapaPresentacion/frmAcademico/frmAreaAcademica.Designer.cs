@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.frmAcademico
 {
-    partial class frmAsignatura
+    partial class frmAreaAcademica
     {
         /// <summary>
         /// Required designer variable.

@@ -43,9 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entAsistencia.cs" />
-    <Compile Include="entDetallePago.cs" />
     <Compile Include="entApoderado.cs" />
-    <Compile Include="entAsignatura.cs" />
+    <Compile Include="entAreaAcademica.cs" />
     <Compile Include="entInscripcion.cs" />
     <Compile Include="entTipoAsistencia.cs" />
     <Compile Include="entTipoCargo.cs" />

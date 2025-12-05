@@ -50,7 +50,7 @@
             // cbTarifa
             // 
             this.cbTarifa.FormattingEnabled = true;
-            this.cbTarifa.Location = new System.Drawing.Point(177, 86);
+            this.cbTarifa.Location = new System.Drawing.Point(150, 83);
             this.cbTarifa.Margin = new System.Windows.Forms.Padding(2);
             this.cbTarifa.Name = "cbTarifa";
             this.cbTarifa.Size = new System.Drawing.Size(147, 21);
@@ -89,7 +89,7 @@
             // 
             // txtIdTipoCargo
             // 
-            this.txtIdTipoCargo.Location = new System.Drawing.Point(267, 24);
+            this.txtIdTipoCargo.Location = new System.Drawing.Point(150, 23);
             this.txtIdTipoCargo.Margin = new System.Windows.Forms.Padding(1);
             this.txtIdTipoCargo.Name = "txtIdTipoCargo";
             this.txtIdTipoCargo.Size = new System.Drawing.Size(57, 20);
@@ -97,7 +97,7 @@
             // 
             // txtNombreTipoCargo
             // 
-            this.txtNombreTipoCargo.Location = new System.Drawing.Point(177, 51);
+            this.txtNombreTipoCargo.Location = new System.Drawing.Point(150, 55);
             this.txtNombreTipoCargo.Margin = new System.Windows.Forms.Padding(1);
             this.txtNombreTipoCargo.Name = "txtNombreTipoCargo";
             this.txtNombreTipoCargo.Size = new System.Drawing.Size(147, 20);

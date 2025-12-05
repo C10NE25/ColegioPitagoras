@@ -44,11 +44,10 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="datApoderado.cs" />
-    <Compile Include="datAsignatura.cs" />
+    <Compile Include="datAreaAcademica.cs" />
     <Compile Include="datAsistencia.cs" />
     <Compile Include="datCargo.cs" />
     <Compile Include="datCurso.cs" />
-    <Compile Include="datDetallePago.cs" />
     <Compile Include="datDocente.cs" />
     <Compile Include="datEstudiante.cs" />
     <Compile Include="datGradoAcademico.cs" />

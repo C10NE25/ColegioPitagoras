@@ -38,15 +38,5 @@ namespace CapaPresentacion
             }
             this.Show();
         }
-
-        private void btnOpenApoderado_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            using (var frm = new frmDetallePago())
-            {
-                frm.ShowDialog();
-            }
-            this.Show();
-        }
     }
 }

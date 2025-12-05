@@ -43,11 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logApoderado.cs" />
-    <Compile Include="logAsignatura.cs" />
+    <Compile Include="logAreaAcademica.cs" />
     <Compile Include="logAsistencia.cs" />
     <Compile Include="logCargo.cs" />
     <Compile Include="logCurso.cs" />
-    <Compile Include="logDetallePago.cs" />
     <Compile Include="logDocente.cs" />
     <Compile Include="logEstudiante.cs" />
     <Compile Include="logGradoAcademico.cs" />

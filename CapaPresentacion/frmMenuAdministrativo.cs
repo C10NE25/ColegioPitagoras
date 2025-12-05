@@ -21,7 +21,7 @@ namespace CapaPresentacion
         private void btnOpenAsignatura_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (var frm = new frmAsignatura())
+            using (var frm = new frmAreaAcademica())
             {
                 frm.ShowDialog();
             }

@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAcademico\frmAsignatura.cs">
+    <Compile Include="frmAcademico\frmAreaAcademica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAcademico\frmAsignatura.Designer.cs">
-      <DependentUpon>frmAsignatura.cs</DependentUpon>
+    <Compile Include="frmAcademico\frmAreaAcademica.Designer.cs">
+      <DependentUpon>frmAreaAcademica.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAcademico\frmTipoParentesco.cs">
       <SubType>Form</SubType>
@@ -167,12 +168,6 @@
     <Compile Include="frmAcademico\frmApoderado.Designer.cs">
       <DependentUpon>frmApoderado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTesoreria\frmDetallePago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTesoreria\frmDetallePago.Designer.cs">
-      <DependentUpon>frmDetallePago.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTesoreria\frmModalidadPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,8 +188,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAcademico\frmAsignatura.resx">
-      <DependentUpon>frmAsignatura.cs</DependentUpon>
+    <EmbeddedResource Include="frmAcademico\frmAreaAcademica.resx">
+      <DependentUpon>frmAreaAcademica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmTipoParentesco.resx">
       <DependentUpon>frmTipoParentesco.cs</DependentUpon>
@@ -213,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuTesoreria.resx">
       <DependentUpon>frmMenuTesoreria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTesoreria\frmDetallePago.resx">
-      <DependentUpon>frmDetallePago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTesoreria\frmTipoCargo.resx">
       <DependentUpon>frmTipoCargo.cs</DependentUpon>

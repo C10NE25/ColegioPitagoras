@@ -9,40 +9,39 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class datDetallePago
+    public class datAreaAcademica
     {
         #region singleton
-        private static readonly datDetallePago _instancia = new datDetallePago();
-        public static datDetallePago Instancia
+        private static readonly datAreaAcademica _instancia = new datAreaAcademica();
+        public static datAreaAcademica Instancia
         {
             get
             {
-                return datDetallePago._instancia;
+                return datAreaAcademica._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        public List<entDetallePago> ListarDetallePago()
+
+        public List<entAreaAcademica> listarAsignatura()
         {
             SqlCommand cmd = null;
-            List<entDetallePago> lista = new List<entDetallePago>();
+            List<entAreaAcademica> lista = new List<entAreaAcademica>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarDetallePago", cn);
+                cmd = new SqlCommand("spListarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entDetallePago DP = new entDetallePago();
-                    DP.IdDetallePago = Convert.ToInt32(dr["idDetallePago"]);
-                    DP.IdPago = Convert.ToInt32(dr["idPago"]);
-                    DP.IdTipoCargo = Convert.ToInt32(dr["idTipoCargo"]);
-                    DP.MontoPagado = Convert.ToDecimal(dr["montoPagado"]);
-                    DP.EstadoDetallePago = Convert.ToBoolean(dr["estadoDetallePago"]);
-                    lista.Add(DP);
+                    entAreaAcademica Asig = new entAreaAcademica();
+                    Asig.IdAsignatura = Convert.ToInt32(dr["idAsignatura"]);
+                    Asig.NombreAsignatura = dr["nombreAsignatura"].ToString();
+                    Asig.EstadoAsignatura = Convert.ToBoolean(dr["estadoAsignatura"]);
+                    lista.Add(Asig);
                 }
             }
             catch (Exception e)
@@ -56,18 +55,18 @@ namespace CapaDatos
             return lista;
         }
 
-        public Boolean insertarDetallePago(entDetallePago DP)
+
+        public Boolean InsertarAsignatura(entAreaAcademica Asig)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarDetallePago", cn);
+                cmd = new SqlCommand("spInsertarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idPago", DP.IdPago);
-                cmd.Parameters.AddWithValue("@idTipoCargo", DP.IdTipoCargo);
-                cmd.Parameters.AddWithValue("@montoPagado", DP.MontoPagado);
+                cmd.Parameters.AddWithValue("@nombreAsignatura", Asig.NombreAsignatura);
+                cmd.Parameters.AddWithValue("@estadoAsignatura", Asig.EstadoAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -86,19 +85,18 @@ namespace CapaDatos
             return inserta;
         }
 
-        public Boolean editarDetallePago(entDetallePago DP)
+        public Boolean EditarAsignatura(entAreaAcademica Asig)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarDetallePago", cn);
+                cmd = new SqlCommand("spEditarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDetallePago", DP.IdDetallePago);
-                cmd.Parameters.AddWithValue("@idPago", DP.IdPago);
-                cmd.Parameters.AddWithValue("@idTipoCargo", DP.IdTipoCargo);
-                cmd.Parameters.AddWithValue("@montoPagado", DP.MontoPagado);
+                cmd.Parameters.AddWithValue("@idAsignatura", Asig.IdAsignatura);
+                cmd.Parameters.AddWithValue("@nombreAsignatura", Asig.NombreAsignatura);
+                cmd.Parameters.AddWithValue("@estadoAsignatura", Asig.EstadoAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -117,16 +115,16 @@ namespace CapaDatos
             return edita;
         }
 
-        public Boolean deshabilitarDetallePago(entDetallePago P)
+        public Boolean DeshabilitarAsignatura(entAreaAcademica Asig)
         {
             SqlCommand cmd = null;
             Boolean deshabilita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarDetallePago", cn);
+                cmd = new SqlCommand("spDeshabilitarAsignatura", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idDetallePago", P.IdDetallePago);
+                cmd.Parameters.AddWithValue("@idAsignatura", Asig.IdAsignatura);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -144,8 +142,6 @@ namespace CapaDatos
             }
             return deshabilita;
         }
-
-
         #endregion metodos
     }
 }

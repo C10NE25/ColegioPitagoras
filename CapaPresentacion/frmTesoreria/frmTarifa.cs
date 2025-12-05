@@ -36,7 +36,6 @@ namespace CapaPresentacion.frmTesoreria
             btnEditar.Enabled = false;
             btnDeshabilitar.Enabled = false;
             //btnModificar.Enabled = false;
-            btnCerrar.Enabled = false;
         }
         void habilitarBotonesPrincipales()
         {
@@ -44,7 +43,6 @@ namespace CapaPresentacion.frmTesoreria
             btnEditar.Enabled = true;
             btnDeshabilitar.Enabled = true;
             btnModificar.Enabled = true;
-            btnCerrar.Enabled = true;
         }
 
         private void limpiarVariables()

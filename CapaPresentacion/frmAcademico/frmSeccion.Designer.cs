@@ -69,7 +69,7 @@
             this.gbxSeccion.Controls.Add(this.label2);
             this.gbxSeccion.Controls.Add(this.txtIdSeccion);
             this.gbxSeccion.Controls.Add(this.txtNombreSeccion);
-            this.gbxSeccion.Location = new System.Drawing.Point(377, 36);
+            this.gbxSeccion.Location = new System.Drawing.Point(367, 36);
             this.gbxSeccion.Margin = new System.Windows.Forms.Padding(1);
             this.gbxSeccion.Name = "gbxSeccion";
             this.gbxSeccion.Padding = new System.Windows.Forms.Padding(1);
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 450);
+            this.ClientSize = new System.Drawing.Size(727, 450);
             this.Controls.Add(this.dgvSeccion);
             this.Controls.Add(this.gbxSeccion);
             this.Controls.Add(this.label1);

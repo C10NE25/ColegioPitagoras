@@ -37,7 +37,7 @@
             this.btnAddGradoAcademico = new System.Windows.Forms.Button();
             this.cbAsignatura = new System.Windows.Forms.ComboBox();
             this.cbGradoAcademico = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAreaAcademica = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -81,7 +81,7 @@
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(428, 294);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(80, 23);
             this.btnEditar.TabIndex = 40;
@@ -92,7 +92,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(344, 294);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 24);
             this.btnNuevo.TabIndex = 39;
@@ -104,7 +104,7 @@
             // 
             this.dgvCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCurso.Location = new System.Drawing.Point(13, 41);
-            this.dgvCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCurso.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCurso.Name = "dgvCurso";
             this.dgvCurso.ReadOnly = true;
             this.dgvCurso.RowHeadersWidth = 30;
@@ -119,7 +119,7 @@
             this.gbxCurso.Controls.Add(this.btnAddGradoAcademico);
             this.gbxCurso.Controls.Add(this.cbAsignatura);
             this.gbxCurso.Controls.Add(this.cbGradoAcademico);
-            this.gbxCurso.Controls.Add(this.label5);
+            this.gbxCurso.Controls.Add(this.lblAreaAcademica);
             this.gbxCurso.Controls.Add(this.label4);
             this.gbxCurso.Controls.Add(this.cbxEstado);
             this.gbxCurso.Controls.Add(this.btnAgregar);
@@ -132,7 +132,7 @@
             this.gbxCurso.Location = new System.Drawing.Point(98, 322);
             this.gbxCurso.Margin = new System.Windows.Forms.Padding(2);
             this.gbxCurso.Name = "gbxCurso";
-            this.gbxCurso.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxCurso.Padding = new System.Windows.Forms.Padding(2);
             this.gbxCurso.Size = new System.Drawing.Size(301, 220);
             this.gbxCurso.TabIndex = 38;
             this.gbxCurso.TabStop = false;
@@ -141,7 +141,7 @@
             // btnAddAsignatura
             // 
             this.btnAddAsignatura.Location = new System.Drawing.Point(260, 115);
-            this.btnAddAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAsignatura.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAsignatura.Name = "btnAddAsignatura";
             this.btnAddAsignatura.Size = new System.Drawing.Size(17, 17);
             this.btnAddAsignatura.TabIndex = 21;
@@ -152,7 +152,7 @@
             // btnAddGradoAcademico
             // 
             this.btnAddGradoAcademico.Location = new System.Drawing.Point(260, 89);
-            this.btnAddGradoAcademico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddGradoAcademico.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddGradoAcademico.Name = "btnAddGradoAcademico";
             this.btnAddGradoAcademico.Size = new System.Drawing.Size(17, 17);
             this.btnAddGradoAcademico.TabIndex = 20;
@@ -178,15 +178,15 @@
             this.cbGradoAcademico.Size = new System.Drawing.Size(147, 21);
             this.cbGradoAcademico.TabIndex = 18;
             // 
-            // label5
+            // lblAreaAcademica
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 123);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Asignatura:";
+            this.lblAreaAcademica.AutoSize = true;
+            this.lblAreaAcademica.Location = new System.Drawing.Point(11, 123);
+            this.lblAreaAcademica.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAreaAcademica.Name = "lblAreaAcademica";
+            this.lblAreaAcademica.Size = new System.Drawing.Size(88, 13);
+            this.lblAreaAcademica.TabIndex = 16;
+            this.lblAreaAcademica.Text = "Area Academica:";
             // 
             // label4
             // 
@@ -202,7 +202,7 @@
             // 
             this.cbxEstado.AutoSize = true;
             this.cbxEstado.Location = new System.Drawing.Point(14, 157);
-            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(106, 17);
             this.cbxEstado.TabIndex = 13;
@@ -213,7 +213,7 @@
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(25, 186);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 23);
             this.btnAgregar.TabIndex = 1;
@@ -225,7 +225,7 @@
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificar.Location = new System.Drawing.Point(110, 186);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(81, 23);
             this.btnModificar.TabIndex = 2;
@@ -237,7 +237,7 @@
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.Location = new System.Drawing.Point(195, 186);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(81, 23);
             this.btnCancelar.TabIndex = 3;
@@ -270,7 +270,7 @@
             this.txtIDCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtIDCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDCurso.Location = new System.Drawing.Point(109, 22);
-            this.txtIDCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDCurso.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDCurso.Name = "txtIDCurso";
             this.txtIDCurso.Size = new System.Drawing.Size(55, 20);
             this.txtIDCurso.TabIndex = 1;
@@ -279,7 +279,7 @@
             // 
             this.txtNombreCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreCurso.Location = new System.Drawing.Point(109, 55);
-            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreCurso.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreCurso.Name = "txtNombreCurso";
             this.txtNombreCurso.Size = new System.Drawing.Size(147, 20);
             this.txtNombreCurso.TabIndex = 0;
@@ -297,7 +297,7 @@
             // 
             this.dgvDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDocente.Location = new System.Drawing.Point(523, 41);
-            this.dgvDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDocente.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDocente.Name = "dgvDocente";
             this.dgvDocente.ReadOnly = true;
             this.dgvDocente.RowHeadersWidth = 30;
@@ -407,7 +407,7 @@
             // btnSearchDocente
             // 
             this.btnSearchDocente.Location = new System.Drawing.Point(282, 23);
-            this.btnSearchDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchDocente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchDocente.Name = "btnSearchDocente";
             this.btnSearchDocente.Size = new System.Drawing.Size(56, 19);
             this.btnSearchDocente.TabIndex = 47;
@@ -417,7 +417,7 @@
             // btnAddDocente
             // 
             this.btnAddDocente.Location = new System.Drawing.Point(342, 22);
-            this.btnAddDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddDocente.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddDocente.Name = "btnAddDocente";
             this.btnAddDocente.Size = new System.Drawing.Size(19, 19);
             this.btnAddDocente.TabIndex = 48;
@@ -427,7 +427,7 @@
             // txtBSearchDocente
             // 
             this.txtBSearchDocente.Location = new System.Drawing.Point(113, 22);
-            this.txtBSearchDocente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBSearchDocente.Margin = new System.Windows.Forms.Padding(2);
             this.txtBSearchDocente.Name = "txtBSearchDocente";
             this.txtBSearchDocente.Size = new System.Drawing.Size(165, 20);
             this.txtBSearchDocente.TabIndex = 49;
@@ -445,7 +445,7 @@
             this.Controls.Add(this.gbxCurso);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCurso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCurso";
@@ -479,7 +479,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbAsignatura;
         private System.Windows.Forms.ComboBox cbGradoAcademico;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblAreaAcademica;
         private System.Windows.Forms.DataGridView dgvDocente;
         private System.Windows.Forms.GroupBox gbDatosDocente;
         private System.Windows.Forms.TextBox txtBSearchDocente;

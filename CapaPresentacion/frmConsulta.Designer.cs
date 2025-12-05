@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 354);
+            this.ClientSize = new System.Drawing.Size(815, 359);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMatricula);
             this.Controls.Add(this.bnInscripcion);

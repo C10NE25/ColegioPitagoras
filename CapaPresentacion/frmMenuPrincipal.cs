@@ -108,5 +108,15 @@ namespace CapaPresentacion
             }
             this.Show();
         }
+
+        private void btnAbrirConsultas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmConsulta())
+            {
+                frm.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }

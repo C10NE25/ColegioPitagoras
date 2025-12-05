@@ -78,6 +78,12 @@
     <Compile Include="frmAcademico\frmTipoAsistencia.Designer.cs">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta.Designer.cs">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuAdministrativo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,30 @@
     <Compile Include="frmTesoreria\frmTarifa.Designer.cs">
       <DependentUpon>frmTarifa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmViewApoderado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewApoderado.Designer.cs">
+      <DependentUpon>frmViewApoderado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewEstudiante.Designer.cs">
+      <DependentUpon>frmViewEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewInscripcion.Designer.cs">
+      <DependentUpon>frmViewInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewMatricula.Designer.cs">
+      <DependentUpon>frmViewMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAcademico\frmAreaAcademica.resx">
@@ -202,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcademico\frmTipoAsistencia.resx">
       <DependentUpon>frmTipoAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta.resx">
+      <DependentUpon>frmConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAdministrativo.resx">
       <DependentUpon>frmMenuAdministrativo.cs</DependentUpon>
@@ -256,6 +289,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTesoreria\frmTarifa.resx">
       <DependentUpon>frmTarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewApoderado.resx">
+      <DependentUpon>frmViewApoderado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewEstudiante.resx">
+      <DependentUpon>frmViewEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewInscripcion.resx">
+      <DependentUpon>frmViewInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewMatricula.resx">
+      <DependentUpon>frmViewMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
@@ -319,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconTesoreria32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="frmConsultas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

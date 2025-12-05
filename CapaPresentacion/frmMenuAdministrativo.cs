@@ -13,6 +13,7 @@ namespace CapaPresentacion
 {
     public partial class frmMenuAdministrativo : Form
     {
+        //Manejo de formularios
         public frmMenuAdministrativo()
         {
             InitializeComponent();

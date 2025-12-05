@@ -33,6 +33,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvGradoAcademico = new System.Windows.Forms.DataGridView();
             this.gbxGradoAcademico = new System.Windows.Forms.GroupBox();
+            this.btnAddSeccion = new System.Windows.Forms.Button();
+            this.btnAddNivelAcademico = new System.Windows.Forms.Button();
             this.cbSeccion = new System.Windows.Forms.ComboBox();
             this.cbNivelAcademico = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtIDGradoAcademico = new System.Windows.Forms.TextBox();
             this.txtNombreGrado = new System.Windows.Forms.TextBox();
-            this.btnAddNivelAcademico = new System.Windows.Forms.Button();
-            this.btnAddSeccion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGradoAcademico)).BeginInit();
             this.gbxGradoAcademico.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +121,26 @@
             this.gbxGradoAcademico.TabIndex = 32;
             this.gbxGradoAcademico.TabStop = false;
             this.gbxGradoAcademico.Text = "Datos del Grado Academico";
+            // 
+            // btnAddSeccion
+            // 
+            this.btnAddSeccion.Location = new System.Drawing.Point(261, 119);
+            this.btnAddSeccion.Name = "btnAddSeccion";
+            this.btnAddSeccion.Size = new System.Drawing.Size(24, 21);
+            this.btnAddSeccion.TabIndex = 18;
+            this.btnAddSeccion.Text = "+";
+            this.btnAddSeccion.UseVisualStyleBackColor = true;
+            this.btnAddSeccion.Click += new System.EventHandler(this.btnAddSeccion_Click);
+            // 
+            // btnAddNivelAcademico
+            // 
+            this.btnAddNivelAcademico.Location = new System.Drawing.Point(261, 88);
+            this.btnAddNivelAcademico.Name = "btnAddNivelAcademico";
+            this.btnAddNivelAcademico.Size = new System.Drawing.Size(24, 20);
+            this.btnAddNivelAcademico.TabIndex = 17;
+            this.btnAddNivelAcademico.Text = "+";
+            this.btnAddNivelAcademico.UseVisualStyleBackColor = true;
+            this.btnAddNivelAcademico.Click += new System.EventHandler(this.btnAddNivelAcademico_Click);
             // 
             // cbSeccion
             // 
@@ -243,24 +263,6 @@
             this.txtNombreGrado.Name = "txtNombreGrado";
             this.txtNombreGrado.Size = new System.Drawing.Size(147, 20);
             this.txtNombreGrado.TabIndex = 0;
-            // 
-            // btnAddNivelAcademico
-            // 
-            this.btnAddNivelAcademico.Location = new System.Drawing.Point(261, 88);
-            this.btnAddNivelAcademico.Name = "btnAddNivelAcademico";
-            this.btnAddNivelAcademico.Size = new System.Drawing.Size(24, 20);
-            this.btnAddNivelAcademico.TabIndex = 17;
-            this.btnAddNivelAcademico.Text = "+";
-            this.btnAddNivelAcademico.UseVisualStyleBackColor = true;
-            // 
-            // btnAddSeccion
-            // 
-            this.btnAddSeccion.Location = new System.Drawing.Point(261, 119);
-            this.btnAddSeccion.Name = "btnAddSeccion";
-            this.btnAddSeccion.Size = new System.Drawing.Size(24, 21);
-            this.btnAddSeccion.TabIndex = 18;
-            this.btnAddSeccion.Text = "+";
-            this.btnAddSeccion.UseVisualStyleBackColor = true;
             // 
             // frmGradoAcademico
             // 

@@ -130,25 +130,6 @@ namespace CapaPresentacion
             habilitarBotonesPrincipales();
         }
 
-        private void btnDeshabilitar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entApoderado tutor = new entApoderado();
-                tutor.IdApoderado = Convert.ToInt32(txtIDTutor.Text.Trim());
-                cbxEstado.Checked = false;
-                tutor.EstadoApo = cbxEstado.Checked;
-                logApoderado.Instancia.DeshabilitarApoderado(tutor);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al deshabilitar tutor: " + ex.Message);
-            }
-            limpiarVariables();
-            gbxTutor.Enabled = false;
-            listarTutor();
-        }
-
         private void dgvTutor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dgvTipoParentesco.Rows[e.RowIndex];

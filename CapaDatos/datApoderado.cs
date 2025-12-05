@@ -121,6 +121,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@apellidosMatApo", apo.ApellidosPatApo);
                 cmd.Parameters.AddWithValue("@numCelularApo", apo.NumCelularApo);
                 cmd.Parameters.AddWithValue("@direccionApo", apo.DireccionApo);
+                cmd.Parameters.AddWithValue("@idParentesco", apo.IdParentesco);
                 cmd.Parameters.AddWithValue("@estadoApo", apo.EstadoApo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();

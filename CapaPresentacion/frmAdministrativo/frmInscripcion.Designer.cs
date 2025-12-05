@@ -32,7 +32,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvInscripcion = new System.Windows.Forms.DataGridView();
             this.gbxInscripcion = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAddEstudiante = new System.Windows.Forms.Button();
+            this.cbEstudiante = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaInscripcion = new System.Windows.Forms.DateTimePicker();
@@ -40,7 +41,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdInscripcion = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInscripcion)).BeginInit();
             this.gbxInscripcion.SuspendLayout();
             this.SuspendLayout();
@@ -81,9 +81,6 @@
             // 
             // gbxInscripcion
             // 
-            this.gbxInscripcion.Controls.Add(this.button1);
-            this.gbxInscripcion.Controls.Add(this.comboBox1);
-            this.gbxInscripcion.Controls.Add(this.label4);
             this.gbxInscripcion.Controls.Add(this.label3);
             this.gbxInscripcion.Controls.Add(this.dtpFechaInscripcion);
             this.gbxInscripcion.Controls.Add(this.btnAgregar);
@@ -99,19 +96,29 @@
             this.gbxInscripcion.TabStop = false;
             this.gbxInscripcion.Text = "Datos de la Inscripcion";
             // 
-            // comboBox1
+            // btnAddEstudiante
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 60);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 25;
+            this.btnAddEstudiante.Location = new System.Drawing.Point(811, 357);
+            this.btnAddEstudiante.Name = "btnAddEstudiante";
+            this.btnAddEstudiante.Size = new System.Drawing.Size(22, 21);
+            this.btnAddEstudiante.TabIndex = 26;
+            this.btnAddEstudiante.Text = "+";
+            this.btnAddEstudiante.UseVisualStyleBackColor = true;
+            this.btnAddEstudiante.Click += new System.EventHandler(this.btnAddEstudiante_Click);
+            // 
+            // cbEstudiante
+            // 
+            this.cbEstudiante.FormattingEnabled = true;
+            this.cbEstudiante.Location = new System.Drawing.Point(615, 358);
+            this.cbEstudiante.Margin = new System.Windows.Forms.Padding(2);
+            this.cbEstudiante.Name = "cbEstudiante";
+            this.cbEstudiante.Size = new System.Drawing.Size(172, 21);
+            this.cbEstudiante.TabIndex = 25;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 62);
+            this.label4.Location = new System.Drawing.Point(554, 361);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
@@ -121,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 93);
+            this.label3.Location = new System.Drawing.Point(18, 62);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
@@ -130,7 +137,7 @@
             // 
             // dtpFechaInscripcion
             // 
-            this.dtpFechaInscripcion.Location = new System.Drawing.Point(85, 88);
+            this.dtpFechaInscripcion.Location = new System.Drawing.Point(86, 57);
             this.dtpFechaInscripcion.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaInscripcion.Name = "dtpFechaInscripcion";
             this.dtpFechaInscripcion.Size = new System.Drawing.Size(191, 20);
@@ -164,34 +171,29 @@
             this.label2.Location = new System.Drawing.Point(15, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(21, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Id Inscripcion";
+            this.label2.Text = "ID:";
             // 
             // txtIdInscripcion
             // 
+            this.txtIdInscripcion.Enabled = false;
             this.txtIdInscripcion.Location = new System.Drawing.Point(86, 27);
             this.txtIdInscripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdInscripcion.Name = "txtIdInscripcion";
             this.txtIdInscripcion.Size = new System.Drawing.Size(70, 20);
             this.txtIdInscripcion.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(281, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 21);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // frmInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 543);
+            this.ClientSize = new System.Drawing.Size(969, 543);
+            this.Controls.Add(this.btnAddEstudiante);
             this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.cbEstudiante);
             this.Controls.Add(this.dgvInscripcion);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.gbxInscripcion);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -219,8 +221,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdInscripcion;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEstudiante;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddEstudiante;
     }
 }

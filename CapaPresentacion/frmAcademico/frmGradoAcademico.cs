@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaLogica;
+using CapaPresentacion.frmAcademico;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -125,6 +126,28 @@ namespace CapaPresentacion
         {
             gbxGradoAcademico.Enabled = false;
             habilitarBotonesPrincipales();
+        }
+
+        private void btnAddNivelAcademico_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmNivelAcademico())
+            {
+                frm.ShowDialog();
+            }
+            cargarNivelAcademico();
+            this.Show();
+        }
+
+        private void btnAddSeccion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            using (var frm = new frmSeccion())
+            {
+                frm.ShowDialog();
+            }
+            cargarSeccion();
+            this.Show();
         }
     }
 }
